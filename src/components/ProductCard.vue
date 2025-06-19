@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="`/producto/${producto.id}`" class="product-card">
+  <router-link :to="`/producto/${producto.nombre}`" class="product-card">
     <img :src="producto.imagen || producto.image" :alt="producto.nombre || producto.title" />
     <h3>{{ producto.nombre || producto.title }}</h3>
     <p v-html="producto.descripcion || producto.content"></p>

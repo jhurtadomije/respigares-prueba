@@ -28,11 +28,11 @@
   </button>
   <h3>Productos en {{ categoriaSeleccionada }}</h3>
   <div class="grid-productos">
-    <div v-for="p in productosFiltrados" :key="p.id" class="producto-resumido-card">
+    <div v-for="p in productosFiltrados" :key="p.nombre" class="producto-resumido-card">
       <h4>{{ p.nombre }}</h4>
       <!-- Imagen principal del producto (si tiene) -->
       <img v-if="p.imagen" :src="p.imagen" :alt="p.nombre" class="mini-img" />
-      <router-link :to="`/producto/${p.id}`" class="btn-vermas">
+      <router-link :to="`/producto/${p.nombre}`" class="btn-vermas">
         Ver más
       </router-link>
     </div>
@@ -47,19 +47,50 @@ import ProductCard from '../components/ProductCard.vue'
 
 // 1. Objeto para las imágenes por categoría
 const CATEGORIA_IMAGENES = {
-  'Aceites': '/img/categorias/aceites.jpg',
-  'Conservas Vegetales': '/img/categorias/conservas-vegetales.jpg',
-  'Encurtidos': '/img/categorias/encurtidos.jpg',
-  'Salsas': '/img/categorias/salsas.jpg',
-  'Especias': '/img/categorias/especias.jpg',
-  // ...añade el resto
+  'Aceites': 'https://respigares.es/wp-content/uploads/2025/02/aceites-categoria.jpg',
+  'Aceites de oliva': 'https://respigares.es/wp-content/uploads/2025/02/aceites-oliva.jpg',
+  'Aceites especiales': 'https://respigares.es/wp-content/uploads/2025/02/aceites-especiales.jpg',
+  'Aceitunas': 'https://respigares.es/wp-content/uploads/2025/02/aceitunas.jpg',
+  'Conservas Vegetales': 'https://respigares.es/wp-content/uploads/2025/02/conservas-vegetales.jpg',
+  'Conservas de Alcachofa': 'https://respigares.es/wp-content/uploads/2025/02/alcachofas.jpg',
+  'Conservas de Espárragos': 'https://respigares.es/wp-content/uploads/2025/02/esparragos.jpg',
+  'Conservas de Pimientos': 'https://respigares.es/wp-content/uploads/2025/02/pimientos.jpg',
+  'Conservas de Tomate': 'https://respigares.es/wp-content/uploads/2025/02/tomate.jpg',
+  'Conservas de Legumbres': 'https://respigares.es/wp-content/uploads/2025/02/legumbres.jpg',
+  'Conservas de Frutas': 'https://respigares.es/wp-content/uploads/2025/02/frutas.jpg',
+  'Conservas de Verduras': 'https://respigares.es/wp-content/uploads/2025/02/verduras.jpg',
+  'Encurtidos': 'https://respigares.es/wp-content/uploads/2025/02/encurtidos.jpg',
+  'Banderillas': 'https://respigares.es/wp-content/uploads/2025/02/banderillas.jpg',
+  'Pepinillos': 'https://respigares.es/wp-content/uploads/2025/02/pepinillos.jpg',
+  'Cebolletas': 'https://respigares.es/wp-content/uploads/2025/02/cebolletas.jpg',
+  'Alcaparras': 'https://respigares.es/wp-content/uploads/2025/02/alcaparras.jpg',
+  'Guindillas': 'https://respigares.es/wp-content/uploads/2025/02/guindillas.jpg',
+  'Mix encurtidos': 'https://respigares.es/wp-content/uploads/2025/02/mix-encurtidos.jpg',
+  'Salsas': 'https://respigares.es/wp-content/uploads/2025/02/salsas.jpg',
+  'Mayonesas': 'https://respigares.es/wp-content/uploads/2025/02/mayonesa.jpg',
+  'Salsas especiales': 'https://respigares.es/wp-content/uploads/2025/02/salsas-especiales.jpg',
+  'Kétchup': 'https://respigares.es/wp-content/uploads/2025/02/ketchup.jpg',
+  'Mojo': 'https://respigares.es/wp-content/uploads/2025/02/mojo.jpg',
+  'Alioli': 'https://respigares.es/wp-content/uploads/2025/02/alioli.jpg',
+  'Vinagretas': 'https://respigares.es/wp-content/uploads/2025/02/vinagretas.jpg',
+  'Especias': 'https://respigares.es/wp-content/uploads/2025/02/especias.jpg',
+  'Hierbas aromáticas': 'https://respigares.es/wp-content/uploads/2025/02/hierbas-aromaticas.jpg',
+  'Pimentón': 'https://respigares.es/wp-content/uploads/2025/02/pimenton.jpg',
+  'Comino': 'https://respigares.es/wp-content/uploads/2025/02/comino.jpg',
+  'Sal': 'https://respigares.es/wp-content/uploads/2025/02/sal.jpg',
+  'Azafrán': 'https://respigares.es/wp-content/uploads/2025/02/azafran.jpg',
+  'Condimentos': 'https://respigares.es/wp-content/uploads/2025/02/condimentos.jpg',
+  'Pimienta': 'https://respigares.es/wp-content/uploads/2025/02/pimienta.jpg',
+  'Otros': 'https://respigares.es/wp-content/uploads/2025/02/otros.jpg',
+  // ... Puedes añadir más categorías personalizadas aquí
 }
+
 
 const productos = ref([])
 const categoriaSeleccionada = ref(null)
 
 onMounted(async () => {
-  const res = await fetch('/productos.json')
+  const res = await fetch('productos.json')
   productos.value = await res.json()
 })
 
