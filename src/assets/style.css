@@ -1,0 +1,197 @@
+:root {
+  --color-main: #ab0a3d;     /* Burdeos principal */
+  --color-blue: #336693;     /* Azul Respigares */
+  --color-gray: #707070;
+  --color-light: #f2f5f7;
+  --color-white: #fff;
+  --font-main: 'Montserrat', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-gray);
+  background: var(--color-white);
+  margin: 0;
+}
+
+.header {
+  background: rgba(234, 17, 71, 0.6); /* usa aquí tu color principal con alpha, 0.60 es ajustable */
+  color: var(--color-white);
+  box-shadow: 0 4px 18px #0002;
+  position: fixed;      /* Cambia a fixed para que siempre esté arriba, sobre el Hero */
+  top: 0;
+  left: 0;
+  width: 100vw;         /* Asegura que cubre toda la pantalla */
+  z-index: 120;         /* Súbelo por encima del Hero */
+  backdrop-filter: blur(3px); /* Efecto glassmorphism opcional */
+  transition: background 0.18s;
+}
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+
+.logo {
+  height: 4.5rem;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 7px;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1.1rem;
+}
+
+.nav a:hover,
+.nav a.router-link-exact-active {
+  background: #fff2;
+  color: var(--color-white);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    height: 56px;
+    padding: 0 1rem;
+  }
+  .nav {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    flex-direction: column;
+    background: var(--color-main);
+    width: 200px;
+    box-shadow: -2px 6px 24px #0003;
+    padding: 1rem;
+    display: none;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* TITULOS Y TEXTOS */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  color: var(--color-gray);
+  font-weight: 900;
+  margin: 0 0 0.8em 0;
+}
+h1 { font-size: 2.2rem; color: var(--color-main);}
+h2 { font-size: 2rem;}
+h3 { font-size: 1.3rem;}
+p  { font-size: 1.1rem; margin: 0 0 1em 0;}
+
+/* BOTONES */
+button, .btn {
+  background: var(--color-main);
+  color: var(--color-white);
+  border: none;
+  border-radius: 20px;
+  padding: 12px 36px;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--color-blue);
+}
+
+/* GRID DE PRODUCTOS */
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* CARD DE PRODUCTO */
+.product-card {
+  display: block;
+  border: 1px solid #eee;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.5rem 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px #0002;
+}
+.product-card img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.product-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-main);
+  font-weight: bold;
+}
+.product-card p {
+  color: var(--color-gray);
+  font-size: 1rem;
+}
+
+/* DETALLE DE PRODUCTO */
+.producto-detalle {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.producto-detalle img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.galeria {
+  margin: 1.5rem 0;
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+.galeria img {
+  cursor: pointer;
+  transition: transform .2s;
+}
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+
