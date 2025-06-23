@@ -21,7 +21,7 @@ const routes = [
      
 ]
 const router = createRouter({
-  history: createWebHistory('/respigares-prueba/'),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 

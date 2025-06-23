@@ -90,9 +90,10 @@ const productos = ref([])
 const categoriaSeleccionada = ref(null)
 
 onMounted(async () => {
-  const res = await fetch('productos.json')
+  const res = await fetch(`${import.meta.env.BASE_URL}productos.json`)
   productos.value = await res.json()
 })
+
 
 // 2. Extraer categorías únicas y asociar imagen
 const categorias = computed(() => {
