@@ -3,5 +3,5 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-  base: '/respigares-prueba/', // ¡AQUÍ el nombre de tu repo!
+  base: '/respigares-prueba/', 
 })
