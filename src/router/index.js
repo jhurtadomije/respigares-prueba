@@ -17,6 +17,7 @@ const routes = [
   { path: '/avisolegal', name: 'AvisoLegal', component: AvisoLegal },
   { path: '/privacidad', name: 'Privacidad', component: Privacidad },
   { path: '/cookies', name: 'Cookies', component: Cookies },
+  { path: '/somos', redirect: '/nostros'}
 ]
 
 const router = createRouter({

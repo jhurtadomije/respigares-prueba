@@ -1,21 +1,22 @@
 <template>
   <Header />
-  <Hero />
   <main class="contenido-principal">
-    <RouterView />
+        <RouterView />
   </main>
   <Footer />
 </template>
 
 <script setup>
-import Header from './components/Header.vue'
-import Hero from './components/Hero.vue'
-import Footer from './components/Footer.vue'
+import Header     from './components/Header.vue'
+
+import Footer     from './components/Footer.vue'
+
+
 </script>
 
 <style>
 .contenido-principal {
-  margin-top: 80px; /* si el header es fijo */
+  margin-top: 80px; 
   padding: 2rem 1rem;
   min-height: 90vh;
 }
