@@ -29,6 +29,7 @@ defineProps({
 .catalogo-preview {
   padding: 1rem;
   text-align: center;
+  overflow-anchor: none;
 }
 .catalogo-preview__title {
   font-size: 2rem;
@@ -39,6 +40,7 @@ defineProps({
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+  overflow-anchor: none;
 }
 .categoria-card {
   background: #fff;

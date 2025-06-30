@@ -11,26 +11,26 @@ const EFFECTS = [
 
 export default {
   mounted(el) {
-    // Prepara estado inicial oculto
+    // Estado inicial: oculto + desplazado
     el.classList.add('before-reveal')
 
-    // Espera a que el DOM pinte
     nextTick(() => {
       const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Elige un efecto al azar
-            const effect = EFFECTS[Math.floor(Math.random() * EFFECTS.length)]
-            // Añade clases para animar
-            el.classList.add('animated', effect)
-            // Remueve estado inicial
+            // Quita el estado oculto
             el.classList.remove('before-reveal')
-            // Ya no hace falta observarlo más
+            // Aplica un efecto aleatorio
+            const effect = EFFECTS[Math.floor(Math.random() * EFFECTS.length)]
+            el.classList.add('animated', effect)
+            // Ya no necesitamos observarlo más
             obs.unobserve(el)
           }
         })
       }, {
-        threshold: 0.6
+        root: null,
+        rootMargin: '0px 0px -10% 0px',  // disparamos justo cuando salga un 10% del bottom
+        threshold: 0                     // con cualquier píxel visible
       })
 
       observer.observe(el)
