@@ -52,7 +52,7 @@
 .brands__label {
   text-align: center;
   display: block;
-  margin-bottom: auto;
+  
   font-size: 2.2rem;
   font-weight: bold;
   
