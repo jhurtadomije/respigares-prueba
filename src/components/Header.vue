@@ -20,3 +20,15 @@
 import { ref } from 'vue'
 const open = ref(false)
 </script>
+<style scoped>
+.header {
+  /* Fondo semitransparente necesario para que el blur actúe */
+  background: rgba(255, 255, 255, 0.6);
+
+  /* Prefijo para WebKit/Safari */
+  -webkit-backdrop-filter: blur(10px);
+  /* La propiedad estándar */
+  backdrop-filter: blur(10px);
+}
+
+</style>

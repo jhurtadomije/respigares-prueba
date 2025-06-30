@@ -8,17 +8,20 @@ import AvisoLegal from '../views/AvisoLegal.vue'
 import Privacidad from '../views/Privacidad.vue'
 import Cookies from '../views/Cookies.vue'
 
+// src/router/index.js
 const routes = [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/nosotros', name: 'Nosotros', component: Nosotros },
-  { path: '/catalogo', name: 'Catalogo', component: Catalogo },
-  { path: '/contacto', name: 'Contacto', component: Contacto },
-  { path: '/producto/:id', name: 'ProductoDetalle', component: ProductoDetalle, props: true },
-  { path: '/avisolegal', name: 'AvisoLegal', component: AvisoLegal },
-  { path: '/privacidad', name: 'Privacidad', component: Privacidad },
-  { path: '/cookies', name: 'Cookies', component: Cookies },
-  { path: '/somos', redirect: '/nostros'}
+  { path: '/',           name: 'Home',           component: Home },
+  { path: '/nosotros',   name: 'Nosotros',       component: Nosotros },
+  { path: '/catalogo',   name: 'Catalogo',       component: Catalogo },
+  { path: '/contacto',   name: 'Contacto',       component: Contacto },
+  { path: '/producto/:id',name: 'ProductoDetalle',component: ProductoDetalle, props: true },
+  { path: '/avisolegal', name: 'AvisoLegal',     component: AvisoLegal },
+  { path: '/privacidad', name: 'Privacidad',     component: Privacidad },
+  { path: '/cookies',    name: 'Cookies',        component: Cookies },
+  // CORRECCIÓN: redirect de /somos apunta a /nosotros
+  { path: '/somos', redirect: '/nosotros' }
 ]
+
 
 const router = createRouter({
   history: createWebHashHistory('/respigares-prueba/'), // IMPORTANTE: hash mode para GitHub Pages

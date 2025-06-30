@@ -1,4 +1,4 @@
-/* src/components/BlogPreview.vue */
+<!-- src/components/BlogPreview.vue -->
 <template>
   <section class="blog-preview contenedor">
     <h2 class="blog-preview__title">Últimas noticias</h2>
@@ -19,7 +19,7 @@
 
 <script setup>
 import { defineProps } from 'vue'
-// Espera props.posts: Array<{ id: number|string, title: string, image: string, excerpt: string, slug: string }>
+
 defineProps({
   posts: {
     type: Array,
@@ -80,33 +80,4 @@ defineProps({
 .blog-card__link:hover {
   text-decoration: underline;
 }
-.catalogo-preview__title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.categoria-card__img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-.categoria-card__title {
-  margin: 0.5rem 0;
-}
-.categoria-card__link {
-  display: inline-block;
-  margin-top: auto;
-  padding: 0.5rem 1rem;
-  background: #ab0a3d;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-.categoria-card__link:hover {
-  background: #92243d;
-}
-
 </style>
-

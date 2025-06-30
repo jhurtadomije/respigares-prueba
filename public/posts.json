@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Inauguración de nuestra nueva nave",
+    "image": "/img/blog/nave.jpg",
+    "excerpt": "Hoy abrimos oficialmente nuestro nuevo centro logístico en Granada…",
+    "slug": "inauguracion-nueva-nave"
+  },
+  {
+    "id": 2,
+    "title": "Cómo elegir el mejor aceite de oliva",
+    "image": "/img/blog/aceite.jpg",
+    "excerpt": "Te contamos los criterios para distinguir un aceite de oliva virgen extra de calidad…",
+    "slug": "como-elegir-aceite-oliva"
+  },
+  {
+    "id": 3,
+    "title": "Tendencias en conservas vegetales",
+    "image": "/img/blog/conservas.jpg",
+    "excerpt": "Descubre las novedades del mercado y los formatos más cómodos para hostelería…",
+    "slug": "tendencias-conservas-vegetales"
+  },
+  {
+    "id": 4,
+    "title": "El futuro de la alimentación infantil",
+    "image": "/img/blog/infantil.jpg",
+    "excerpt": "Hablamos con expertos sobre los nuevos productos para los más pequeños…",
+    "slug": "futuro-alimentacion-infantil"
+  }
+]

@@ -15,15 +15,20 @@ body {
 }
 
 .header {
-  background: rgba(234, 17, 71, 0.6); /* usa aquí tu color principal con alpha, 0.60 es ajustable */
+  /* Tu fondo semitransparente para que el blur tenga algo que difuminar */
+  background: rgba(234, 17, 71, 0.6);
+
+  /* Prefijo WebKit para Safari y otras implementaciones antiguas */
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+
   color: var(--color-white);
   box-shadow: 0 4px 18px #0002;
-  position: fixed;      /* Cambia a fixed para que siempre esté arriba, sobre el Hero */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;         /* Asegura que cubre toda la pantalla */
-  z-index: 120;         /* Súbelo por encima del Hero */
-  backdrop-filter: blur(3px); /* Efecto glassmorphism opcional */
+  width: 100vw;
+  z-index: 120;
   transition: background 0.18s;
 }
 .header-content {
@@ -36,6 +41,7 @@ body {
   gap: 2rem;
   padding: 0 1.5rem;
 }
+
 
 
 .logo {
