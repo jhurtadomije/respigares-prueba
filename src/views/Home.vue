@@ -1,19 +1,27 @@
 <template>
-<Hero />
+  <section v-scroll-random-reveal>
+  <Hero />
+  </section>
   <main class="home-content contenedor">
     
-
+    <section v-scroll-random-reveal>
     <!-- 1. Preview de “Somos” (componente estático) -->
     <SomosPreview />
+    </section>
 
+    <section v-scroll-random-reveal>
     <!-- 2. Preview de “Catálogo” con las primeras 6 categorías -->
     <CatalogPreview :categories="categoriesPreview" />
+    </section>
 
+    <section v-scroll-random-reveal>
     <!-- 3. Carrusel de marcas -->
     <BrandsCarousel />
-
+    </section>
+    <section v-scroll-random-reveal>
     <!-- 4. Preview de “Blog” con las últimas 4 entradas -->
     <BlogPreview :posts="postsPreview" />
+    </section>
   </main>
 
 </template>

@@ -3,7 +3,9 @@
   <main class="contenido-principal">
         <RouterView />
   </main>
+  <section v-scroll-random-reveal>
   <Footer />
+  </section>
 </template>
 
 <script setup>
