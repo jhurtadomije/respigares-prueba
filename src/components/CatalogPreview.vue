@@ -32,8 +32,10 @@ defineProps({
   overflow-anchor: none;
 }
 .catalogo-preview__title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  color: var(--color-main);
 }
 .catalogo-grid {
   display: grid;

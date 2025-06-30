@@ -1,6 +1,6 @@
 <!-- src/components/BrandsCarousel.vue -->
 <template>
-  <span class="brands__label">Nuestras Marcas</span>
+  <h2 class="brands_title">Nuestras Marcas</h2>
   <section class="brands">
     
     <div class="contenedor">
@@ -64,15 +64,11 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   width: 100%;
 }
 
-.brands__label {
-  margin-top: 2.5rem;
-  display: block;
+.brands_title {
   text-align: center;
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: var(--color-gray);
+  font-size: 2.25rem;
   margin-bottom: 2rem;
-
+  color: var(--color-main);
 }
 
 .brands::after {

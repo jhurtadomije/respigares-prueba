@@ -1,5 +1,5 @@
 <template>
-  <span class="brands__label">Somos</span>
+  <h2 class="brands__somos">Somos</h2>
   <section class="preview preview--somos contenedor">
     <div class="preview__header">
       <div class="preview__white-bar"></div>
@@ -49,13 +49,11 @@
 </script>
 
 <style scoped>
-.brands__label {
+.brands__somos {
   text-align: center;
-  display: block;
-  
-  font-size: 2.2rem;
-  font-weight: bold;
-  
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  color: var(--color-main);
 }
 .preview--somos {
   background: #f5f8fa;
