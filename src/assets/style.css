@@ -196,7 +196,10 @@ button:hover, .btn:hover {
 .galeria img:hover {
   transform: scale(1.05);
 }
-
+.fade-in-slow {
+  /* Mismo keyframe que fadeIn pero más pausado */
+  animation: fadeIn 2s ease-out both;
+}
 /* Estado inicial: oculto y desplazado ligeramente */
 .before-reveal {
   opacity: 0;

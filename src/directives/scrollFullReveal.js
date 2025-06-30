@@ -13,7 +13,7 @@ export default {
           if (entry.intersectionRatio === 1) {
             el.classList.remove('before-reveal')
             // Aplica fade-in
-            el.classList.add('animated', 'fade-in')
+            el.classList.add('animated', 'fade-in-slow')
             obs.unobserve(el)
           }
         })
