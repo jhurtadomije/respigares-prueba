@@ -36,8 +36,9 @@ defineProps({
 }
 .catalogo-grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 .categoria-card {
   background: #fff;
@@ -50,7 +51,8 @@ defineProps({
 }
 .categoria-card__img {
   width: 100%;
-  height: 150px;
+  /* altura flexible para que crezca según proporción */
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 .categoria-card__title {
@@ -60,12 +62,26 @@ defineProps({
 .categoria-card__link {
   margin-top: auto;
   padding: 0.75rem;
-  background: #ab0a3d;
-  color: #fff;
+  background: var(--color-main);
+  color: var(--color-white);
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.2s;
 }
 .categoria-card__link:hover {
-  background: #92243d;
+  background: var(--color-blue);
+}
+
+@media (max-width: 400px) {
+  .catalogo-grid {
+    gap: 1rem;
+  }
+  .categoria-card__title {
+    font-size: 1.1rem;
+  }
+  .categoria-card__link {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 </style>
