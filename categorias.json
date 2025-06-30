@@ -1,0 +1,82 @@
+[
+  {
+    "id": "aceites_y_vinagres",
+    "name": "Aceites y Vinagres",
+    "image": "img/categorias/aceites_y_vinagres.jpg"
+  },
+  {
+    "id": "aceitunas_y_encurtidos",
+    "name": "Aceitunas y Encurtidos",
+    "image": "img/categorias/aceitunas_y_encurtidos.jpg"
+  },
+  {
+    "id": "alimentacion_infantil",
+    "name": "Alimentación Infantil",
+    "image": "img/categorias/alimentacion_infantil.jpg"
+  },
+  {
+    "id": "almibares_mermeladas_y_mieles",
+    "name": "Almíbares, Mermeladas y Mieles",
+    "image": "img/categorias/almibares_mermeladas_y_mieles.jpg"
+  },
+  {
+    "id": "caldos",
+    "name": "Caldos",
+    "image": "img/categorias/caldos.png"
+  },
+  {
+    "id": "carnicos_ibericos",
+    "name": "Cárnicos Ibéricos",
+    "image": "img/categorias/carnicos_ibericos.png"
+  },
+  {
+    "id": "conservas_de_pescado",
+    "name": "Conservas de Pescado",
+    "image": "img/categorias/conservas_de_pescado.jpg"
+  },
+  {
+    "id": "conservas_vegetales",
+    "name": "Conservas Vegetales",
+    "image": "img/categorias/conservas_vegetales.jpg"
+  },
+  {
+    "id": "jamones_y_embutidos",
+    "name": "Jamones y Embutidos",
+    "image": "img/categorias/jamones_y_embutidos.jpg"
+  },
+  {
+    "id": "legumbres_y_arroces",
+    "name": "Legumbres y Arroces",
+    "image": "img/categorias/legumbres_y_arroces.jpg"
+  },
+  {
+    "id": "precocinados",
+    "name": "Precocinados",
+    "image": "img/categorias/precocinados.jpg"
+  },
+  {
+    "id": "quesos",
+    "name": "Quesos",
+    "image": "img/categorias/quesos.png"
+  },
+  {
+    "id": "reposteria",
+    "name": "Repostería",
+    "image": "img/categorias/reposteria.png"
+  },
+  {
+    "id": "salsas_ketchup_y_mostaza",
+    "name": "Salsas, Ketchup y Mostaza",
+    "image": "img/categorias/salsas_ketchup_y_mostaza.jpg"
+  },
+  {
+    "id": "siropes",
+    "name": "Siropes",
+    "image": "img/categorias/siropes.jpeg"
+  },
+  {
+    "id": "vinos",
+    "name": "Vinos",
+    "image": "img/categorias/vinos.png"
+  }
+]
