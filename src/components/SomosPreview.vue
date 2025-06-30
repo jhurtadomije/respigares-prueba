@@ -60,7 +60,7 @@
   text-align: center;
   padding: 1rem;
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .preview__header {
   position: relative;

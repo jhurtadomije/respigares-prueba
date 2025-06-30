@@ -1,15 +1,13 @@
 <!-- src/components/BrandsCarousel.vue -->
 <template>
-  <h2 class="brands_title">Nuestras Marcas</h2>
+  <h2 class="brands__label">Nuestras Marcas</h2>
   <section class="brands">
-    
     <div class="contenedor">
       
       <Swiper
         class="brands-swiper"
-        :modules="[Navigation, Pagination, Autoplay]"
+        :modules="[Navigation, Autoplay]"  
         navigation
-        :pagination="{ clickable: true }"
         :autoplay="{ delay: 3000, disableOnInteraction: false }"
         loop
         :slides-per-view="5"
@@ -36,10 +34,9 @@
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
 
 const modules = import.meta.glob(
@@ -50,7 +47,6 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 </script>
 
 <style scoped>
-
 .brands {
   background: var(--color-light);
   padding: 3rem 0 2rem;
@@ -64,11 +60,13 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   width: 100%;
 }
 
-.brands_title {
+.brands__label {
+  margin-top: 2.5rem;
+  display: block;
   text-align: center;
   font-size: 2.25rem;
-  margin-bottom: 2rem;
   color: var(--color-main);
+  margin-bottom: 2rem;
 }
 
 .brands::after {
@@ -85,18 +83,12 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 .brands-swiper {
   width: 100%;
   --swiper-navigation-color: var(--color-main);
-  --swiper-pagination-color: var(--color-main);
-  padding-bottom: 3rem;
+  padding-bottom: 2rem; /* Ajustado tras quitar bullets */
   overflow: visible;
 }
 
 .brands-swiper .swiper-wrapper {
   align-items: center;
-}
-
-.brands-swiper .swiper-pagination {
-  margin-top: 2rem;
-  display: none;
 }
 
 .brands-swiper-slide {
@@ -117,9 +109,8 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   filter: grayscale(0%) opacity(1);
 }
 
-/* Responsive adjustments */
+/* Ajustes móviles */
 @media (max-width: 480px) {
-  
   .brand-logo {
     max-width: 80px;
     max-height: 60px;

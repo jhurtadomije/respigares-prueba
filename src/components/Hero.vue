@@ -77,6 +77,7 @@ onMounted(() => {
 }
 
 .hero-content {
+  margin-top: 20rem;
   position: relative;
   z-index: 3;
   display: flex;

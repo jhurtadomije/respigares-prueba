@@ -16,7 +16,7 @@
         >
           <div class="blog-card__media">
             <img
-              :src="post.image"
+              :src="BASE + post.image.replace(/^\//, '')"
               :alt="post.title"
               class="blog-card__img"
               loading="lazy"
@@ -34,13 +34,16 @@
 <script setup>
 import { defineProps } from 'vue'
 
+// Base URL de Vite (en dev "/" y en producción "/respigares-prueba/")
+const BASE = import.meta.env.BASE_URL
+
 defineProps({
   /**
    * posts: Array de objetos con al menos:
    * {
    *   slug: string,
    *   title: string,
-   *   image: string,
+   *   image: string,  // ruta con leading slash, p.ej. "/img/blog/aceitunas-negras.jpg"
    *   source: string
    * }
    */
