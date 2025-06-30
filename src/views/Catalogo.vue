@@ -118,13 +118,15 @@ const productosFiltrados = computed(() =>
 <style scoped>
 .catalogo {
   padding: 2rem;
+  text-align: center;
 }
 
 .categorias-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin: 2rem 0;
+  margin-bottom: 1.5rem;
 }
 .categoria-card {
   position: relative;

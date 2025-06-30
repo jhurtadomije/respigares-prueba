@@ -7,19 +7,22 @@ import ProductoDetalle from '../views/ProductoDetalle.vue'
 import AvisoLegal from '../views/AvisoLegal.vue'
 import Privacidad from '../views/Privacidad.vue'
 import Cookies from '../views/Cookies.vue'
+import Blog        from '../views/Blog.vue'
+import Noticia     from '../views/NoticiaDetalle.vue'
 
-// src/router/index.js
 const routes = [
   { path: '/',           name: 'Home',           component: Home },
   { path: '/nosotros',   name: 'Nosotros',       component: Nosotros },
   { path: '/catalogo',   name: 'Catalogo',       component: Catalogo },
   { path: '/contacto',   name: 'Contacto',       component: Contacto },
-  { path: '/producto/:id',name: 'ProductoDetalle',component: ProductoDetalle, props: true },
+  { path: '/producto/:id',name: 'ProductoDetalle',component: ProductoDetalle },
   { path: '/avisolegal', name: 'AvisoLegal',     component: AvisoLegal },
   { path: '/privacidad', name: 'Privacidad',     component: Privacidad },
   { path: '/cookies',    name: 'Cookies',        component: Cookies },
   // CORRECCIÓN: redirect de /somos apunta a /nosotros
-  { path: '/somos', redirect: '/nosotros' }
+  { path: '/somos', redirect: '/nosotros' },
+  { path: '/blog',      name: 'Blog',      component: Blog },
+  { path: '/blog/:slug', name: 'Noticia',  component: Noticia, props: true }
 ]
 
 

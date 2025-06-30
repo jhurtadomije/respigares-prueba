@@ -16,8 +16,8 @@ import Footer     from './components/Footer.vue'
 
 <style>
 .contenido-principal {
-  margin-top: 80px; 
-  padding: 2rem 1rem;
-  min-height: 90vh;
+  margin-top: 2rem; 
+  
+  min-height: 80vh;
 }
 </style>

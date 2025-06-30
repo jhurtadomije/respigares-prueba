@@ -15,13 +15,8 @@ body {
 }
 
 .header {
-  /* Tu fondo semitransparente para que el blur tenga algo que difuminar */
+ 
   background: rgba(234, 17, 71, 0.6);
-
-  /* Prefijo WebKit para Safari y otras implementaciones antiguas */
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-
   color: var(--color-white);
   box-shadow: 0 4px 18px #0002;
   position: fixed;
@@ -31,6 +26,8 @@ body {
   z-index: 120;
   transition: background 0.18s;
 }
+
+
 .header-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -84,7 +81,7 @@ body {
 @media (max-width: 768px) {
   .header-content {
     height: 56px;
-    padding: 0 1rem;
+    
   }
   .nav {
     position: absolute;

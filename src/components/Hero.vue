@@ -38,7 +38,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
   const video = document.querySelector('.hero-video');
-  if (video) video.playbackRate = 0.5; // O el valor que prefieras
+  if (video) video.playbackRate = 0.7; 
 });
 </script>
 
@@ -46,7 +46,13 @@ onMounted(() => {
 .hero {
   position: relative;
   width: 100vw;
-  min-height: 62vh;
+
+  /* Ocupa toda la ventana menos el header fijo de 64px */
+  height: calc(100vh - 64px);
+
+  /* Si prefieres un porcentaje fijo, por ejemplo 80% de alto */
+  /* height: 80vh; */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +63,7 @@ onMounted(() => {
   position: absolute;
   top: 0; left: 0;
   width: 100vw;
-  height: 100%;
+  height: 100vw;
   object-fit: cover;
   z-index: 1;
   filter: brightness(0.82) saturate(1.1);

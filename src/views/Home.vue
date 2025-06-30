@@ -1,8 +1,7 @@
 <template>
-  <Header />
-
+<Hero />
   <main class="home-content contenedor">
-    <Hero />
+    
 
     <!-- 1. Preview de “Somos” (componente estático) -->
     <SomosPreview />
@@ -17,11 +16,15 @@
     <BlogPreview :posts="postsPreview" />
   </main>
 
-  <Footer />
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import Hero           from '../components/Hero.vue'
+import SomosPreview   from '../components/SomosPreview.vue'
+import CatalogPreview from '../components/CatalogPreview.vue'
+import BrandsCarousel from '../components/BrandsCarousel.vue'
+import BlogPreview    from '../components/BlogPreview.vue'
 
 const categoriesPreview = ref([])
 const postsPreview      = ref([])
@@ -33,7 +36,7 @@ onMounted(async () => {
   const catRes = await fetch(`${base}categorias.json`)
   if (catRes.ok) {
     const allCats = await catRes.json()
-    categoriesPreview.value = allCats.slice(0, 6)
+    categoriesPreview.value = allCats.slice(0, 16)
   } else {
     console.error('No se encontró categorias.json en', `${base}categorias.json`)
   }
@@ -52,7 +55,13 @@ onMounted(async () => {
 
 <style>
 .home-content {
-  margin-top: 80px; /* espacio para el header fijo */
+  margin-top: 60px; /* espacio para el header fijo */
   padding: 2rem 0;
+}
+.catalogo-grid {
+  display: grid;
+  /* Fijas 4 columnas iguales */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 </style>

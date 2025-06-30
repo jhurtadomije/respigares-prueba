@@ -27,7 +27,7 @@ defineProps({
 
 <style scoped>
 .catalogo-preview {
-  padding: 4rem 1rem;
+  padding: 1rem;
   text-align: center;
 }
 .catalogo-preview__title {
@@ -36,7 +36,7 @@ defineProps({
 }
 .catalogo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4,1fr);
   gap: 2rem;
 }
 .categoria-card {
