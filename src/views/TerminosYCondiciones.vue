@@ -152,16 +152,17 @@
 
       <p>
         Puede utilizar la siguiente estructura:
-        <ul>
-          <li>A la atención de (insertar datos del empresario, dirección, email):</li>
-          <li>Por la presente le comunico/comunicamos que desisto de mi/desistimos de nuestro contrato de venta del siguiente bien/prestación del siguiente servicio</li>
-          <li>Pedido el/recibido el…</li>
-          <li>Nombre del consumidor y usuario</li>
-          <li>Domicilio del consumidor y usuario</li>
-          <li>Firma (solo si se presenta en papel)</li>
-          <li>Fecha</li>
-        </ul>
       </p>
+      <ul>
+        <li>A la atención de (insertar datos del empresario, dirección, email):</li>
+        <li>Por la presente le comunico/comunicamos que desisto de mi/desistimos de nuestro contrato de venta del siguiente bien/prestación del siguiente servicio</li>
+        <li>Pedido el/recibido el…</li>
+        <li>Nombre del consumidor y usuario</li>
+        <li>Domicilio del consumidor y usuario</li>
+        <li>Firma (solo si se presenta en papel)</li>
+        <li>Fecha</li>
+      </ul>
+
     </div>
 
     <div class="legal-block">
