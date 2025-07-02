@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+
 const BASE = import.meta.env.BASE_URL
 
 defineProps({

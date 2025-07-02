@@ -39,12 +39,11 @@ onMounted(() => {
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100% - 64px); /* 64px = altura de tu header fijo */
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  min-height: 400px;
 }
 
 .hero-video {
@@ -127,6 +126,7 @@ onMounted(() => {
   background: linear-gradient(90deg, #f5e396, #b38b25);
 }
 
+
 /* Mobile first: menos separación, textos pequeños, sin desbordes */
 @media (max-width: 700px) {
   .hero {
@@ -150,6 +150,12 @@ onMounted(() => {
   }
 }
 
+@media (min-width: 900px) {
+  .hero {
+    min-height: 480px;
+    max-height: 650px;
+  }
+}
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(35px);}
   to   { opacity: 1; transform: none;}

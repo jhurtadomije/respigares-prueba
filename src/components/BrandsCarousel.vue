@@ -1,10 +1,10 @@
 <template>
   <h2 class="brands__label">Nuestras Marcas</h2>
   <section class="brands">
-     <div class="contenedor">
+    <div class="contenedor">
       <Swiper
         class="brands-swiper"
-        :modules="[Navigation, Autoplay]"  
+        :modules="[Navigation, Autoplay]"
         navigation
         :autoplay="{ delay: 3000, disableOnInteraction: false }"
         loop
@@ -49,6 +49,7 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   background: var(--color-light);
   padding: 2.2rem 0 1.6rem 0;
   position: relative;
+  overflow-x: hidden; /* BLOQUEA SCROLL LATERAL */
 }
 
 .contenedor {
@@ -57,14 +58,14 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   padding-left: 0.7rem;
   padding-right: 0.7rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .brands__label {
   margin-top: 2rem;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: 900;
-  
   color: var(--color-main);
   margin-bottom: 2em;
 }
@@ -73,20 +74,21 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
   width: 100vw;
   height: 1px;
   background: #ccc;
   opacity: 0.5;
-  left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .brands-swiper {
   width: 100%;
   --swiper-navigation-color: var(--color-main);
-  padding-bottom: 1.3rem;
+  padding-bottom: 1.2rem;
   overflow: visible;
+  /* NO uses max-width: 98vw aquí */
 }
 
 .brands-swiper .swiper-wrapper {
@@ -116,7 +118,7 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 /* ===== TABLET ===== */
 @media (min-width: 30em) {
   .brands__label {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
   .brand-logo {
@@ -124,11 +126,16 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
     max-height: 4.1rem;
   }
 }
-
+@media (hover: hover) and (pointer: fine) {
+  .brands-swiper-slide:hover .brand-logo {
+    filter: grayscale(0%) opacity(1) drop-shadow(0 2px 6px #e7c95344);
+    transform: scale(1.07);
+  }
+}
 /* ===== DESKTOP ===== */
 @media (min-width: 60em) {
   .brands__label {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
@@ -139,6 +146,8 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   .brands {
     padding: 3rem 0 2rem 0;
   }
+  .brands-swiper {
+    padding-bottom: 1.6rem; /* desktop */
+  }
 }
-
 </style>
