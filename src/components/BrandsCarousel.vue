@@ -3,21 +3,19 @@
   <h2 class="brands__label">Nuestras Marcas</h2>
   <section class="brands">
     <div class="contenedor">
-      
       <Swiper
         class="brands-swiper"
         :modules="[Navigation, Autoplay]"  
         navigation
         :autoplay="{ delay: 3000, disableOnInteraction: false }"
         loop
-        :slides-per-view="5"
-        :space-between="4"
+        :slides-per-view="2"
+        :space-between="10"
         :breakpoints="{
-          320:  { slidesPerView: 1, spaceBetween: 2 },
-          480:  { slidesPerView: 2, spaceBetween: 4 },
-          768:  { slidesPerView: 3, spaceBetween: 6 },
-          1024: { slidesPerView: 4, spaceBetween: 8 },
-          1280: { slidesPerView: 5, spaceBetween: 10 }
+          320:  { slidesPerView: 2, spaceBetween: 8 },
+          480:  { slidesPerView: 3, spaceBetween: 10 },
+          640:  { slidesPerView: 4, spaceBetween: 12 },
+          960:  { slidesPerView: 5, spaceBetween: 16 }
         }"
       >
         <SwiperSlide
@@ -47,26 +45,29 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 </script>
 
 <style scoped>
+/* ==== MOBILE FIRST ==== */
 .brands {
   background: var(--color-light);
-  padding: 3rem 0 2rem;
+  padding: 2.2rem 0 1.6rem;
   position: relative;
 }
 
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 0.7rem;
   width: 100%;
 }
 
 .brands__label {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   display: block;
   text-align: center;
-  font-size: 2.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   color: var(--color-main);
-  margin-bottom: 2rem;
+  margin-bottom: 1.1rem;
 }
 
 .brands::after {
@@ -83,7 +84,7 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 .brands-swiper {
   width: 100%;
   --swiper-navigation-color: var(--color-main);
-  padding-bottom: 2rem; /* Ajustado tras quitar bullets */
+  padding-bottom: 1.3rem;
   overflow: visible;
 }
 
@@ -98,22 +99,45 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 }
 
 .brand-logo {
-  max-width: 120px;
-  max-height: 80px;
+  max-width: 80px;
+  max-height: 52px;
+  width: 100%;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.5);
-  transition: filter 0.3s ease, opacity 0.3s ease;
+  filter: grayscale(100%) opacity(0.55);
+  transition: filter 0.3s, opacity 0.3s;
+  margin: 0 auto;
 }
 
 .brands-swiper-slide:hover .brand-logo {
   filter: grayscale(0%) opacity(1);
 }
 
-/* Ajustes móviles */
-@media (max-width: 480px) {
+/* ===== TABLET ===== */
+@media (min-width: 480px) {
+  .brands__label {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
   .brand-logo {
-    max-width: 80px;
-    max-height: 60px;
+    max-width: 100px;
+    max-height: 65px;
   }
 }
+
+/* ===== DESKTOP ===== */
+@media (min-width: 960px) {
+  .brands__label {
+    font-size: 2.1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .brand-logo {
+    max-width: 120px;
+    max-height: 80px;
+  }
+  .brands {
+    padding: 3rem 0 2rem;
+  }
+}
+
 </style>

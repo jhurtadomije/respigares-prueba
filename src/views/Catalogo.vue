@@ -116,36 +116,32 @@ const productosFiltrados = computed(() =>
 </script>
 
 <style scoped>
-.catalogo {
-  padding: 2rem;
-  text-align: center;
-}
-
 .categorias-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin: 2rem 0;
-  margin-bottom: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin: 1.5rem 0 1rem 0;
 }
+
 .categoria-card {
   position: relative;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 24px 0 #0001;
-  transition: transform .17s, box-shadow .17s;
-  min-height: 210px;
+  box-shadow: 0 2px 12px 0 #0001;
+  min-height: 160px;
   display: flex;
   align-items: stretch;
+  background: #fff;
+  transition: transform .14s, box-shadow .14s;
 }
 .categoria-card:hover {
-  transform: scale(1.04) translateY(-4px);
-  box-shadow: 0 8px 36px 0 #0002;
+  transform: scale(1.04) translateY(-3px);
+  box-shadow: 0 4px 18px 0 #0002;
 }
 .categoria-img-wrap {
   width: 100%;
-  height: 210px;
+  height: 140px;
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -159,94 +155,68 @@ const productosFiltrados = computed(() =>
   object-fit: cover;
   z-index: 1;
   transition: filter .2s;
-  filter: grayscale(0.10) brightness(0.95);
+  filter: grayscale(0.10) brightness(0.97);
 }
 .categoria-card:hover img {
   filter: none;
 }
 .categoria-gradient {
   position: absolute;
-  bottom: 0; left: 0; right: 0; height: 45%;
+  bottom: 0; left: 0; right: 0; height: 50%;
   z-index: 2;
-  background: linear-gradient(0deg,rgba(30,30,30,0.83) 65%,transparent 100%);
+  background: linear-gradient(0deg,rgba(30,30,30,0.85) 60%,transparent 100%);
 }
 .categoria-titulo {
   position: relative;
   z-index: 3;
   color: #fff;
-  font-size: 1.27rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: .03em;
-  padding: 1rem;
-  text-shadow: 0 2px 8px #0005;
+  padding: 0.8rem 0.5rem;
+  text-shadow: 0 1px 6px #0006;
   width: 100%;
   text-align: center;
 }
 
-.btn-volver {
-  margin-bottom: 1.3rem;
-  background: #008B3C;
-  color: #fff;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 1px 6px #0002;
-  transition: background .2s, box-shadow .2s;
+/* Responsive: 2 columnas tablet */
+@media (min-width: 600px) {
+  .categorias-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+  .categoria-img-wrap {
+    height: 150px;
+  }
+  .categoria-titulo {
+    font-size: 1.17rem;
+  }
 }
-.btn-volver:hover {
-  background: #006c2b;
-  box-shadow: 0 2px 12px #0002;
+/* Responsive: 3 columnas desktop mediano */
+@media (min-width: 900px) {
+  .categorias-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+  .categoria-img-wrap {
+    height: 170px;
+  }
+  .categoria-titulo {
+    font-size: 1.22rem;
+  }
+}
+/* Responsive: 4 columnas escritorio grande */
+@media (min-width: 1200px) {
+  .categorias-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .categoria-img-wrap {
+    height: 210px;
+  }
+  .categoria-titulo {
+    font-size: 1.27rem;
+  }
 }
 
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-.producto-resumido-card {
-  padding: 1.1rem 1rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 12px #0001;
-  background: #fff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: .8rem;
-  align-items: center;
-  justify-content: center;
-  min-height: 220px;
-}
-.producto-resumido-card h4 {
-  margin: 0 0 .5rem 0;
-  font-weight: 600;
-  font-size: 1.18rem;
-}
-.producto-resumido-card .mini-img {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: .6rem;
-  background: #f9f9f9;
-  box-shadow: 0 1px 6px #0002;
-}
-.btn-vermas {
-  background: #008b3c;
-  color: #fff;
-  border: none;
-  padding: .5rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: background .18s;
-  margin-top: .2rem;
-}
-.btn-vermas:hover {
-  background: #006c2b;
-}
 
 </style>

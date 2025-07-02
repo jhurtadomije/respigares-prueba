@@ -1,29 +1,21 @@
 <template>
   <section v-scroll-random-reveal>
-  <Hero />
+    <Hero />
   </section>
   <main class="home-content contenedor">
-    
     <section v-scroll-random-reveal>
-    <!-- 1. Preview de “Somos” (componente estático) -->
-    <SomosPreview />
-    </section>
-
-    <section v-scroll-random-reveal>
-    <!-- 2. Preview de “Catálogo” con las primeras 6 categorías -->
-    <CatalogPreview :categories="categoriesPreview" />
-    </section>
-
-    <section v-scroll-random-reveal>
-    <!-- 3. Carrusel de marcas -->
-    <BrandsCarousel />
+      <SomosPreview />
     </section>
     <section v-scroll-random-reveal>
-    <!-- 4. Preview de “Blog” con las últimas 4 entradas -->
-    <BlogPreview :posts="postsPreview" />
+      <CatalogPreview :categories="categoriesPreview" />
+    </section>
+    <section v-scroll-random-reveal>
+      <BrandsCarousel />
+    </section>
+    <section v-scroll-random-reveal>
+      <BlogPreview :posts="postsPreview" />
     </section>
   </main>
-
 </template>
 
 <script setup>
@@ -44,12 +36,12 @@ onMounted(async () => {
   const catRes = await fetch(`${base}categorias.json`)
   if (catRes.ok) {
     const allCats = await catRes.json()
-    categoriesPreview.value = allCats.slice(0, 16)
+    categoriesPreview.value = allCats // Ya lo limitas en CatalogPreview si quieres
   } else {
     console.error('No se encontró categorias.json en', `${base}categorias.json`)
   }
 
-  // Fetch posts (asegúrate de crear public/posts.json)
+  // Fetch posts
   const postRes = await fetch(`${base}posts.json`)
   if (postRes.ok) {
     const allPosts = await postRes.json()
@@ -60,16 +52,9 @@ onMounted(async () => {
 })
 </script>
 
-
 <style>
 .home-content {
-  margin-top: 60px; /* espacio para el header fijo */
+  margin-top: 70px;
   padding: 2rem 0;
-}
-.catalogo-grid {
-  display: grid;
-  /* Fijas 4 columnas iguales */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
 }
 </style>

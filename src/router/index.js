@@ -7,27 +7,29 @@ import ProductoDetalle from '../views/ProductoDetalle.vue'
 import AvisoLegal from '../views/AvisoLegal.vue'
 import Privacidad from '../views/Privacidad.vue'
 import Cookies from '../views/Cookies.vue'
-import Blog        from '../views/Blog.vue'
-import Noticia     from '../views/NoticiaDetalle.vue'
+import Blog from '../views/Blog.vue'
+import Noticia from '../views/NoticiaDetalle.vue'
+import TerminosYcondiciones from '../views/TerminosYcondiciones.vue'
+// import NotFound from '../views/NotFound.vue'
 
 const routes = [
-  { path: '/',           name: 'Home',           component: Home },
-  { path: '/nosotros',   name: 'Nosotros',       component: Nosotros },
-  { path: '/catalogo',   name: 'Catalogo',       component: Catalogo },
-  { path: '/contacto',   name: 'Contacto',       component: Contacto },
-  { path: '/producto/:id',name: 'ProductoDetalle',component: ProductoDetalle },
-  { path: '/avisolegal', name: 'AvisoLegal',     component: AvisoLegal },
-  { path: '/privacidad', name: 'Privacidad',     component: Privacidad },
-  { path: '/cookies',    name: 'Cookies',        component: Cookies },
-  // CORRECCIÓN: redirect de /somos apunta a /nosotros
+  { path: '/', name: 'Home', component: Home },
+  { path: '/nosotros', name: 'Nosotros', component: Nosotros },
+  { path: '/catalogo', name: 'Catalogo', component: Catalogo },
+  { path: '/contacto', name: 'Contacto', component: Contacto },
+  { path: '/producto/:id', name: 'ProductoDetalle', component: ProductoDetalle },
+  { path: '/avisolegal', name: 'AvisoLegal', component: AvisoLegal },
+  { path: '/privacidad', name: 'Privacidad', component: Privacidad },
+  { path: '/cookies', name: 'Cookies', component: Cookies },
   { path: '/somos', redirect: '/nosotros' },
-  { path: '/blog',      name: 'Blog',      component: Blog },
-  { path: '/blog/:slug', name: 'Noticia',  component: Noticia, props: true }
+  { path: '/blog', name: 'Blog', component: Blog },
+  { path: '/blog/:slug', name: 'Noticia', component: Noticia, props: true },
+  { path: '/TerminosYCondiciones', name: 'Terminos', component: TerminosYcondiciones },
+  // { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound } // opcional
 ]
 
-
 const router = createRouter({
-  history: createWebHashHistory('/respigares-prueba/'), // IMPORTANTE: hash mode para GitHub Pages
+  history: createWebHashHistory('/respigares-prueba/'),
   routes,
 })
 

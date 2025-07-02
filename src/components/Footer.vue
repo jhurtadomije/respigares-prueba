@@ -2,9 +2,8 @@
   <footer class="footer">
     <div class="footer-top contenedor">
       <!-- Columna 1: Logo y lema -->
-      <div class="footer-col">
+      <div class="footer-col footer-col--logo">
         <img src="/img/logo-mas-de-50aniv__blanco-sin-fondo.png" alt="Logo 50 Aniversario" class="logo-footer" />
-
         <p class="footer-desc">
           Distribución de alimentación profesional.<br>
           Calidad y cercanía desde Granada.
@@ -79,37 +78,44 @@ const year = new Date().getFullYear()
   color: #fff;
   padding: 0;
   font-size: 1em;
+  margin-top: 3rem;
 }
 .footer-top {
   display: flex;
-  gap: 3rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 2.5rem 0 1rem 0;
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 1.2rem 0;
   border-bottom: 1px solid #fff2;
 }
 .footer-col {
-  flex: 1 1 220px;
-  min-width: 210px;
-  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.footer-col--logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 .logo-footer {
-  width: 5rem;
-  width: 100%;
+  width: 130px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 .footer-desc {
   color: #ffe;
-  font-size: 1em;
-  margin: 0 0 1rem 0;
+  font-size: 1.07em;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 .footer-col h4 {
-  font-size: 1.2em;
+  font-size: 1.18em;
   font-weight: 700;
-  margin: 1em 0 0.7em 0;
+  margin: 1.1em 0 0.7em 0;
   color: #fff6;
   letter-spacing: 0.03em;
 }
@@ -119,25 +125,29 @@ const year = new Date().getFullYear()
   margin: 0 0 1em 0;
 }
 .footer-col ul li {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.55em;
 }
 .footer-col ul li a, .footer-col ul li span {
   color: #fff;
   text-decoration: none;
   font-size: 1em;
   transition: color 0.15s;
+  padding: 8px 0;
+  display: inline-block;
 }
 .footer-col ul li a:hover {
   color: #f9c846;
 }
 .icon {
   margin-right: 0.5em;
-  font-size: 1.1em;
+  font-size: 1.08em;
+  vertical-align: middle;
 }
 .footer-social {
   margin-top: 1rem;
   display: flex;
-  gap: 1.1rem;
+  gap: 1.2rem;
+  justify-content: center;
 }
 .footer-social a {
   color: #fff;
@@ -145,6 +155,7 @@ const year = new Date().getFullYear()
   transition: color 0.2s;
   text-decoration: none;
   opacity: 0.88;
+  display: inline-block;
 }
 .footer-social a:hover {
   color: #f9c846;
@@ -155,7 +166,7 @@ const year = new Date().getFullYear()
   background: #9b0c39;
   color: #fff9;
   padding: 1rem 0 0.7rem 0;
-  font-size: 0.97em;
+  font-size: 0.98em;
   letter-spacing: 0.01em;
 }
 .footer-bottom a {
@@ -166,15 +177,23 @@ const year = new Date().getFullYear()
 .footer-bottom a:hover {
   color: #f9c846;
 }
-@media (max-width: 900px) {
+/* ======= Desktop (900px+) ======= */
+@media (min-width: 900px) {
   .footer-top {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: stretch;
-    padding: 2rem 0 1rem 0;
+    flex-direction: row;
+    gap: 3.2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2.5rem 0 1.1rem 0;
   }
-  .footer-col {
-    margin-bottom: 0.8rem;
+  .footer-col, .footer-col--logo {
+    text-align: left;
+    align-items: flex-start;
+    max-width: 340px;
+    margin-bottom: 0;
+  }
+  .footer-social {
+    justify-content: flex-start;
   }
 }
 </style>

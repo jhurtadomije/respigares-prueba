@@ -7,20 +7,13 @@
       muted
       loop
       playsinline
-      
     >
       <source src="/videos/video-hero.mp4" type="video/mp4" />
-      <!-- Fallback para navegadores antiguos -->
       Tu navegador no soporta vídeo en HTML5.
     </video>
-
-    <!-- Capa oscura para mejorar el contraste -->
     <div class="hero-overlay"></div>
-
-    <!-- Contenido centrado -->
     <div class="hero-content">
       <img src="/img/Logomasde50anos.png" alt="Respigares" class="hero-logo" />
-
       <h1 class="hero-title">
         Especialistas en <span>productos gourmet</span>
       </h1>
@@ -33,12 +26,12 @@
     </div>
   </section>
 </template>
+
 <script setup>
 import { onMounted } from 'vue';
-
 onMounted(() => {
   const video = document.querySelector('.hero-video');
-  if (video) video.playbackRate = 0.7; 
+  if (video) video.playbackRate = 0.7;
 });
 </script>
 
@@ -46,38 +39,35 @@ onMounted(() => {
 .hero {
   position: relative;
   width: 100vw;
-
-  /* Ocupa toda la ventana menos el header fijo de 64px */
-  height: calc(100vh - 64px);
-
-  /* Si prefieres un porcentaje fijo, por ejemplo 80% de alto */
-  /* height: 80vh; */
-
+  height: calc(100vh - 64px); /* 64px = altura de tu header fijo */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  min-height: 400px;
 }
 
 .hero-video {
   position: absolute;
   top: 0; left: 0;
   width: 100vw;
-  height: 100vw;
+  height: 100%;
   object-fit: cover;
   z-index: 1;
   filter: brightness(0.82) saturate(1.1);
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0; left: 0; width: 100vw; height: 100%;
+  top: 0; left: 0;
+  width: 100vw; height: 100%;
   background: linear-gradient(90deg, #16430044 30%, #0000 100%);
   z-index: 2;
 }
 
 .hero-content {
-  margin-top: 20rem;
   position: relative;
   z-index: 3;
   display: flex;
@@ -87,14 +77,15 @@ onMounted(() => {
   color: #fff;
   text-align: center;
   width: 100%;
-  padding: 2.5rem 1rem;
-  animation: fadeIn 1.2s cubic-bezier(.8,.1,.1,1);
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  animation: fadeIn 1.8s cubic-bezier(.8,.1,.1,1);
 }
 
 .hero-logo {
   width: 170px;
   margin-bottom: 1.7rem;
   filter: drop-shadow(0 2px 18px #2228);
+  max-width: 80vw;
 }
 .hero-title {
   font-size: 2.7rem;
@@ -135,22 +126,31 @@ onMounted(() => {
   background: linear-gradient(90deg, #f5e396, #b38b25);
 }
 
-/* Responsive: móvil */
-@media (max-width: 650px) {
-  .hero-title {
-    font-size: 2rem;
+/* Mobile first: menos separación, textos pequeños, sin desbordes */
+@media (max-width: 700px) {
+  .hero {
+    height: calc(90vh - 56px);
+    min-height: 300px;
   }
   .hero-logo {
     width: 110px;
     margin-bottom: 1.1rem;
   }
+  .hero-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+  }
   .hero-content {
-    padding: 1.1rem 0.3rem;
+    padding: 1.2rem 0.2rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
   }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px);}
+  from { opacity: 0; transform: translateY(35px);}
   to   { opacity: 1; transform: none;}
 }
 </style>

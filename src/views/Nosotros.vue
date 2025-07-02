@@ -45,40 +45,35 @@
         </p>
       </div>
     </div>
-
-    
   </section>
 </template>
 
 <script setup>
-// Sin lógica en este componente, todo es estático
+// Componente estático
 </script>
 
 <style scoped>
 .somos-section {
-  position: relative;
   background: #f5f8fa;
-  padding: 4rem 1rem 6rem;
+  padding: 2rem 0 5rem 0;
   overflow: hidden;
 }
-
-/* Card introductoria */
 .somos-intro {
   background: #fff;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2rem 1rem;
   max-width: 800px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2.5rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px #0001;
 }
 .somos-intro__title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #ab0a3d;
   margin-bottom: 0.5rem;
 }
 .somos-intro__subtitle {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #7a7a7a;
   margin-bottom: 1rem;
 }
@@ -87,53 +82,55 @@
   line-height: 1.6;
 }
 
-/* Features */
 .somos-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 950px;
+  margin: 0 auto;
 }
 .feature {
-  flex: 1 1 260px;
   background: #fff;
-  border-radius: 8px;
-  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  padding: 2rem 1rem 1.3rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.15s;
 }
 .feature__icon {
-  height: 60px;
+  height: 56px;
   margin-bottom: 1rem;
 }
 .feature__title {
-  font-size: 1.25rem;
+  font-size: 1.23rem;
   color: #ab0a3d;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
 }
 .feature__text {
   color: #666;
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
-/* Imagen carrito */
-.somos-section__cart {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 250px;
-  opacity: 0.8;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .somos-section__cart {
-    display: none;
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  .somos-intro {
+    padding: 1.2rem 0.5rem;
+    font-size: 0.98rem;
+  }
+  .somos-intro__title {
+    font-size: 1.35rem;
   }
   .somos-features {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .feature {
+    padding: 1.3rem 0.5rem 1.1rem;
   }
 }
 </style>

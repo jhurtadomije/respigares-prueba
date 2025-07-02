@@ -1,4 +1,4 @@
-/* src/components/CatalogPreview.vue */
+<!-- src/components/CatalogPreview.vue -->
 <template>
   <section class="catalogo-preview contenedor">
     <h2 class="catalogo-preview__title">Nuestro catálogo</h2>
@@ -16,7 +16,6 @@
 
 <script setup>
 import { defineProps } from 'vue'
-// Espera props.categories: Array<{ id: number|string, name: string, image: string }>
 defineProps({
   categories: {
     type: Array,
@@ -26,66 +25,111 @@ defineProps({
 </script>
 
 <style scoped>
+/* ===== MOBILE FIRST ===== */
 .catalogo-preview {
-  padding: 1rem;
+  padding: 1.5rem 0.5rem;
   text-align: center;
-  overflow-anchor: none;
 }
 .catalogo-preview__title {
-  text-align: center;
-  font-size: 2.25rem;
-  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
   color: var(--color-main);
+  letter-spacing: .01em;
 }
 .catalogo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-  overflow-anchor: none;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
+
 .categoria-card {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 9px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
+  transition: box-shadow .18s, transform .18s;
 }
+.categoria-card:active,
+.categoria-card:hover {
+  box-shadow: 0 6px 18px rgba(171,10,61,0.07);
+  transform: translateY(-4px) scale(1.01);
+}
+
 .categoria-card__img {
   width: 100%;
-  /* altura flexible para que crezca según proporción */
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  display: block;
 }
+
 .categoria-card__title {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.07rem;
+  font-weight: 700;
 }
+
 .categoria-card__link {
   margin-top: auto;
-  padding: 0.75rem;
+  padding: 0.6rem;
   background: var(--color-main);
-  color: var(--color-white);
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 0.97rem;
+  border-radius: 0 0 8px 8px;
+  letter-spacing: 0.01em;
   transition: background 0.2s;
+  display: block;
 }
 .categoria-card__link:hover {
   background: var(--color-blue);
 }
 
-@media (max-width: 400px) {
+/* ====== TABLET (min 500px) ====== */
+@media (min-width: 500px) {
+  .catalogo-preview__title {
+    font-size: 1.7rem;
+  }
   .catalogo-grid {
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
   }
   .categoria-card__title {
-    font-size: 1.1rem;
+    font-size: 1.12rem;
+  }
+}
+
+/* ====== TABLET GRANDE (min 800px) ====== */
+@media (min-width: 800px) {
+  .catalogo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .categoria-card__title {
+    font-size: 1.15rem;
+  }
+}
+
+/* ====== DESKTOP (min 1150px) ====== */
+@media (min-width: 1150px) {
+  .catalogo-preview__title {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+  .catalogo-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .categoria-card__title {
+    font-size: 1.22rem;
   }
   .categoria-card__link {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    padding: 0.9rem 0;
   }
 }
 </style>
