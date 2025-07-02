@@ -1,4 +1,3 @@
-<!-- src/components/CatalogPreview.vue -->
 <template>
   <section class="catalogo-preview contenedor">
     <h2 class="catalogo-preview__title">Nuestro catálogo</h2>
@@ -25,111 +24,111 @@ defineProps({
 </script>
 
 <style scoped>
-/* ===== MOBILE FIRST ===== */
-.catalogo-preview {
-  padding: 1.5rem 0.5rem;
-  text-align: center;
-}
+
+
 .catalogo-preview__title {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-  color: var(--color-main);
-  letter-spacing: .01em;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2em;
+  color: var(--color-main, #ab0a3d);
+  font-weight: 900;
 }
+
 .catalogo-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1.5em;
+  margin-top: 2em;
 }
 
 .categoria-card {
   background: #fff;
-  border-radius: 9px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-radius: 0.7em;
+  box-shadow: 0 0.14em 0.6em #0001;
   overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
-  transition: box-shadow .18s, transform .18s;
+  transition: box-shadow .16s, transform .16s;
 }
 .categoria-card:active,
 .categoria-card:hover {
-  box-shadow: 0 6px 18px rgba(171,10,61,0.07);
-  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0.4em 1.2em #ab0a3d12;
+  transform: translateY(-0.3em) scale(1.015);
 }
 
 .categoria-card__img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   object-fit: cover;
   display: block;
+  background: #f4f4f4;
 }
 
 .categoria-card__title {
-  margin: 1rem 0 0.5rem 0;
-  font-size: 1.07rem;
+  margin: 1em 0 0.4em 0;
+  font-size: 1.15em;
   font-weight: 700;
+  color: #2c2c2c;
 }
 
 .categoria-card__link {
   margin-top: auto;
-  padding: 0.6rem;
-  background: var(--color-main);
+  padding: 0.8em 0;
+  background: var(--color-main, #ab0a3d);
   color: #fff;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.97rem;
-  border-radius: 0 0 8px 8px;
+  font-size: 1em;
+  border-radius: 0 0 0.6em 0.6em;
   letter-spacing: 0.01em;
-  transition: background 0.2s;
+  transition: background 0.18s;
   display: block;
 }
 .categoria-card__link:hover {
-  background: var(--color-blue);
+  background: var(--color-blue, #256296);
 }
 
-/* ====== TABLET (min 500px) ====== */
-@media (min-width: 500px) {
-  .catalogo-preview__title {
-    font-size: 1.7rem;
-  }
+/* Tablet: 2 columnas */
+@media (min-width: 40em) {
   .catalogo-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-  }
-  .categoria-card__title {
-    font-size: 1.12rem;
+    gap: 1.7em;
   }
 }
 
-/* ====== TABLET GRANDE (min 800px) ====== */
-@media (min-width: 800px) {
+/* Desktop: 3 columnas */
+@media (min-width: 62em) {
   .catalogo-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  .categoria-card__title {
-    font-size: 1.15rem;
+    gap: 2em;
   }
 }
 
-/* ====== DESKTOP (min 1150px) ====== */
-@media (min-width: 1150px) {
-  .catalogo-preview__title {
-    font-size: 2.1rem;
-    margin-bottom: 2rem;
-  }
+/* Desktop grande: 4 columnas */
+@media (min-width: 80em) {
   .catalogo-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 2.3em;
   }
-  .categoria-card__title {
-    font-size: 1.22rem;
+  .catalogo-preview__title {
+    font-size: 2.7rem;
   }
-  .categoria-card__link {
-    font-size: 1.05rem;
-    padding: 0.9rem 0;
+}
+
+/* --- Clase contenedor global: pon esto en tu estilos base (si no lo tienes ya) --- */
+.contenedor {
+  max-width: 70em; /* 1120px aprox (ajusta según tu Home) */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2em;
+  padding-right: 2em;
+  box-sizing: border-box;
+}
+@media (max-width: 40em) {
+  .contenedor {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
   }
 }
 </style>

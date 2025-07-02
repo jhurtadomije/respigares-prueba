@@ -1,8 +1,7 @@
-<!-- src/components/BrandsCarousel.vue -->
 <template>
   <h2 class="brands__label">Nuestras Marcas</h2>
   <section class="brands">
-    <div class="contenedor">
+     <div class="contenedor">
       <Swiper
         class="brands-swiper"
         :modules="[Navigation, Autoplay]"  
@@ -48,26 +47,26 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 /* ==== MOBILE FIRST ==== */
 .brands {
   background: var(--color-light);
-  padding: 2.2rem 0 1.6rem;
+  padding: 2.2rem 0 1.6rem 0;
   position: relative;
 }
 
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.7rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
   width: 100%;
 }
 
 .brands__label {
-  margin-top: 1.5rem;
-  display: block;
+  margin-top: 2rem;
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-size: 2.2rem;
+  font-weight: 900;
+  
   color: var(--color-main);
-  margin-bottom: 1.1rem;
+  margin-bottom: 2em;
 }
 
 .brands::after {
@@ -75,10 +74,12 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 1px;
   background: #ccc;
   opacity: 0.5;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .brands-swiper {
@@ -99,8 +100,8 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 }
 
 .brand-logo {
-  max-width: 80px;
-  max-height: 52px;
+  max-width: 5.5rem;
+  max-height: 3.3rem;
   width: 100%;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.55);
@@ -113,30 +114,30 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 }
 
 /* ===== TABLET ===== */
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .brands__label {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
   }
   .brand-logo {
-    max-width: 100px;
-    max-height: 65px;
+    max-width: 6.25rem;
+    max-height: 4.1rem;
   }
 }
 
 /* ===== DESKTOP ===== */
-@media (min-width: 960px) {
+@media (min-width: 60em) {
   .brands__label {
     font-size: 2.1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
   .brand-logo {
-    max-width: 120px;
-    max-height: 80px;
+    max-width: 7.5rem;
+    max-height: 5rem;
   }
   .brands {
-    padding: 3rem 0 2rem;
+    padding: 3rem 0 2rem 0;
   }
 }
 

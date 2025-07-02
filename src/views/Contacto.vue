@@ -1,10 +1,18 @@
 <template>
+  <!-- Cabecera visual con imagen de fondo -->
+  <div class="section-hero">
+    <img src="/img/contacto.png" alt="Contacto Respigares" class="section-hero-img" />
+    <div class="section-title-tab animate-fadein">
+      <h1>Contacto</h1>
+    </div>
+  </div>
+
   <section class="contacto contenedor">
-    <h2>Contacto</h2>
     <p class="contacto-lead">
       ¿Tienes alguna duda o deseas información? <br>
       Escríbenos y te responderemos lo antes posible.
     </p>
+
     <form class="contacto-form" @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="nombre">Nombre</label>
@@ -76,6 +84,67 @@ const handleSubmit = () => {
 </script>
 
 <style scoped>
+/* Hero cabecera tipo catálogo */
+.section-hero {
+  position: relative;
+  width: 100vw;
+  min-height: 14vw;
+  max-height: 20em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 0;
+}
+.section-hero-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(1.05) saturate(1.05);
+  pointer-events: none;
+  user-select: none;
+}
+.section-title-tab {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border-radius: 1.3em 1.3em 0 0;
+  padding: 1.5em 2em 0.8em 2em;
+  min-width: 8em;
+  margin-bottom: -1.3em;
+  margin-top: 2em;
+  box-shadow: 0 0.1em 1em #0001;
+  display: flex;
+  justify-content: center;
+}
+.section-title-tab h1 {
+  color: #ab0a3d;
+  font-size: 2.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 700px) {
+  .section-hero-img { min-height: 110px; }
+  .section-title-tab { padding: 0.9em 0.5em 0.7em 0.5em; }
+  .section-title-tab h1 { font-size: 1.5rem; }
+}
+
+/* Animación de aparición */
+.animate-fadein {
+  animation: aparecer 1.25s cubic-bezier(.8,.1,.1,1);
+}
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(35px);}
+  to   { opacity: 1; transform: none;}
+}
+
+/* El resto de tu CSS del formulario y contacto */
 .contacto {
   max-width: 540px;
   margin: 0 auto;
@@ -84,13 +153,6 @@ const handleSubmit = () => {
   border-radius: 16px;
   box-shadow: 0 4px 32px #ab0a3d22, 0 1.5px 0 #e7c95388;
   margin-top: 2.5rem;
-}
-h2 {
-  color: var(--color-main);
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: .5rem;
-  letter-spacing: 0.01em;
 }
 .contacto-lead {
   color: #707070;
@@ -108,10 +170,6 @@ h2 {
   padding: 2rem 1.2rem 1.1rem;
   box-shadow: 0 2px 10px #ab0a3d09;
   animation: aparecer 1.2s cubic-bezier(.8,.1,.1,1);
-}
-@keyframes aparecer {
-  from { opacity: 0; transform: translateY(40px);}
-  to   { opacity: 1; transform: none;}
 }
 .form-group label {
   display: block;

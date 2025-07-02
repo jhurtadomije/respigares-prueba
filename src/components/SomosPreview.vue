@@ -49,116 +49,116 @@
 </script>
 
 <style scoped>
-/* Título */
 .brands__somos {
   text-align: center;
-  font-size: 2.1rem;
-  margin: 1.5rem 0 1.2rem;
+  font-size: 2.2rem;
+  margin: 0.5rem;
   color: var(--color-main, #ab0a3d);
   letter-spacing: 0.03em;
   font-weight: 900;
 }
 
-/* Barra y subtítulo */
+.preview--somos {
+  background: #f5f8fa;
+  padding: 2.2em 2vw 3.2em 2vw;
+  text-align: center;
+  border-radius: 1em;
+  box-shadow: 0 0.13em 0.75em #ab0a3d10;
+  margin-bottom: 2.2em;
+  max-width: 65em;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
 .preview__header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.1em;
   position: relative;
 }
 .preview__white-bar {
-  width: 120px;
-  height: 14px;
-  border-radius: 30px;
+  width: 8em;
+  height: 1em;
+  border-radius: 3em;
   background: #fff;
-  box-shadow: 0 4px 16px #0001;
-  margin-bottom: 0.4rem;
+  box-shadow: 0 0.29em 1em #0001;
+  margin-bottom: 0.4em;
   z-index: 1;
 }
 .subtitle {
   color: #7a7a7a;
-  margin-bottom: 0.2rem;
-  font-size: 1.08rem;
+  margin-bottom: 0.2em;
+  font-size: 1.08em;
   font-weight: 600;
 }
 
-/* Bloque general */
-.preview--somos {
-  background: #f5f8fa;
-  padding: 1.2rem 1rem 2.2rem;
-  text-align: center;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px #ab0a3d10;
-  margin-bottom: 2.2rem;
-  position: relative;
-}
-
-/* Descripción */
 .preview__text {
-  max-width: 700px;
-  margin: 0 auto 2rem;
+  max-width: 44em;
+  margin: 0 auto 2em auto;
   color: #555;
-  font-size: 1.09rem;
+  font-size: 1.09em;
   line-height: 1.6;
   font-weight: 500;
 }
 
-/* Grid de features */
 .somos-features {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.5em;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
+  max-width: 54em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .feature {
-  flex: 1 1 240px;
-  max-width: 330px;
+  flex: 1 1 14em;
+  max-width: 21em;
   min-width: 0;
   background: #fff;
-  border-radius: 13px;
-  padding: 1.2rem 1.1rem 1.7rem;
+  border-radius: 0.8em;
+  padding: 1.2em 1em 1.7em 1em;
   text-align: center;
-  box-shadow: 0 2px 12px #0002;
+  box-shadow: 0 0.13em 0.75em #0002;
   transition: box-shadow .22s, transform .18s;
-  border: 1px solid #eee;
+  border: 0.09em solid #eee;
 }
 .feature:hover {
-  box-shadow: 0 8px 28px #ab0a3d14;
-  transform: translateY(-4px) scale(1.025);
+  box-shadow: 0 0.6em 1.8em #ab0a3d14;
+  transform: translateY(-0.25em) scale(1.025);
 }
 .feature__icon {
-  height: 55px;
-  margin-bottom: 0.9rem;
-  filter: drop-shadow(0 2px 10px #ab0a3d11);
+  height: 3.3em;
+  margin-bottom: 0.9em;
+  filter: drop-shadow(0 0.13em 0.65em #ab0a3d11);
 }
 .feature__title {
-  font-size: 1.13rem;
+  font-size: 1.13em;
   color: #ab0a3d;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.35em;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
 .feature__text {
   color: #666;
-  font-size: 0.98rem;
+  font-size: 0.98em;
   line-height: 1.55;
   font-weight: 500;
 }
 
-/* Botón */
 .btn-preview {
-  margin-top: 1.1rem;
+  margin-top: 1.1em;
   display: inline-block;
   background: #ab0a3d;
   color: #fff;
-  padding: 0.92rem 1.45rem;
-  border-radius: 22px;
+  padding: 0.92em 1.45em;
+  border-radius: 2em;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 2px 10px #ab0a3d18;
+  font-size: 1em;
+  box-shadow: 0 0.13em 0.65em #ab0a3d18;
   transition: background 0.22s, box-shadow 0.15s, filter 0.12s;
 }
 .btn-preview:hover {
@@ -166,19 +166,22 @@
   filter: brightness(1.1);
 }
 
-/* Responsive: móvil */
-@media (max-width: 800px) {
+/* Responsive móvil */
+@media (max-width: 50em) {
   .somos-features {
     flex-direction: column;
     align-items: stretch;
-    gap: 1.3rem;
+    gap: 1.3em;
   }
   .feature {
     max-width: 100%;
-    padding: 1.3rem 0.7rem 1.4rem;
+    padding: 1.3em 0.7em 1.4em 0.7em;
   }
   .brands__somos {
     font-size: 1.4rem;
+  }
+  .preview--somos {
+    padding: 1.2em 0.6em 2.2em 0.6em;
   }
 }
 </style>

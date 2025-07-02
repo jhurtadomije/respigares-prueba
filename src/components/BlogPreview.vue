@@ -51,11 +51,11 @@ defineProps({
   text-align: center;
 }
 .blog-preview__title {
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1.2rem;
   color: var(--color-main);
   font-weight: 900;
-  letter-spacing: .01em;
+ 
 }
 .blog-grid {
   display: grid;

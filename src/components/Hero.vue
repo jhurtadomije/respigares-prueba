@@ -38,8 +38,8 @@ onMounted(() => {
 <style scoped>
 .hero {
   position: relative;
-  width: 100vw;
-  height: calc(100vh - 64px); /* 64px = altura de tu header fijo */
+  width: 100%;
+  height: calc(100% - 64px); /* 64px = altura de tu header fijo */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@ onMounted(() => {
 .hero-video {
   position: absolute;
   top: 0; left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 1;
@@ -62,7 +62,8 @@ onMounted(() => {
 .hero-overlay {
   position: absolute;
   top: 0; left: 0;
-  width: 100vw; height: 100%;
+  width: 100%; 
+  height: 100%;
   background: linear-gradient(90deg, #16430044 30%, #0000 100%);
   z-index: 2;
 }

@@ -1,5 +1,5 @@
 <template>
-  <section class="nosotros-hero">
+  <section class="nosotros-hero animate-fadein">
     <img src="/img/hero-nosotros.jpg" alt="Equipo Respigares" class="nosotros-hero-img" />
     <div class="nosotros-hero-content">
       <h1>Somos</h1>
@@ -7,11 +7,13 @@
   </section>
 
   <!-- Subtítulo fuera de la pestaña -->
-  <p class="hero-subtitle-nosotros">Misión, visión y valores</p>
+  <p class="hero-subtitle-nosotros animate-fadein" style="animation-delay:.20s;">
+    Misión, visión y valores
+  </p>
 
   <div class="nosotros-wrap">
     <!-- SECCIÓN 1 -->
-    <section class="nosotros-section contenedor">
+    <section class="nosotros-section contenedor animate-stagger" style="animation-delay:.37s;">
       <div class="ns-img">
         <img src="/img/nosotros-supermercado1.jpg" alt="Supermercado" />
       </div>
@@ -30,7 +32,7 @@
     </section>
 
     <!-- SECCIÓN 2 (invertida en escritorio) -->
-    <section class="nosotros-section nosotros-section-invert contenedor">
+    <section class="nosotros-section nosotros-section-invert contenedor animate-stagger" style="animation-delay:.57s;">
       <div class="ns-img">
         <img src="/img/nosotros-supermercado2.png" alt="Equipo en supermercado" />
       </div>
@@ -52,7 +54,7 @@
     </section>
 
     <!-- SECCIÓN 3 -->
-    <section class="nosotros-section contenedor">
+    <section class="nosotros-section contenedor animate-stagger" style="animation-delay:.77s;">
       <div class="ns-img">
         <img src="/img/nosotros-carrito.jpg" alt="Historia Respigares" />
       </div>
@@ -68,7 +70,7 @@
     </section>
 
     <!-- VALORES -->
-    <section class="nosotros-valores contenedor">
+    <section class="nosotros-valores contenedor animate-stagger" style="animation-delay:.97s;">
       <h3 class="valores-title">• VALORES •</h3>
       <div class="valores-grid">
         <div class="valor">
@@ -99,7 +101,7 @@
     </section>
 
     <!-- EQUIPO -->
-    <section class="nosotros-equipo contenedor">
+    <section class="nosotros-equipo contenedor animate-stagger" style="animation-delay:1.17s;">
       <h2 class="equipo-title">Equipo</h2>
       <p class="equipo-subtitle">Los profesionales</p>
       <div class="equipo-grid">
@@ -422,4 +424,17 @@
     min-width: 0;
   }
 }
+/* Animaciones de aparición */
+.animate-fadein {
+  animation: aparecer 1.05s cubic-bezier(.8,.1,.1,1);
+}
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(32px);}
+  to   { opacity: 1; transform: none;}
+}
+.animate-stagger {
+  opacity: 0;
+  animation: aparecer 1.08s cubic-bezier(.8,.1,.1,1) forwards;
+}
+
 </style>

@@ -1,14 +1,14 @@
 <template>
   <!-- Cabecera visual con imagen de fondo -->
-  <div class="catalogo-hero">
+  <div class="catalogo-hero animate-fadein">
     <img src="/img/hero-catalogo.jpg" alt="Catálogo de productos" class="catalogo-hero-img" />
-    <div class="catalogo-title-tab">
+    <div class="catalogo-title-tab animate-fadein">
       <h1>Catálogo</h1>
     </div>
   </div>
 
   <!-- Descripción debajo de la pestaña -->
-  <div class="catalogo-desc-wrap">
+  <div class="catalogo-desc-wrap animate-fadein-slow">
     <p class="catalogo-desc">
       Representamos y distribuimos <b>más de 4.000 referencias de alimentos de primera calidad</b>, tanto en formato de distribución para canal HORECA como en formato para consumo de clientes particulares a través de grandes cuentas o detallistas.
       Te invitamos a visitar cada una de las categorías de nuestro catálogo y <b>no dudes en contactar con nuestro departamento comercial para atenderte como mereces</b>.
@@ -203,4 +203,20 @@ onMounted(async () => {
   .categoria-card__img { width: 9em; height: 9em; }
   .catalogo { padding-left: 0.5em; padding-right: 0.5em; }
 }
+/* Animaciones de aparición */
+.animate-fadein {
+  animation: aparecer 1.08s cubic-bezier(.8,.1,.1,1);
+}
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(35px);}
+  to   { opacity: 1; transform: none;}
+}
+.animate-fadein-slow {
+  animation: aparecer 1.5s cubic-bezier(.8,.1,.1,1);
+}
+.animate-stagger {
+  opacity: 0;
+  animation: aparecer 0.7s cubic-bezier(.8,.1,.1,1) forwards;
+}
+
 </style>

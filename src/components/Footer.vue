@@ -2,7 +2,7 @@
   <footer class="footer">
     <!-- Línea superior: menú de navegación y logo -->
     <div class="footer-top contenedor">
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Enlaces principales">
         <router-link to="/">INICIO</router-link>
         <router-link to="/nosotros">SOMOS</router-link>
         <router-link to="/catalogo">CATÁLOGO</router-link>
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <!-- Línea central: bloque de info UE y texto institucional -->
+    <!-- Línea central: info UE y texto institucional -->
     <div class="footer-middle contenedor">
       <img src="/img/logofeder.svg" alt="Unión Europea" class="footer-ue-img" />
       <div class="footer-middle-desc">
@@ -58,6 +58,7 @@ const year = new Date().getFullYear()
   box-sizing: border-box;
   letter-spacing: 0.01em;
 }
+
 .contenedor {
   max-width: 1300px;
   margin: 0 auto;
@@ -74,6 +75,7 @@ const year = new Date().getFullYear()
   padding: 2.5rem 0 1.3rem 0;
   gap: 2.5rem;
 }
+
 .footer-nav {
   display: flex;
   flex-direction: column;
@@ -95,11 +97,14 @@ const year = new Date().getFullYear()
 }
 .footer-logo-wrap {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-logo-main {
-  width: 150px;
+  width: 9.7rem;
   max-width: 90vw;
-  margin: 0 1rem;
+  margin: 0 1.4rem;
   display: block;
   filter: drop-shadow(0 2px 10px #0003);
 }
@@ -116,24 +121,32 @@ const year = new Date().getFullYear()
 /* Línea central info */
 .footer-middle {
   display: flex;
-  align-items: flex-start;
-  gap: 1.8em;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8em;
   border-top: 1px solid #b31d47;
   border-bottom: 1px solid #b31d47;
-  padding: 1.3rem 0 1rem 0;
+  padding: 1em 0 1em 0;
   margin-bottom: 0.5em;
+  text-align: center;
 }
 .footer-ue-img {
-  width: 100px;
-  max-width: 35vw;
-  background: #fff;
-  border-radius: 0.5em;
-  margin-right: 1.5em;
+  display: block;
+  height: 28px;
+  width: auto;
+  max-width: 80px;
+  min-width: 40px;
+  object-fit: contain;
+  
+  border-radius: 8px;
+  margin-bottom: 0.8em;
+  margin-right: 0;
+  box-shadow: 0 2px 12px #0002;
 }
 .footer-middle-desc {
-  font-size: 0.97em;
-  color: #fff;
-  text-align: left;
+  font-size: 0.8em;
+  
+  text-align: center;
 }
 
 /* Línea inferior */
@@ -160,6 +173,7 @@ const year = new Date().getFullYear()
   display: flex;
   gap: 1.8em;
   font-size: 0.97em;
+  flex-wrap: wrap;
 }
 .footer-bottom-links a {
   color: #fff7;
@@ -202,12 +216,12 @@ const year = new Date().getFullYear()
     padding-right: 0.7rem;
   }
   .footer-logo-main {
-    width: 80vw;
-    max-width: 170px;
+    width: 60vw;
+    max-width: 130px;
   }
   .footer-ue-img {
-    width: 50vw;
-    max-width: 100px;
+    width: 30vw;
+    max-width: 80px;
   }
 }
 </style>

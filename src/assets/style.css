@@ -27,26 +27,29 @@ body {
   transition: background 0.18s;
 }
 
+/* === HEADER Y LOGO === */
 .header-content {
   width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  height: 56px;
+  min-height: 3.6rem;      /* Suficiente para el logo + padding */
+  padding: 0.5rem 1rem;    /* Espaciado arriba y abajo */
   justify-content: space-between;
   gap: 1rem;
-  padding: 0 1rem;
+  box-sizing: border-box;
 }
-
-/* Logo más pequeño para mobile */
 .logo {
   height: 2.8rem;
+  display: block;
+  max-width: 80vw;
+  object-fit: contain;
 }
 
 /* NAV — MENÚ MÓVIL */
 .nav {
   position: absolute;
-  top: 56px;
+  top: 100%;
   right: 0;
   flex-direction: column;
   background: var(--color-main);
@@ -208,12 +211,12 @@ button:hover, .btn:hover {
 @media (min-width: 768px) {
   .header-content {
     max-width: 1200px;
-    height: 64px;
-    padding: 0 1.5rem;
+    min-height: 5.3rem;      /* Antes 64px. Suficiente para el logo y padding extra */
+    padding: 0.7rem 1.5rem;
     gap: 2rem;
   }
   .logo {
-    height: 4.5rem;
+    height: 4.2rem; /* Ajusta según tu logo. Si se corta, sube el min-height del header */
   }
   .nav {
     position: static;
@@ -243,5 +246,3 @@ button:hover, .btn:hover {
     max-width: 800px;
   }
 }
-
-
