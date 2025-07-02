@@ -1,7 +1,9 @@
 <!-- src/components/BlogPreview.vue -->
 <template>
   <section class="blog-preview contenedor">
-    <h2 class="blog-preview__title">Blog</h2>
+    <h2 v-if="showTitle" class="blog-preview__title">
+      Blog
+    </h2>
     <div class="blog-grid">
       <article
         v-for="post in posts"
@@ -36,12 +38,11 @@ import { defineProps } from 'vue'
 const BASE = import.meta.env.BASE_URL
 
 defineProps({
-  posts: {
-    type: Array,
-    required: true
-  }
+  posts: { type: Array, required: true },
+  showTitle: { type: Boolean, default: true }
 })
 </script>
+
 
 <style scoped>
 /* ===== MOBILE FIRST ===== */

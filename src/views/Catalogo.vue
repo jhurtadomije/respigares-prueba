@@ -1,222 +1,206 @@
 <template>
-  <section class="catalogo contenedor">
-    <h2>Catálogo</h2>
-
-    <!-- Vista de Categorías -->
-    <div v-if="!categoriaSeleccionada">
-      <div class="categorias-grid">
-        <div
-          v-for="cat in categorias"
-          :key="cat.nombre"
-          class="categoria-card"
-          @click="categoriaSeleccionada = cat.nombre"
-        >
-          <div class="categoria-img-wrap">
-            <img :src="cat.imagen" :alt="cat.nombre" />
-            <div class="categoria-gradient"></div>
-            <span class="categoria-titulo">{{ cat.nombre }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Vista de Productos de la Categoría -->
-    <!-- ...código anterior... -->
-<div v-else>
-  <button @click="categoriaSeleccionada = null" class="btn-volver">
-    ← Volver a categorías
-  </button>
-  <h3>Productos en {{ categoriaSeleccionada }}</h3>
-  <div class="grid-productos">
-    <div v-for="p in productosFiltrados" :key="p.nombre" class="producto-resumido-card">
-      <h4>{{ p.nombre }}</h4>
-      <!-- Imagen principal del producto (si tiene) -->
-      <img v-if="p.imagen" :src="p.imagen" :alt="p.nombre" class="mini-img" />
-      <router-link :to="`/producto/${p.nombre}`" class="btn-vermas">
-        Ver más
-      </router-link>
+  <!-- Cabecera visual con imagen de fondo -->
+  <div class="catalogo-hero">
+    <img src="/img/hero-catalogo.jpg" alt="Catálogo de productos" class="catalogo-hero-img" />
+    <div class="catalogo-title-tab">
+      <h1>Catálogo</h1>
     </div>
   </div>
-</div>
+
+  <!-- Descripción debajo de la pestaña -->
+  <div class="catalogo-desc-wrap">
+    <p class="catalogo-desc">
+      Representamos y distribuimos <b>más de 4.000 referencias de alimentos de primera calidad</b>, tanto en formato de distribución para canal HORECA como en formato para consumo de clientes particulares a través de grandes cuentas o detallistas.
+      Te invitamos a visitar cada una de las categorías de nuestro catálogo y <b>no dudes en contactar con nuestro departamento comercial para atenderte como mereces</b>.
+    </p>
+  </div>
+
+  <!-- Grid de categorías -->
+  <section class="catalogo contenedor">
+    <div class="catalogo-grid">
+      <div
+        v-for="cat in categories"
+        :key="cat.id"
+        class="categoria-card"
+      >
+        <img :src="cat.image" :alt="cat.name" class="categoria-card__img" />
+        <h3 class="categoria-card__title">{{ cat.name }}</h3>
+        <router-link :to="`/catalogo?cat=${cat.id}`" class="categoria-card__link">
+          VER PRODUCTOS
+        </router-link>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import ProductCard from '../components/ProductCard.vue'
+import { ref, onMounted } from 'vue'
 
-// 1. Objeto para las imágenes por categoría
-const CATEGORIA_IMAGENES = {
-  'Aceites': 'https://respigares.es/wp-content/uploads/2025/02/aceites-categoria.jpg',
-  'Aceites de oliva': 'https://respigares.es/wp-content/uploads/2025/02/aceites-oliva.jpg',
-  'Aceites especiales': 'https://respigares.es/wp-content/uploads/2025/02/aceites-especiales.jpg',
-  'Aceitunas': 'https://respigares.es/wp-content/uploads/2025/02/aceitunas.jpg',
-  'Conservas Vegetales': 'https://respigares.es/wp-content/uploads/2025/02/conservas-vegetales.jpg',
-  'Conservas de Alcachofa': 'https://respigares.es/wp-content/uploads/2025/02/alcachofas.jpg',
-  'Conservas de Espárragos': 'https://respigares.es/wp-content/uploads/2025/02/esparragos.jpg',
-  'Conservas de Pimientos': 'https://respigares.es/wp-content/uploads/2025/02/pimientos.jpg',
-  'Conservas de Tomate': 'https://respigares.es/wp-content/uploads/2025/02/tomate.jpg',
-  'Conservas de Legumbres': 'https://respigares.es/wp-content/uploads/2025/02/legumbres.jpg',
-  'Conservas de Frutas': 'https://respigares.es/wp-content/uploads/2025/02/frutas.jpg',
-  'Conservas de Verduras': 'https://respigares.es/wp-content/uploads/2025/02/verduras.jpg',
-  'Encurtidos': 'https://respigares.es/wp-content/uploads/2025/02/encurtidos.jpg',
-  'Banderillas': 'https://respigares.es/wp-content/uploads/2025/02/banderillas.jpg',
-  'Pepinillos': 'https://respigares.es/wp-content/uploads/2025/02/pepinillos.jpg',
-  'Cebolletas': 'https://respigares.es/wp-content/uploads/2025/02/cebolletas.jpg',
-  'Alcaparras': 'https://respigares.es/wp-content/uploads/2025/02/alcaparras.jpg',
-  'Guindillas': 'https://respigares.es/wp-content/uploads/2025/02/guindillas.jpg',
-  'Mix encurtidos': 'https://respigares.es/wp-content/uploads/2025/02/mix-encurtidos.jpg',
-  'Salsas': 'https://respigares.es/wp-content/uploads/2025/02/salsas.jpg',
-  'Mayonesas': 'https://respigares.es/wp-content/uploads/2025/02/mayonesa.jpg',
-  'Salsas especiales': 'https://respigares.es/wp-content/uploads/2025/02/salsas-especiales.jpg',
-  'Kétchup': 'https://respigares.es/wp-content/uploads/2025/02/ketchup.jpg',
-  'Mojo': 'https://respigares.es/wp-content/uploads/2025/02/mojo.jpg',
-  'Alioli': 'https://respigares.es/wp-content/uploads/2025/02/alioli.jpg',
-  'Vinagretas': 'https://respigares.es/wp-content/uploads/2025/02/vinagretas.jpg',
-  'Especias': 'https://respigares.es/wp-content/uploads/2025/02/especias.jpg',
-  'Hierbas aromáticas': 'https://respigares.es/wp-content/uploads/2025/02/hierbas-aromaticas.jpg',
-  'Pimentón': 'https://respigares.es/wp-content/uploads/2025/02/pimenton.jpg',
-  'Comino': 'https://respigares.es/wp-content/uploads/2025/02/comino.jpg',
-  'Sal': 'https://respigares.es/wp-content/uploads/2025/02/sal.jpg',
-  'Azafrán': 'https://respigares.es/wp-content/uploads/2025/02/azafran.jpg',
-  'Condimentos': 'https://respigares.es/wp-content/uploads/2025/02/condimentos.jpg',
-  'Pimienta': 'https://respigares.es/wp-content/uploads/2025/02/pimienta.jpg',
-  'Otros': 'https://respigares.es/wp-content/uploads/2025/02/otros.jpg',
-  // ... Puedes añadir más categorías personalizadas aquí
-}
-
-
-const productos = ref([])
-const categoriaSeleccionada = ref(null)
+// Carga categorías desde categorias.json
+const categories = ref([])
 
 onMounted(async () => {
-  const res = await fetch(`${import.meta.env.BASE_URL}productos.json`)
-  productos.value = await res.json()
+  const res = await fetch(`${import.meta.env.BASE_URL}categorias.json`)
+  if (res.ok) categories.value = await res.json()
 })
-
-
-// 2. Extraer categorías únicas y asociar imagen
-const categorias = computed(() => {
-  const mapa = {}
-  productos.value.forEach(p => {
-    if (!mapa[p.categoria]) {
-      mapa[p.categoria] = true
-    }
-  })
-  return Object.keys(mapa).map(nombre => ({
-    nombre,
-    imagen: CATEGORIA_IMAGENES[nombre] || '/img/categorias/default.jpg'
-  }))
-})
-
-// 3. Filtrar productos por categoría seleccionada
-const productosFiltrados = computed(() =>
-  productos.value.filter(p => p.categoria === categoriaSeleccionada.value)
-)
 </script>
 
 <style scoped>
-.categorias-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.2rem;
-  margin: 1.5rem 0 1rem 0;
-}
-
-.categoria-card {
+/* Cabecera visual */
+.catalogo-hero {
   position: relative;
-  cursor: pointer;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 2px 12px 0 #0001;
-  min-height: 160px;
-  display: flex;
-  align-items: stretch;
-  background: #fff;
-  transition: transform .14s, box-shadow .14s;
-}
-.categoria-card:hover {
-  transform: scale(1.04) translateY(-3px);
-  box-shadow: 0 4px 18px 0 #0002;
-}
-.categoria-img-wrap {
-  width: 100%;
-  height: 140px;
-  position: relative;
+  width: 100vw;
+  min-height: 14vw;
+  max-height: 20em;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: #f4f4f4;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 0;
 }
-.categoria-img-wrap img {
+.catalogo-hero-img {
   position: absolute;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100vw;
+  height: 100%;
   object-fit: cover;
   z-index: 1;
-  transition: filter .2s;
-  filter: grayscale(0.10) brightness(0.97);
+  filter: brightness(1.05) saturate(1.05);
+  pointer-events: none;
+  user-select: none;
 }
-.categoria-card:hover img {
-  filter: none;
-}
-.categoria-gradient {
-  position: absolute;
-  bottom: 0; left: 0; right: 0; height: 50%;
-  z-index: 2;
-  background: linear-gradient(0deg,rgba(30,30,30,0.85) 60%,transparent 100%);
-}
-.categoria-titulo {
+.catalogo-title-tab {
   position: relative;
-  z-index: 3;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 0.8rem 0.5rem;
-  text-shadow: 0 1px 6px #0006;
-  width: 100%;
+  z-index: 2;
+  background: #fff;
+  border-radius: 1.3em 1.3em 0 0;
+  padding: 1.5em 2em 0.8em 2em;
+  min-width: 8em;
+  margin-bottom: -1.3em;
+  margin-top: 2em;
+  box-shadow: 0 0.1em 1em #0001;
+  display: flex;
+  justify-content: center;
+}
+.catalogo-title-tab h1 {
+  color: #ab0a3d;
+  font-size: 2.7rem;
+  font-weight: bold;
   text-align: center;
+  margin: 1rem;
+  letter-spacing: 0.01em;
 }
 
-/* Responsive: 2 columnas tablet */
-@media (min-width: 600px) {
-  .categorias-grid {
+.catalogo-desc-wrap {
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.catalogo-desc {
+  margin: 3em auto 1.5em auto;
+  max-width: 50em;
+  color: #4a4a4a;
+  text-align: center;
+  font-size: 1.14em;
+  background: none;
+  padding: 0 2em;
+  line-height: 1.6;
+}
+.catalogo-desc b {
+  color: #464b55;
+  font-weight: 700;
+}
+
+/* Grid de categorías */
+.catalogo {
+  width: 100%;
+  max-width: 78em;
+  margin: 0 auto 3em auto;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  box-sizing: border-box;
+  background: transparent;
+}
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4em;
+  margin: 2em 0 0 0;
+  justify-content: center;
+}
+.categoria-card {
+  background: none;
+  border-radius: 0.3em;
+  box-shadow: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform .14s;
+}
+.categoria-card__img {
+  width: 13em;
+  height: 13em;
+  object-fit: cover;
+  margin-bottom: 0.7em;
+  border-radius: 0.15em;
+  box-shadow: 0 2px 8px #0002;
+}
+.categoria-card__title {
+  margin: 0 0 0.6em 0;
+  font-size: 1.47em;
+  font-weight: 800;
+  color: #767676;
+  letter-spacing: -0.03em;
+  text-align: center;
+  line-height: 1.13;
+}
+.categoria-card__link {
+  margin-top: 0.3em;
+  padding: 0.6em 1.6em;
+  background: #326999;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.03em;
+  border-radius: 1.5em;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 6px #0001;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+  cursor: pointer;
+}
+.categoria-card__link:hover {
+  background: #ab0a3d;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (min-width: 32em) {
+  .catalogo-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.3rem;
-  }
-  .categoria-img-wrap {
-    height: 150px;
-  }
-  .categoria-titulo {
-    font-size: 1.17rem;
+    gap: 2.6em;
   }
 }
-/* Responsive: 3 columnas desktop mediano */
-@media (min-width: 900px) {
-  .categorias-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.4rem;
-  }
-  .categoria-img-wrap {
-    height: 170px;
-  }
-  .categoria-titulo {
-    font-size: 1.22rem;
-  }
-}
-/* Responsive: 4 columnas escritorio grande */
-@media (min-width: 1200px) {
-  .categorias-grid {
+@media (min-width: 54em) {
+  .catalogo-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 2.8em;
   }
-  .categoria-img-wrap {
-    height: 210px;
-  }
-  .categoria-titulo {
-    font-size: 1.27rem;
+  .categoria-card__img {
+    width: 13em;
+    height: 13em;
   }
 }
-
-
+@media (max-width: 700px) {
+  .catalogo-hero-img { min-height: 110px; }
+  .catalogo-title-tab { padding: 0.9em 0.5em 0.7em 0.5em; }
+  .catalogo-title-tab h1 { font-size: 1.5rem; }
+  .catalogo-desc { font-size: 1em; padding: 0 0.4em; }
+  .categoria-card__img { width: 9em; height: 9em; }
+  .catalogo { padding-left: 0.5em; padding-right: 0.5em; }
+}
 </style>

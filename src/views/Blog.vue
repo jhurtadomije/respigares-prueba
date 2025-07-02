@@ -1,20 +1,15 @@
-<!-- src/views/Blog.vue -->
 <template>
-  <Header />
-  <main class="page-blog">
+  <div class="page-wrap">
     <h1 class="page-title">Blog</h1>
     <div v-if="posts.length">
-      <BlogPreview :posts="posts" />
+      <BlogPreview :posts="posts" :showTitle="false" />
     </div>
     <p v-else class="loading-posts">Cargando noticias…</p>
-  </main>
-  <Footer />
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import Header       from '../components/Header.vue'
-import Footer       from '../components/Footer.vue'
 import BlogPreview  from '../components/BlogPreview.vue'
 
 const posts = ref([])
@@ -31,11 +26,14 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.page-blog {
+.page-wrap {
   margin-top: 80px;
   padding: 2.5rem 0 2rem 0;
   background: #fff;
   min-height: 70vh;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .page-title {
   text-align: center;
@@ -52,7 +50,7 @@ onMounted(async () => {
   margin-top: 4rem;
 }
 @media (max-width: 600px) {
-  .page-blog {
+  .page-wrap {
     padding: 1.2rem 0 1.2rem 0;
   }
   .page-title {

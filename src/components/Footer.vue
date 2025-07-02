@@ -1,69 +1,44 @@
 <template>
   <footer class="footer">
+    <!-- Línea superior: menú de navegación y logo -->
     <div class="footer-top contenedor">
-      <!-- Columna 1: Logo y lema -->
-      <div class="footer-col footer-col--logo">
-        <img src="/img/logo-mas-de-50aniv__blanco-sin-fondo.png" alt="Logo 50 Aniversario" class="logo-footer" />
-        <p class="footer-desc">
-          Distribución de alimentación profesional.<br>
-          Calidad y cercanía desde Granada.
-        </p>
+      <nav class="footer-nav">
+        <router-link to="/">INICIO</router-link>
+        <router-link to="/nosotros">SOMOS</router-link>
+        <router-link to="/catalogo">CATÁLOGO</router-link>
+        <router-link to="/blog">BLOG</router-link>
+        <router-link to="/contacto">CONTACTO</router-link>
+      </nav>
+      <div class="footer-logo-wrap">
+        <img src="/img/logo-mas-de-50aniv__blanco-sin-fondo.png" alt="Logo Respigares" class="footer-logo-main" />
       </div>
-      <!-- Columna 2: Enlaces rápidos y legales -->
-      <div class="footer-col">
-        <h4>Enlaces</h4>
-        <ul>
-          <li><router-link to="/">Inicio</router-link></li>
-          <li><router-link to="/catalogo">Catálogo</router-link></li>
-          <li><router-link to="/contacto">Contacto</router-link></li>
-        </ul>
-        <h4>Avisos legales</h4>
-        <ul>
-          <li><router-link to="/avisolegal">Aviso legal</router-link></li>
-          <li><router-link to="/privacidad">Política de privacidad</router-link></li>
-          <li><router-link to="/cookies">Política de cookies</router-link></li>
-        </ul>
-      </div>
-      <!-- Columna 3: Contacto y redes -->
-      <div class="footer-col">
-        <h4>Contacto</h4>
-        <ul>
-          <li>
-            <a href="tel:+34958256738">
-              <span class="icon">📞</span> 958 25 67 38
-            </a>
-          </li>
-          <li>
-            <a href="mailto:info@respigares.es">
-              <span class="icon">✉️</span> info@respigares.es
-            </a>
-          </li>
-          <li>
-            <a href="https://maps.google.com/?q=Av.+de+Andalucía+102,+Granada" target="_blank" rel="noopener">
-              <span class="icon">📍</span> Av. de Andalucía 102, Granada
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/34666666666?text=Hola%20Respigares%2C%20quiero%20información%20sobre%20vuestros%20productos" target="_blank" rel="noopener">
-              <span class="icon">💬</span> WhatsApp
-            </a>
-          </li>
-        </ul>
-        <div class="footer-social">
-          <a href="https://facebook.com/" target="_blank" aria-label="Facebook" rel="noopener">🌐</a>
-          <a href="https://instagram.com/" target="_blank" aria-label="Instagram" rel="noopener">📸</a>
-          <a href="https://wa.me/34666666666" target="_blank" aria-label="WhatsApp" rel="noopener">🟢</a>
-        </div>
+      <div class="footer-contact">
+        <div>958 551 801<br />info@respigares.es</div>
+        <div>Calle Almería, 8, 18194<br />Churriana de la Vega, Granada</div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>
-        © {{ year }} Respigares. Todos los derechos reservados.
-        &nbsp;|&nbsp;
-        <router-link to="/privacidad">Política de privacidad</router-link>
-        &nbsp;|&nbsp;
-        <router-link to="/cookies">Cookies</router-link>
-      </p>
+
+    <!-- Línea central: bloque de info UE y texto institucional -->
+    <div class="footer-middle contenedor">
+      <img src="/img/logofeder.svg" alt="Unión Europea" class="footer-ue-img" />
+      <div class="footer-middle-desc">
+        REPRESENTACIONES ESPIGARES SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha desarrollado una Web Corporativa y una Solución de Comercio Electrónico, para la mejora de competitividad y productividad de la empresa. [22/12/2018]. Para ello ha contado con el apoyo del Programa TicCámaras de la Cámara de Comercio de Granada.
+      </div>
+    </div>
+
+    <!-- Línea inferior: copyright y legales -->
+    <div class="footer-bottom contenedor">
+      <div class="footer-bottom-row">
+        <div class="footer-bottom-copy">
+          COPYRIGHT © {{ year }} - REPRESENTACIONES ESPIGARES
+        </div>
+        <div class="footer-bottom-links">
+          <router-link to="/cookies">Política de cookies</router-link>
+          <router-link to="/avisolegal">Aviso Legal</router-link>
+          <router-link to="/privacidad">Política de privacidad</router-link>
+          <router-link to="/TerminosYCondiciones">Términos y condiciones</router-link>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -74,126 +49,165 @@ const year = new Date().getFullYear()
 
 <style scoped>
 .footer {
-  background: #ab0a3d;
+  background: #a50c3a;
   color: #fff;
-  padding: 0;
   font-size: 1em;
-  margin-top: 3rem;
-}
-.footer-top {
-  display: flex;
-  flex-direction: column;
-  gap: 2.2rem;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0 1.2rem 0;
-  border-bottom: 1px solid #fff2;
-}
-.footer-col {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-.footer-col--logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-.logo-footer {
-  width: 130px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-.footer-desc {
-  color: #ffe;
-  font-size: 1.07em;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-.footer-col h4 {
-  font-size: 1.18em;
-  font-weight: 700;
-  margin: 1.1em 0 0.7em 0;
-  color: #fff6;
-  letter-spacing: 0.03em;
-}
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1em 0;
-}
-.footer-col ul li {
-  margin-bottom: 0.55em;
-}
-.footer-col ul li a, .footer-col ul li span {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-  transition: color 0.15s;
-  padding: 8px 0;
-  display: inline-block;
-}
-.footer-col ul li a:hover {
-  color: #f9c846;
-}
-.icon {
-  margin-right: 0.5em;
-  font-size: 1.08em;
-  vertical-align: middle;
-}
-.footer-social {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1.2rem;
-  justify-content: center;
-}
-.footer-social a {
-  color: #fff;
-  font-size: 1.6em;
-  transition: color 0.2s;
-  text-decoration: none;
-  opacity: 0.88;
-  display: inline-block;
-}
-.footer-social a:hover {
-  color: #f9c846;
-  opacity: 1;
-}
-.footer-bottom {
-  text-align: center;
-  background: #9b0c39;
-  color: #fff9;
-  padding: 1rem 0 0.7rem 0;
-  font-size: 0.98em;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  box-sizing: border-box;
   letter-spacing: 0.01em;
 }
-.footer-bottom a {
-  color: #fff7;
-  text-decoration: underline;
-  margin: 0 0.4em;
+.contenedor {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
+  width: 100%;
 }
-.footer-bottom a:hover {
+
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2.5rem 0 1.3rem 0;
+  gap: 2.5rem;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  margin-top: 0.5em;
+}
+.footer-nav a {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-size: 1em;
+  margin-bottom: 0.2em;
+  transition: color 0.15s;
+}
+.footer-nav a:hover {
   color: #f9c846;
 }
-/* ======= Desktop (900px+) ======= */
-@media (min-width: 900px) {
-  .footer-top {
-    flex-direction: row;
-    gap: 3.2rem;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 2.5rem 0 1.1rem 0;
+.footer-logo-wrap {
+  text-align: center;
+}
+.footer-logo-main {
+  width: 150px;
+  max-width: 90vw;
+  margin: 0 1rem;
+  display: block;
+  filter: drop-shadow(0 2px 10px #0003);
+}
+.footer-contact {
+  text-align: right;
+  font-size: 0.99em;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.footer-contact div {
+  margin-bottom: 0.5em;
+}
+
+/* Línea central info */
+.footer-middle {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.8em;
+  border-top: 1px solid #b31d47;
+  border-bottom: 1px solid #b31d47;
+  padding: 1.3rem 0 1rem 0;
+  margin-bottom: 0.5em;
+}
+.footer-ue-img {
+  width: 100px;
+  max-width: 35vw;
+  background: #fff;
+  border-radius: 0.5em;
+  margin-right: 1.5em;
+}
+.footer-middle-desc {
+  font-size: 0.97em;
+  color: #fff;
+  text-align: left;
+}
+
+/* Línea inferior */
+.footer-bottom {
+  background: #95153c;
+  color: #fff9;
+  font-size: 0.97em;
+  padding: 0.6rem 0 0.7rem 0;
+}
+.footer-bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+.footer-bottom-copy {
+  font-size: 0.98em;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+.footer-bottom-links {
+  display: flex;
+  gap: 1.8em;
+  font-size: 0.97em;
+}
+.footer-bottom-links a {
+  color: #fff7;
+  text-decoration: underline;
+  transition: color 0.12s;
+}
+.footer-bottom-links a:hover {
+  color: #f9c846;
+}
+
+@media (max-width: 900px) {
+  .footer-top,
+  .footer-middle,
+  .footer-bottom-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .footer-col, .footer-col--logo {
-    text-align: left;
-    align-items: flex-start;
-    max-width: 340px;
-    margin-bottom: 0;
+  .footer-contact {
+    text-align: center;
+    margin-top: 1em;
   }
-  .footer-social {
-    justify-content: flex-start;
+  .footer-logo-main {
+    margin: 1.4em 0 1em 0;
+  }
+  .footer-middle {
+    gap: 0.7em;
+    padding: 1.2em 0;
+  }
+  .footer-bottom-links {
+    gap: 0.7em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+  .footer-logo-main {
+    width: 80vw;
+    max-width: 170px;
+  }
+  .footer-ue-img {
+    width: 50vw;
+    max-width: 100px;
   }
 }
 </style>
