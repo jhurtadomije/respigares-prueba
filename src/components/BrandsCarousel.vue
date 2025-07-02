@@ -84,7 +84,7 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 }
 
 .brands-swiper {
-  width: 100%;
+  max-width: 100%;
   --swiper-navigation-color: var(--color-main);
   padding-bottom: 1.2rem;
   overflow: visible;
