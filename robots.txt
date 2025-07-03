@@ -1,0 +1,21 @@
+# Bloquea todas las carpetas sensibles y archivos privados
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /panel/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /api/
+Disallow: /node_modules/
+Disallow: /assets/privado/
+Disallow: /*.php$
+Disallow: /*.env$
+Disallow: /*.git$
+Disallow: /README.md
+
+# Permite el acceso completo al resto del sitio
+Allow: /
+
+# Indica el sitemap principal
+Sitemap: https://respigares.es/sitemap.xml
