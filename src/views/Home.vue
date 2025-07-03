@@ -20,6 +20,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useHead } from '@vueuse/head'
 import Hero           from '../components/Hero.vue'
 import SomosPreview   from '../components/SomosPreview.vue'
 import CatalogPreview from '../components/CatalogPreview.vue'
@@ -49,6 +50,20 @@ onMounted(async () => {
   } else {
     console.error('No se encontró posts.json en', `${base}posts.json`)
   }
+})
+
+useHead({
+  title: 'Respigares | Distribución de productos gourmet en Andalucía',
+  meta: [
+    { name: 'description', content: 'Distribuimos más de 4.000 referencias de alimentos gourmet y productos premium para hostelería y particulares. Calidad, confianza y cercanía desde 1971.' },
+    { property: 'og:title', content: 'Respigares | Distribución de productos gourmet en Andalucía' },
+    { property: 'og:description', content: 'Representaciones Espigares: calidad, confianza y un amplio catálogo de productos de alimentación.' },
+    { property: 'og:image', content: 'https://www.respigares.es/img/hero-catalogo.jpg' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.respigares.es/' }
+  ]
 })
 </script>
 

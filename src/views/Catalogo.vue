@@ -34,6 +34,7 @@
 </template>
 
 <script setup>
+import { useHead } from '@vueuse/head'
 import { ref, onMounted } from 'vue'
 
 // Carga categorías desde categorias.json
@@ -43,6 +44,21 @@ onMounted(async () => {
   const res = await fetch(`${import.meta.env.BASE_URL}categorias.json`)
   if (res.ok) categories.value = await res.json()
 })
+
+useHead({
+  title: 'Catálogo de productos | Respigares',
+  meta: [
+    { name: 'description', content: 'Consulta nuestro catálogo con más de 4.000 referencias de productos de alimentación gourmet y primeras marcas. Distribución profesional para hostelería y particulares.' },
+    { property: 'og:title', content: 'Catálogo de productos | Respigares' },
+    { property: 'og:description', content: 'Distribuimos alimentos premium: conservas, aceites, encurtidos, y mucho más. Solicita información sin compromiso.' },
+    { property: 'og:image', content: 'https://www.respigares.es/img/hero-catalogo.jpg' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.respigares.es/catalogo' }
+  ]
+})
+
 </script>
 
 <style scoped>

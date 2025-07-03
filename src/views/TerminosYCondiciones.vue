@@ -179,6 +179,23 @@
     </div>
   </section>
 </template>
+<script setup>
+  import { useHead } from '@vueuse/head';
+
+  useHead({
+  title: 'Términos y Condiciones | Respigares',
+  meta: [
+    { name: 'description', content: 'Lee los términos y condiciones legales aplicables a la compra de productos y servicios en respigares.es. Información sobre devoluciones, envíos y privacidad.' },
+    { property: 'og:title', content: 'Términos y Condiciones | Respigares' },
+    { property: 'og:description', content: 'Condiciones legales para la compra online en Respigares. Derechos del consumidor y garantías.' },
+    { property: 'og:image', content: 'https://www.respigares.es/img/hero-catalogo.jpg' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.respigares.es/terminos' }
+  ]
+})
+</script>
 
 <style scoped>
 .legal-section {

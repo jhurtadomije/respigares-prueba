@@ -60,6 +60,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useHead } from '@vueuse/head'
 
 const form = ref({
   nombre: '',
@@ -81,6 +82,21 @@ const handleSubmit = () => {
     setTimeout(() => (enviado.value = false), 5000)
   }, 1500)
 }
+useHead({
+  title: 'Contacto | Respigares',
+  meta: [
+    { name: 'description', content: '¿Tienes dudas o necesitas información? Contacta con Representaciones Espigares, especialistas en productos gourmet. Te responderemos lo antes posible.' },
+    { property: 'og:title', content: 'Contacto | Respigares' },
+    { property: 'og:description', content: 'Contacta con Respigares: teléfono, email, WhatsApp o formulario. Atención personalizada para empresas y particulares.' },
+    { property: 'og:image', content: 'https://www.respigares.es/img/contacto.png' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.respigares.es/contacto' }
+  ]
+})
+
+
 </script>
 
 <style scoped>

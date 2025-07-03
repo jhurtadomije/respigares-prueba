@@ -18,6 +18,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import BlogPreview  from '../components/BlogPreview.vue'
+import { useHead } from '@vueuse/head'
 
 const posts = ref([])
 
@@ -30,6 +31,21 @@ onMounted(async () => {
     console.error('No se pudo cargar posts.json en', `${base}posts.json`)
   }
 })
+
+useHead({
+  title: 'Blog y Novedades | Respigares',
+  meta: [
+    { name: 'description', content: 'Actualidad, novedades, consejos y noticias sobre productos gourmet, distribución y alimentación en Andalucía. Síguenos en el blog de Respigares.' },
+    { property: 'og:title', content: 'Blog y Novedades | Respigares' },
+    { property: 'og:description', content: 'Descubre noticias, eventos y tendencias en el sector alimentación de la mano de Respigares.' },
+    { property: 'og:image', content: 'https://www.respigares.es/img/hero-catalogo.jpg' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.respigares.es/blog' }
+  ]
+})
+
 </script>
 
 <style scoped>

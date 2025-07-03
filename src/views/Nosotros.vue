@@ -151,7 +151,23 @@
 </template>
 
 <script setup>
-// Solo contenido/estructura.
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'Quiénes somos | Respigares',
+  meta: [
+    { name: 'description', content: 'Conoce la historia, misión, visión y valores de Representaciones Espigares. Más de 50 años creciendo junto a nuestros clientes y marcas representadas.' },
+    { property: 'og:title', content: 'Quiénes somos | Respigares' },
+    { property: 'og:description', content: 'Desde 1971, expertos en representación y distribución de productos de alimentación en Andalucía.' },
+    { property: 'og:image', content: 'https://www.respigares.es/img/hero-nosotros.jpg' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://www.respigares.es/somos' }
+  ]
+})
+
+
 </script>
 
 <style scoped>
