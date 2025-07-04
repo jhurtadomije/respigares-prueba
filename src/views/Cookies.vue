@@ -83,22 +83,28 @@ function saveConfig() {
   justify-content: center;
   animation: fadein .35s;
 }
-.cookies-modal, .cookies-config-modal {
+
+/* --- MOBILE FIRST --- */
+.cookies-modal,
+.cookies-config-modal {
   background: #fff;
+  width: 98vw;
   max-width: 500px;
-  width: 94vw;
-  border-radius: 16px;
-  padding: 2rem 1.5rem 1rem;
+  min-width: 0;
+  border-radius: 10px;
+  padding: 1.1rem 0.7rem 0.8rem;
   box-shadow: 0 6px 44px #0002;
   color: #443;
   text-align: center;
   position: relative;
-  /* Animación wow al aparecer */
   animation: modalWowIn 0.88s cubic-bezier(.22,1.11,.4,1.01);
+  max-height: 92vh;
+  overflow-y: auto;
+  margin: 4vw auto;
 }
 .cookies-modal h2 {
   color: var(--color-main, #ab0a3d);
-  font-size: 1.18rem;
+  font-size: 1.03rem;
   margin-bottom: .6rem;
   font-weight: 900;
 }
@@ -110,14 +116,15 @@ function saveConfig() {
 }
 .cookies-modal-actions {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.8rem;
   justify-content: center;
   margin-top: .7rem;
 }
 .btn-cookies-all,
 .btn-cookies-tech,
 .btn-cookies-config {
-  padding: 0.7em 1.7em;
+  padding: 0.68em 1.5em;
   font-size: 1rem;
   font-weight: bold;
   border-radius: 20px;
@@ -125,6 +132,9 @@ function saveConfig() {
   cursor: pointer;
   box-shadow: 0 2px 14px #ab0a3d19;
   transition: background 0.17s, color 0.17s;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
 }
 .btn-cookies-all {
   background: var(--color-main, #ab0a3d);
@@ -141,21 +151,56 @@ function saveConfig() {
   border: 1px solid #ab0a3d55;
 }
 .cookies-config-modal {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   padding-top: 1.1rem;
 }
 .cookies-config-modal label {
   display: block;
   text-align: left;
   margin: .8em 0;
-  font-size: 1.03em;
+  font-size: 1em;
   cursor: pointer;
 }
+.cookies-modal *,
+.cookies-config-modal * {
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+/* --- ESCRITORIO --- */
+@media (min-width: 600px) {
+  .cookies-modal,
+  .cookies-config-modal {
+    width: 94vw;
+    padding: 2rem 1.5rem 1rem;
+    font-size: 1.04em;
+    border-radius: 16px;
+    max-width: 500px;
+  }
+  .cookies-modal-actions {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .btn-cookies-all,
+  .btn-cookies-tech,
+  .btn-cookies-config {
+    width: auto;
+    max-width: 220px;
+    margin: 0;
+  }
+  .cookies-modal h2 {
+    font-size: 1.18rem;
+  }
+  .cookies-config-modal h3 {
+    font-size: 1.09rem;
+  }
+}
+
+/* --- Animaciones --- */
 @keyframes fadein {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-/* Animación wow modal */
 @keyframes modalWowIn {
   from {
     opacity: 0;
