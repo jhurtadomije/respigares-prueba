@@ -10,7 +10,13 @@
       @focus="hover = true"
       @blur="hover = false"
       tabindex="0"
+      @error="onImgError"
+        v-show="!imgError"
     />
+    <div v-if="imgError" class="img-fallback">
+        <img src="/img/productos/default.jpg" alt="Imagen no disponible" class="product-img" />
+        <span>Imagen no disponible por el momento</span>
+      </div>
     <h3 class="product-title">{{ producto.nombre }}</h3>
     <router-link
       :to="`/producto/${encodeURIComponent(producto.nombre)}`"
@@ -28,6 +34,10 @@ const props = defineProps({
   delay: { type: Number, default: 0 }
 })
 const hover = ref(false)
+
+function onImgError() {
+  imgError.value = true
+}
 </script>
 
 <style scoped>
