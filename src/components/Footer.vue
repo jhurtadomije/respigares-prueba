@@ -20,7 +20,9 @@
 
     <!-- Línea central: info UE y texto institucional -->
     <div class="footer-middle contenedor">
+    <router-link to="/" class="logo-link" aria-label="Ir a inicio">
       <img src="/img/logofeder.svg" alt="Unión Europea" class="footer-ue-img" />
+      </router-link>
       <div class="footer-middle-desc">
         REPRESENTACIONES ESPIGARES S.L. ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha desarrollado una Web Corporativa y una Solución de Comercio Electrónico, para la mejora de competitividad y productividad de la empresa. [22/12/2018]. Para ello ha contado con el apoyo del Programa TicCámaras de la Cámara de Comercio de Granada.
       </div>

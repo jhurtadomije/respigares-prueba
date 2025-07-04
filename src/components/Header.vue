@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <div class="header-content">
+    <router-link to="/" class="logo-link" aria-label="Ir a inicio">
       <img src="/img/logo-mas-de-50aniv__blanco-sin-fondo.png" alt="Respigares" class="logo" />
+      </router-link>
       <!-- Botón Hamburguesa -->
       <button
         class="menu-btn"
