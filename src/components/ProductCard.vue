@@ -1,53 +1,88 @@
 <template>
-  <div class="product-card">
-    <img :src="Array.isArray(producto.imagen) ? producto.imagen[0] : producto.imagen" :alt="producto.nombre" />
-    <h3>{{ producto.nombre }}</h3>
-    <router-link :to="`/producto/${encodeURIComponent(producto.nombre)}`" class="btn-ver-mas">
+  <div class="product-card animate-fadeup" :style="`--delay: ${delay || 0}ms`">
+    <img
+      :src="Array.isArray(producto.imagen) ? producto.imagen[0] : producto.imagen"
+      :alt="producto.nombre"
+      class="product-img"
+      loading="lazy"
+      @mouseover="hover = true"
+      @mouseleave="hover = false"
+      @focus="hover = true"
+      @blur="hover = false"
+      tabindex="0"
+    />
+    <h3 class="product-title">{{ producto.nombre }}</h3>
+    <router-link
+      :to="`/producto/${encodeURIComponent(producto.nombre)}`"
+      class="btn-ver-mas"
+    >
       Más detalles
     </router-link>
   </div>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
-const props = defineProps({ producto: Object })
-const router = useRouter()
-
-function irADetalle() {
-  // Puedes usar el nombre o mejor, un campo id o slug único si lo tienes
-  router.push(`/producto/${props.producto.nombre}`)
-}
+import { ref } from 'vue'
+const props = defineProps({
+  producto: { type: Object, required: true },
+  delay: { type: Number, default: 0 }
+})
+const hover = ref(false)
 </script>
 
 <style scoped>
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(38px);}
+  to   { opacity: 1; transform: none;}
+}
+.animate-fadeup {
+  opacity: 0;
+  animation: fadeUp 1.2s cubic-bezier(.8,.1,.1,1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
 .product-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #eee;
-  border-radius: 12px;
+  border: 1.5px solid #eee;
+  border-radius: 14px;
   background: #fff;
   text-align: center;
   color: inherit;
   text-decoration: none;
-  padding: 1.2rem 0.8rem;
-  transition: transform 0.18s, box-shadow 0.18s;
+  padding: 1.25rem 1rem 1.2rem 1rem;
+  transition:
+    transform 0.23s cubic-bezier(.8,.1,.1,1),
+    box-shadow 0.18s,
+    border-color 0.18s;
   box-shadow: 0 2px 14px #0001;
   min-width: 0;
   position: relative;
+  outline: none;
 }
 
-.product-card:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 6px 28px #ab0a3d18;
+.product-card:hover,
+.product-card:focus-within {
+  transform: translateY(-9px) scale(1.04) rotate(-0.2deg);
+  box-shadow: 0 10px 32px #28528136, 0 3px 22px #ab0a3d18;
+  border-color: #ab0a3d33;
 }
 
 .product-img {
   max-width: 100%;
   max-height: 185px;
   object-fit: contain;
-  border-radius: 7px;
+  border-radius: 10px;
   margin-bottom: 0.9rem;
   background: #f5f5f5;
+  box-shadow: 0 2px 12px #32699913;
+  transition: box-shadow 0.23s, filter 0.2s;
+}
+.product-card:hover .product-img,
+.product-card:focus-within .product-img {
+  filter: brightness(1.11) saturate(1.09);
+  box-shadow: 0 8px 28px #ab0a3d18, 0 2px 10px #32699916;
+  outline: 2px solid var(--color-main, #285281);
 }
 
 .product-title {
@@ -56,22 +91,29 @@ function irADetalle() {
   font-weight: bold;
   margin: 0 0 0.4em 0;
   line-height: 1.17;
+  letter-spacing: .01em;
 }
 
 .btn-ver-mas {
   margin-top: auto;
-  padding: 0.7em 1.7em;
-  background: var(--color-main);
+  padding: 0.68em 1.5em;
+  background: var(--color-main, #285281);
   color: #fff;
   border: none;
   border-radius: 11px;
-  font-size: 1.03em;
+  font-size: 1.01em;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.17s;
+  box-shadow: 0 1px 8px #0001;
+  text-decoration: none;
+  letter-spacing: .01em;
 }
-.btn-vermas:hover {
-  background: #326999;
+.btn-ver-mas:hover,
+.btn-ver-mas:focus {
+  background: #ab0a3d;
+  transform: scale(1.08);
+  outline: none;
 }
 
 @media (max-width: 500px) {
@@ -83,9 +125,6 @@ function irADetalle() {
   }
   .product-title {
     font-size: 1.01rem;
-  }
-  .product-desc {
-    font-size: 0.92rem;
   }
 }
 </style>

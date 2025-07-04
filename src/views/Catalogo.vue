@@ -15,34 +15,40 @@
     </p>
   </div>
 <!-- Grid de categorías -->
-  <div v-if="categoriaSeleccionada" class="catalogo-productos contenedor">
-    <button class="btn-volver-categorias" @click="volverCategorias">← Volver a categorías</button>
+  <div v-if="categoriaSeleccionada" class="catalogo-productos-contenedor">
     <h2 class="catalogo-cat-title">Productos en "{{ categoriaSeleccionada.name }}"</h2>
     <div v-if="productosFiltrados.length" class="grid-productos">
-      <ProductCard v-for="producto in productosFiltrados" :key="producto.nombre" :producto="producto" />
+      <ProductCard
+        v-for="(producto, idx) in productosFiltrados"
+        :key="producto.nombre"
+        :producto="producto"
+        :delay="idx * 140"
+      />
     </div>
     <div v-else class="no-productos">
       No hay productos para esta categoría.
     </div>
+    <button class="btn-volver-categorias" @click="volverCategorias">← Volver a categorías</button>
   </div>
 
   
   <!-- Si NO hay categoría seleccionada, muestra las categorías como hasta ahora -->
   <section v-else class="catalogo contenedor">
-    <div class="catalogo-grid">
-      <div
-        v-for="cat in categories"
-        :key="cat.id"
-        class="categoria-card"
-      >
-        <img :src="cat.image" :alt="cat.name" class="categoria-card__img" />
-        <h3 class="categoria-card__title">{{ cat.name }}</h3>
-        <router-link :to="`/catalogo?cat=${cat.id}`" class="categoria-card__link">
-          VER PRODUCTOS
-        </router-link>
-      </div>
+  <div class="catalogo-grid">
+    <div
+      v-for="(cat, idx) in categories"
+      :key="cat.id"
+      class="categoria-card animate-stagger"
+      :style="`animation-delay: ${idx * 120}ms;`"
+    >
+      <img :src="cat.image" :alt="cat.name" class="categoria-card__img" />
+      <h3 class="categoria-card__title">{{ cat.name }}</h3>
+      <router-link :to="`/catalogo?cat=${cat.id}`" class="categoria-card__link">
+        VER PRODUCTOS
+      </router-link>
     </div>
-  </section>
+  </div>
+</section>
 </template>
 
 <script setup>
@@ -187,6 +193,9 @@ useHead({
 }
 
 /* Grid de categorías */
+.catalogo-productos-contenedor{
+  text-align: center;  
+}
 .catalogo {
   width: 100%;
   max-width: 78em;
@@ -250,6 +259,17 @@ useHead({
   color: #fff;
   text-decoration: underline;
 }
+.btn-volver-categorias{
+  margin: 2rem;
+  
+}
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2.2em 0;
+}
+
 
 /* Responsive */
 @media (min-width: 32em) {
@@ -289,7 +309,7 @@ useHead({
 }
 .animate-stagger {
   opacity: 0;
-  animation: aparecer 0.7s cubic-bezier(.8,.1,.1,1) forwards;
+  animation: aparecer 1.2s cubic-bezier(.8,.1,.1,1) forwards;
 }
 
 </style>
