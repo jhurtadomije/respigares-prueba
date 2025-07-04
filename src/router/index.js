@@ -10,6 +10,7 @@ import Cookies from '../views/Cookies.vue'
 import Blog from '../views/Blog.vue'
 import Noticia from '../views/NoticiaDetalle.vue'
 import TerminosYcondiciones from '../views/TerminosYCondiciones.vue'
+import CookiesPolicy from '../views/CookiesPolicy.vue'
 // import NotFound from '../views/NotFound.vue'
 
 const routes = [
@@ -25,6 +26,7 @@ const routes = [
   { path: '/blog', name: 'Blog', component: Blog },
   { path: '/blog/:slug', name: 'Noticia', component: Noticia, props: true },
   { path: '/TerminosYCondiciones', name: 'Terminos', component: TerminosYcondiciones },
+  { path: '/politica-cookies', name: 'CookiesPolicy', component: CookiesPolicy, },
   // { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound } // opcional
 ]
 

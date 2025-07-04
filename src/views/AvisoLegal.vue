@@ -1,25 +1,21 @@
-<!-- src/views/AvisoLegal.vue -->
 <template>
   <section class="aviso-legal contenedor">
     <h1 class="aviso-legal__titulo">Aviso Legal</h1>
-    
+
     <div class="aviso-legal__block">
       <p>
-        <strong>Representaciones Espigares S.L</strong> (en adelante, RESPONSABLE) pone a disposición de los usuarios el presente documento, con el que pretende dar cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), así como informar a todos los usuarios del sitio web respecto a las condiciones de uso.
+        <strong>Representaciones Espigares S.L.</strong> (en adelante, la “Empresa” o el “RESPONSABLE”) pone a disposición de los usuarios el presente documento, con el fin de dar cumplimiento a las obligaciones dispuestas en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), así como informar sobre las condiciones de uso del sitio web <strong>respigares.es</strong>.
       </p>
       <p>
-        Toda persona que acceda a este sitio web asume el papel de usuario, comprometiéndose a la observancia y cumplimiento riguroso de las disposiciones aquí dispuestas, así como a cualquier otra disposición legal que fuera de aplicación.
-      </p>
-      <p>
-        Representaciones Espigares S.L se reserva el derecho de modificar cualquier tipo de información que pudiera aparecer en el sitio web, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas obligaciones, entendiéndose como suficiente la publicación en el sitio web.
+        El acceso y/o uso de este sitio web atribuye la condición de usuario, que acepta, desde dicho acceso y/o uso, las presentes condiciones generales de uso. La Empresa se reserva el derecho de modificar cualquier tipo de información que pudiera aparecer en el sitio web, sin que exista obligación de preavisar o poner en conocimiento de los usuarios dichas modificaciones, entendiéndose como suficiente la publicación en el sitio web.
       </p>
     </div>
 
     <div class="aviso-legal__block">
       <h2>Datos identificativos</h2>
       <ul>
-        <li><b>Denominación social:</b> Representaciones Espigares S.L</li>
-        <li><b>C.I.F:</b> B18366096</li>
+        <li><b>Denominación social:</b> Representaciones Espigares S.L.</li>
+        <li><b>CIF:</b> B18366096</li>
         <li><b>Domicilio social:</b> C/Almería 8, 18194, Churriana de la Vega (Granada)</li>
         <li><b>Registro Mercantil de Granada:</b> tomo 668, libro 0, folio 19, sección 8, hoja GR-8478, inscripción 1ª</li>
         <li><b>Correo electrónico:</b> <a href="mailto:info@respigares.es">info@respigares.es</a></li>
@@ -30,36 +26,40 @@
     <div class="aviso-legal__block">
       <h2>Responsabilidad</h2>
       <p>
-        El prestador se exime de cualquier tipo de responsabilidad derivada de la información publicada en su sitio web, siempre que esta información haya sido manipulada o introducida por un tercero ajeno al mismo.
+        El RESPONSABLE no se hace responsable de la información publicada en su sitio web si esta ha sido manipulada o introducida por un tercero ajeno a la Empresa.
       </p>
       <p>
-        Desde este sitio web es posible que se redirija a contenidos de terceros. Dado que el prestador no puede controlar siempre los contenidos introducidos por los terceros en su sitio, no asume responsabilidad respecto a dichos contenidos. En todo caso, el prestador procederá a la retirada inmediata de cualquier contenido que pudiera contravenir la legislación, la moral o el orden público, informando a las autoridades competentes.
+        Desde el sitio web es posible que se redirija a contenidos de terceros. Dado que la Empresa no puede controlar siempre los contenidos introducidos por terceros en sus sitios web, no asume ningún tipo de responsabilidad respecto a dichos contenidos. No obstante, la Empresa procederá a la retirada inmediata de cualquier contenido que pudiera contravenir la legislación nacional o internacional, la moral o el orden público, informando a las autoridades competentes.
       </p>
       <p>
-        El prestador no se hace responsable de la información y contenidos almacenados en foros, chats, blogs, comentarios, redes sociales o cualquier otro medio que permita a terceros publicar contenidos de forma independiente. No obstante, y en cumplimiento del art. 11 y 16 de la LSSI-CE, el prestador se pone a disposición de usuarios y autoridades para colaborar en la retirada o bloqueo de contenidos que pudieran afectar o contravenir la legislación, derechos de terceros o el orden público. Si detecta algún contenido susceptible de esta clasificación, notifíquelo al administrador del sitio web.
+        La Empresa no se hace responsable de la información y contenidos almacenados en foros, chats, blogs, comentarios, redes sociales o cualquier otro medio que permita a terceros publicar contenidos de forma independiente en esta página web. No obstante, en cumplimiento de los artículos 11 y 16 de la LSSI-CE, la Empresa se pone a disposición de usuarios y autoridades para colaborar en la retirada o bloqueo de aquellos contenidos que pudieran afectar o contravenir la legislación, derechos de terceros o el orden público. Si detecta algún contenido susceptible de esta clasificación, notifíquelo al administrador del sitio web.
       </p>
     </div>
 
     <div class="aviso-legal__block">
       <h2>Propiedad intelectual e industrial</h2>
       <p>
-        El sitio web, su programación, edición, compilación y demás elementos necesarios para su funcionamiento, los diseños, logotipos, textos y/o gráficos son propiedad del prestador o dispone de licencia o autorización expresa por parte de los autores.
+        El sitio web, incluyendo su programación, edición, compilación y demás elementos necesarios para su funcionamiento, así como los diseños, logotipos, textos y/o gráficos, son propiedad de la Empresa o dispone de licencia o autorización expresa por parte de los autores.
       </p>
       <p>
-        Cualquier reproducción total o parcial, uso, explotación, distribución y comercialización, requiere autorización escrita previa del prestador. Cualquier uso no autorizado será considerado un incumplimiento grave de los derechos de propiedad intelectual o industrial.
+        Queda prohibida la reproducción total o parcial, uso, explotación, distribución y comercialización, salvo autorización previa y por escrito por parte de la Empresa. Cualquier uso no autorizado será considerado un incumplimiento grave de los derechos de propiedad intelectual o industrial.
       </p>
       <p>
-        El prestador reconoce a favor de sus titulares los derechos de propiedad industrial e intelectual, sin que la mención o aparición en el sitio web implique la existencia de derechos o responsabilidad alguna sobre los mismos, ni respaldo, patrocinio o recomendación.
+        Se reconocen a favor de sus titulares los derechos de propiedad industrial e intelectual correspondientes, sin que la mención o aparición en el sitio web implique la existencia de derechos o responsabilidad alguna sobre los mismos, ni respaldo, patrocinio o recomendación por parte de la Empresa.
       </p>
     </div>
 
     <div class="aviso-legal__block">
       <h2>Ley aplicable y jurisdicción</h2>
       <p>
-        Esta página web se encuentra sometida a la legislación española. En caso de litigio o controversia surgida del uso de esta web, ambas partes se someten a la jurisdicción de los tribunales de la ciudad de Granada (España), salvo que por ley corresponda la jurisdicción al domicilio del consumidor.
+        La relación entre el usuario y la Empresa se regirá por la normativa vigente y de aplicación en el territorio español. En caso de litigio o controversia, ambas partes se someten a la jurisdicción de los juzgados y tribunales de Granada (España), salvo que por ley corresponda la jurisdicción al domicilio del consumidor.
       </p>
       <p>
-        Si es un cliente de la Unión Europea (no español), puede presentar su reclamación en: <a href="http://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">http://ec.europa.eu/consumers/odr/</a>
+        Si usted es cliente de la Unión Europea, puede presentar su reclamación en la plataforma de resolución de litigios en línea de la UE:&nbsp;
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>
+      </p>
+      <p>
+        Puede consultar nuestra <a href="/privacidad" target="_blank">Política de Privacidad</a> para más información sobre el tratamiento de datos personales.
       </p>
     </div>
 
@@ -68,6 +68,7 @@
     </div>
   </section>
 </template>
+
 
 <style scoped>
 .aviso-legal {

@@ -14,7 +14,7 @@
       </div>
       <div class="footer-contact">
         <div>958 551 801<br />info@respigares.es</div>
-        <div>Calle Almería, 8, 18194<br />Churriana de la Vega, Granada</div>
+        <div>C/Almería, 8, 18194<br />Churriana de la Vega, Granada</div>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
     <div class="footer-middle contenedor">
       <img src="/img/logofeder.svg" alt="Unión Europea" class="footer-ue-img" />
       <div class="footer-middle-desc">
-        REPRESENTACIONES ESPIGARES SL ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha desarrollado una Web Corporativa y una Solución de Comercio Electrónico, para la mejora de competitividad y productividad de la empresa. [22/12/2018]. Para ello ha contado con el apoyo del Programa TicCámaras de la Cámara de Comercio de Granada.
+        REPRESENTACIONES ESPIGARES S.L. ha sido beneficiaria del Fondo Europeo de Desarrollo Regional cuyo objetivo es mejorar el uso y la calidad de las tecnologías de la información y de las comunicaciones y el acceso a las mismas y gracias al que ha desarrollado una Web Corporativa y una Solución de Comercio Electrónico, para la mejora de competitividad y productividad de la empresa. [22/12/2018]. Para ello ha contado con el apoyo del Programa TicCámaras de la Cámara de Comercio de Granada.
       </div>
     </div>
 
@@ -30,13 +30,16 @@
     <div class="footer-bottom contenedor">
       <div class="footer-bottom-row">
         <div class="footer-bottom-copy">
-          COPYRIGHT © {{ year }} - REPRESENTACIONES ESPIGARES
+          COPYRIGHT © {{ year }} - REPRESENTACIONES ESPIGARES S.L.
         </div>
         <div class="footer-bottom-links">
-          <router-link to="/cookies">Política de cookies</router-link>
+          <router-link to="/politica-cookies">Política de cookies</router-link>
           <router-link to="/avisolegal">Aviso Legal</router-link>
           <router-link to="/privacidad">Política de privacidad</router-link>
           <router-link to="/TerminosYCondiciones">Términos y condiciones</router-link>
+          <button class="footer-cookies-btn" @click="abrirConfigCookies" type="button">
+            Configurar cookies
+          </button>
         </div>
       </div>
     </div>
@@ -45,6 +48,12 @@
 
 <script setup>
 const year = new Date().getFullYear()
+import { showCookies, configOpen } from '../cookiesState'
+// Evento global para mostrar el modal de cookies
+function abrirConfigCookies() {
+  showCookies.value = true
+  configOpen.value = true
+}
 </script>
 
 <style scoped>
@@ -137,7 +146,6 @@ const year = new Date().getFullYear()
   max-width: 80px;
   min-width: 40px;
   object-fit: contain;
-  
   border-radius: 8px;
   margin-bottom: 0.8em;
   margin-right: 0;
@@ -145,7 +153,6 @@ const year = new Date().getFullYear()
 }
 .footer-middle-desc {
   font-size: 0.8em;
-  
   text-align: center;
 }
 
@@ -181,6 +188,22 @@ const year = new Date().getFullYear()
   transition: color 0.12s;
 }
 .footer-bottom-links a:hover {
+  color: #f9c846;
+}
+
+/* Nuevo botón configurar cookies */
+.footer-cookies-btn {
+  background: none;
+  border: none;
+  color: #fff7;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+  transition: color 0.13s;
+  padding: 0;
+  margin-left: .5em;
+}
+.footer-cookies-btn:hover {
   color: #f9c846;
 }
 

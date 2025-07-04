@@ -2,11 +2,14 @@
 <template>
   <section class="privacidad contenedor">
     <h1 class="privacidad__titulo">Política de Privacidad</h1>
+    <p class="privacidad__intro">
+      En <b>Representaciones Espigares S.L</b> nos preocupa la seguridad y privacidad de tus datos personales, cumpliendo siempre con la normativa vigente (RGPD y LOPDGDD).
+    </p>
 
     <div class="privacidad__block">
       <h2>1. Información al usuario</h2>
       <p>
-        <b>Representaciones Espigares S.L</b> es el responsable del tratamiento de los datos personales del Usuario y le informa que estos datos serán tratados conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD). 
+        <b>Representaciones Espigares S.L</b> (en adelante, la “Empresa” o el “RESPONSABLE”) es el responsable del tratamiento de los datos personales del usuario y le informa que estos serán tratados conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).
       </p>
       <ul>
         <li>
@@ -24,18 +27,25 @@
           <b>Legitimación:</b> consentimiento mediante casilla de aceptación y, en compras, por contrato.
         </li>
         <li>
-          <b>Criterios de conservación:</b> mientras exista un interés mutuo; seudonimización/destrucción segura al finalizar.
-        </li>
-        <li>
-          <b>Comunicación de datos:</b> acceso solo por desarrolladores web y empresa de alojamiento, con contrato de confidencialidad; no se cederán salvo obligación legal.
+          <b>Criterios de conservación:</b> los datos se conservarán mientras exista un interés mutuo o durante los plazos legales; posteriormente se suprimirán mediante seudonimización o destrucción segura.
         </li>
       </ul>
-      <h3>Derechos del Usuario</h3>
+    </div>
+
+    <div class="privacidad__block">
+      <h2>2. Destinatarios</h2>
+      <p>
+        No se comunicarán datos a terceros, salvo obligación legal o encargo de tratamiento a proveedores (como la empresa de alojamiento web o desarrolladores), siempre bajo contrato de confidencialidad.
+      </p>
+    </div>
+
+    <div class="privacidad__block">
+      <h2>3. Derechos del usuario</h2>
       <ul>
-        <li><b>Retirar consentimiento</b> en cualquier momento.</li>
-        <li><b>Oponerse o solicitar portabilidad</b> de sus datos.</li>
-        <li><b>Acceso, rectificación y supresión</b> de datos, así como limitación u oposición al tratamiento.</li>
-        <li><b>Presentar reclamación</b> ante la <a href="http://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos</a> si no queda satisfecho.</li>
+        <li><b>Retirar el consentimiento</b> en cualquier momento.</li>
+        <li><b>Oponerse o solicitar la portabilidad</b> de sus datos.</li>
+        <li><b>Acceso, rectificación y supresión</b> de los datos, así como limitación u oposición al tratamiento.</li>
+        <li><b>Presentar una reclamación</b> ante la <a href="http://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos</a> si no queda satisfecho.</li>
       </ul>
       <p>
         <b>Datos de contacto para ejercer sus derechos:</b><br>
@@ -45,19 +55,38 @@
     </div>
 
     <div class="privacidad__block">
-      <h2>2. Carácter obligatorio o facultativo de la información</h2>
+      <h2>4. Carácter obligatorio o facultativo de la información</h2>
       <p>
         El usuario acepta de forma libre e inequívoca que sus datos son necesarios para atender su petición; la inclusión de otros datos es voluntaria. El usuario garantiza la veracidad de los datos facilitados y se compromete a comunicar cualquier modificación.
       </p>
       <p>
-        <b>Sus datos personales no serán cedidos a terceros</b> sin su consentimiento. Todos los campos marcados como obligatorios en los formularios web son necesarios para la prestación del servicio. En caso de no facilitar los datos requeridos, no se garantiza la adecuación del servicio.
+        Todos los campos marcados como obligatorios en los formularios web son necesarios para la prestación del servicio. En caso de no facilitar los datos requeridos, no se garantiza la adecuación del servicio.
       </p>
     </div>
 
-    <div class="privacidad__block privacidad__info">
+    <div class="privacidad__block">
+      <h2>5. Seguridad y confidencialidad</h2>
       <p>
-        Última actualización: Julio 2025
+        La Empresa adopta todas las medidas técnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos personales y evitar su pérdida, alteración, tratamiento o acceso no autorizado.
       </p>
+    </div>
+
+    <div class="privacidad__block">
+      <h2>6. Modificaciones</h2>
+      <p>
+        Nos reservamos el derecho de modificar esta política para adaptarla a novedades legislativas o jurisprudenciales. En ese caso, se anunciará convenientemente en esta página.
+      </p>
+    </div>
+
+    <div class="privacidad__block">
+      <h2>7. Cookies</h2>
+      <p>
+        Este sitio web utiliza cookies técnicas y, previa aceptación, cookies de análisis y publicidad. Puedes configurar tus preferencias en cualquier momento o consultar nuestra <a href="/politica-cookies" target="_blank">Política de Cookies</a> para más información.
+      </p>
+    </div>
+
+    <div class="privacidad__info">
+      <p>Última actualización: Julio 2025</p>
     </div>
   </section>
 </template>
@@ -80,6 +109,13 @@
   margin-bottom: 2.1rem;
   font-weight: 900;
 }
+.privacidad__intro {
+  font-size: 1.13rem;
+  text-align: center;
+  margin-bottom: 2.1rem;
+  color: var(--color-main);
+  font-weight: 600;
+}
 .privacidad__block {
   margin-bottom: 2.3rem;
   background: #f8f8fa;
@@ -100,13 +136,6 @@
   margin: 0 0 1rem 0;
   color: var(--color-main);
   font-weight: 700;
-}
-.privacidad__block h3 {
-  font-size: 1.05rem;
-  margin-top: 1.2rem;
-  margin-bottom: 0.6rem;
-  color: var(--color-blue);
-  font-weight: 600;
 }
 .privacidad__block a {
   color: var(--color-main);

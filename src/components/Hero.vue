@@ -18,7 +18,7 @@
         Especialistas en <span>productos gourmet</span>
       </h1>
       <p class="hero-subtitle">
-        Calidad y tradición desde 1991 &bull; Conservas &bull; Aceites &bull; Encurtidos
+        Calidad y tradición desde 1971 &bull; Conservas &bull; Aceites &bull; Encurtidos
       </p>
       <router-link to="/catalogo" class="hero-btn">
         Ver Catálogo
