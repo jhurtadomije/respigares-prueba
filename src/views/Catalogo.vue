@@ -211,15 +211,19 @@ useHead({
   gap: 2.4em;
   margin: 2em 0 0 0;
   justify-content: center;
+  align-items: stretch; /* <-- Añadido */
 }
 .categoria-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* NEW: fuerza que todas tengan igual altura */
+  height: 100%;
+  min-height: 340px; /* Prueba valores (por ejemplo 320/340/360) según tu contenido */
   background: none;
   border-radius: 0.3em;
   box-shadow: none;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   transition: transform .14s;
 }
 .categoria-card__img {
@@ -240,7 +244,8 @@ useHead({
   line-height: 1.13;
 }
 .categoria-card__link {
-  margin-top: 0.3em;
+  margin-top: auto; /* <-- Esto es clave para alinear los botones */
+  /* El resto igual */
   padding: 0.6em 1.6em;
   background: #326999;
   color: #fff;

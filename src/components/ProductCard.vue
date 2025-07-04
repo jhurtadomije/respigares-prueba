@@ -1,5 +1,6 @@
 <template>
   <div class="product-card animate-fadeup" :style="`--delay: ${delay || 0}ms`">
+  <div class="product-img-wrap">
     <img
       :src="Array.isArray(producto.imagen) ? producto.imagen[0] : producto.imagen"
       :alt="producto.nombre"
@@ -13,6 +14,7 @@
       @error="onImgError"
         v-show="!imgError"
     />
+    </div>
     <div v-if="imgError" class="img-fallback">
         <img src="/img/productos/default.jpg" alt="Imagen no disponible" class="product-img" />
         <span>Imagen no disponible por el momento</span>
