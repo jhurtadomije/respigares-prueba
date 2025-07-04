@@ -1,15 +1,22 @@
 <template>
-  <router-link :to="`/producto/${producto.nombre}`" class="product-card">
-    <img :src="producto.imagen || producto.image" :alt="producto.nombre || producto.title" class="product-img" />
-    <h3 class="product-title">{{ producto.nombre || producto.title }}</h3>
-    <p class="product-desc" v-html="producto.descripcion || producto.content"></p>
-  </router-link>
+  <div class="product-card">
+    <img :src="Array.isArray(producto.imagen) ? producto.imagen[0] : producto.imagen" :alt="producto.nombre" />
+    <h3>{{ producto.nombre }}</h3>
+    <router-link :to="`/producto/${encodeURIComponent(producto.nombre)}`" class="btn-ver-mas">
+      Más detalles
+    </router-link>
+  </div>
 </template>
 
 <script setup>
-defineProps({
-  producto: Object
-})
+import { useRouter } from 'vue-router'
+const props = defineProps({ producto: Object })
+const router = useRouter()
+
+function irADetalle() {
+  // Puedes usar el nombre o mejor, un campo id o slug único si lo tienes
+  router.push(`/producto/${props.producto.nombre}`)
+}
 </script>
 
 <style scoped>
@@ -51,12 +58,20 @@ defineProps({
   line-height: 1.17;
 }
 
-.product-desc {
-  color: #575757;
-  font-size: 0.98rem;
-  margin-bottom: 0.2rem;
-  min-height: 32px;
-  line-height: 1.55;
+.btn-ver-mas {
+  margin-top: auto;
+  padding: 0.7em 1.7em;
+  background: var(--color-main);
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  font-size: 1.03em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-vermas:hover {
+  background: #326999;
 }
 
 @media (max-width: 500px) {

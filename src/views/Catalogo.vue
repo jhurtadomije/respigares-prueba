@@ -14,9 +14,21 @@
       Te invitamos a visitar cada una de las categorías de nuestro catálogo y <b>no dudes en contactar con nuestro departamento comercial para atenderte como mereces</b>.
     </p>
   </div>
+<!-- Grid de categorías -->
+  <div v-if="categoriaSeleccionada" class="catalogo-productos contenedor">
+    <button class="btn-volver-categorias" @click="volverCategorias">← Volver a categorías</button>
+    <h2 class="catalogo-cat-title">Productos en "{{ categoriaSeleccionada.name }}"</h2>
+    <div v-if="productosFiltrados.length" class="grid-productos">
+      <ProductCard v-for="producto in productosFiltrados" :key="producto.nombre" :producto="producto" />
+    </div>
+    <div v-else class="no-productos">
+      No hay productos para esta categoría.
+    </div>
+  </div>
 
-  <!-- Grid de categorías -->
-  <section class="catalogo contenedor">
+  
+  <!-- Si NO hay categoría seleccionada, muestra las categorías como hasta ahora -->
+  <section v-else class="catalogo contenedor">
     <div class="catalogo-grid">
       <div
         v-for="cat in categories"
@@ -35,15 +47,61 @@
 
 <script setup>
 import { useHead } from '@vueuse/head'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import ProductCard from '../components/ProductCard.vue'
 
-// Carga categorías desde categorias.json
 const categories = ref([])
+const productos = ref([])
+const route = useRoute()
+const router = useRouter()
 
+// Carga las categorías al montar la vista
 onMounted(async () => {
-  const res = await fetch(`${import.meta.env.BASE_URL}categorias.json`)
-  if (res.ok) categories.value = await res.json()
+  const catRes = await fetch(`${import.meta.env.BASE_URL}categorias.json`)
+  if (catRes.ok) categories.value = await catRes.json()
+
+  // Si hay categoría en la query al cargar, carga productos
+  if (route.query.cat) {
+    await cargarProductos()
+  }
 })
+
+// Vigila los cambios de categoría para recargar productos
+watch(
+  () => route.query.cat,
+  async (nuevaCat, antiguaCat) => {
+    if (nuevaCat) {
+      await cargarProductos()
+    } else {
+      productos.value = []
+    }
+  }
+)
+
+// Función para cargar productos
+async function cargarProductos() {
+  const prodRes = await fetch(`${import.meta.env.BASE_URL}productos.json`)
+  if (prodRes.ok) productos.value = await prodRes.json()
+}
+
+// Encuentra la categoría seleccionada
+const categoriaSeleccionada = computed(() =>
+  categories.value.find(cat => String(cat.id) === String(route.query.cat))
+)
+
+// Filtra los productos por la categoría seleccionada
+const productosFiltrados = computed(() => {
+  if (!route.query.cat) return []
+  return productos.value.filter(p =>
+    p.categoria === categoriaSeleccionada.value?.id
+  )
+})
+
+// Botón para volver a la lista de categorías
+function volverCategorias() {
+  router.push('/catalogo')
+}
 
 useHead({
   title: 'Catálogo de productos | Respigares',
@@ -58,7 +116,6 @@ useHead({
     { rel: 'canonical', href: 'https://www.respigares.es/catalogo' }
   ]
 })
-
 </script>
 
 <style scoped>

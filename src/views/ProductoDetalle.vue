@@ -1,11 +1,11 @@
 <template>
   <section class="detalle-producto contenedor">
-    <router-link to="/catalogo" class="btn-volver">← Volver al catálogo</router-link>
     <h2>{{ producto?.nombre }}</h2>
     <div v-if="imagenes.length" class="imagenes-galeria">
       <img v-for="(img, idx) in imagenes" :src="img" :key="idx" :alt="producto.nombre" />
     </div>
     <div class="descripcion" v-html="descripcionSaneada"></div>
+    <router-link to="/catalogo" class="btn-volver">← Volver al catálogo</router-link>
   </section>
 </template>
 
@@ -30,26 +30,46 @@ const descripcionSaneada = computed(() =>
     : ''
 )
 
-onMounted(async () => {
-  const res = await fetch('/productos.json')
-  const lista = await res.json()
-  producto.value = lista.find(p => p.id == route.params.id)
+function slugify(str) {
+  return str
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+}
 
-  // Gestión flexible: array, string separado por comas o string simple
-  if (Array.isArray(producto.value?.imagen)) {
-    imagenes.value = producto.value.imagen
-  } else if (typeof producto.value?.imagen === 'string') {
-    imagenes.value = producto.value.imagen.split(',').map(s => s.trim()).filter(Boolean)
-  } else {
-    imagenes.value = []
+onMounted(async () => {
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}productos.json`)
+    if (!res.ok) throw new Error('No se pudo cargar productos.json')
+    const lista = await res.json()
+    const paramNombre = decodeURIComponent(route.params.nombre)
+    producto.value = lista.find(p => p.nombre === paramNombre)
+
+    // Aquí la gestión de imágenes:
+    if (producto.value) {
+      if (Array.isArray(producto.value.imagen)) {
+        imagenes.value = producto.value.imagen
+      } else if (typeof producto.value.imagen === 'string') {
+        imagenes.value = [producto.value.imagen]
+      } else {
+        imagenes.value = []
+      }
+    }
+  } catch (e) {
+    console.error("ERROR al cargar productos.json:", e)
   }
 })
+
 </script>
 
 <style scoped>
 .detalle-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 680px;
-  margin: 2rem auto;
+  margin: 7rem auto 4rem auto;
   padding: 2rem;
   background: #fff;
   border-radius: 16px;
@@ -78,9 +98,10 @@ onMounted(async () => {
   word-break: break-word;
 }
 .btn-volver {
+  
   display: inline-block;
-  margin-bottom: 1.3rem;
-  background: #008B3C;
+  margin-bottom: 2rem;
+  background: var(--color-main);
   color: #fff;
   border: none;
   padding: 0.75rem 2rem;
@@ -93,7 +114,7 @@ onMounted(async () => {
   text-decoration: none;
 }
 .btn-volver:hover {
-  background: #006c2b;
+  background: var(--color-light);
   box-shadow: 0 2px 12px #0002;
 }
 </style>

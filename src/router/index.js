@@ -17,7 +17,7 @@ const routes = [
   { path: '/nosotros', name: 'Nosotros', component: Nosotros },
   { path: '/catalogo', name: 'Catalogo', component: Catalogo },
   { path: '/contacto', name: 'Contacto', component: Contacto },
-  { path: '/producto/:id', name: 'ProductoDetalle', component: ProductoDetalle },
+  { path: '/producto/:nombre', name: 'ProductoDetalle', component: () => import('../views/ProductoDetalle.vue') },
   { path: '/avisolegal', name: 'AvisoLegal', component: AvisoLegal },
   { path: '/privacidad', name: 'Privacidad', component: Privacidad },
   { path: '/cookies', name: 'Cookies', component: Cookies },
