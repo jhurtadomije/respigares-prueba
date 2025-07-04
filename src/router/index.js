@@ -9,7 +9,7 @@ import Privacidad from '../views/Privacidad.vue'
 import Cookies from '../views/Cookies.vue'
 import Blog from '../views/Blog.vue'
 import Noticia from '../views/NoticiaDetalle.vue'
-import TerminosYcondiciones from '../views/TerminosYcondiciones.vue'
+import TerminosYcondiciones from '../views/TerminosYCondiciones.vue'
 // import NotFound from '../views/NotFound.vue'
 
 const routes = [
