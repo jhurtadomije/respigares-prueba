@@ -1,24 +1,24 @@
 <template>
   <div class="product-card animate-fadeup" :style="`--delay: ${delay || 0}ms`">
-  <div class="product-img-wrap">
-    <img
-      :src="Array.isArray(producto.imagen) ? producto.imagen[0] : producto.imagen"
-      :alt="producto.nombre"
-      class="product-img"
-      loading="lazy"
-      @mouseover="hover = true"
-      @mouseleave="hover = false"
-      @focus="hover = true"
-      @blur="hover = false"
-      tabindex="0"
-      @error="onImgError"
+    <div class="product-img-wrap">
+      <img
+        :src="Array.isArray(producto.imagen) ? producto.imagen[0] : producto.imagen"
+        :alt="producto.nombre"
+        class="product-img"
+        loading="lazy"
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+        @focus="hover = true"
+        @blur="hover = false"
+        tabindex="0"
+        @error="onImgError"
         v-show="!imgError"
-    />
-    </div>
-    <div v-if="imgError" class="img-fallback">
-        <img src="/img/productos/default.jpg" alt="Imagen no disponible" class="product-img" />
+      />
+      <div v-if="imgError" class="img-fallback">
+        <img :src="base + 'img/productos/default.jpg'" alt="Imagen no disponible" class="product-img" />
         <span>Imagen no disponible por el momento</span>
       </div>
+    </div>
     <h3 class="product-title">{{ producto.nombre }}</h3>
     <router-link
       :to="`/producto/${encodeURIComponent(producto.nombre)}`"
@@ -36,11 +36,14 @@ const props = defineProps({
   delay: { type: Number, default: 0 }
 })
 const hover = ref(false)
+const imgError = ref(false)
+const base = import.meta.env.BASE_URL || '/'
 
 function onImgError() {
   imgError.value = true
 }
 </script>
+
 
 <style scoped>
 @keyframes fadeUp {

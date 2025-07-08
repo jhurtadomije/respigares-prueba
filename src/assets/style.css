@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  background: rgba(234, 17, 71, 0.6);
+  background: var(--color-main);
   color: var(--color-white);
   box-shadow: 0 4px 18px #0002;
   position: fixed;

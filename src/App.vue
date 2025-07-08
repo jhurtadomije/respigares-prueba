@@ -22,7 +22,7 @@ import WhatsappButton from './components/WhatsappButton.vue'
 
 <style>
 .contenido-principal {
-  margin-top: 2rem;
+  margin-top: 5.6rem;
   min-height: 80vh;
 }
 </style>

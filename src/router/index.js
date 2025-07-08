@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Nosotros from '../views/Nosotros.vue'
 import Catalogo from '../views/Catalogo.vue'
@@ -31,7 +31,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory('/respigares-prueba/'),
+  history: createWebHistory('/'),
   routes,
   scrollBehavior() {
     return { top: 0 }

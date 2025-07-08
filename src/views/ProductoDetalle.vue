@@ -4,7 +4,7 @@
     <div v-if="imagenes.length" class="imagenes-galeria">
       <img
         v-for="(img, idx) in imagenes"
-        :src="img"
+        :src="base + (img.startsWith('/') ? img.substring(1) : img)"
         :key="idx"
         :alt="producto.nombre"
         @click="abrirModal(img)"
@@ -22,7 +22,11 @@
       <span class="cerrar-modal" @click="cerrarModal" tabindex="0" @keyup.enter="cerrarModal">&times;</span>
       <div class="modal-content modal-anim">
         <div class="modal-nombre">{{ producto?.nombre }}</div>
-        <img :src="imagenModal" class="modal-img" :alt="producto?.nombre" />
+        <img
+          :src="base + (imagenModal.startsWith('/') ? imagenModal.substring(1) : imagenModal)"
+          class="modal-img"
+          :alt="producto?.nombre"
+        />
       </div>
     </div>
   </section>
@@ -35,6 +39,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const producto = ref(null)
 const imagenes = ref([])
+const base = import.meta.env.BASE_URL || '/'
 
 const modalVisible = ref(false)
 const imagenModal = ref('')

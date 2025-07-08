@@ -33,24 +33,41 @@
         <span>✅</span> ¡Mensaje enviado correctamente! Gracias por contactar con Respigares.
       </p>
     </form>
+
     <div class="contacto-info">
       <div>
-        <span class="icono">📞</span>
-        <a href="tel:+34958256738">958 25 67 38</a>
-      </div>
-      <div>
-        <span class="icono">✉️</span>
-        <a href="mailto:info@respigares.es">info@respigares.es</a>
-      </div>
-      <div>
-        <span class="icono">📍</span>
-        <a href="https://maps.google.com/?q=Av.+de+Andalucía+102,+Granada" target="_blank" rel="noopener">
-          Av. de Andalucía 102, Granada
+        <a href="tel:+34958551801" class="contact-link">
+          <span class="icono">
+            <!-- Teléfono SVG -->
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M6.2 4.7A10.14 10.14 0 0 0 3.15 7.5c-1.04 1.3-.72 3.16.37 4.4 2.3 2.7 5.4 5.5 8.1 7.3 1.4.96 3.4.59 4.4-.54l2.2-2.3c.29-.3.26-.8-.08-1.05l-3.6-2.7a.72.72 0 0 0-.88.01l-1.38 1.12c-.15.13-.37.13-.52-.02l-2.2-2.3c-.13-.13-.14-.34-.02-.49l1.12-1.41a.72.72 0 0 0 0-.88l-2.7-3.64a.72.72 0 0 0-1.07-.08Z" fill="#285281"/></svg>
+          </span>
+          958 55 18 01
         </a>
       </div>
       <div>
-        <span class="icono">💬</span>
-        <a href="https://wa.me/34666666666?text=Hola%20Respigares%2C%20quiero%20información%20sobre%20vuestros%20productos" target="_blank" rel="noopener">
+        <a href="mailto:info@respigares.es" class="contact-link">
+          <span class="icono">
+            <!-- Email SVG -->
+            <svg width="22" height="22" fill="none" viewBox="0 0 22 22"><path d="M3.3 5.4A2.5 2.5 0 0 1 5.8 3.3h10.4a2.5 2.5 0 0 1 2.5 2.1l-8.7 6.7a.7.7 0 0 1-.86 0l-8.7-6.7Zm-1 1.45V16.2a2.5 2.5 0 0 0 2.5 2.5h13.4a2.5 2.5 0 0 0 2.5-2.5V6.85l-7.54 5.84a2.2 2.2 0 0 1-2.66 0L2.3 6.85Z" fill="#285281"/></svg>
+          </span>
+          info@respigares.es
+        </a>
+      </div>
+      <div>
+        <a href="https://maps.google.com/?q=Calle+Almeria+8,+18194+Churriana+de+la+Vega,+Granada" target="_blank" rel="noopener" class="contact-link">
+          <span class="icono">
+            <!-- Localización SVG -->
+            <svg width="22" height="22" fill="none" viewBox="0 0 22 22"><path d="M11 3.3a6.5 6.5 0 0 1 6.5 6.5c0 4.05-5.2 8.86-6.02 9.59a.73.73 0 0 1-.96 0C9.7 18.66 4.5 13.85 4.5 9.8A6.5 6.5 0 0 1 11 3.3Zm0 4.2a2.3 2.3 0 1 0 0 4.6 2.3 2.3 0 0 0 0-4.6Z" fill="#285281"/></svg>
+          </span>
+          Calle Almería, 8, 18194 Churriana de la Vega, Granada
+        </a>
+      </div>
+      <div>
+        <a href="https://wa.me/34659307281?text=Hola%20Respigares%2C%20quiero%20informaci%C3%B3n%20sobre%20vuestros%20productos" target="_blank" rel="noopener" class="contact-link">
+          <span class="icono">
+            <!-- WhatsApp SVG -->
+            <svg width="22" height="22" fill="none" viewBox="0 0 22 22"><path d="M11 3.3a7.7 7.7 0 0 0-6.1 12.51l-1 3.64a.63.63 0 0 0 .79.78l3.67-1A7.7 7.7 0 1 0 11 3.3Zm0 13.2a5.5 5.5 0 0 1-3.05-.91l-.22-.14-2.18.6.59-2.15-.15-.23A5.5 5.5 0 1 1 11 16.5Zm2.44-4.42c-.38-.19-1.12-.55-1.29-.61-.17-.06-.3-.1-.43.11-.13.19-.5.61-.62.73-.11.13-.23.14-.43.05a4.5 4.5 0 0 1-2.3-2.03c-.15-.26.15-.28.44-.93.11-.23.06-.34-.03-.46-.07-.11-.43-1.04-.59-1.42-.16-.38-.33-.33-.45-.33h-.39c-.13 0-.33.05-.5.23-.17.18-.66.65-.66 1.6 0 .95.68 1.87.77 2 .09.13 1.33 2.02 3.23 2.75.45.15.8.24 1.07.16.32-.1 1-.41 1.15-.81.15-.4.15-.74.1-.81-.06-.07-.13-.1-.24-.17Z" fill="#285281"/></svg>
+          </span>
           WhatsApp
         </a>
       </div>
@@ -74,7 +91,6 @@ const enviado = ref(false)
 const handleSubmit = () => {
   enviando.value = true
   enviado.value = false
-  // Aquí harías la petición a tu API
   setTimeout(() => {
     enviando.value = false
     enviado.value = true
@@ -95,8 +111,6 @@ useHead({
     { rel: 'canonical', href: 'https://www.respigares.es/contacto' }
   ]
 })
-
-
 </script>
 
 <style scoped>
@@ -290,5 +304,22 @@ useHead({
   .contacto-form {
     padding: 1.2rem 0.5rem 1rem;
   }
+}
+.contacto-info .contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  text-decoration: none;
+  color: var(--color-main, #285281);
+  font-weight: bold;
+  transition: color 0.17s;
+}
+.contacto-info .contact-link:hover .icono svg,
+.contacto-info .contact-link:focus .icono svg {
+  filter: brightness(1.25) saturate(1.6) drop-shadow(0 2px 8px #28528133);
+  transform: scale(1.12) rotate(-6deg);
+}
+.contacto-info .icono svg {
+  transition: filter 0.18s, transform 0.16s;
 }
 </style>
