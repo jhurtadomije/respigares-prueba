@@ -300,6 +300,19 @@ useHead({
   .catalogo-desc { font-size: 1em; padding: 0 0.4em; }
   .categoria-card__img { width: 9em; height: 9em; }
   .catalogo { padding-left: 0.5em; padding-right: 0.5em; }
+   .catalogo-grid { gap: 1.2em; }
+   .categoria-card {
+    min-height: unset;                          /* quita altura forzada */
+    padding: 10px 12px;
+    gap: .55rem;                                /* separa img/título/botón de forma controlada */
+  }
+  .categoria-card__title {
+    margin: .35rem 0 0;                         /* título más pegado */
+  }
+   .categoria-card__link {
+    margin-top: .6rem !important;               /* ya no al fondo; anula el auto */
+    margin-bottom: 0;
+  }
 }
 /* Animaciones de aparición */
 .animate-fadein {

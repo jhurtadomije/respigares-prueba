@@ -1,35 +1,164 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <url>
-    <loc>https://respigares.es/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://respigares.es/catalogo</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://respigares.es/somos</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://respigares.es/contacto</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://respigares.es/blog</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <!-- Añade aquí más URLs según tengas rutas importantes -->
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://respigares.es/</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>1.0</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.9</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/somos</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.8</priority>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/contacto</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.8</priority>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/blog</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/conservas-vegetales</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/aceitunas-y-encurtidos</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/aceites-y-vinagres</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/conservas-de-pescado</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/almibares-mermeladas-miel</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/alimentacion-infantil</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/legumbres-arroces</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/salsas-ketchup-mostaza</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/jamones-y-embutidos-ibericos</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/quesos</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/vinos</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/repostería</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/carnicos-ibericos</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/caldos</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/siropes</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/precocinados</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.7</priority>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/ensaladas</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.6</priority>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/bombones</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.6</priority>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/legumbres</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.6</priority>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/galletas</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.6</priority>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/papillas</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.6</priority>
+<changefreq>monthly</changefreq>
+</url>
+<url>
+<loc>https://respigares.es/catalogo/alcachofas</loc>
+<lastmod>2025-08-12</lastmod>
+<priority>0.6</priority>
+<changefreq>monthly</changefreq>
+</url>
 </urlset>
