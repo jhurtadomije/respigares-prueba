@@ -1,16 +1,12 @@
+<!-- src/components/ProductCard.vue -->
 <template>
   <div class="product-card animate-fadeup" :style="`--delay: ${delay || 0}ms`">
     <div class="product-img-wrap">
       <img
-        :src="Array.isArray(producto.imagen) ? producto.imagen[0] : producto.imagen"
-        :alt="producto.nombre"
+        :src="imgSrc"
+        :alt="altText"
         class="product-img"
         loading="lazy"
-        @mouseover="hover = true"
-        @mouseleave="hover = false"
-        @focus="hover = true"
-        @blur="hover = false"
-        tabindex="0"
         @error="onImgError"
         v-show="!imgError"
       />
@@ -19,9 +15,11 @@
         <span>Imagen no disponible por el momento</span>
       </div>
     </div>
-    <h3 class="product-title">{{ producto.nombre }}</h3>
+
+    <h3 class="product-title">{{ titleText }}</h3>
+
     <router-link
-      :to="`/producto/${encodeURIComponent(producto.nombre)}`"
+      :to="`/producto/${encodeURIComponent(linkSlug)}`"
       class="btn-ver-mas"
     >
       Más detalles
@@ -30,17 +28,51 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+
 const props = defineProps({
   producto: { type: Object, required: true },
   delay: { type: Number, default: 0 }
 })
-const hover = ref(false)
+
 const imgError = ref(false)
 const base = import.meta.env.BASE_URL || '/'
+function onImgError() { imgError.value = true }
 
-function onImgError() {
-  imgError.value = true
+function fullSrc(path) {
+  if (!path) return base + 'img/productos/default.jpg'
+  if (/^https?:\/\//i.test(path) || path.startsWith('/')) return path
+  return base + path.replace(/^\/+/, '')
+}
+
+// --- Texto ---
+const titleText = computed(() =>
+  props.producto.title || props.producto.nombre || 'Producto'
+)
+const altText = computed(() => `Imagen de ${titleText.value}`)
+
+// --- Imagen principal ---
+const imgSrc = computed(() => {
+  if (Array.isArray(props.producto.images) && props.producto.images.length > 0) {
+    return fullSrc(props.producto.images[0])
+  }
+  if (Array.isArray(props.producto.galeria) && props.producto.galeria.length > 0) {
+    return fullSrc(props.producto.galeria[0])
+  }
+  return base + 'img/productos/default.jpg'
+})
+
+// --- Slug ---
+const linkSlug = computed(() =>
+  props.producto.slug || slugify(titleText.value)
+)
+
+function slugify(s) {
+  return String(s)
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
 }
 </script>
 
@@ -93,6 +125,23 @@ function onImgError() {
   box-shadow: 0 2px 12px #32699913;
   transition: box-shadow 0.23s, filter 0.2s;
 }
+.product-img-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 185px;
+}
+
+.img-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  color: #666;
+  font-size: .9rem;
+}
+
 .product-card:hover .product-img,
 .product-card:focus-within .product-img {
   filter: brightness(1.11) saturate(1.09);

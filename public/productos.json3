@@ -1,0 +1,2965 @@
+[
+  {
+    "id": 10831,
+    "nombre": "Tomate Frito Casero Lata Celorrio. Varios formatos",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/05/10009A.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Tomate Frito",
+    "marca": "Celorrio",
+    "tags": [
+      "tomate",
+      "salsa",
+      "casero",
+      "lata"
+    ]
+  },
+  {
+    "id": 10827,
+    "nombre": "Salsa Gazpacho Tarro Celorrio. Varios Formatos",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/05/Salsa-Gazpacho-Tarro-1-kg.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Gazpacho",
+    "marca": "Celorrio",
+    "tags": [
+      "gazpacho",
+      "salsa",
+      "tomate",
+      "tarro"
+    ]
+  },
+  {
+    "id": 10825,
+    "nombre": "Tomate salsa de pizza Celorrio. Varios formatos",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/05/salsa-pizza-celorrio.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Salsa de Pizza",
+    "marca": "Celorrio",
+    "tags": [
+      "tomate",
+      "pizza",
+      "salsa",
+      "celorrio"
+    ]
+  },
+  {
+    "id": 10823,
+    "nombre": "Tomate Entero Lata Primera Celorrio Varios Formatos",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/05/Tomate-Entero-Lata-1-kg-Primera-scaled.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Tomate Entero",
+    "marca": "Celorrio",
+    "tags": [
+      "tomate",
+      "entero",
+      "lata",
+      "celorrio"
+    ]
+  },
+  {
+    "id": 10816,
+    "nombre": "Tomate Frito Lata Celorrio. Varios formatos",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/05/10009.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Tomate Frito",
+    "marca": "Celorrio",
+    "tags": [
+      "tomate",
+      "frito",
+      "salsa",
+      "celorrio"
+    ]
+  },
+  {
+    "id": 10764,
+    "nombre": "Pimientos del piquillo entero Extra Acequia",
+    "descripcion": "Especial para relleno. Color rojo intenso y textura firme que facilita su manipulación al ser cocinados. Varios formatos.",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTOS-DEL-PIQUILLO-ENTERO-EXTRA-ajustado.jpeg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Piquillo Entero",
+    "marca": "Acequia",
+    "tags": [
+      "pimientos",
+      "piquillo",
+      "entero",
+      "extra"
+    ]
+  },
+  {
+    "id": 10777,
+    "nombre": "Pimientos en su jugo asados en horno de leña Acequia",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTOS-ASADOS-CON-LENA-EN-SU-JUGO-ARTESANOS-ACEQUIA-ajustado.jpeg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Pimientos Asados",
+    "marca": "Acequia",
+    "tags": [
+      "pimientos",
+      "asados",
+      "horno de leña",
+      "acequia"
+    ]
+  },
+  {
+    "id": 10768,
+    "nombre": "Ensalada de pimientos asados en horno de leña con tomate y aceitunas negras Acequia",
+    "descripcion": "Varios formatos",
+    "galeria": [
+      "img/productos/2025/02/ENSALADA-DE-PIMIENTOS-ASADOS-AL-HORNO-DE-LENA-CON-TOMATE-Y-ACEITUNAS-NEGRAS-ajustado-tarro.jpeg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Ensaladas",
+    "marca": "Acequia",
+    "tags": [
+      "ensalada",
+      "pimientos",
+      "asados",
+      "tomate",
+      "aceitunas",
+      "acequia"
+    ]
+  },
+  {
+    "id": 10774,
+    "nombre": "Pimientos del piquillo enteros Extra Acequia",
+    "descripcion": "Varios formatos",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTO-DEL-PIQUILLO-ENTERO-EXTRA-3KG-ACEQUIA-ajustado-bote.jpeg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Piquillo Entero",
+    "marca": "Acequia",
+    "tags": [
+      "pimientos",
+      "piquillo",
+      "entero",
+      "extra"
+    ]
+  },
+  {
+    "id": 10783,
+    "nombre": "Pimientos del piquillo entero trozos Celorrio",
+    "descripcion": "Varios formatos",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTOS-DEL-PIQUILLO-ENTERO-TROZOS-TARRO-CELORRIO-200x300-1.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Piquillo Trozos",
+    "marca": "Celorrio",
+    "tags": [
+      "pimientos",
+      "piquillo",
+      "trozos",
+      "celorrio"
+    ]
+  },
+  {
+    "id": 10788,
+    "nombre": "Pimiento entero Extra Celorrio",
+    "descripcion": "Varios formatos",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTO-ENTERO-EXTRA-TARRO-CELORRIO-200x200-1.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Pimiento Entero",
+    "marca": "Celorrio",
+    "tags": [
+      "pimiento",
+      "entero",
+      "extra",
+      "celorrio"
+    ]
+  },
+  {
+    "id": 10781,
+    "nombre": "Pimiento Extra primera Corona de Labarra",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTO-CORONAS-DE-LABARRA-PRIMERA.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Pimiento Entero",
+    "marca": "Corona de Labarra",
+    "tags": [
+      "pimiento",
+      "extra",
+      "primera",
+      "labarra"
+    ]
+  },
+  {
+    "id": 10786,
+    "nombre": "Pimiento en tiras Celorrio",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTO-EN-TIRAS-LATA-3KG.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Pimiento en Tiras",
+    "marca": "Celorrio",
+    "tags": [
+      "pimiento",
+      "tiras",
+      "celorrio"
+    ]
+  },
+  {
+    "id": 10794,
+    "nombre": "Pimiento piquillo tiras Extra Celorrio",
+    "descripcion": "Varios formatos",
+    "galeria": [
+      "img/productos/2025/02/PIMIIENTO-PIQUILLO-TIRAS.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Piquillo Tiras",
+    "marca": "Celorrio",
+    "tags": [
+      "pimiento",
+      "piquillo",
+      "tiras",
+      "celorrio"
+    ]
+  },
+  {
+    "id": 10792,
+    "nombre": "Pimiento Piquillo Extra Celorrio",
+    "descripcion": "Varios formatos",
+    "galeria": [
+      "img/productos/2025/02/PIMIENTO-PIQUILLO-3-KG.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Piquillo Entero",
+    "marca": "Celorrio",
+    "tags": [
+      "pimiento",
+      "piquillo",
+      "celorrio",
+      "extra"
+    ]
+  },
+  {
+    "id": 10798,
+    "nombre": "Pimiento rojo entero al natural calidad extra Marcove",
+    "descripcion": "Preparado a partir de pimientos enteros descorazonados y pelados. Envasados en hojalata con agua, sal y ácido cítrico. Tratados por calor para garantizar estabilidad. Formato Pack-3 1/8 kg. Peso neto 240g (80x3). Peso escurrido 180g (60x3).",
+    "galeria": [
+      "img/productos/2025/02/Pimientos-morrones-Extra-Marcove.png"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Pimiento Entero",
+    "marca": "Marcove",
+    "tags": [
+      "pimiento",
+      "rojo",
+      "entero",
+      "natural",
+      "marcove"
+    ]
+  },
+  {
+    "id": 10796,
+    "nombre": "Pimiento rojo entero al natural calidad extra Marcove",
+    "descripcion": "Preparado a partir de pimientos enteros descorazonados y pelados. Envasados en hojalata con agua, sal y ácido cítrico. Varios formatos.",
+    "galeria": [
+      "img/productos/2025/02/Pimientos-morrones-enteros-Marcove.png"
+    ],
+    "categoria": "conservas_vegetales",
+    "subcategoria": "Pimiento Entero",
+    "marca": "Marcove",
+    "tags": [
+      "pimiento",
+      "rojo",
+      "entero",
+      "natural",
+      "marcove"
+    ]
+  },
+  {
+    "id": 10756,
+    "nombre": "Mermelada Hero naranja amarga porciones",
+    "descripcion": "Confituras Hero naranja amarga con un envase premium 25g. Elaboradas con materias primas de la máxima calidad.",
+    "galeria": [
+      "img/productos/2024/12/porcion_naranja_amarga_1_1.webp"
+    ],
+    "categoria": "mermeladas",
+    "subcategoria": "Mermeladas",
+    "marca": "Hero",
+    "tags": [
+      "mermelada",
+      "naranja",
+      "amarga",
+      "hero",
+      "porcion"
+    ]
+  },
+  {
+    "id": 10753,
+    "nombre": "Todo fruta manzana plátano Hero",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2024/12/N012253OriginalImage-pdpFormat.webp"
+    ],
+    "categoria": "reposteria",
+    "subcategoria": "Hero Baby",
+    "marca": "Hero",
+    "tags": [
+      "fruta",
+      "manzana",
+      "platano",
+      "postres",
+      "meriendas",
+      "hero",
+      "baby"
+    ]
+  },
+  {
+    "id": 10751,
+    "nombre": "Miel frasco 30 grs. Hero",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2024/12/Miel-30-gr.jpeg"
+    ],
+    "categoria": "miel",
+    "subcategoria": "Miel Hero",
+    "marca": "Hero",
+    "tags": [
+      "miel",
+      "frasco",
+      "hero",
+      "endulzante"
+    ]
+  },
+  {
+    "id": 10745,
+    "nombre": "Confitura Frambuesa Hero",
+    "descripcion": "Elaboradas con materias primas de la máxima calidad y un envase de cristal que ayuda a la perfecta conservación de todas las propiedades de las frutas.",
+    "galeria": [
+      "img/productos/2024/12/frambuesa-frasco.jpg"
+    ],
+    "categoria": "mermeladas",
+    "subcategoria": "Frambuesa",
+    "marca": "Hero",
+    "tags": [
+      "confitura",
+      "mermelada",
+      "frambuesa",
+      "hero"
+    ]
+  },
+  {
+    "id": 10742,
+    "nombre": "Albóndigas en Salsa Hero",
+    "descripcion": "Albóndigas en salsa Hero, elaboradas con la receta tradicional, con todo el sabor y sin conservantes ni colorantes. Con huevos de gallinas criadas en libertad y carne de origen 100% español. Sin aceite de palma.",
+    "galeria": [
+      "img/productos/2024/12/albondigas-hero.webp"
+    ],
+    "categoria": "precocinados",
+    "subcategoria": "Platos preparados",
+    "marca": "Hero",
+    "tags": [
+      "albondigas",
+      "salsa",
+      "precocinados",
+      "hero"
+    ]
+  },
+  {
+    "id": 10741,
+    "nombre": "Ravioli al Huevo con carne Hero",
+    "descripcion": "Salsa: agua, tomate (45%), cebolla, aceite de girasol, azúcar, sal, almidón de maíz modificado, aroma y ajo. Pasta: sémola de trigo duro (12%), huevo (2,6%). Relleno: pan rallado (harina de trigo, sal y levadura), carne de cerdo (6,5%), aceite de palma, jamón (1%), sal, queso y aroma.",
+    "galeria": [
+      "img/productos/2024/12/00118035400011____2__600x600.jpg"
+    ],
+    "categoria": "precocinados",
+    "subcategoria": "Pasta rellena",
+    "marca": "Hero",
+    "tags": [
+      "ravioli",
+      "pasta",
+      "huevo",
+      "carne",
+      "precocinados",
+      "hero"
+    ]
+  },
+  {
+    "id": 10736,
+    "nombre": "Petit Queso Fresco y Frutas Variadas",
+    "descripcion": "Tarritos para un crecimiento sano y equilibrado a partir de 6 meses. Pack 2×80 gr.",
+    "galeria": [
+      "img/productos/2024/12/petit-queso-frutas-variadas.jpg"
+    ],
+    "categoria": "reposteria",
+    "subcategoria": "Hero Baby",
+    "marca": "Hero",
+    "tags": [
+      "petit",
+      "queso fresco",
+      "frutas variadas",
+      "postres",
+      "meriendas",
+      "hero",
+      "baby"
+    ]
+  },
+  {
+    "id": 10733,
+    "nombre": "Melocotón en almíbar Hero",
+    "descripcion": "Melocotón en almíbar Hero elaborado de la forma más natural y sin alterar las propiedades de la fruta. Ingredientes: melocotones en mitades, almíbar (agua y azúcar), acidulante (ácido cítrico) y antioxidante (ácido ascórbico).",
+    "galeria": [
+      "img/productos/2024/12/melocoton-almibar-ext240g.jpg"
+    ],
+    "categoria": "almibares",
+    "subcategoria": "Melocotón",
+    "marca": "Hero",
+    "tags": [
+      "melocoton",
+      "almibar",
+      "fruta",
+      "hero"
+    ]
+  },
+  {
+    "id": 10728,
+    "nombre": "Leche Nutrasense Classic nº1",
+    "slug": "leche-hb-ns-premium-no1",
+    "descripcion": "Hero Nutrasense Classic 1, leche para lactantes en polvo 800g fórmula completa con una combinación de nutrientes seleccionados para el óptimo crecimiento y desarrollo de bebés hasta los 6 meses.\n\nCaracterísticas:\n- Fórmula nutritiva: La Leche Nutrasense Classic de Hero proporciona una combinación equilibrada de nutrientes esenciales para el crecimiento y desarrollo.\n- Alta calidad: Elaborada con ingredientes de primera calidad, garantizando la pureza y seguridad del producto.\n- Fácil digestión: Su fórmula cuidadosamente diseñada asegura una digestión suave y confortable para los más pequeños.\n- Enriquecida con vitaminas y minerales: Contiene una variedad de vitaminas y minerales esenciales para apoyar un desarrollo saludable.\n- Sin azúcares añadidos: Una opción nutritiva sin añadidos artificiales ni azúcares perjudiciales.",
+    "galeria": [
+      "img/productos/2024/12/leche-1-1200x1200-1.jpg"
+    ],
+    "categorias": {
+      "id": "alimentacion_infantil",
+      "name": "Alimentación Infantil",
+      "subcategoria": "Leches Infantiles Hero Baby"
+    },
+    "marca": "Hero",
+    "categoria": "leches-infantiles"
+  },
+  {
+    "id": 10726,
+    "nombre": "Leche HB NS Premium nº2",
+    "slug": "leche-hb-ns-premium-no2",
+    "descripcion": "Leche Nutrasense Premium 2, es una leche infantil con ingredientes científicamente probados y resultados demostrados. Contribuye al crecimiento y desarrollo óptimo de tu bebé. Indicado para bebés a partir de 6 meses. Sin aceite de palma.",
+    "galeria": [
+      "img/productos/2024/12/8410175070180_BOTE_FRONTAL_0.webp"
+    ],
+    "categorias": {
+      "id": "alimentacion_infantil",
+      "name": "Alimentación Infantil",
+      "subcategoria": "Leches Infantiles Hero Baby"
+    },
+    "marca": "Hero",
+    "categoria": "leches-infantiles"
+  },
+  {
+    "id": 10704,
+    "nombre": "Aceite Girasol Alto Oléico Aceites el Niño",
+    "slug": "aceite-girasol-alto-oleico",
+    "descripcion": "El aceite de girasol alto oleico es similar en su composición al aceite de oliva… Este tipo de aceite se obtiene a partir de semillas de variedades de girasol especiales, ricas en dicho ácido, y representa una oferta interesante por su buen diseño nutricional y su precio accesible. El ácido oleico es un tipo de grasa monoinsaturada, característica del aceite de oliva, de las aceitunas y del aguacate, y tras esta novedad de la tecnología alimentaria, también abunda en este nuevo tipo de aceite.",
+    "galeria": [
+      "img/productos/2024/11/aceite-girasol-alto101-aceites-el-nino.jpg"
+    ],
+    "categorias": {
+      "id": "aceites_y_vinagres",
+      "name": "Aceites y Vinagres",
+      "subcategoria": "aceite-de-girasol"
+    },
+    "marca": "El Niño",
+    "categoria": "aceites_y_vinagres"
+  },
+  {
+    "id": 10689,
+    "nombre": "Blanco Verdejo D.O Rueda «Divino Minino»",
+    "slug": "blanco-verdejo-d-o-rueda-divino-minino",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2024/11/Divino_Minino-removebg-preview2.png"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Rueda"
+    },
+    "marca": "Divino Minino",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10654,
+    "nombre": "Queso curado Portillo",
+    "slug": "queso-curado-portillo",
+    "descripcion": "Portillo Curado, elaborado con leche pasteurizada de vaca y leche pasteurizada de oveja, suave y delicado, con el equilibrio óptimo de maduración, con una curación superior a 105 días. Suave, delicado y agradable al paladar, con el equilibrio óptimo de madurez.",
+    "galeria": [
+      "img/productos/2024/11/PortilloCurado3kg-1-1024x976-1.png",
+      "img/productos/2024/11/PortilloCuradoMedio-250x167.jpg"
+    ],
+    "categorias": {
+      "id": "quesos",
+      "name": "Quesos",
+      "subcategoria": "Quesos Curados"
+    },
+    "marca": "Portillo",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10651,
+    "nombre": "Queso Cerrato Viejo 1968",
+    "slug": "queso-cerrato-viejo-1968",
+    "descripcion": "Leche cruda de oveja (min 50%) y pasteurizada de vaca (min 40%), sal, cuajo. Cerrato 1968 es la joya de la corona de Quesos Cerrato debido a sus características inconfundibles. Queso de mezcla fundente por su leche cruda de oveja y la leche pasteurizada de vaca, de sabor intenso gracias a su prolongado proceso de curación superior a 250 días. Aporta sabores intensos, con un ligero toque picante equilibrado. Maridaje: Cervezas Ale, Vinos Blancos secos frutales y Vinos Tintos de crianza media. Acompañamientos ideales: uvas, frambuesas, membrillo, verduras y encurtidos.",
+    "galeria": [
+      "img/productos/2024/11/3036-300x300-1.jpg"
+    ],
+    "categorias": {
+      "id": "quesos",
+      "name": "Quesos",
+      "subcategoria": "Quesos Curados"
+    },
+    "marca": "Cerrato",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10647,
+    "nombre": "Queso Cerrato Tostado Viejo",
+    "slug": "queso-cerrato-tostado-viejo",
+    "descripcion": "Leche pasteurizada de vaca (30%), oveja (30%), cabra (30%), sal y cuajo. Cerrato Tostado es un queso de mezcla elaborado con leche pasteurizada de vaca, oveja y cabra. Con más de 180 días de maduración, se caracteriza por su color naranja y aroma torrefacto y afrutado. Al corte presenta pasta beige con ojos de tamaño variable. Sabor intenso con matices dulces y lácteos. Maridaje: Cervezas tostadas, Vinos Blancos en barrica, Vinos andaluces y Tintos de crianza. Acompañamientos: anchoas, salmón, panes de maíz, frutos secos y miel.",
+    "galeria": [
+      "img/productos/2024/11/Cerrato-Tosado-viejo.jpg",
+      "img/productos/2024/11/7489176-250x250.jpg"
+    ],
+    "categorias": {
+      "id": "quesos",
+      "name": "Quesos",
+      "subcategoria": "Quesos Curados"
+    },
+    "marca": "Cerrato",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10644,
+    "nombre": "Queso semicurado Portillo",
+    "slug": "queso-semicurado-portillo",
+    "descripcion": "Los maestros queseros de Quesos Cerrato cuidan los detalles seleccionando los ingredientes y materias primas para su elaboración. Portillo Semicurado está elaborado con leche pasteurizada de vaca y de oveja, con una curación superior a 35 días. Sabor suave y delicado, con interior firme y compacto de color blanco marfil. Aromas lácteos y dulces. Maridaje: Cervezas tostadas, Vinos Blancos en barrica, Vinos andaluces y Tintos de crianza. Acompañamientos: anchoas, salmón, panes de maíz, almendras, avellanas o miel.",
+    "galeria": [
+      "img/productos/2024/11/20100-PortilloSemi3kg-1024x976-1.png"
+    ],
+    "categorias": {
+      "id": "quesos",
+      "name": "Quesos",
+      "subcategoria": "Quesos Semicurados"
+    },
+    "marca": "Portillo",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10636,
+    "nombre": "Queso de oveja CURADO «Peña Nieto»",
+    "slug": "queso-de-oveja-curado-pena-nieto",
+    "descripcion": "Queso elaborado con leche cruda de oveja. Curación: Entre 3 y 6 meses. Catálogo disponible en: img/productos/2024/11/CATALOGO_PENANIETO_web.pdf",
+    "galeria": [
+      "img/productos/2024/11/52023-1.1.jpg"
+    ],
+    "categorias": {
+      "id": "quesos",
+      "name": "Quesos",
+      "subcategoria": "Quesos Curados"
+    },
+    "marca": "Peña Nieto",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10632,
+    "nombre": "Queso de oveja AÑEJO «Peña Nieto»",
+    "slug": "queso-de-oveja-anejo-pena-nieto",
+    "descripcion": "Queso elaborado con leche cruda de oveja. Sabor recio, fuerte y de intenso aroma. Curación: Entre 9 y 12 meses. Catálogo disponible en: img/productos/2024/11/CATALOGO_PENANIETO_web.pdf",
+    "galeria": [
+      "img/productos/2024/11/52022-1.1.jpg"
+    ],
+    "categorias": {
+      "id": "quesos",
+      "name": "Quesos",
+      "subcategoria": "Quesos Añejo"
+    },
+    "marca": "Peña Nieto",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10628,
+    "nombre": "Queso de oveja Gran Reserva «Peña Nieto»",
+    "slug": "queso-de-oveja-gran-reserva-pena-nieto",
+    "descripcion": "Queso elaborado con leche cruda de oveja. Sabor recio, fuerte e intenso aroma. Período de curación: superior a 12 meses. Catálogo disponible en: img/productos/2024/11/CATALOGO_PENANIETO_web.pdf",
+    "galeria": [
+      "img/productos/2024/11/52300-2.jpg"
+    ],
+    "categorias": {
+      "id": "quesos",
+      "name": "Quesos",
+      "subcategoria": "Quesos Gran Reserva"
+    },
+    "marca": "Peña Nieto",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10624,
+    "nombre": "Tinto Reserva D.O Rioja «Vástagos de Rubal»",
+    "slug": "tinto-reserva-d-o-rioja-vastagos-de-rubal",
+    "descripcion": "Unidades por caja: 6. Cajas por fila: 25. Filas por palet: 4. Cajas por palet: 100.",
+    "galeria": [
+      "img/productos/2024/11/rioja-reserva-1x2-1.jpg"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Rioja"
+    },
+    "marca": "Vástagos de Rubal",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10622,
+    "nombre": "Tinto Crianza D.O Rioja «Vástagos de Rubal»",
+    "slug": "tinto-crianza-d-o-rioja-vastagos-de-rubal",
+    "descripcion": "Unidades por caja: 6. Cajas por fila: 25. Filas por palet: 4. Cajas por palet: 100.",
+    "galeria": [
+      "img/productos/2024/11/Rioja-Crianza-1x2-1.jpg"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Rioja"
+    },
+    "marca": "Vástagos de Rubal",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10619,
+    "nombre": "Tinto Joven D.O Rioja «Vástagos de Rubal»",
+    "slug": "tinto-joven-d-o-rioja-vastagos-de-rubal",
+    "descripcion": "CATA:\n- Color: Rojo granate brillante e intenso.\n- Aroma: Muy limpio, persistente y afrutado con recuerdos a frutos rojos, fresa y frambuesas.\n- Gusto: Suave y afrutado, de ataque largo y bien estructurado.\n- Retrogusto: Persistente, de gran armonía y con final agradable.\n\nRECOMENDACIONES Y MARIDAJE:\nCarnes blancas, caza de pluma y quesos. No recomendado a embarazadas, enfermos hepáticos ni alérgicos al sulfuroso. Conservar en lugar fresco y seco.\n\nUnidades por caja: 6. Cajas por fila: 25. Filas por palet: 4. Cajas por palet: 100.",
+    "galeria": [
+      "img/productos/2024/11/rioja-joven.jpg"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Rioja"
+    },
+    "marca": "Vástagos de Rubal",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10613,
+    "nombre": "Vino Tinto Roble D.O Ribera del Duero «Templarios del Camino»",
+    "slug": "vino-tinto-roble-d-o-ribera-del-duero-templarios-del-camino",
+    "descripcion": "Unidades por caja: 6. Cajas por fila: 25. Filas por palet: 4. Cajas por palet: 100.",
+    "galeria": [
+      "img/productos/2024/11/90008N-roble-templarios-.jpg"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Ribera del Duero"
+    },
+    "marca": "Templarios del Camino",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10611,
+    "nombre": "Tinto Reserva D.O Ribera del Duero «Templarios del Camino»",
+    "slug": "tinto-reserva-d-o-ribera-del-duero-templarios-del-camino",
+    "descripcion": "Unidades por caja: 6. Cajas por fila: 25. Filas por palet: 4. Cajas por palet: 100.",
+    "galeria": [
+      "img/productos/2024/11/reserva-templarios.jpg"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Ribera del Duero"
+    },
+    "marca": "Templarios del Camino",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10607,
+    "nombre": "Tinto Crianza D.O Ribera del Duero «Templarios del Camino»",
+    "slug": "vino-tinto-crianza-do-ribera-del-duero-templarios",
+    "descripcion": "Unidades por caja: 6. Cajas por fila: 25. Filas por palet: 4. Cajas por palet: 100.",
+    "galeria": [
+      "img/productos/2024/11/crianza-templarios-1x2-1.jpg"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Ribera del Duero"
+    },
+    "marca": "Templarios del Camino",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10604,
+    "nombre": "Tinto Joven D.O. Ribera del Duero «Templarios del Camino»",
+    "slug": "vino-tinto-joven-d-o-ribera-del-duero-templarios-del-camino",
+    "descripcion": "Unidades por caja: 6. Cajas por fila: 25. Filas por palet: 4. Cajas por palet: 100.",
+    "galeria": [
+      "img/productos/2024/11/90008N-1x2-1.jpg"
+    ],
+    "categorias": {
+      "id": "vinos",
+      "name": "Vinos",
+      "subcategoria": "Vinos D.O. Ribera del Duero"
+    },
+    "marca": "Templarios del Camino",
+    "categoria": "vinos"
+  },
+  {
+    "id": 10594,
+    "nombre": "Vinagre de vino blanco 1 L. «El Pilar»",
+    "slug": "vinagre-de-vino-blanco-1-l-el-pilar",
+    "descripcion": "Marca: El Pilar. Peso bruto: 1.050 g. Peso neto: 1.000 g.\n\nLogística: Unidades por caja: 15. Cajas por fila: 10. Filas por palet: 5. Cajas por palet: 50.",
+    "galeria": [
+      "img/productos/2024/11/9003142.jpg"
+    ],
+    "categorias": {
+      "id": "aceites_y_vinagres",
+      "name": "Aceites y Vinagres",
+      "subcategoria": "Vinagres"
+    },
+    "marca": "El Pilar",
+    "categoria": "vinos"
+  },
+  {
+    "id": 9771,
+    "nombre": "Tarritos Hero",
+    "slug": "tarritos-hero",
+    "descripcion": "Tarritos Hero Baby: en ellos hay solo lo que ves. Conservando lo bueno de la naturaleza.\n- SOLO lo que ves\n- SIN aditivos\n- SIN azúcar/sal añadida\n- SIN aceite de palma\n\nEncuentra tarritos para bebés de frutas, verduras, pescado o carne. Una alimentación completa y sana para tu bebé.",
+    "galeria": [
+      "img/productos/2021/02/bodegon-tarritos-500.jpg",
+      "img/productos/2021/02/pl_tano_manzana_pera_y_mandarina_235g_l.png",
+      "img/productos/2021/02/selecci_n_de_tres_frutas_235g_l.png",
+      "img/productos/2021/02/melocot_n_de_la_huerta_y_pl_tano_235g_l.png",
+      "img/productos/2021/02/frutas_variadas_235g_l_1.png"
+    ],
+    "categorias": {
+      "id": "alimentacion_infantil",
+      "name": "Alimentación Infantil",
+      "subcategoria": "Tarritos Hero"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10533,
+    "nombre": "Apio Rallado",
+    "slug": "apio-rallado",
+    "descripcion": "",
+    "galeria": [],
+    "categorias": {
+      "id": "conservas_vegetales",
+      "name": "Conservas Vegetales",
+      "subcategoria": "Otros vegetales"
+    },
+    "marca": "Celorrio",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10531,
+    "nombre": "Alubias Blanca y Roja en conserva",
+    "slug": "alubias-blanca-y-roja-en-conserva",
+    "descripcion": "Alubias blanca y roja en conserva. Varios formatos disponibles.",
+    "galeria": [
+      "img/productos/2024/09/780_0692.jpg"
+    ],
+    "categorias": {
+      "id": "conservas_legumbres",
+      "name": "Conservas de legumbres",
+      "subcategoria": "Alubias"
+    },
+    "marca": "Celorrio",
+    "categoria": "legumbres_y_arroces"
+  },
+  {
+    "id": 10528,
+    "nombre": "Ajetes Tiernos",
+    "slug": "ajetes-tiernos",
+    "descripcion": "Ajetes frescos y tiernos listos para su uso en cocina.",
+    "galeria": [
+      "img/productos/2024/09/OIP-1-1.jpg"
+    ],
+    "categorias": {
+      "id": "conservas_vegetales",
+      "name": "Ajos, brotes de ajo y ajetes",
+      "subcategoria": "Ajetes"
+    },
+    "marca": "Celorrio",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10526,
+    "nombre": "Puerros enteros",
+    "slug": "puerros-enteros",
+    "descripcion": "Puerros enteros frescos ideales para guisos y cremas.",
+    "galeria": [
+      "img/productos/2024/09/OIP-2.jpg"
+    ],
+    "categorias": {
+      "id": "vegetales",
+      "name": "Otros vegetales",
+      "subcategoria": "Puerros"
+    },
+    "marca": "Celorrio",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10518,
+    "nombre": "Gildas de Boquerón",
+    "slug": "gildas-de-boqueron",
+    "descripcion": "Gildas tradicionales elaboradas con boquerón.",
+    "galeria": [
+      "img/productos/2024/09/gilda-de-boqueron.jpg"
+    ],
+    "categorias": {
+      "id": "conservas_de_pescado",
+      "name": "Gildas",
+      "subcategoria": "Boquerón"
+    },
+    "marca": "otros",
+    "categoria": "pescados-conserva"
+  },
+  {
+    "id": 10516,
+    "nombre": "Boquerón cantábrico oliva",
+    "slug": "boqueron-cantabrico-oliva",
+    "descripcion": "Boquerón del Cantábrico en aceite de oliva. Formato 700 grs.",
+    "galeria": [
+      "img/productos/2024/09/boqueron.jpg"
+    ],
+    "categorias": {
+      "id": "conservas_de_pescado",
+      "name": "Boquerones",
+      "subcategoria": "Cantábrico"
+    },
+    "marca": "otros",
+    "categoria": "pescados-conserva"
+  },
+  {
+    "id": 10495,
+    "nombre": "Anchoas con Mantequilla",
+    "slug": "anchoas-con-mantequilla-lotamar",
+    "descripcion": "Anchoas del Cantábrico en mantequilla y pimiento (Etiqueta Negra).",
+    "galeria": [
+      "img/productos/2024/09/ro100-mantequilla2_265x265.jpg",
+      "img/productos/2024/09/ro100-pimientos9_265x265.jpg"
+    ],
+    "categorias": {
+      "id": "conservas_de_pescado",
+      "name": "Anchoas",
+      "subcategoria": "Cantábrico"
+    },
+    "marca": "Lotamar",
+    "categoria": "pescados-conserva"
+  },
+  {
+    "id": 10493,
+    "nombre": "Costilla ibérica",
+    "slug": "costilla-iberica",
+    "descripcion": "Costilla de cerdo ibérico, ideal para asados y guisos.",
+    "galeria": [
+      "img/productos/2024/09/costilla_cerdo_iberico.jpg"
+    ],
+    "categorias": {
+      "id": "carnes",
+      "name": "Cárnicos ibéricos",
+      "subcategoria": "Costilla"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10491,
+    "nombre": "Cruceta de cebo ibérico",
+    "slug": "cruceta-de-cebo-iberico",
+    "descripcion": "Cruceta de cerdo ibérico, jugosa y tierna para plancha o brasa.",
+    "galeria": [
+      "img/productos/2024/09/cruceta.jpg"
+    ],
+    "categorias": {
+      "id": "carnes",
+      "name": "Cárnicos ibéricos",
+      "subcategoria": "Cruceta"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10489,
+    "nombre": "Lágrima de Cebo ibérico",
+    "slug": "lagrima-de-cebo-iberico",
+    "descripcion": "Las lágrimas de cerdo ibérico se destacan por su ternura y jugosidad, con alto contenido en grasa infiltrada y ácido oleico.",
+    "galeria": [
+      "img/productos/2024/09/lagrima-de-cerdo-iberico.jpg"
+    ],
+    "categorias": {
+      "id": "carnes",
+      "name": "Cárnicos ibéricos",
+      "subcategoria": "Lágrima"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10483,
+    "nombre": "Bola de cebo ibérico",
+    "slug": "bola-de-cebo-100-iberico",
+    "descripcion": "Bola de cerdo ibérico, perfecta para guisos y plancha.",
+    "galeria": [
+      "img/productos/2024/09/Bola.jpg"
+    ],
+    "categorias": {
+      "id": "carnes",
+      "name": "Cárnicos ibéricos",
+      "subcategoria": "Bola"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10480,
+    "nombre": "Pluma Ibérica",
+    "slug": "pluma-iberica-2",
+    "descripcion": "La pluma ibérica es una carne tierna y jugosa con alto contenido en ácido oleico, criada en dehesa.",
+    "galeria": [
+      "img/productos/2024/09/pluma-2.jpg"
+    ],
+    "categorias": {
+      "id": "carnes",
+      "name": "Cárnicos ibéricos",
+      "subcategoria": "Pluma"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10478,
+    "nombre": "Lagarto Ibérico",
+    "slug": "lagarto-iberico",
+    "descripcion": "Se trata de una carne magra muy jugosa, ya que entre las lascas de carne encontramos pequeñas vetas de grasa que hacen que no se quede reseca.",
+    "galeria": [
+      "img/productos/2024/09/lagarto-250x166.jpg",
+      "img/productos/2024/09/lagarto-750x499.jpg",
+      "img/productos/2024/09/lagarto-768x511.jpg",
+      "img/productos/2024/09/lagarto-1050x700.jpg",
+      "img/productos/2024/09/lagarto-1170x778.jpg",
+      "img/productos/2024/09/lagarto-970x645.jpg",
+      "img/productos/2024/09/lagarto-500x333.jpg",
+      "img/productos/2024/09/lagarto-395x263.jpg",
+      "img/productos/2024/09/lagarto-290x193.jpg",
+      "img/productos/2024/09/lagarto-120x80.jpg",
+      "img/productos/2024/09/lagarto-600x399.jpg",
+      "img/productos/2024/09/lagarto.jpg"
+    ],
+    "categorias": {
+      "id": "carnicos",
+      "name": "Cárnicos Ibéricos",
+      "subcategoria": "Cárnicos Ibéricos"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10474,
+    "nombre": "Pluma Ibérica",
+    "slug": "pluma-iberica",
+    "descripcion": "La principal característica de este corte es que la pluma ibérica tiene: una textura tierna, suave y deliciosa para el paladar. Tiene el equilibrio perfecto entre grasa y magro, siendo una grasa saludable con un importante aporte de ácido oleico, similar al aceite de oliva. Este tipo de grasa monoinsaturada es propia de la carne ibérica y no de otros cerdos. El sabor es único gracias a la crianza en libertad y alimentación en la dehesa.",
+    "galeria": [
+      "img/productos/2024/09/OIP-1-250x138.jpg",
+      "img/productos/2024/09/OIP-1-395x218.jpg",
+      "img/productos/2024/09/OIP-1-290x160.jpg",
+      "img/productos/2024/09/OIP-1-120x66.jpg",
+      "img/productos/2024/09/OIP-1.jpg"
+    ],
+    "categorias": {
+      "id": null,
+      "name": null,
+      "subcategoria": null
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10472,
+    "nombre": "Abanico de manto de Cebo Ibérico",
+    "slug": "abanico-de-manto-de-cebo-iberico",
+    "descripcion": "El abanico ibérico es una pieza de carne rica en vetas de grasa, lo que la convierte en un bocado muy jugoso y sabroso.",
+    "galeria": [
+      "img/productos/2024/09/abanico-revisan-1-250x166.jpg",
+      "img/productos/2024/09/abanico-revisan-1-750x499.jpg",
+      "img/productos/2024/09/abanico-revisan-1-768x511.jpg",
+      "img/productos/2024/09/abanico-revisan-1-1050x700.jpg",
+      "img/productos/2024/09/abanico-revisan-1-1170x778.jpg",
+      "img/productos/2024/09/abanico-revisan-1-970x645.jpg",
+      "img/productos/2024/09/abanico-revisan-1-500x333.jpg",
+      "img/productos/2024/09/abanico-revisan-1-395x263.jpg",
+      "img/productos/2024/09/abanico-revisan-1-290x193.jpg",
+      "img/productos/2024/09/abanico-revisan-1-120x80.jpg",
+      "img/productos/2024/09/abanico-revisan-1-600x399.jpg",
+      "img/productos/2024/09/abanico-revisan-1.jpg",
+      "img/productos/2024/09/abanico-revisan.jpg"
+    ],
+    "categorias": {
+      "id": "carnicos",
+      "name": "Cárnicos Ibéricos",
+      "subcategoria": "Cárnicos Ibéricos"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10470,
+    "nombre": "Solomillo de Cebo Ibérico",
+    "slug": "solomillo-de-cebo-iberico",
+    "descripcion": "El solomillo es una pieza de carne procedente de la parte lumbar, situada entre las costillas inferiores y la columna vertebral, concretamente encima de los riñones y debajo del lomo bajo.",
+    "galeria": [
+      "img/productos/2024/09/solomillo-revisan-250x166.jpg",
+      "img/productos/2024/09/solomillo-revisan-750x499.jpg",
+      "img/productos/2024/09/solomillo-revisan-768x511.jpg",
+      "img/productos/2024/09/solomillo-revisan-1050x700.jpg",
+      "img/productos/2024/09/solomillo-revisan-1170x778.jpg",
+      "img/productos/2024/09/solomillo-revisan-970x645.jpg",
+      "img/productos/2024/09/solomillo-revisan-500x333.jpg",
+      "img/productos/2024/09/solomillo-revisan-395x263.jpg",
+      "img/productos/2024/09/solomillo-revisan-290x193.jpg",
+      "img/productos/2024/09/solomillo-revisan-120x80.jpg",
+      "img/productos/2024/09/solomillo-revisan-600x399.jpg",
+      "img/productos/2024/09/solomillo-revisan.jpg"
+    ],
+    "categorias": {
+      "id": "carnicos",
+      "name": "Cárnicos Ibéricos",
+      "subcategoria": "Cárnicos Ibéricos"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10468,
+    "nombre": "Secreto de papada ibérico",
+    "slug": "secreto-de-papada-iberico",
+    "descripcion": "",
+    "galeria": [
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-250x224.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-750x673.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-768x689.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-1170x1050.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-970x871.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-500x449.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-395x355.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-290x260.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-120x108.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web-600x539.jpg",
+      "img/productos/2024/09/iberlonja_secretito-papada-iberico_tabla_web.jpg"
+    ],
+    "categorias": {
+      "id": "carnicos",
+      "name": "Cárnicos Ibéricos",
+      "subcategoria": "Cárnicos Ibéricos"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10464,
+    "nombre": "CALDO NATURAL DE POLLO 0% SAL AÑADIDA ANETO",
+    "slug": "caldo-natural-de-pollo-0-sal-anadida-aneto",
+    "descripcion": "Seleccionamos el mejor pollo de corral y las verduras más frescas, lavamos cuidadosamente todos los ingredientes, y los cocemos a fuego lento durante más de 3 horas.",
+    "galeria": [
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6-250x250.png",
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6-150x150.png",
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6-500x500.png",
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6-395x395.png",
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6-290x290.png",
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6-120x120.png",
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6-100x100.png",
+      "img/productos/2024/09/HkdlHlsJesQxdfiZ5CM6.png"
+    ],
+    "categorias": {
+      "id": "caldos_y_sopas",
+      "name": "caldos",
+      "subcategoria": null
+    },
+    "marca": "Aneto",
+    "categoria": "caldos"
+  },
+  {
+    "id": 10462,
+    "nombre": "CALDO NATURAL DE PUCHERO ANETO",
+    "slug": "caldo-natural-de-puchero-aneto",
+    "descripcion": "Seleccionamos las mejores carnes y las verduras más frescas, lavamos cuidadosamente todos los ingredientes, y los cocemos a fuego lento durante más de 3 horas. También disponible en 500ml.",
+    "galeria": [
+      "img/productos/2024/09/W8DB2S1lwFRC4xWjiyQM-250x333.png",
+      "img/productos/2024/09/W8DB2S1lwFRC4xWjiyQM-500x667.png",
+      "img/productos/2024/09/W8DB2S1lwFRC4xWjiyQM-395x527.png",
+      "img/productos/2024/09/W8DB2S1lwFRC4xWjiyQM-290x387.png",
+      "img/productos/2024/09/W8DB2S1lwFRC4xWjiyQM-120x160.png",
+      "img/productos/2024/09/W8DB2S1lwFRC4xWjiyQM.png"
+    ],
+    "categorias": {
+      "id": "caldos",
+      "name": "Caldos",
+      "subcategoria": "Caldos"
+    },
+    "marca": "Hero",
+    "categoria": "caldos"
+  },
+  {
+    "id": 10460,
+    "nombre": "CALDO NATURAL DE JAMÓN ANETO",
+    "slug": "caldo-natural-de-jamon-aneto",
+    "descripcion": "Seleccionamos el mejor Jamón Serrano y las verduras más frescas, lavamos cuidadosamente todos los ingredientes, y los cocemos a fuego lento durante más de 3 horas. También disponible en 500ml.",
+    "galeria": [
+      "img/productos/2024/09/wjIR6XB05ZU1qPDrQvcg-250x333.png",
+      "img/productos/2024/09/wjIR6XB05ZU1qPDrQvcg-500x6caldos.png",
+      "img/productos/2024/09/wjIR6XB05ZU1qPDrQvcg-395x527.png",
+      "img/productos/2024/09/wjIR6XB05ZU1qPDrQvcg-290x387.png",
+      "img/productos/2024/09/wjIR6XB05ZU1qPDrQvcg-120x160.png",
+      "img/productos/2024/09/wjIR6XB05ZU1qPDrQvcg.png"
+    ],
+    "categorias": {
+      "id": "caldos",
+      "name": "Caldos",
+      "subcategoria": "Caldos"
+    },
+    "marca": "Aneto",
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 10458,
+    "nombre": "FUMET NATURAL DE MARISCO Y PESCADO DE ROCA ANETO",
+    "slug": "fumet-natural-de-marisco-y-pescado-de-roca-aneto",
+    "descripcion": "Es un caldo de la cocina tradicional marinera elaborado con pescado de roca y marisco. Es ideal para preparar sopas, guisos, salsas marineras, arroces e incluso la mejor zarzuela.",
+    "galeria": [
+      "img/productos/2024/09/LUBmVwq00WUwgBptiNxB-250x333.png",
+      "img/productos/2024/09/LUBmVwq00WUwgBptiNxB-500x667.png",
+      "img/productos/2024/09/LUBmVwq00WUwgBptiNxB-395x527.png",
+      "img/productos/2024/09/LUBmVwq00WUwgBptiNxB-290x387.png",
+      "img/productos/2024/09/LUBmVwq00WUwgBptiNxB-120x160.png",
+      "img/productos/2024/09/LUBmVwq00WUwgBptiNxB.png"
+    ],
+    "categorias": {
+      "id": 67,
+      "name": "Caldos",
+      "subcategoria": "Caldos"
+    },
+    "marca": "Aneto",
+    "categoria": "caldos"
+  },
+  {
+    "id": 10456,
+    "nombre": "Caldo Natural Ecológico de Alcachofa 0% Sal añadida ANETO",
+    "slug": "caldo-natural-ecologico-de-alcachofa-0-sal-anadida-aneto",
+    "descripcion": "Este caldo te ayuda a: – Una buena hidratación y regulación de los líquidos del organismo. – Complementar dietas hipocalóricas e hiposódicas. Consulta a tu Dietista y/o Nutricionista. Bébelo frío o caliente.",
+    "galeria": [
+      "img/productos/2024/09/jlWkwzfC4LuAedVfgksN-thumb.png",
+      "img/productos/2024/09/jlWkwzfC4LuAedVfgksN-thumb-150x150.png",
+      "img/productos/2024/09/jlWkwzfC4LuAedVfgksN-thumb-120x120.png",
+      "img/productos/2024/09/jlWkwzfC4LuAedVfgksN-thumb-100x100.png"
+    ],
+    "categorias": {
+      "id": 67,
+      "name": "Caldos",
+      "subcategoria": "Caldos"
+    },
+    "marca": "Aneto",
+    "categoria": "caldos"
+  },
+  {
+    "id": 10454,
+    "nombre": "CALDO NATURAL DE PESCADO ANETO",
+    "slug": "caldo-natural-de-pescado-aneto",
+    "descripcion": "<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone size-medium wp-image-10455\" src=\"img/productos/2024/09/HUtLrwtUlqPsiDWwpsua-250x333.png\" alt=\"\" width=\"225\" height=\"300\" srcset=\"img/productos/2024/09/HUtLrwtUlqPsiDWwpsua-250x333.png 250w, img/productos/2024/09/HUtLrwtUlqPsiDWwpsua-500x667.png 500w, img/productos/2024/09/HUtLrwtUlqPsiDWwpsua-395x527.png 395w, img/productos/2024/09/HUtLrwtUlqPsiDWwpsua-290x387.png 290w, img/productos/2024/09/HUtLrwtUlqPsiDWwpsua-120x160.png 120w, img/productos/2024/09/HUtLrwtUlqPsiDWwpsua.png 600w\" sizes=\"auto, (max-width: 225px) 100vw, 225px\" /></p>\n<p>Seleccionamos el mejor pescado y las verduras más frescas, lavamos cuidadosamente todos los ingredientes, y los cocemos a fuego lento durante más de 2 horas. También disponible en 500ml.</p>\n",
+    "imagen_destacada": "img/productos/2024/09/HUtLrwtUlqPsiDWwpsua.png",
+    "galeria": [
+      "img/productos/2024/09/HUtLrwtUlqPsiDWwpsua.png"
+    ],
+    "categorias": {
+      "ancestros": [
+        {
+          "id": 67,
+          "name": "Caldos",
+          "slug": "caldos"
+        }
+      ],
+      "padre": {
+        "id": 67,
+        "name": "Caldos",
+        "slug": "caldos"
+      },
+      "categoria": null,
+      "subcategoria": {
+        "id": 67,
+        "name": "Caldos",
+        "slug": "caldos"
+      }
+    },
+    "marca": "Aneto",
+    "categoria": "caldos"
+  },
+  {
+    "id": 10452,
+    "nombre": "CALDO NATURAL DE VERDURAS ANETO",
+    "slug": "caldo-natural-de-verduras-aneto",
+    "descripcion": "<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone size-medium wp-image-10453\" src=\"img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-250x250.png\" alt=\"\" width=\"250\" height=\"250\" srcset=\"img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-250x250.png 250w, img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-150x150.png 150w, img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-500x500.png 500w, img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-395x395.png 395w, img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-290x290.png 290w, img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-120x120.png 120w, img/productos/2024/09/Plx8JHZxgt9M4oKALoeA-100x100.png 100w, img/productos/2024/09/Plx8JHZxgt9M4oKALoeA.png 600w\" sizes=\"auto, (max-width: 250px) 100vw, 250px\" /></p>\n<p>Seleccionamos las verduras más frescas, las lavamos cuidadosamente y las cocemos a fuego lento durante más de 3 horas. También disponible en 500ml.</p>\n",
+    "imagen_destacada": "img/productos/2024/09/Plx8JHZxgt9M4oKALoeA.png",
+    "galeria": [
+      "img/productos/2024/09/Plx8JHZxgt9M4oKALoeA.png"
+    ],
+    "categorias": {
+      "ancestros": [
+        {
+          "id": 67,
+          "name": "Caldos",
+          "slug": "caldos"
+        }
+      ],
+      "padre": {
+        "id": 67,
+        "name": "Caldos",
+        "slug": "caldos"
+      },
+      "categoria": null,
+      "subcategoria": {
+        "id": 67,
+        "name": "Caldos",
+        "slug": "caldos"
+      }
+    },
+    "marca": "Aneto",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10450,
+    "nombre": "CALDO NATURAL DE POLLO ANETO",
+    "slug": "caldo-natural-de-pollo-aneto",
+    "descripcion": "<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone size-medium wp-image-10451\" src=\"img/productos/2024/09/7ifQpcrIW1rJysbjVGQN-250x333.png\" alt=\"\" width=\"225\" height=\"300\" srcset=\"img/productos/2024/09/7ifQpcrIW1rJysbjVGQN-250x333.png 250w, img/productos/2024/09/7ifQpcrIW1rJysbjVGQN-500x667.png 500w, img/productos/2024/09/7ifQpcrIW1rJysbjVGQN-395x527.png 395w, img/productos/2024/09/7ifQpcrIW1rJysbjVGQN-290x387.png 290w, img/productos/2024/09/7ifQpcrIW1rJysbjVGQN-120x160.png 120w, img/productos/2024/09/7ifQpcrIW1rJysbjVGQN.png 600w\" sizes=\"auto, (max-width: 225px) 100vw, 225px\" /></p>\n<p>Seleccionamos el mejor Pollo de Corral y las verduras más frescas, lavamos cuidadosamente todos los ingredientes, y los cocemos a fuego lento durante más de 3 horas. También disponible en bipack (2x330ml), 500ml, 1500ml</p>\n",
+    "imagen_destacada": "img/productos/2024/09/7ifQpcrIW1rJysbjVGQN.png",
+    "galeria": [
+      "img/productos/2024/09/7ifQpcrIW1rJysbjVGQN.png"
+    ],
+    "categorias": {
+      "ancestros": [
+        {
+          "id": 67,
+          "name": "Caldos",
+          "slug": "caldos"
+        }
+      ],
+      "padre": {
+        "id": 67,
+        "name": "Caldos",
+        "slug": "caldos"
+      },
+      "categoria": null,
+      "subcategoria": {
+        "id": 67,
+        "name": "Caldos",
+        "slug": "caldos"
+      }
+    },
+    "marca": "Aneto",
+    "categoria": "caldos"
+  },
+  {
+    "id": 10444,
+    "nombre": "Arroz largo Montsià",
+    "slug": "arroz-largo-montsia",
+    "descripcion": "Varios Formatos.\nSe cuece antes y siempre queda entero y suelto, se usa mucho en ensaladas y guarniciones.\nEl arroz Largo Montsià está especialmente indicado para confeccionar ensaladas o bien para la guarnición, ideal para realzar el sabor de los platos principales.\nEl arroz de grano largo puede tener entre 4 y 5 veces la longitud de su grosor, superando los 6 mm de longitud. Posee una cantidad alta de amilasa y por esta razón una vez cocido, queda más suelto.",
+    "imagen_destacada": "img/productos/2024/09/arroz-largo.png",
+    "galeria": [
+      "img/productos/2024/09/arroz-largo-250x370.png",
+      "img/productos/2024/09/arroz-largo-395x584.png",
+      "img/productos/2024/09/arroz-largo-290x429.png",
+      "img/productos/2024/09/arroz-largo-120x177.png",
+      "img/productos/2024/09/arroz-largo.png"
+    ],
+    "categorias": {
+      "id": "arroces",
+      "name": "Arroces",
+      "subcategoria": "Arroces"
+    },
+    "marca": "Montsià",
+    "categoria": "legumbres_y_arroces"
+  },
+  {
+    "id": 10441,
+    "nombre": "Tarrito Hero Baby compota de manzana",
+    "slug": "tarrito-hero-baby-compota-de-manzana",
+    "descripcion": "Hero Baby Compota de Manzana. Desde 4 meses. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor compota de manzana.\nFormato: 2x120 gr.",
+    "imagen_destacada": "img/productos/2024/09/8410175079787_compota_de_manzana_1_1.png",
+    "galeria": [
+      "img/productos/2024/09/8410175079787_compota_de_manzana_1_1-250x250.png",
+      "img/productos/2024/09/8410175079787_compota_de_manzana_1_1-500x500.png",
+      "img/productos/2024/09/8410175079787_compota_de_manzana_1_1-395x395.png",
+      "img/productos/2024/09/8410175079787_compota_de_manzana_1_1-290x290.png",
+      "img/productos/2024/09/8410175079787_compota_de_manzana_1_1-120x120.png",
+      "img/productos/2024/09/8410175079787_compota_de_manzana_1_1-600x600.png",
+      "img/productos/2024/09/8410175079787_compota_de_manzana_1_1.png"
+    ],
+    "categorias": {
+      "id": "postres_y_meriendas_hero_baby",
+      "name": "Postres y Meriendas Hero Baby",
+      "subcategoria": "Compotas"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10439,
+    "nombre": "Yogur Hero Baby natural",
+    "slug": "yogur-hero-baby-natural",
+    "descripcion": "Hero Baby Yogur Natural. Elaborado siguiendo los estándares de la Calidad Baby. Conservando lo bueno de la naturaleza. A partir de 6 meses. Sin azúcares añadidos. Fuente de calcio. Sabor natural.\nFormato: 2x120 gr.",
+    "imagen_destacada": "img/productos/2024/09/8410175079299_yogur_natural_1.png",
+    "galeria": [
+      "img/productos/2024/09/8410175079299_yogur_natural_1-250x250.png",
+      "img/productos/2024/09/8410175079299_yogur_natural_1-500x500.png",
+      "img/productos/2024/09/8410175079299_yogur_natural_1-395x395.png",
+      "img/productos/2024/09/8410175079299_yogur_natural_1-290x290.png",
+      "img/productos/2024/09/8410175079299_yogur_natural_1-120x120.png",
+      "img/productos/2024/09/8410175079299_yogur_natural_1-600x600.png",
+      "img/productos/2024/09/8410175079299_yogur_natural_1.png"
+    ],
+    "categorias": {
+      "id": "postres_y_meriendas_hero_baby",
+      "name": "Postres y Meriendas Hero Baby",
+      "subcategoria": "Yogures"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10437,
+    "nombre": "Yogur Hero Baby plátano y fresa",
+    "slug": "yogur-hero-baby-platano-y-fresa",
+    "descripcion": "Hero Baby Yogur Plátano y Fresa. Elaborado siguiendo los estándares de la Calidad Baby. Conservando lo bueno de la naturaleza. A partir de 6 meses. Sin azúcares añadidos. Fuente de calcio. Sabor plátano y fresa.\nFormato: 2x120 gr.",
+    "imagen_destacada": "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1.png",
+    "galeria": [
+      "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1-250x250.png",
+      "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1-500x500.png",
+      "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1-395x395.png",
+      "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1-290x290.png",
+      "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1-120x120.png",
+      "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1-600x600.png",
+      "img/productos/2024/09/143599_h1c1_yogurplatanoyfresa_2x120g_1.png"
+    ],
+    "categorias": {
+      "id": "postres_y_meriendas_hero_baby",
+      "name": "Postres y Meriendas Hero Baby",
+      "subcategoria": "Yogures"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10433,
+    "nombre": "Tarrito Frutas Variadas Hero",
+    "slug": "tarrito-frutas-variadas-hero",
+    "descripcion": "Tarrito Frutas Variadas. Desde 4 meses. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor frutas variadas.\nFormato: 6x190 gr.",
+    "imagen_destacada": "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1.jpg",
+    "galeria": [
+      "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1-250x250.jpg",
+      "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1-500x500.jpg",
+      "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1-395x395.jpg",
+      "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1-290x290.jpg",
+      "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1-120x120.jpg",
+      "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1-600x600.jpg",
+      "img/productos/2024/09/tarritos-hero-frutas-variadas-pack-190_1.jpg"
+    ],
+    "categorias": {
+      "id": "tarritos_hero",
+      "name": "Tarritos Hero",
+      "subcategoria": "Frutas Variadas"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10431,
+    "nombre": "Tarrito Hero Baby menestra de cordero a la crema",
+    "slug": "tarrito-hero-baby-menestra-de-cordero-a-la-crema",
+    "descripcion": "Tarrito Recetas Caseras Menestra de Cordero a la Crema. Desde 6 meses. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor menestra de cordero a la crema.\nFormato: 2x190 gr.",
+    "imagen_destacada": "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1.jpg",
+    "galeria": [
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-250x250.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-750x750.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-768x768.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-1170x1170.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-970x970.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-500x500.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-395x395.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-290x290.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-120x120.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1-600x600.jpg",
+      "img/productos/2024/09/8410175036681_h1c1__menestra_de_cordero_a_la_crema_2x190g_1.jpg"
+    ],
+    "categorias": {
+      "id": "tarritos_hero",
+      "name": "Tarritos Hero",
+      "subcategoria": "Recetas Caseras"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10428,
+    "nombre": "Tarrito Hero Baby merluza",
+    "slug": "tarrito-hero-baby-merluza",
+    "descripcion": "Tarrito Cazuelita de Merluza. Textura con grumitos. Desde 8 meses. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor merluza.\nFormato: 2x190 gr.",
+    "imagen_destacada": "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1.png",
+    "galeria": [
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-250x250.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-750x750.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-768x768.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-1170x1170.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-970x970.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-500x500.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-395x395.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-290x290.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-120x120.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1-600x600.png",
+      "img/productos/2024/09/8410175081605_h1c1__cazuelita_de_merluza_a_la_marinera_2x190g_1.png"
+    ],
+    "categorias": {
+      "id": "tarritos_hero",
+      "name": "Tarritos Hero",
+      "subcategoria": "Recetas Caseras"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10426,
+    "nombre": "Tarrito Hero Baby alubias y verduritas",
+    "slug": "tarrito-hero-baby-alubias-y-verduritas",
+    "descripcion": "Tarrito Potaje de Alubias y Verduritas. Textura con grumitos. Desde 8 meses. Recetas caseras como las de toda la vida. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido. Sabor alubias y verduritas.\nFormato: 2x190 gr.",
+    "imagen_destacada": "img/productos/2024/09/8410175081599_h1c1__potaje_de_verduras_2x190g_1.png",
+    "galeria": [
+      "img/productos/2024/09/8410175081599_h1c1__potaje_de_verduras_2x190g_1-250x250.png",
+      "img/productos/2024/09/8410175081599_h1c1__potaje_de_verduras_2x190g_1-395x395.png",
+      "img/productos/2024/09/8410175081599_h1c1__potaje_de_verduras_2x190g_1-290x290.png",
+      "img/productos/2024/09/8410175081599_h1c1__potaje_de_verduras_2x190g_1-120x120.png",
+      "img/productos/2024/09/8410175081599_h1c1__potaje_de_verduras_2x190g_1.png"
+    ],
+    "categorias": {
+      "id": "tarritos_hero",
+      "name": "Tarritos Hero",
+      "subcategoria": "Recetas Caseras"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10424,
+    "nombre": "Tarrito Hero Baby lentejas con verduritas",
+    "slug": "tarrito-hero-baby-lentejas-con-verduritas",
+    "descripcion": "Tarrito Recetas Caseras Lentejas con Verduritas. Desde 6 meses. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor lentejas con verduritas.\nFormato: 2x190 gr.",
+    "imagen_destacada": "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1.png",
+    "galeria": [
+      "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1-250x250.png",
+      "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1-500x500.png",
+      "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1-395x395.png",
+      "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1-290x290.png",
+      "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1-120x120.png",
+      "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1-600x600.png",
+      "img/productos/2024/09/8410175028129_h1c1__lentejas_con_verduritas_2x190g_1.png"
+    ],
+    "categorias": {
+      "id": "tarritos_hero",
+      "name": "Tarritos Hero",
+      "subcategoria": "Recetas Caseras"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10421,
+    "nombre": "Tarrito Hero Baby cocido de ternera",
+    "slug": "tarrito-hero-baby-cocido-de-ternera",
+    "descripcion": "Tarrito Recetas Caseras Cocido de Ternera. Desde 8 meses. Textura suave. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor cocido de ternera.\nFormato: 2x190 gr.",
+    "imagen_destacada": "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1.png",
+    "galeria": [
+      "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1-250x250.png",
+      "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1-500x500.png",
+      "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1-395x395.png",
+      "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1-290x290.png",
+      "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1-120x120.png",
+      "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1-600x600.png",
+      "img/productos/2024/09/8410175028136_h1c1_cocido_de_ternera_2x190g_1.png"
+    ],
+    "categorias": {
+      "id": "tarritos_hero",
+      "name": "Tarritos Hero",
+      "subcategoria": "Recetas Caseras"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10419,
+    "nombre": "Tarrito Hero Baby petit queso fresco y frutas variadas",
+    "slug": "tarrito-hero-baby-petit-queso-fresco-y-frutas-variadas",
+    "descripcion": "Desde 6 meses. Tarrito Petit Queso Fresco y Frutas Variadas. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor petit queso fresco y frutas variadas.",
+    "imagen_destacada": "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3.png",
+    "galeria": [
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-250x250.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-150x150.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-500x500.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-395x395.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-290x290.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-120x120.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-600x600.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3-100x100.png",
+      "img/productos/2024/09/102743_h1c1_petitfrutasvariadas_2x80g_3.png"
+    ],
+    "categorias": {
+      "id": "alimentacion_infantil",
+      "name": "Alimentación Infantil",
+      "subcategoria": "Tarritos Hero"
+    },
+    "marca": "Hero",
+    "categoria": "quesos"
+  },
+  {
+    "id": 10417,
+    "nombre": "Tarrito Hero Baby frutas variadas y galletas",
+    "slug": "tarrito-hero-baby-frutas-variadas-y-galletas",
+    "descripcion": "Tarrito Merienda Frutas Variadas y Galleta. Desde 6 meses. Elaborado siguiendo los estándares de la Calidad Baby. Sin azúcar añadido ni almidón. Ingredientes 100% naturales. Sabor frutas variadas y galletas.",
+    "imagen_destacada": "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1.png",
+    "galeria": [
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-250x250.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-750x750.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-150x150.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-768x768.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-1170x1170.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-970x970.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-500x500.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-395x395.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-290x290.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-120x120.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-600x600.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1-100x100.png",
+      "img/productos/2024/09/134068_h1c1_frutasvariadasygalleta_2x190g_1.png"
+    ],
+    "categorias": {
+      "id": "alimentacion_infantil",
+      "name": "Alimentación Infantil",
+      "subcategoria": "Tarritos Hero"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10415,
+    "nombre": "Tarrina Hero Baby natillas con galletas",
+    "slug": "tarrina-hero-baby-natillas-con-galletas",
+    "descripcion": "Tarrito natillas con galletas en formato. Calidad Baby. Conservando lo bueno de la naturaleza. A partir de 6 meses. Sin azúcares añadidos. Sabor natillas con galletas.",
+    "imagen_destacada": "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1.png",
+    "galeria": [
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-250x250.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-750x750.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-150x150.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-768x768.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-1170x1170.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-970x970.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-500x500.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-395x395.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-290x290.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-120x120.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-600x600.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1-100x100.png",
+      "img/productos/2024/09/127062_h1c1_natillascongalletas_2x130g_1__3-1.png"
+    ],
+    "categorias": {
+      "id": "alimentacion_infantil",
+      "name": "Alimentación Infantil",
+      "subcategoria": "Postres y Meriendas Hero Baby"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10410,
+    "nombre": "Aceitunas verdes manzanilla Rellenas de Anchoa",
+    "slug": "aceitunas-verdes-manzanilla-rellenas-de-anchoa",
+    "descripcion": "Varios formatos.\nVariedad: Manzanilla\nOrigen: España\nColor: Verdes\nPresentación: Rellenas\nCategoría: 1\nCalibre: 240/360",
+    "imagen_destacada": "img/productos/2024/09/41AO4E7IbmL._AC_.jpg",
+    "galeria": [
+      "img/productos/2024/09/RELLENAS_ANCHOAS-250x250.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-750x750.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-150x150.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-768x768.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-500x500.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-395x395.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-290x290.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-120x120.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-600x600.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS-100x100.png",
+      "img/productos/2024/09/RELLENAS_ANCHOAS.png",
+      "img/productos/2024/09/41AO4E7IbmL._AC_.jpg"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Aceitunas"
+    },
+    "marca": null,
+    "categoria": "pescados-conserva"
+  },
+  {
+    "id": 10406,
+    "nombre": "Aceitunas negras Con hueso Excelencia",
+    "slug": "aceitunas-negras-con-hueso-excelencia",
+    "descripcion": "Variedad: Hojiblanca\nOrigen: España\nColor: Negras\nPresentación: Enteras\nCategoría: EXTRA",
+    "imagen_destacada": "img/productos/2024/09/10000005936.webp",
+    "galeria": [
+      "img/productos/2024/09/10000005936-250x292.webp",
+      "img/productos/2024/09/10000005936-500x583.webp",
+      "img/productos/2024/09/10000005936-395x461.webp",
+      "img/productos/2024/09/10000005936-290x338.webp",
+      "img/productos/2024/09/10000005936-120x140.webp",
+      "img/productos/2024/09/10000005936.webp"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Aceitunas Negras"
+    },
+    "marca": "Excelencia",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10400,
+    "nombre": "Olivar del Señorío: Picual Garrafa 5l",
+    "slug": "olivar-del-senorio-picual-garrafa-5l",
+    "descripcion": "Aceite de oliva virgen extra equilibrado con un frutado intenso con notas de hoja, tomate, alcachofa y plátano con un amargo y picante de intensidad media. Esta variedad de aceite es muy resistente y son ideales para guisos y carnes.\n\nLínea diseñada para el gran consumo así como para el sector hostelero ya que mantiene una excelente relación calidad/precio al tratarse de un aceite de oliva virgen extra de la variedad picual de extracción en frío con una acidez aproximada de 0.2º.",
+    "imagen_destacada": "img/productos/2024/09/Oleozumo_Olivar-de-Senorio_Garrafa-5L-400x600-1.jpg",
+    "galeria": [
+      "img/productos/2024/09/Oleozumo_Olivar-de-Senorio_Garrafa-5L-400x600-1.jpg"
+    ],
+    "categorias": {
+      "id": "aceites_y_vinagres",
+      "name": "Aceites de Oliva",
+      "subcategoria": "aceite-de-oliva"
+    },
+    "marca": "Oleozumo",
+    "categoria": "aceites_y_vinagres"
+  },
+  {
+    "id": 10398,
+    "nombre": "Aceite Girasol Guillen 5l",
+    "slug": "aceite-de-girasol-guillen-5l",
+    "descripcion": "",
+    "imagen_destacada": "img/productos/2024/09/aceite-girasol-guillen-5l-288-1.jpg",
+    "galeria": [
+      "img/productos/2024/09/aceite-girasol-guillen-5l-288-1.jpg"
+    ],
+    "categorias": {
+      "id": "aceites_y_vinagres",
+      "name": "Aceites de Girasol",
+      "subcategoria": "aceite-de-girasol"
+    },
+    "marca": "Guillen",
+    "categoria": "aceites_y_vinagres"
+  },
+  {
+    "id": 10396,
+    "nombre": "Aceite de Aguacate Soy Plus La Española botella cristal 250ml",
+    "slug": "aceite-de-aguacate-soy-plus-la-espanola-botella-cristal-250ml",
+    "descripcion": "Aceite de aguacate en botella de cristal de 250ml.",
+    "imagen_destacada": "img/productos/2024/09/aguacate-editado-288.png",
+    "galeria": [
+      "img/productos/2024/09/08410660064007_C1N1-removebg-preview_540x.webp",
+      "img/productos/2024/09/aguacate-editado-288.png"
+    ],
+    "categorias": {
+      "id": "aceites",
+      "name": "Aceites",
+      "subcategoria": "Otros Aceites"
+    },
+    "marca": "La Española",
+    "categoria": "aceites_y_vinagres"
+  },
+  {
+    "id": 10394,
+    "nombre": "Crema de aceite de Oliva virgen Extra Vulpi",
+    "slug": "crema-de-aceite-de-oliva-virgen-extra-vulpi",
+    "descripcion": "Es una crema que aporta el sabor, los aromas y las mejores percepciones del Aceite de Oliva Virgen Extra.\n\nIdeal para todo tipo de platos fríos: ensaladas, canapés, tostadas, toppings, emplatados, etc. Además supone una gran novedad. Por su baja aportación calórica (70% menos de calorías que el Aceite de Oliva Tradicional) está recomendada para dietas hipocalóricas, siendo muy saludable por su aporte de Omega 3.",
+    "imagen_destacada": "img/productos/2024/09/MG_814130.png",
+    "galeria": [
+      "img/productos/2024/09/MG_814130-250x500.png",
+      "img/productos/2024/09/MG_814130-500x1000.png",
+      "img/productos/2024/09/MG_814130-395x790.png",
+      "img/productos/2024/09/MG_814130-290x580.png",
+      "img/productos/2024/09/MG_814130-120x240.png",
+      "img/productos/2024/09/MG_814130-600x1200.png",
+      "img/productos/2024/09/MG_814130.png"
+    ],
+    "categorias": {
+      "id": "aceites_y_vinagres",
+      "name": "Aceites de Oliva",
+      "subcategoria": "aceite-de-oliva"
+    },
+    "marca": "Vulpi",
+    "categoria": "aceites_y_vinagres"
+  },
+  {
+    "id": 10388,
+    "nombre": "Arroz Bomba Extra Montsià",
+    "slug": "arroz-bomba-extra-montsia",
+    "descripcion": "Arroz bomba.\n\nEl preferido de las buenas paellas y arroces caldosos de pescado. El arroz Bomba Montsià es un arroz ideal para la preparación de platos de alta cocina, gracias a la calidad de una selecta variedad de arroz.\n\nTierno y suave al paladar una vez cocido, la gran capacidad de absorción de sus granos cortos y redondeados permite incorporar plenamente el sabor de los ingredientes.",
+    "imagen_destacada": "img/productos/2024/09/2711000001.jpg",
+    "galeria": [
+      "img/productos/2024/09/arroz-bomba-250x370.png",
+      "img/productos/2024/09/arroz-bomba-395x584.png",
+      "img/productos/2024/09/arroz-bomba-290x429.png",
+      "img/productos/2024/09/arroz-bomba-120x177.png",
+      "img/productos/2024/09/arroz-bomba.png",
+      "img/productos/2024/09/2711000001.jpg"
+    ],
+    "categorias": {
+      "id": "arroces",
+      "name": "Arroces",
+      "subcategoria": "Arroz Bomba"
+    },
+    "marca": "Montsià",
+    "categoria": "legumbres_y_arroces"
+  },
+  {
+    "id": 10385,
+    "nombre": "Aceitunas Guadalquivir Negras Deshuesadas",
+    "slug": "aceitunas-guadalquivir-negras-deshuesadas",
+    "descripcion": "Variedad: Hojiblanca\nOrigen: España\nColor: Negras\nPresentación: Deshuesadas\nCategoría: Extra",
+    "imagen_destacada": "img/productos/2024/09/negras-deshuesadas-excelencia.jpg",
+    "galeria": [
+      "img/productos/2024/09/aceituna-negra-sin-hueso-250x250.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-750x750.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-150x150.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-768x768.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-500x500.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-395x395.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-290x290.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-120x120.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-600x600.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso-100x100.png",
+      "img/productos/2024/09/aceituna-negra-sin-hueso.png",
+      "img/productos/2024/09/negras-deshuesadas-excelencia.jpg"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Negras Deshuesadas"
+    },
+    "marca": "Guadalquivir",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10378,
+    "nombre": "Aceitunas Guadalquivir Verdes Manzanilla en Rodajas",
+    "slug": "aceitunas-guadalquivir-verdes-manzanilla-en-rodajas",
+    "descripcion": "Nuestra marca Excelencia se distingue por ofrecer una calidad superior en una amplia gama de posibilidades. Tiene una amplia variedad de formatos que satisfacen las necesidades del cliente más exigente.\n\nVariedad: Manzanilla\nOrigen: España\nColor: Verdes\nPresentación: Enteras\nCategoría: 1\nCalibre: 240/360",
+    "imagen_destacada": "img/productos/2024/09/370475.jpg",
+    "galeria": [
+      "img/productos/2024/09/370475.jpg"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Verdes Manzanilla"
+    },
+    "marca": "Guadalquivir",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10374,
+    "nombre": "Aceitunas Guadalquivir Negras Laminadas",
+    "slug": "aceitunas-guadalquivir-negras-laminadas",
+    "descripcion": "Nuestra marca Excelencia se distingue por ofrecer una calidad superior en una amplia gama de posibilidades. Tiene una amplia variedad de formatos que satisfacen las necesidades del cliente más exigente.\n\nVariedad: Hojiblanca\nOrigen: España\nColor: Negras\nPresentación: Deshuesadas\nCategoría: Extra",
+    "imagen_destacada": "img/productos/2024/09/581836.jpg",
+    "galeria": [
+      "img/productos/2024/09/NEGRAS_RODAJAS-250x250.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-750x750.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-150x150.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-768x768.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-500x500.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-395x395.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-290x290.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-120x120.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-600x600.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS-100x100.png",
+      "img/productos/2024/09/NEGRAS_RODAJAS.png",
+      "img/productos/2024/09/581836.jpg"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Negras Laminadas"
+    },
+    "marca": "Guadalquivir",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10372,
+    "nombre": "Receta Casera de Tomate Frito Hero",
+    "slug": "receta-casera-de-tomate-frito-hero",
+    "descripcion": "Receta casera de tomate frito de Hero, elaborado con aceite de oliva, 100% natural, sin conservantes ni colorantes. Elaborado con los mejores ingredientes, a fuego lento, para conseguir el sabor de una tradición, la cocina casera.",
+    "imagen_destacada": "img/productos/2024/09/Tomate-frito-receta-casera-hero-scaled.webp",
+    "galeria": [
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-250x407.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-750x1222.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-768x1252.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-943x1536.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-1257x2048.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-1170x1907.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-970x1581.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-500x815.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-395x644.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-290x473.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-120x196.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-600x978.webp",
+      "img/productos/2024/09/Tomate-frito-receta-casera-hero-scaled.webp"
+    ],
+    "categorias": {
+      "id": "tomate-frito",
+      "name": "Tomate Frito y salsas de Tomate",
+      "subcategoria": "Receta Casera"
+    },
+    "marca": "Hero",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10361,
+    "nombre": "Tomate Frito Temporada Hero",
+    "slug": "tomate-frito-temporada-hero",
+    "descripcion": "Tomate frito de Temporada Hero, elaborado en la Huerta de Murcia con un kilo de tomates pera 100% frescos, seleccionados en la última campaña. Sin conservantes ni colorantes. Elaborado con solo 4 ingredientes, como tú lo harías en casa para un sabor excepcional.",
+    "imagen_destacada": "img/productos/2024/09/tomate-frito-temporada-hero-scaled.webp",
+    "galeria": [
+      "img/productos/2024/09/tomate-frito-temporada-hero-250x407.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-750x1222.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-768x1252.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-943x1536.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-1257x2048.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-1170x1907.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-970x1581.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-500x815.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-395x644.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-290x473.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-120x196.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-600x978.webp",
+      "img/productos/2024/09/tomate-frito-temporada-hero-scaled.webp"
+    ],
+    "categorias": {
+      "id": "tomate-frito",
+      "name": "Tomate Frito y salsas de Tomate",
+      "subcategoria": "Temporada"
+    },
+    "marca": "Hero",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10358,
+    "nombre": "Sirope de Fresa Vulpi",
+    "slug": "sirope-de-fresa-vulpi",
+    "descripcion": "Con nuestra receta casera, hemos logrado el mejor complemento para innumerables preparaciones: gofres, pasteles, magdalenas, panqueques, fresas, galletas, cafés, helados, panaderías, etc. Dale a todas tus ideas un sabor fresco y afrutado. ¡100% libre de gluten!",
+    "imagen_destacada": "img/productos/2024/09/MG_814835-324x1024-1.png",
+    "galeria": [
+      "img/productos/2024/09/MG_814835-324x1024-1-250x790.png",
+      "img/productos/2024/09/MG_814835-324x1024-1-290x917.png",
+      "img/productos/2024/09/MG_814835-324x1024-1-120x379.png",
+      "img/productos/2024/09/MG_814835-324x1024-1.png"
+    ],
+    "categorias": {
+      "id": "siropes",
+      "name": "Siropes",
+      "subcategoria": "Fresa"
+    },
+    "marca": "Vulpi",
+    "categoria": "siropes"
+  },
+  {
+    "id": 10356,
+    "nombre": "Sirope de Caramelo Vulpi",
+    "slug": "sirope-de-caramelo-vulpi",
+    "descripcion": "Con nuestra receta casera, hemos logrado el mejor complemento para innumerables preparaciones: gofres, pasteles, magdalenas, panqueques, fresas, galletas, helados, panaderías, etc. Dale a todas tus ideas un auténtico y rico sabor a caramelo. ¡100% libre de gluten!",
+    "imagen_destacada": "img/productos/2024/09/MG_811403-289x1024-1.png",
+    "galeria": [
+      "img/productos/2024/09/MG_811403-289x1024-1-250x886.png",
+      "img/productos/2024/09/MG_811403-289x1024-1-120x425.png",
+      "img/productos/2024/09/MG_811403-289x1024-1.png"
+    ],
+    "categorias": {
+      "id": "siropes",
+      "name": "Siropes",
+      "subcategoria": "Caramelo"
+    },
+    "marca": "Vulpi",
+    "categoria": "siropes"
+  },
+  {
+    "id": 10353,
+    "nombre": "Sirope de Chocolate Vulpi",
+    "slug": "sirope-de-chocolate-vulpi",
+    "descripcion": "Con nuestra receta casera, hemos logrado el mejor complemento para innumerables preparaciones: gofres, pasteles, magdalenas, panqueques, fresas, galletas, helados, panaderías, etc. Dale a todas tus ideas un genuino y rico sabor a chocolate. ¡100% libre de gluten!",
+    "imagen_destacada": "img/productos/2024/09/MG_8365144-303x1024-1.png",
+    "galeria": [
+      "img/productos/2024/09/MG_8365144-303x1024-1-250x845.png",
+      "img/productos/2024/09/MG_8365144-303x1024-1-290x980.png",
+      "img/productos/2024/09/MG_8365144-303x1024-1-120x406.png",
+      "img/productos/2024/09/MG_8365144-303x1024-1.png"
+    ],
+    "categorias": {
+      "id": "siropes",
+      "name": "Siropes",
+      "subcategoria": "Chocolate"
+    },
+    "marca": "Vulpi",
+    "categoria": "reposteria"
+  },
+  {
+    "id": 10349,
+    "nombre": "Brownies con caramelos de chocolate",
+    "slug": "brownies-con-caramelos-de-chocolate",
+    "descripcion": "Deliciosos brownies con trocitos de caramelo de chocolate. Perfectos para acompañar con café o disfrutar como postre.",
+    "imagen_destacada": "img/productos/2024/09/galactic.png",
+    "galeria": [
+      "img/productos/2024/09/galactic-250x222.png",
+      "img/productos/2024/09/galactic-395x351.png",
+      "img/productos/2024/09/galactic-290x257.png",
+      "img/productos/2024/09/galactic-120x107.png",
+      "img/productos/2024/09/galactic.png"
+    ],
+    "categorias": {
+      "id": "reposteria",
+      "name": "Repostería",
+      "subcategoria": "Brownies"
+    },
+    "marca": null,
+    "categoria": "reposteria"
+  },
+  {
+    "id": 10347,
+    "nombre": "Brownies chocolate con pepitas chocolate belga",
+    "slug": "brownies-chocolate-con-pepitas-chocolate-belga",
+    "descripcion": "Brownies de intenso chocolate con auténticas pepitas de chocolate belga. Ideales para los amantes del cacao.",
+    "imagen_destacada": "img/productos/2024/09/brownies-de-chocolate.png",
+    "galeria": [
+      "img/productos/2024/09/brownies-de-chocolate-250x214.png",
+      "img/productos/2024/09/brownies-de-chocolate-395x338.png",
+      "img/productos/2024/09/brownies-de-chocolate-290x248.png",
+      "img/productos/2024/09/brownies-de-chocolate-120x103.png",
+      "img/productos/2024/09/brownies-de-chocolate.png"
+    ],
+    "categorias": {
+      "id": "reposteria",
+      "name": "Repostería",
+      "subcategoria": "Brownies"
+    },
+    "marca": null,
+    "categoria": "reposteria"
+  },
+  {
+    "id": 10346,
+    "nombre": "Blondies Vainilla y Chocolate Belga",
+    "slug": "blondies-vainilla-y-chocolate-belga",
+    "descripcion": "Deliciosos blondies con sabor a vainilla y trozos de chocolate belga. Una alternativa perfecta a los brownies tradicionales.",
+    "imagen_destacada": "img/productos/2024/09/blonde.png",
+    "galeria": [
+      "img/productos/2024/09/blonde-250x222.png",
+      "img/productos/2024/09/blonde-395x351.png",
+      "img/productos/2024/09/blonde-290x257.png",
+      "img/productos/2024/09/blonde-120x107.png",
+      "img/productos/2024/09/blonde.png"
+    ],
+    "categorias": {
+      "id": "reposteria",
+      "name": "Repostería",
+      "subcategoria": "Blondies"
+    },
+    "marca": "Blondies",
+    "categoria": "reposteria"
+  },
+  {
+    "id": 10333,
+    "nombre": "Tomate Frito casero aceite de Oliva Orquídea",
+    "slug": "tomate-frito-casero-aceite-de-oliva-orquidea",
+    "descripcion": "Tomate frito casero elaborado con aceite de oliva Orquídea. Sabor tradicional y natural para tus recetas.",
+    "imagen_destacada": "img/productos/2024/09/tomate-frito-casero.png",
+    "galeria": [
+      "img/productos/2024/09/tomate-frito-casero.png"
+    ],
+    "categorias": {
+      "id": "tomate_frito",
+      "name": "Tomate Frito y salsas de Tomate",
+      "subcategoria": "Tomate Frito"
+    },
+    "marca": "Orquídea",
+    "categoria": "salsas_ketchup_y_mostaza"
+  },
+  {
+    "id": 10330,
+    "nombre": "Tomate entero pelado Orquídea",
+    "slug": "tomate-entero-pelado-orquidea",
+    "descripcion": "Tomates enteros pelados Orquídea, perfectos para guisos, salsas y recetas caseras.",
+    "imagen_destacada": "img/productos/2024/09/tomate-entero-orquidea.png",
+    "galeria": [
+      "img/productos/2024/09/tomate-entero-orquidea.png"
+    ],
+    "categorias": {
+      "id": "tomate_entero",
+      "name": "Tomate Entero y Triturado",
+      "subcategoria": "Tomate Entero"
+    },
+    "marca": "Orquídea",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10288,
+    "nombre": "Tomate frito Verdegal. Varios Formatos",
+    "slug": "tomate-frito-3kg-verdegal",
+    "descripcion": "Tomate frito Verdegal disponible en varios formatos. Elaborado con ingredientes naturales para un sabor auténtico.",
+    "imagen_destacada": "",
+    "galeria": [],
+    "categorias": {
+      "id": "tomate_frito",
+      "name": "Tomate Frito y salsas de Tomate",
+      "subcategoria": "Tomate Frito"
+    },
+    "marca": "Verdegal",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 10235,
+    "nombre": "Aceituna Negra Natural 370ml.",
+    "slug": "aceituna-negra-natural-370ml",
+    "descripcion": "Aceituna negra natural, carnosa y gruesa, ideal para el picoteo o como acompañamiento en platos mediterráneos.",
+    "imagen_destacada": "img/productos/2023/07/aceituna-negra-natural-tarro-370-eco-sin-gluten-vegano-rioverde-1-1.png",
+    "galeria": [
+      "img/productos/2023/07/aceituna-negra-natural-tarro-370-eco-sin-gluten-vegano-rioverde-1-1.png"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Negras"
+    },
+    "marca": "Rioverde",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10232,
+    "nombre": "Aceitunas Verdes Partidas – Chupadedos 370ml.",
+    "slug": "aceitunas-verdes-partidas-chupadedos-370ml",
+    "descripcion": "Aceitunas verdes partidas estilo 'Chupadedos'. Una opción clásica y sabrosa para disfrutar en aperitivos.",
+    "imagen_destacada": "img/productos/2023/07/Aceituna-Chupadedos-370ml-e1689670991352.jpg",
+    "galeria": [
+      "img/productos/2023/07/Aceituna-Chupadedos-370ml-e1689670991352.jpg"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Partidas"
+    },
+    "marca": null,
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10230,
+    "nombre": "Aceitunas Manzanilla rellenas de Anchoa del Cantábrico MSC 370ml.",
+    "slug": "aceitunas-manzanilla-rellenas-de-anchoa-del-cantabrico-msc-370ml",
+    "descripcion": "Aceitunas manzanilla de gran calibre rellenas de anchoa del Cantábrico con certificado MSC de pesca sostenible.",
+    "imagen_destacada": "img/productos/2023/07/aceitunas-manzanilla-fina-anchoa-catanbrico-msc-lata-370-sin-gluten-vegano-rioverde.png",
+    "galeria": [
+      "img/productos/2023/07/aceitunas-manzanilla-fina-anchoa-catanbrico-msc-lata-370-sin-gluten-vegano-rioverde.png"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Rellenas"
+    },
+    "marca": null,
+    "categoria": "pescados-conserva"
+  },
+  {
+    "id": 10228,
+    "nombre": "Aceitunas Verdes Partidas Mojo Picón 370ml.",
+    "slug": "aceitunas-verdes-partidas-mojo-picon-370ml",
+    "descripcion": "Aceitunas verdes partidas aliñadas con mojo picón canario. Sabor intenso y ligeramente picante.",
+    "imagen_destacada": "img/productos/2023/07/aceitunas-verdes-partidas-mojo-picon-tarro-370-sin-gluten-vegano-rioverde-1.png",
+    "galeria": [
+      "img/productos/2023/07/aceitunas-verdes-partidas-mojo-picon-tarro-370-sin-gluten-vegano-rioverde-1.png"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Partidas"
+    },
+    "marca": null,
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10226,
+    "nombre": "Aceitunas Verdes Partidas Receta de la Abuela 370ml.",
+    "slug": "aceitunas-verdes-partidas-receta-de-la-abuela-370ml",
+    "descripcion": "Aceitunas verdes partidas con aliño tradicional 'Receta de la Abuela'. Una propuesta clásica y muy sabrosa.",
+    "imagen_destacada": "img/productos/2023/07/aceitunas-verdes-partidas-receta-abuela-tarro-370-sin-gluten-vegano-rioverde-1.png",
+    "galeria": [
+      "img/productos/2023/07/aceitunas-verdes-partidas-receta-abuela-tarro-370-sin-gluten-vegano-rioverde-1.png"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Partidas"
+    },
+    "marca": "Rioverde",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10224,
+    "nombre": "Aceituna Gordal con Pepinillo 1850ml.",
+    "slug": "aceituna-gordal-con-pepinillo-1850ml",
+    "descripcion": "Aceitunas gordal de gran tamaño acompañadas de pepinillo crujiente. Aperitivo ideal con vinagre suave.",
+    "imagen_destacada": "img/productos/2023/07/aceituna-gordal-pepinillo-tarro-1850-sin-gluten-vegano-rioverde-1.png",
+    "galeria": [
+      "img/productos/2023/07/aceituna-gordal-pepinillo-tarro-1850-sin-gluten-vegano-rioverde-1.png"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Gordal"
+    },
+    "marca": "Rioverde",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 10222,
+    "nombre": "Aceituna Gordal con Pepinillo 370ml.",
+    "slug": "aceituna-gordal-con-pepinillo-370ml",
+    "descripcion": "De fino y agradable sabor, la aceituna «Gordal» es la variedad de mayor tamaño. De textura carnosa y gruesa, se emplea fundamentalmente en aderezos o rellena de otros productos. Nuestra combinación de aceituna gordal con pepinillo crujiente Rioverde, es un aperitivo ideal para cualquier reunión. Está aderezada con un vinagre muy suave, por lo que gusta tanto a los amantes de los encurtidos, como a los no tan aficionados a los mismos.",
+    "imagen_destacada": "img/productos/2023/07/aceituna-gordal-pepinillo-tarro-370-sin-gluten-vegano-rioverde.png",
+    "galeria": [
+      "img/productos/2023/07/aceituna-gordal-pepinillo-tarro-370-sin-gluten-vegano-rioverde.png"
+    ],
+    "categoria": "aceitunas",
+    "marca": "Rioverde"
+  },
+  {
+    "id": 10219,
+    "nombre": "Aceituna Gordal con Guindilla 370ml.",
+    "slug": "aceituna-gordal-con-guindilla-370ml",
+    "descripcion": "De fino y agradable sabor, la aceituna «gordal» es la variedad de mayor tamaño. De textura carnosa y gruesa, se emplea fundamentalmente en aderezos o rellena de otros productos.",
+    "imagen_destacada": "img/productos/2023/07/aceituna-gordal-guindilla-tarro-370-sin-gluten-vegano-rioverde.png",
+    "galeria": [
+      "img/productos/2023/07/aceituna-gordal-guindilla-tarro-370-sin-gluten-vegano-rioverde.png"
+    ],
+    "categoria": "aceitunas",
+    "marca": "Rioverde"
+  },
+  {
+    "id": 9960,
+    "nombre": "Mermelada 1886",
+    "slug": "mermelada-1886",
+    "descripcion": "Mermelada extra elaborada siguiendo la receta original de Hero y el proceso tradicional de cocción, lentamente y a baja temperatura. Un sabor intenso y natural con trozos de fruta. Envasada al baño maría para una perfecta conservación sin conservantes ni colorantes. Formato 320g.",
+    "imagen_destacada": "img/productos/2021/02/1886-Fresa.jpg",
+    "galeria": [
+      "img/productos/2021/02/1886-Fresa.jpg",
+      "img/productos/2021/02/1886-Melocoton.jpg",
+      "img/productos/2021/02/1886-Arandanos.jpg",
+      "img/productos/2021/02/1886-Fresa-250x250.jpg",
+      "img/productos/2021/02/1886-Melocoton-250x250.jpg",
+      "img/productos/2021/02/1886-Arandanos-250x250.jpg"
+    ],
+    "categoria": "mermeladas",
+    "marca": "1886"
+  },
+  {
+    "id": 9779,
+    "nombre": "Jamón Curado Gran Reserva +16m LA FINCA",
+    "slug": "jamon-curado-gran-reserva-16m-la-finca",
+    "descripcion": "Jamón Curado Gran Reserva LA FINCA. Jamón de bodega ‘La Finca’, cuya curación en secadero es superior a los 16 meses.\nEste es un jamón de bodega de carne color rojo brillante, infiltración en grasa, sabor dulce y textura suave.\nEl color es rojizo y brillante al cortarlo, y se puede apreciar vetas de grasa infiltradas en la masa muscular. Esta grasa tiene un tono blanquecino y amarillento.\nDe aroma característico, suave, agradable, en definitivas cuentas… un gran jamón.",
+    "imagen_destacada": "img/productos/2020/07/Jamon-La-Finca.jpg",
+    "galeria": [
+      "img/productos/2020/07/Jamon-La-Finca.jpg",
+      "img/productos/2020/07/Jamon-La-Finca-250x375.jpg",
+      "img/productos/2020/07/Alcornoque-La-Finca-750x751.jpg"
+    ],
+    "categoria": "jamones_y_embutidos",
+    "marca": "Jamones La Finca"
+  },
+  {
+    "id": 1834,
+    "nombre": "Tarritos",
+    "slug": "tarritos",
+    "descripcion": "Los tarritos de Hero Baby son una opción magnífica para la alimentación de los más pequeños, con la gama de tarritos más amplia del mercado. Hero Baby te ofrece tarritos de carne, pescado, verduritas y frutas, para proporcionar una dieta equilibrada con ingredientes naturales y nutritivos. También cuenta con la gama ecológica Hero Baby Solo, elaborados con ingredientes 100% eco.",
+    "imagen_destacada": "img/productos/2019/03/Hero_arroz850.png",
+    "galeria": [
+      "img/productos/2019/03/Hero_arroz850.png"
+    ],
+    "categoria": "alimentacion_infantil",
+    "marca": "Hero"
+  },
+  {
+    "id": 1985,
+    "nombre": "Buenas Noches",
+    "slug": "buenas-noches",
+    "descripcion": "Los tarritos Babynoches Hero Baby se elaboran con recetas que facilitan la digestión y aseguran un buen sueño, desde los 6 meses.",
+    "imagen_destacada": "img/productos/2019/05/8410175013903_VERDURITAS-POLLO_2X190G.png",
+    "galeria": [
+      "img/productos/2019/05/8410175013903_VERDURITAS-POLLO_2X190G.png"
+    ],
+    "categoria": "alimentacion_infantil",
+    "marca": "Hero"
+  },
+  {
+    "id": 1835,
+    "nombre": "Zumito Frutas Variadas",
+    "slug": "zumitos",
+    "descripcion": "Elaborado con materias primas controladas desde el origen. Para bebés a partir de 4 meses. Sin conservantes ni colorantes. Sin azúcares añadidos y fuente de vitamina C.",
+    "imagen_destacada": "img/productos/2019/03/IMAGEN-ZUMOS-HERO-SIN-EDITAR.jpg",
+    "galeria": [
+      "img/productos/2019/03/IMAGEN-ZUMOS-HERO-SIN-EDITAR.jpg"
+    ],
+    "categoria": "alimentacion_infantil",
+    "marca": "Hero"
+  },
+  {
+    "id": 1838,
+    "nombre": "Papillas",
+    "slug": "papillas",
+    "descripcion": "Papillas para bebés desde 6 meses de edad. Elaboradas con grano completo, no refinado, manteniendo el salvado y el germen, sin azúcares añadidos, con calcio, hierro y vitaminas. Deliciosas y sin grumos.\nEl grano completo es menos refinado, mantiene el salvado como fuente de fibra y el germen que aporta ácidos grasos esenciales.",
+    "imagen_destacada": "img/productos/2019/03/papilla-sin-glute.jpg",
+    "galeria": [
+      "img/productos/2019/03/papilla-sin-glute.jpg"
+    ],
+    "categoria": "alimentacion_infantil",
+    "marca": null
+  },
+  {
+    "id": 1836,
+    "nombre": "Galletas y snacks",
+    "slug": "galletas",
+    "descripcion": "Mi primera galleta sin gluten de Hero Baby está especialmente adaptada para tu bebé. Elaboradas con ingredientes 100% naturales, tienen una textura de fácil disolución.",
+    "imagen_destacada": "img/productos/2019/03/8410175039132_Mi-primera-galleta-sin-gluten_-180g-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/03/8410175039132_Mi-primera-galleta-sin-gluten_-180g-scaled.jpg"
+    ],
+    "categoria": "reposteria",
+    "marca": null
+  },
+  {
+    "id": 1837,
+    "nombre": "Leche HB NS Premium nº3",
+    "slug": "leches",
+    "descripcion": "Leche Nutrasense Premium 3, leche infantil con ingredientes científicamente probados y resultados demostrados. Contribuye al crecimiento y desarrollo óptimo de tu bebé. Indicado para bebés a partir de 12 meses. Sin aceite de palma.",
+    "imagen_destacada": "img/productos/2019/03/8410175070197_BOTE_FRONTAL.webp",
+    "galeria": [
+      "img/productos/2019/03/8410175070197_BOTE_FRONTAL.webp"
+    ],
+    "categoria": "leches-infantiles",
+    "marca": "Hero"
+  },
+  {
+    "id": 2130,
+    "nombre": "Jamón de Bellota 100% Ibérico Don Agustín",
+    "slug": "jamon-de-bellota-100-iberico-don-agustin",
+    "descripcion": "El jamón de bellota 100% ibérico Don Agustín de calidad superior es el summum de los Ibéricos.\nColor rojo puro intenso y brillante, con vetas de grasa marmórea y aromática. Su textura se funde en el paladar para desarrollar un sabor intenso, suave y persistente, entre dulce y poco salado, evocando frutos secos, bodega y campo.",
+    "imagen_destacada": "img/productos/2019/05/jamon-agustin.jpg",
+    "galeria": [
+      "img/productos/2019/05/jamon-agustin.jpg"
+    ],
+    "categoria": "carnicos_ibericos",
+    "marca": "Don Agustín"
+  },
+  {
+    "id": 1843,
+    "nombre": "Jamon de Bellota Iberico 75%",
+    "slug": "jamon-de-bellota-iberico-75",
+    "descripcion": "Jamón de Bellota Ibérico 75% raza ibérica de la Denominación de Origen Guijuelo con una curación mínima de 36 meses.",
+    "imagen_destacada": "img/productos/2019/03/jamon-iberico.jpg",
+    "galeria": [
+      "img/productos/2019/03/jamon-iberico.jpg"
+    ],
+    "categorias": {
+      "id": "ibericos",
+      "name": "Jamones y Embutidos Ibéricos",
+      "subcategoria": "Jamones"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 2132,
+    "nombre": "Jamón de CEBO DE CAMPO Ibérico 50% Raza Ibérica",
+    "slug": "jamon-de-cebo-de-campo-iberico-50-raza-iberica",
+    "descripcion": "Jamón de Cebo de Campo Ibérico 50% raza ibérica con una curación de 30 meses.",
+    "imagen_destacada": "img/productos/2019/05/jamon-campo.jpg",
+    "galeria": [
+      "img/productos/2019/05/jamon-campo.jpg"
+    ],
+    "categorias": {
+      "id": "ibericos",
+      "name": "Jamones y Embutidos Ibéricos",
+      "subcategoria": "Jamones"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 2126,
+    "nombre": "Lomo",
+    "slug": "lomo",
+    "descripcion": "En pleno corazón del Campo Charro a tan solo 8 km de Ciudad Rodrigo. En un paisaje único salpicado de encinas, robles y alcornoques con un clima único, donde mantenemos nuestra propia producción de cerdas puras ibéricas, para poder obtener nuestros mejores productos.",
+    "imagen_destacada": "img/productos/2019/03/lomo.jpg",
+    "galeria": [
+      "img/productos/2019/03/lomo.jpg"
+    ],
+    "categorias": {
+      "id": "ibericos",
+      "name": "Jamones y Embutidos Ibéricos",
+      "subcategoria": "Lomo"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 2092,
+    "nombre": "Arroz vaporizado",
+    "slug": "arroz-vaporizado",
+    "descripcion": "El arroz Vaporizado Montsià ha sido sometido a un proceso de elevadas presiones de modo que mantiene sus propiedades nutritivas repartidas por todo el grano, mejorando textura y sabor además de cocer rápidamente. Es un arroz que nunca se pasa, garantiza un resultado óptimo tanto en aporte nutricional como en calidad del sabor.",
+    "imagen_destacada": "img/productos/2019/05/arroz-vaporizado-1kg.png",
+    "galeria": [
+      "img/productos/2019/05/arroz-vaporizado-1kg.png"
+    ],
+    "categorias": {
+      "id": "arroces",
+      "name": "Arroces",
+      "subcategoria": "Arroz Vaporizado"
+    },
+    "marca": "Montsia",
+    "categoria": "legumbres_y_arroces"
+  },
+  {
+    "id": 2090,
+    "nombre": "Arroz extra",
+    "slug": "arroz-extra",
+    "descripcion": "El arroz Extra Montsià de sabor y calidad incomparables es el preferido de prestigiosos restauradores y el más utilizado entre los profesionales del sector. Se utiliza siempre la misma variedad seleccionada, Montsianell, y por tanto tiene el mismo tiempo de cocción y una gran capacidad de absorción de gustos y sabores.",
+    "imagen_destacada": "img/productos/2019/05/extra-1kg.png",
+    "galeria": [
+      "img/productos/2019/05/extra-1kg.png"
+    ],
+    "categorias": {
+      "id": "arroces",
+      "name": "Arroces",
+      "subcategoria": "Arroz Extra"
+    },
+    "marca": "Montsia",
+    "categoria": "legumbres_y_arroces"
+  },
+  {
+    "id": 2035,
+    "nombre": "Tabletas sin azúcar",
+    "slug": "tabletas-sin-azucar",
+    "descripcion": "Las tabletas 0% Azúcares añadidos de Valor están elaboradas con algunos de los mejores cacaos del mundo y con Stevia, un edulcorante de origen natural. Ideal para todos aquellos que no pueden consumir azúcar o aquellos que les gusta cuidarse. Además, todos los productos de la gama 0% Azúcares añadidos mantienen el mismo sabor y aroma que el chocolate Valor tradicional. Disfruta del placer del chocolate, sin azúcares.",
+    "imagen_destacada": "img/productos/2019/05/Chocolate-Negro-70-Mousse-naranja-0-azúcares-añadidos-150.jpg",
+    "galeria": [
+      "img/productos/2019/05/Chocolate-Negro-70-Mousse-naranja-0-azúcares-añadidos-150.jpg"
+    ],
+    "categorias": {
+      "id": "chocolates",
+      "name": "Chocolates",
+      "subcategoria": "Tabletas sin azúcar"
+    },
+    "marca": "Valor",
+    "categoria": "reposteria"
+  },
+  {
+    "id": 2072,
+    "nombre": "Chocolate con leche sin lactosa",
+    "slug": "chocolate-sin-lactosa",
+    "descripcion": "Su delicioso sabor y fácil digestión hacen de las tabletas de chocolate con leche sin lactosa de Valor la opción perfecta para todos aquellos que han reducido el consumo de lactosa en su dieta.",
+    "imagen_destacada": "img/productos/2019/05/Chocolate-con-leche-Sin-lactosa-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/05/Chocolate-con-leche-Sin-lactosa-scaled.jpg"
+    ],
+    "categorias": {
+      "id": "chocolates",
+      "name": "Chocolates",
+      "subcategoria": "Sin lactosa"
+    },
+    "marca": "Valor",
+    "categoria": "reposteria"
+  },
+  {
+    "id": 2078,
+    "nombre": "Chocolate a la Taza",
+    "slug": "chocolate-a-la-taza",
+    "descripcion": "El delicioso sabor de un buen chocolate a la taza es el recuerdo inconfundible de nuestra marca. Su degustación será siempre un momento de extremada exquisitez.",
+    "imagen_destacada": "img/productos/2019/05/Tableta-Taza-300g-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/05/Tableta-Taza-300g-scaled.jpg"
+    ],
+    "categorias": {
+      "id": "chocolates",
+      "name": "Chocolates",
+      "subcategoria": "Chocolate a la Taza"
+    },
+    "marca": "Valor",
+    "categoria": "reposteria"
+  },
+  {
+    "id": 2075,
+    "nombre": "Especial postres",
+    "slug": "especial-postres",
+    "descripcion": "Deliciosa tableta de chocolate a base de una mezcla de cacaos de orígenes selectos, que aportan un intenso sabor y aroma. Exquisito chocolate puro fácil de fundir para elaborar los postres más deliciosos.",
+    "imagen_destacada": "img/productos/2019/05/Cacao-puro-en-polvo-desgrasado-250g-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/05/Cacao-puro-en-polvo-desgrasado-250g-scaled.jpg"
+    ],
+    "categorias": {
+      "id": "reposteria",
+      "name": "Repostería",
+      "subcategoria": "Chocolates"
+    },
+    "marca": null,
+    "categoria": "reposteria"
+  },
+  {
+    "id": 2069,
+    "nombre": "Huesitos",
+    "slug": "huesitos",
+    "descripcion": "Crujiente barrita de barquillo cubierta con chocolate con leche y relleno 37% con cacao.",
+    "imagen_destacada": "img/productos/2019/05/H-ORIG-x12-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/05/H-ORIG-x12-scaled.jpg"
+    ],
+    "categorias": {
+      "id": "reposteria",
+      "name": "Repostería",
+      "subcategoria": "Chocolates"
+    },
+    "marca": "Huesitos",
+    "categoria": "reposteria"
+  },
+  {
+    "id": 2066,
+    "nombre": "Ensaladas",
+    "slug": "ensaladas",
+    "descripcion": "Las mejor preparadas, aliñadas, listas para su consumo, dotadas de un suave sabor agridulce que les dan una personalidad propia nada más abrir el envase. Así son las Ensaladas Rioverde, las mejores de su clase.",
+    "imagen_destacada": "img/productos/2019/05/8410954000247-Rioverde-Ensalada-De-Pimiento-RH370.jpg",
+    "galeria": [
+      "img/productos/2019/05/8410954000247-Rioverde-Ensalada-De-Pimiento-RH370.jpg"
+    ],
+    "categorias": {
+      "id": "encurtidos",
+      "name": "Encurtidos",
+      "subcategoria": "Ensaladas"
+    },
+    "marca": "Rioverde",
+    "categoria": "conservas_vegetales"
+  },
+  {
+    "id": 2063,
+    "nombre": "Encurtidos",
+    "slug": "encurtidos",
+    "descripcion": "Con el punto justo de vinagre y una materia prima fresca de la mejor calidad, nuestros Encurtidos Tradicionales contribuyen a realzar y complementar el sabor de sus recetas.",
+    "imagen_destacada": "img/productos/2019/05/8410954000155-Rioverde-Cocktel-Encurtidos-RH370.jpg",
+    "galeria": [
+      "img/productos/2019/05/8410954000155-Rioverde-Cocktel-Encurtidos-RH370.jpg"
+    ],
+    "categorias": {
+      "id": "encurtidos",
+      "name": "Encurtidos",
+      "subcategoria": "Cocktel"
+    },
+    "marca": "Rioverde",
+    "categoria": "encurtidos"
+  },
+  {
+    "id": 2047,
+    "nombre": "Mermeladas de temporada",
+    "slug": "mermeladas-de-temporada",
+    "descripcion": "Mermelada elaborada con las mejores frutas de la última campaña. Todo natural, sin conservantes ni colorantes. Formato 350g.",
+    "imagen_destacada": "img/productos/2019/05/3D-Temporada-Mango-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/05/3D-Temporada-Mango-scaled.jpg"
+    ],
+    "categorias": {
+      "id": "mermeladas",
+      "name": "Confituras y Mermeladas",
+      "subcategoria": "Temporada"
+    },
+    "marca": "Hero",
+    "categoria": "mermeladas"
+  },
+  {
+    "id": 2044,
+    "nombre": "Mermeladas de temporada zero",
+    "slug": "mermeladas-de-temporada-zero",
+    "descripcion": "La primera mermelada de Temporada elaborada únicamente con azúcares de origen natural. Realizadas de manera artesanal y en cantidad limitada, en su proceso de elaboración 100% a base de fruta, los azúcares refinados son sustituidos por azúcares procedentes de la propia fruta, consiguiendo un dulzor natural y un sabor auténtico que hará de tus desayunos y meriendas el momento favorito del día.",
+    "imagen_destacada": "img/productos/2019/05/Temporada-Zero-Melocotón-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/05/Temporada-Zero-Melocotón-scaled.jpg"
+    ],
+    "categorias": {
+      "id": "mermeladas",
+      "name": "Confituras y Mermeladas",
+      "subcategoria": "Temporada Zero"
+    },
+    "marca": "Hero",
+    "categoria": "mermeladas"
+  },
+  {
+    "id": 2038,
+    "nombre": "Confituras Diet",
+    "slug": "confituras-diet",
+    "descripcion": "Disfrutarás del auténtico sabor de siempre, elaboradas con los mejores ingredientes y solo con fruta para ofrecerte una confitura Todo Natural y sin azúcar añadido.",
+    "imagen_destacada": "img/productos/2019/05/8410175025159-Albaricoque-Diet.jpg",
+    "galeria": [
+      "img/productos/2019/05/8410175025159-Albaricoque-Diet.jpg"
+    ],
+    "categorias": {
+      "id": "mermeladas",
+      "name": "Confituras y Mermeladas",
+      "subcategoria": "Diet"
+    },
+    "marca": null,
+    "categoria": "mermeladas"
+  },
+  {
+    "id": 2011,
+    "nombre": "Mermeladas profesionales",
+    "slug": "mermeladas-profesionales",
+    "descripcion": "Disfrutarás del auténtico sabor de siempre, elaborada con los mejores ingredientes y solo con fruta para ofrecerte una confitura Todo Natural, en todos sus formatos.",
+    "imagen_destacada": "img/productos/2019/05/conf.profesional.jpg",
+    "galeria": [
+      "img/productos/2019/05/conf.profesional.jpg"
+    ],
+    "categorias": {
+      "id": "mermeladas",
+      "name": "Confituras y Mermeladas",
+      "subcategoria": "Profesionales"
+    },
+    "marca": null,
+    "categoria": "mermeladas"
+  },
+  {
+    "id": 1993,
+    "nombre": "Hero Solo",
+    "slug": "hero-solo",
+    "descripcion": "SOLO fruta y nada más, 100% Ecológica. Gama de tarritos con 100% fruta ecológica. Tarrito exclusivo y moderno de 120g. +4 meses. Sin gluten, sin leche, sin huevo.",
+    "imagen_destacada": "img/productos/2019/05/solo-surtido.jpg",
+    "galeria": [
+      "img/productos/2019/05/solo-surtido.jpg"
+    ],
+    "categorias": {
+      "id": "hero-baby",
+      "name": "Postres y Meriendas Hero Baby",
+      "subcategoria": "Tarritos"
+    },
+    "marca": "Hero",
+    "categoria": "reposteria"
+  },
+  {
+    "id": 1988,
+    "nombre": "Hero Bolsitas",
+    "slug": "hero-bolsitas",
+    "descripcion": "Bolsitas de fruta Hero Baby elaboradas con 100% fruta, sin azúcares añadidos y fuente de Vitamina C. +4 meses. Sin aceite de palma, sin gluten, sin leche.",
+    "imagen_destacada": "img/productos/2019/05/8410175066022_Solo-Pera-Platano-Naranja_100g.png",
+    "galeria": [
+      "img/productos/2019/05/8410175066022_Solo-Pera-Platano-Naranja_100g.png"
+    ],
+    "categorias": {
+      "id": "hero-baby",
+      "name": "Postres y Meriendas Hero Baby",
+      "subcategoria": "Bolsitas"
+    },
+    "marca": "Hero",
+    "categoria": "alimentacion_infantil"
+  },
+  {
+    "id": 10125,
+    "nombre": "Salsas Heinz",
+    "slug": "salsas-heinz",
+    "descripcion": "Desde Beanz hasta sopas y salsas. Descubre todos los sabores Heinz favoritos navegando por su gama de productos.",
+    "imagen_destacada": "img/productos/2021/09/salsas.jpg",
+    "galeria": [
+      "img/productos/2021/09/salsas.jpg",
+      "https://d167y3o4ydtmfg.cloudfront.net/krafts/303/1620226425821_750x750.png",
+      "https://d167y3o4ydtmfg.cloudfront.net/krafts/303/1620217470626_750x750.png",
+      "https://d167y3o4ydtmfg.cloudfront.net/krafts/303/1602597681772_691x568.png",
+      "https://d167y3o4ydtmfg.cloudfront.net/krafts/303/1620225992519_2449x1632.png",
+      "https://d167y3o4ydtmfg.cloudfront.net/krafts/303/1602238568702_691x568.png",
+      "https://d167y3o4ydtmfg.cloudfront.net/krafts/303/1620231784761_2449x1632.png"
+    ],
+    "categorias": {
+      "id": "salsas",
+      "name": "Salsas, Ketchup y Mostaza",
+      "subcategoria": "Heinz"
+    },
+    "marca": "Heinz",
+    "categoria": "salsas_ketchup_y_mostaza"
+  },
+  {
+    "id": 1861,
+    "nombre": "Barbacoa Coosur",
+    "slug": "barbacoa-coosur",
+    "descripcion": "Salsa barbacoa en envase de 1.850 gramos, ideal para hostelería. Elaborada con tomate, vinagre, caramelo, especias y aromas para potenciar su sabor.",
+    "imagen_destacada": "img/productos/2019/03/barbacoa.jpg",
+    "galeria": [
+      "img/productos/2019/03/barbacoa.jpg"
+    ],
+    "categorias": {
+      "id": "salsas",
+      "name": "Salsas, Ketchup y Mostaza",
+      "subcategoria": "Barbacoa"
+    },
+    "marca": "Coosur",
+    "categoria": "salsas_ketchup_y_mostaza"
+  },
+  {
+    "id": 1860,
+    "nombre": "Mostaza Coosur",
+    "slug": "mostaza-coosur",
+    "descripcion": "Mostaza en garrafa de 1.700 gramos para hostelería. Gama Coosur Profesional, formato ergonómico para fácil manejo.",
+    "imagen_destacada": "img/productos/2019/03/mostaza.jpg",
+    "galeria": [
+      "img/productos/2019/03/mostaza.jpg"
+    ],
+    "categorias": {
+      "id": "salsas",
+      "name": "Salsas, Ketchup y Mostaza",
+      "subcategoria": "Mostaza"
+    },
+    "marca": "Coosur",
+    "categoria": "salsas_ketchup_y_mostaza"
+  },
+  {
+    "id": 1859,
+    "nombre": "Ketchup Coosur",
+    "slug": "ketchup-coosur",
+    "descripcion": "Ketchup en envases de 1.850 y 4.850 gramos, ideal para hostelería. Para 100 g de salsa se emplean 152 g de tomate.",
+    "imagen_destacada": "img/productos/2019/03/ketchup.jpg",
+    "galeria": [
+      "img/productos/2019/03/ketchup.jpg"
+    ],
+    "categorias": {
+      "id": "salsas",
+      "name": "Salsas, Ketchup y Mostaza",
+      "subcategoria": "Ketchup"
+    },
+    "marca": "Coosur",
+    "categoria": "salsas_ketchup_y_mostaza"
+  },
+  {
+    "id": 1857,
+    "nombre": "Rellenas",
+    "slug": "rellenas",
+    "descripcion": "<p>Aceitunas Guadalquivir, con sede en Sevilla (España), fue fundada en 1962 por Francisco Escalante Rivera y actualmente es una de las 5 mayores empresas del mundo del sector de la aceituna de mesa.<br />\nProcesando más de 50 millones de kilos de aceitunas anualmente por más de 400 empleados en 4 plantas de fabricación, están presentes en más de 60 países.</p>\n<p>Su misión y meta es la de producir productos seguros, con la calidad que el cliente demanda, con un servicio y competitividad por encima de sus expectativas, respetando el medio ambiente y creando valor para la sociedad y el accionista.</p>\n",
+    "imagen_destacada": "img/productos/2019/03/TIN_A370_Verdes_ANCHOA-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/03/TIN_A370_Verdes_ANCHOA-scaled.jpg"
+    ],
+    "categorias": {
+      "ancestros": [
+        {
+          "id": 40,
+          "name": "Aceitunas",
+          "slug": "aceitunas"
+        }
+      ],
+      "padre": {
+        "id": 40,
+        "name": "Aceitunas",
+        "slug": "aceitunas"
+      },
+      "categoria": null,
+      "subcategoria": {
+        "id": 40,
+        "name": "Aceitunas",
+        "slug": "aceitunas"
+      }
+    },
+    "marca": "Guadalquivir",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 1856,
+    "nombre": "Aceitunas Negras",
+    "slug": "aceitunas-negras",
+    "descripcion": "Aceitunas Guadalquivir, con sede en Sevilla, fundada en 1962. Procesa más de 50 millones de kilos anuales y está presente en más de 60 países. Su misión es producir productos seguros, de calidad y respetuosos con el medio ambiente.",
+    "imagen_destacada": "img/productos/2019/03/TIN_A370_Negras_CON_HUESO-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/03/TIN_A370_Negras_CON_HUESO-scaled.jpg"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Negras"
+    },
+    "marca": "Guadalquivir",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 1854,
+    "nombre": "Aceitunas en Rodajas",
+    "slug": "aceitunas-rodajas",
+    "descripcion": "Aceitunas Guadalquivir, con sede en Sevilla, fundada en 1962. Procesa más de 50 millones de kilos anuales y está presente en más de 60 países. Su misión es producir productos seguros, de calidad y respetuosos con el medio ambiente.",
+    "imagen_destacada": "img/productos/2019/03/rodajas.jpg",
+    "galeria": [
+      "img/productos/2019/03/rodajas.jpg"
+    ],
+    "categorias": {
+      "id": "aceitunas",
+      "name": "Aceitunas",
+      "subcategoria": "Rodajas"
+    },
+    "marca": "Guadalquivir",
+    "categoria": "aceitunas"
+  },
+  {
+    "id": 1852,
+    "nombre": "Arroz Bomba Montsià",
+    "slug": "arroz-bomba",
+    "descripcion": "El arroz Bomba Montsià es ideal para la preparación de platos de alta cocina. Tierno y suave al paladar, sus granos cortos y redondeados absorben perfectamente los sabores.",
+    "imagen_destacada": "img/productos/2019/03/arroz-bomba-1k.png",
+    "galeria": [
+      "img/productos/2019/03/arroz-bomba-1k.png"
+    ],
+    "categorias": {
+      "id": "arroces",
+      "name": "Arroces",
+      "subcategoria": "Bomba"
+    },
+    "marca": "Montsià",
+    "categoria": "legumbres_y_arroces"
+  },
+  {
+    "id": 1853,
+    "nombre": "Lenteja Pardina Extra Lerén",
+    "slug": "lenteja-pardina-extra-leren",
+    "descripcion": "Legumbres La Fuensantica presenta su Lenteja Pardina Extra Lerén, un producto de alta calidad dentro de su variado catálogo.",
+    "imagen_destacada": "img/productos/2019/03/lentejas-leren.jpg",
+    "galeria": [
+      "img/productos/2019/03/lentejas-leren.jpg"
+    ],
+    "categorias": {
+      "id": "legumbres",
+      "name": "Legumbres",
+      "subcategoria": "Lentejas"
+    },
+    "marca": "La Fuensantica",
+    "categoria": "legumbres_y_arroces"
+  },
+  {
+    "id": 1851,
+    "nombre": "D.O Rioja Crianza Viña de La Merce",
+    "slug": "rioja-crianza-vina-de-la-merce",
+    "descripcion": "Vino 100% Tempranillo procedente de viñedos de más de 40 años en Rioja Alta. Fermentado en acero inoxidable y envejecido 14 meses en barrica. De capa media alta, aromas de fruta fresca, toques balsámicos y sabor redondo y sedoso. Temperatura ideal de consumo: 15-17ºC.",
+    "imagen_destacada": "img/productos/2019/03/image4-1-e1586168411648.jpeg",
+    "galeria": [
+      "img/productos/2019/03/image4-1-e1586168411648.jpeg"
+    ],
+    "categorias": {
+      "id": "rioja",
+      "name": "Vinos D.O Rioja",
+      "subcategoria": "Crianza"
+    },
+    "marca": "Viña de La Merce",
+    "categoria": "vinos"
+  },
+  {
+    "id": 1845,
+    "nombre": "Salchichón Ibérico",
+    "slug": "salchichon-iberico",
+    "descripcion": "Producido en pleno corazón del Campo Charro, en un entorno único de encinas, robles y alcornoques. Elaborado con cerdas puras ibéricas propias para garantizar la máxima calidad.",
+    "imagen_destacada": "img/productos/2019/03/salchichon-iberico.png",
+    "galeria": [
+      "img/productos/2019/03/salchichon-iberico.png"
+    ],
+    "categorias": {
+      "id": "ibericos",
+      "name": "Jamones y Embutidos Ibéricos",
+      "subcategoria": "Salchichón"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 1844,
+    "nombre": "Chorizo Ibérico",
+    "slug": "chorizo-iberico",
+    "descripcion": "Producido en pleno corazón del Campo Charro, en un entorno único de encinas, robles y alcornoques. Elaborado con cerdas puras ibéricas propias para garantizar la máxima calidad.",
+    "imagen_destacada": "img/productos/2019/03/chorizo-iberico2.jpg",
+    "galeria": [
+      "img/productos/2019/03/chorizo-iberico2.jpg"
+    ],
+    "categorias": {
+      "id": "ibericos",
+      "name": "Jamones y Embutidos Ibéricos",
+      "subcategoria": "Chorizo"
+    },
+    "marca": null,
+    "categoria": "carnicos_ibericos"
+  },
+  {
+    "id": 1842,
+    "nombre": "Bombones",
+    "slug": "bombones",
+    "descripcion": "Los bombones de Valor se presentan en diversos formatos, sabores, e incluso sin azúcar para que puedas disfrutar de todo el placer, sin azúcar.",
+    "imagen_destacada": "img/productos/2019/03/surtido-bombones.jpg",
+    "galeria": [
+      "img/productos/2019/03/surtido-bombones.jpg"
+    ],
+    "categoria": "reposteria",
+    "marca": "Valor"
+  },
+  {
+    "id": 1841,
+    "nombre": "Cacao en polvo",
+    "slug": "cacao-en-polvo",
+    "descripcion": "¡Por fin un cacao negro 70% soluble! Para amantes de los altos porcentajes de cacao, pruébalo y descubre el auténtico sabor a cacao.",
+    "imagen_destacada": "img/productos/2019/03/Cacao-70-Soluble-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/03/Cacao-70-Soluble-scaled.jpg"
+    ],
+    "categoria": "reposteria",
+    "marca": "Valor"
+  },
+  {
+    "id": 1840,
+    "nombre": "Coberturas",
+    "slug": "coberturas",
+    "descripcion": "La gama profesional está formada por coberturas de chocolate elaboradas con los mejores cacaos africanos con un perfil organoléptico clásico.",
+    "imagen_destacada": "img/productos/2019/03/Profesional-70-25kg.jpg",
+    "galeria": [
+      "img/productos/2019/03/Profesional-70-25kg.jpg"
+    ],
+    "categoria": "reposteria",
+    "marca": null
+  },
+  {
+    "id": 1833,
+    "nombre": "Confituras",
+    "slug": "mermeladas",
+    "descripcion": "Disfrutarás del auténtico sabor de siempre, elaboradas con los mejores ingredientes y solo con fruta para ofrecerte una confitura Todo Natural.",
+    "imagen_destacada": "img/productos/2019/03/conf.melocoton.jpg",
+    "galeria": [
+      "img/productos/2019/03/conf.melocoton.jpg"
+    ],
+    "categoria": "mermeladas",
+    "marca": null
+  },
+  {
+    "id": 2041,
+    "nombre": "Maridajes",
+    "slug": "maridajes",
+    "descripcion": "Nueva mermelada que fusiona ideas, sabores, texturas y experiencias. Es ideal para combinarlo como quieras para obtener nuevas experiencias.",
+    "imagen_destacada": "img/productos/2019/05/Pack-3-mermeladas.jpg",
+    "galeria": [
+      "img/productos/2019/05/Pack-3-mermeladas.jpg"
+    ],
+    "categoria": "mermeladas",
+    "marca": null
+  },
+  {
+    "id": 1832,
+    "nombre": "Piña Natural Norvi",
+    "slug": "pinas",
+    "descripcion": "La mejor fruta tanto en almíbar como en su jugo, para disfrutar en casa.",
+    "imagen_destacada": "img/productos/2019/03/piña-norvi.jpg",
+    "galeria": [
+      "img/productos/2019/03/piña-norvi.jpg"
+    ],
+    "categoria": "almibares",
+    "marca": "Norvi"
+  },
+  {
+    "id": 1831,
+    "nombre": "Cocktail de frutas Verdegal 3Kg",
+    "slug": "melocotones",
+    "descripcion": "La mejor fruta en almíbar y jugo en el tamaño ideal para el profesional.",
+    "imagen_destacada": "img/productos/2019/03/coctel-3kg-250x163-editado.png",
+    "galeria": [
+      "img/productos/2019/03/coctel-3kg-250x163-editado.png"
+    ],
+    "categoria": "almibares",
+    "marca": "Verdegal"
+  },
+  {
+    "id": 1829,
+    "nombre": "Encurtidos",
+    "slug": "encurtidos",
+    "descripcion": "",
+    "imagen_destacada": "",
+    "galeria": [],
+    "categoria": "encurtidos",
+    "marca": null
+  },
+  {
+    "id": 1827,
+    "nombre": "Espárragos D.O. Navarra",
+    "slug": "rayados",
+    "descripcion": "La Denominación Específica «Espárrago de Navarra» se destina a espárragos producidos en Aragón, La Rioja y Navarra. De color blanco, textura suave y sabor exquisito, se comercializan en categorías Extra y Primera.",
+    "imagen_destacada": "img/productos/2019/03/11097F-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/03/11097F-scaled.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "marca": null
+  },
+  {
+    "id": 1826,
+    "nombre": "Pimientos del piquillo",
+    "slug": "pimientos",
+    "descripcion": "El pimiento del piquillo es una variedad producida en Lodosa (Navarra) protegida por la Denominación de Origen Piquillo de Lodosa. Suele prepararse al horno y envasado.",
+    "imagen_destacada": "img/productos/2019/03/13044B.jpg",
+    "galeria": [
+      "img/productos/2019/03/13044B.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "marca": null
+  },
+  {
+    "id": 1825,
+    "nombre": "Verduras de Navarra",
+    "slug": "champinones",
+    "descripcion": "Navarra es reconocida como la capital mundial de la verdura, considerada patrimonio gastronómico por chefs de prestigio como Ferrán Adriá, Joan Roca y Rodrigo de la Calle.",
+    "imagen_destacada": "img/productos/2019/03/60008B-scaled.jpg",
+    "galeria": [
+      "img/productos/2019/03/60008B-scaled.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "marca": "Verduras de Navarra"
+  },
+  {
+    "id": 1824,
+    "nombre": "Alcachofas",
+    "slug": "alcachofas",
+    "descripcion": "Las alcachofas son ricas en hidratos de carbono como la inulina y fibra, además de minerales como sodio, potasio, fósforo y calcio. Contienen vitaminas B1, B3 y C, y sustancias con efectos positivos para la salud.",
+    "imagen_destacada": "img/productos/2019/03/orquidea.jpg",
+    "galeria": [
+      "img/productos/2019/03/orquidea.jpg"
+    ],
+    "categoria": "conservas_vegetales",
+    "marca": "Orquídea"
+  }
+]

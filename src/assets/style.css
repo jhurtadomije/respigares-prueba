@@ -16,8 +16,11 @@ body {
 }
 
 .header {
-  background: var(--color-main);
-  color: var(--color-white);
+  background: linear-gradient(
+    to bottom,
+    var(--color-main) 0%,
+    #e8a1b7 100%   /* rojo mucho más claro */
+  );
   box-shadow: 0 4px 18px #0002;
   position: fixed;
   top: 0;

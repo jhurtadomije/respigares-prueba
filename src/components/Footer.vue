@@ -60,7 +60,11 @@ function abrirConfigCookies() {
 
 <style scoped>
 .footer {
-  background: #a50c3a;
+  background: linear-gradient(
+    to bottom,
+    var(--color-main) 0%,
+    #e8a1b7 100%   /* rojo mucho más claro */
+  );
   color: #fff;
   font-size: 1em;
   width: 100vw;

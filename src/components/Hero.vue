@@ -13,7 +13,7 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="/img/Logomasde50anos.png" alt="Respigares" class="hero-logo" />
+      
       <h1 class="hero-title">
         Especialistas en <span>productos gourmet</span>
       </h1>
@@ -77,16 +77,11 @@ onMounted(() => {
   color: #fff;
   text-align: center;
   width: 100%;
-  padding: 2.5rem 1rem 1.5rem 1rem;
+  padding: 20rem 1rem 0.5rem 1rem;
   animation: fadeIn 1.8s cubic-bezier(.8,.1,.1,1);
 }
 
-.hero-logo {
-  width: 170px;
-  margin-bottom: 1.7rem;
-  filter: drop-shadow(0 2px 18px #2228);
-  max-width: 80vw;
-}
+
 .hero-title {
   font-size: 2.7rem;
   font-weight: 700;
