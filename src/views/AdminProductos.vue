@@ -499,9 +499,10 @@ onMounted(async () => {
 
 <style scoped>
 .admin-page {
-  padding: 1.5rem;
+  
+  padding: 3rem;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 1rem auto ;
 }
 
 /* HEADER */

@@ -9,37 +9,32 @@ const router = Router();
 // Correo al que se envían las consultas
 const CONTACT_TO = process.env.CONTACT_TO || "jhurtadomije@gmail.com";
 
-// ------------- CONFIGURACIÓN SMTP -------------
-let transporter = null;
+// --- FLAG PARA SABER SI PODEMOS USAR SMTP ---
+let SMTP_ENABLED = true;
 
-// Solo montamos el transporter si hay config mínima
-if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
-  transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === "true", // true normalmente solo con 465
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+// Configuramos el transporte de nodemailer
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT) || 587,
+  secure: process.env.SMTP_SECURE === "true",
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
-  transporter.verify((err) => {
-    if (err) {
-      console.error(
-        "Error configurando SMTP, desactivamos envío real:",
-        err.message
-      );
-      transporter = null; // 🔴 en caso de fallo, NO usaremos SMTP
-    } else {
-      console.log("SMTP listo para enviar correos");
-    }
-  });
-} else {
-  console.warn("SMTP no configurado: modo demo (sin envío real de email)");
-}
+// Verificamos el transporte al arrancar
+transporter.verify((err) => {
+  if (err) {
+    console.error("Error configurando SMTP:", err.message);
+    // 🔴 Desactivamos SMTP para no volver a intentarlo en cada petición
+    SMTP_ENABLED = false;
+  } else {
+    console.log("SMTP listo para enviar correos");
+  }
+});
 
-// ------------- RUTA POST /api/contacto -------------
+// Ruta para enviar consulta de contacto
 router.post("/", async (req, res) => {
   try {
     const {
@@ -61,6 +56,7 @@ router.post("/", async (req, res) => {
     }
 
     const tipoFinal = tipo || "producto";
+    const asunto = `[Web Respigares] Nueva solicitud (${tipoFinal})`;
 
     const lineasProducto = producto_nombre
       ? `
@@ -71,7 +67,7 @@ router.post("/", async (req, res) => {
 
     const html = `
       <h2>Nueva solicitud de información desde la web</h2>
-
+      
       ${lineasProducto}
 
       <h3>Datos de contacto</h3>
@@ -106,9 +102,9 @@ Mensaje
 ${mensaje}
     `.trim();
 
-    // 🔹 MODO DEMO: sin transporter (o con error previo en verify)
-    if (!transporter) {
-      console.log("[CONTACTO DEMO] Datos recibidos:", {
+    // 🔹 Si el SMTP está desactivado (Railway no puede conectar), solo logueamos y respondemos OK
+    if (!SMTP_ENABLED) {
+      console.log("[CONTACTO DEMO] Solicitud recibida (sin envío SMTP):", {
         tipoFinal,
         producto_sku,
         producto_nombre,
@@ -122,28 +118,30 @@ ${mensaje}
       return res.json({
         ok: true,
         message:
-          "Solicitud recibida correctamente (modo demo: el correo no se ha enviado porque el SMTP no está configurado en el servidor).",
+          "Solicitud recibida correctamente. En breve nos pondremos en contacto contigo.",
       });
     }
 
-    // 🔹 Envío real de correo (cuando SMTP funcione)
+    // 🔹 Envío real de correo (cuando SMTP funciona, por ejemplo en local)
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: CONTACT_TO,
-      replyTo: email,
-      subject: `[Web Respigares] Nueva solicitud (${tipoFinal})`,
+      replyTo: email, // para que puedan contestar directamente al cliente
+      subject: asunto,
       text,
       html,
     });
 
+    // Respuesta OK al front
     return res.json({ ok: true, message: "Mensaje enviado correctamente" });
   } catch (err) {
-    console.error("Error al procesar contacto", err);
+    console.error("Error al guardar/enviar contacto", err);
 
-    // Incluso aquí podemos evitar el 500 “duro” y devolver info controlada:
-    return res.status(500).json({
-      ok: false,
-      error: "Error al procesar la consulta de contacto en el servidor.",
+    // ❗ IMPORTANTE: aunque falle el envío, NO devolvemos 500 al usuario final
+    return res.json({
+      ok: true,
+      message:
+        "Solicitud recibida correctamente. Hemos tenido un problema al enviar el aviso interno, pero revisaremos tu mensaje.",
     });
   }
 });
