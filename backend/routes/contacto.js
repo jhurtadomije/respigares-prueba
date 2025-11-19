@@ -1,3 +1,4 @@
+// backend/routes/contacto.js
 import { Router } from "express";
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
@@ -6,35 +7,51 @@ dotenv.config();
 
 const router = Router();
 
-// Correo al que se envían las consultas
-const CONTACT_TO = process.env.CONTACT_TO || "jhurtadomije@gmail.com";
+// Correo destino
+const CONTACT_TO = process.env.CONTACT_TO || "info@respigares.es";
 
-// --- FLAG PARA SABER SI PODEMOS USAR SMTP ---
-let SMTP_ENABLED = true;
+// Detectar si estamos en Railway (para desactivar SMTP allí si quieres)
+const isRailway = Boolean(
+  process.env.RAILWAY_ENVIRONMENT ||
+  process.env.RAILWAY_PROJECT_ID ||
+  process.env.RAILWAY_STATIC_URL
+);
 
-// Configuramos el transporte de nodemailer
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST,
-  port: Number(process.env.SMTP_PORT) || 587,
-  secure: process.env.SMTP_SECURE === "true",
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+// Flag manual para desactivar SMTP (útil en Railway)
+const SMTP_DISABLED =
+  process.env.SMTP_DISABLED === "true" || isRailway;
 
-// Verificamos el transporte al arrancar
-transporter.verify((err) => {
-  if (err) {
-    console.error("Error configurando SMTP:", err.message);
-    // 🔴 Desactivamos SMTP para no volver a intentarlo en cada petición
-    SMTP_ENABLED = false;
-  } else {
-    console.log("SMTP listo para enviar correos");
-  }
-});
+let transporter = null;
 
-// Ruta para enviar consulta de contacto
+if (
+  !SMTP_DISABLED &&
+  process.env.SMTP_HOST &&
+  process.env.SMTP_USER &&
+  process.env.SMTP_PASS
+) {
+  transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,           // mail.respigares.es
+    port: Number(process.env.SMTP_PORT) || 587,
+    secure: process.env.SMTP_SECURE === "true", // false -> STARTTLS en 587
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  transporter.verify((err) => {
+    if (err) {
+      console.error("Error configurando SMTP, lo desactivamos:", err.message);
+      transporter = null;
+    } else {
+      console.log("SMTP listo para enviar correos");
+    }
+  });
+} else {
+  console.log("SMTP desactivado (Railway o SMTP_DISABLED=true). Modo demo sin envío real.");
+}
+
+// ------------ POST /api/contacto -------------
 router.post("/", async (req, res) => {
   try {
     const {
@@ -56,7 +73,6 @@ router.post("/", async (req, res) => {
     }
 
     const tipoFinal = tipo || "producto";
-    const asunto = `[Web Respigares] Nueva solicitud (${tipoFinal})`;
 
     const lineasProducto = producto_nombre
       ? `
@@ -67,7 +83,7 @@ router.post("/", async (req, res) => {
 
     const html = `
       <h2>Nueva solicitud de información desde la web</h2>
-      
+
       ${lineasProducto}
 
       <h3>Datos de contacto</h3>
@@ -102,9 +118,9 @@ Mensaje
 ${mensaje}
     `.trim();
 
-    // 🔹 Si el SMTP está desactivado (Railway no puede conectar), solo logueamos y respondemos OK
-    if (!SMTP_ENABLED) {
-      console.log("[CONTACTO DEMO] Solicitud recibida (sin envío SMTP):", {
+    // 👉 Si NO hay transporter (por ejemplo en Railway): MODO DEMO
+    if (!transporter) {
+      console.log("[CONTACTO DEMO] Solicitud recibida:", {
         tipoFinal,
         producto_sku,
         producto_nombre,
@@ -117,31 +133,28 @@ ${mensaje}
 
       return res.json({
         ok: true,
+        demo: true,
         message:
-          "Solicitud recibida correctamente. En breve nos pondremos en contacto contigo.",
+          "Solicitud recibida correctamente (entorno de pruebas: el correo no se ha enviado realmente).",
       });
     }
 
-    // 🔹 Envío real de correo (cuando SMTP funciona, por ejemplo en local)
+    // 👉 Envío real de correo (local / servidor con SMTP abierto)
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: CONTACT_TO,
-      replyTo: email, // para que puedan contestar directamente al cliente
-      subject: asunto,
+      replyTo: email,
+      subject: `[Web Respigares] Nueva solicitud (${tipoFinal})`,
       text,
       html,
     });
 
-    // Respuesta OK al front
-    return res.json({ ok: true, message: "Mensaje enviado correctamente" });
+    return res.json({ ok: true, demo: false, message: "Mensaje enviado correctamente" });
   } catch (err) {
     console.error("Error al guardar/enviar contacto", err);
-
-    // ❗ IMPORTANTE: aunque falle el envío, NO devolvemos 500 al usuario final
-    return res.json({
-      ok: true,
-      message:
-        "Solicitud recibida correctamente. Hemos tenido un problema al enviar el aviso interno, pero revisaremos tu mensaje.",
+    return res.status(500).json({
+      ok: false,
+      error: "Error al procesar la consulta",
     });
   }
 });
