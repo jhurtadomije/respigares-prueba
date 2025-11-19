@@ -31,8 +31,19 @@
     <h2 class="catalogo-cat-title">
       Productos en "{{ categoriaSeleccionada.name }}"
     </h2>
+    <div v-if="isLoading" class="catalogo-loading">
+      <img
+        src="/img/iconos/loading.gif"
+        alt="Cargando productos"
+        class="loading-gif"
+      />
+    </div>
 
-    <div v-if="productosFiltrados.length" class="grid-productos">
+    <div v-else-if="error" class="catalogo-error">
+      <p>Ha ocurrido un error al cargar los productos.</p>
+      <button class="btn-volver-categorias" @click="load">Reintentar</button>
+    </div>
+    <div v-else-if="productosFiltrados.length" class="grid-productos">
       <ProductCard
         v-for="(producto, idx) in productosFiltrados"
         :key="producto.sku"
@@ -79,7 +90,7 @@ const categories = ref([]);
 const route = useRoute();
 const router = useRouter();
 
-const { load, list, loading, error } = useCatalogo();
+const { load, list, isLoading, error } = useCatalogo();
 
 onMounted(async () => {
   // 1) Cargar categorías desde categorias.json
@@ -269,7 +280,7 @@ useHead({
   padding: 0.8rem 1.8rem;
   border-radius: 999px;
   border: none;
- background: linear-gradient(135deg, var(--color-main), var(--color-gray));
+  background: linear-gradient(135deg, var(--color-main), var(--color-gray));
   color: #fff;
   font-weight: 700;
   font-size: 0.98rem;
@@ -305,7 +316,11 @@ useHead({
   gap: 2.4em 2.6em;
   margin: 2em 0 0 0;
 }
-
+.loading-gif {
+  max-width: 120px;
+  width: 20vw;          /* se escala un poco según pantalla */
+  height: auto;
+}
 /* Wrapper = router-link, toda la card es clicable */
 .categoria-card__wrapper {
   flex: 1 1 14rem;
@@ -327,11 +342,8 @@ useHead({
   text-align: center;
   box-shadow: 0 0.18rem 0.9rem rgba(0, 0, 0, 0.06);
   border: 1px solid #e5e9f0;
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.2s ease,
-    border-color 0.18s ease,
-    background 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.2s ease,
+    border-color 0.18s ease, background 0.18s ease;
 }
 
 /* hover: botón “premium” sobre TODO el bloque */

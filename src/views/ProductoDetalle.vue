@@ -1,6 +1,17 @@
 <template>
-  <div v-if="producto" class="pd-wrapper">
-    <div class="pd-shell">
+  <div class="pd-wrapper">
+    <!-- 1) LOADING -->
+    <div v-if="isLoading" class="pd-loading">
+      <img
+        src="/img/iconos/loading.gif"
+        alt="Cargando producto"
+        class="loading-gif"
+      />
+      <p>Cargando producto...</p>
+    </div>
+
+    <!-- 2) PRODUCTO ENCONTRADO -->
+    <div v-else-if="producto" class="pd-shell">
       <!-- Breadcrumb -->
       <nav class="pd-breadcrumb">
         <RouterLink to="/">Inicio</RouterLink>
@@ -95,17 +106,10 @@
             <p>{{ producto.descripcion }}</p>
           </section>
 
-          <section
-            v-if="producto.tags && producto.tags.length"
-            class="pd-tags"
-          >
+          <section v-if="producto.tags && producto.tags.length" class="pd-tags">
             <h3>Características destacadas</h3>
             <div class="pd-tags-list">
-              <span
-                v-for="tag in producto.tags"
-                :key="tag"
-                class="pd-tag"
-              >
+              <span v-for="tag in producto.tags" :key="tag" class="pd-tag">
                 {{ tag }}
               </span>
             </div>
@@ -116,7 +120,8 @@
             <p class="pd-cta-text">
               ¿Te interesa este producto para tu negocio?
               <br />
-              Contacta con el departamento comercial para obtener más información.
+              Contacta con el departamento comercial para obtener más
+              información.
             </p>
             <div class="pd-cta-actions">
               <button
@@ -136,20 +141,14 @@
       </section>
 
       <!-- PRODUCTOS RELACIONADOS (CARRUSEL) -->
-      <section
-        v-if="relatedProducts.length"
-        class="pd-related"
-      >
+      <section v-if="relatedProducts.length" class="pd-related">
         <div class="pd-related-header">
           <div>
             <h2>Productos relacionados</h2>
             <p>Creemos que también podrían interesarte estos productos...</p>
           </div>
 
-          <div
-            v-if="relatedProducts.length > 2"
-            class="pd-related-controls"
-          >
+          <div v-if="relatedProducts.length > 2" class="pd-related-controls">
             <button
               type="button"
               class="pd-ctrl-btn"
@@ -196,19 +195,18 @@
         </div>
       </section>
     </div>
-  </div>
 
-  <!-- Estado: producto no encontrado -->
-  <div v-else class="pd-wrapper pd-wrapper--empty">
-    <div class="pd-empty-card">
-      <p>Producto no encontrado.</p>
-      <RouterLink to="/catalogo" class="pd-btn pd-btn--ghost">
-        ⬅ Volver al catálogo
-      </RouterLink>
+    <!-- 3) PRODUCTO NO ENCONTRADO -->
+    <div v-else class="pd-wrapper--empty">
+      <div class="pd-empty-card">
+        <p>Producto no encontrado.</p>
+        <RouterLink to="/catalogo" class="pd-btn pd-btn--ghost">
+          Volver al catálogo
+        </RouterLink>
+      </div>
     </div>
   </div>
 </template>
-
 
 <script setup>
 import { computed, ref, watch, onMounted } from "vue";
@@ -217,7 +215,7 @@ import { useCatalogo } from "../composables/useCatalogo";
 import { openContactForProducto } from "../contactModalState";
 
 const route = useRoute();
-const { list, load } = useCatalogo();
+const { list, load, isLoading, error } = useCatalogo();
 
 const DEFAULT_IMG = "img/default.jpg"; // 👈 está en /public/img/default.jpg
 
@@ -316,8 +314,7 @@ function buildImagenUrl(path) {
   // Si ya es absoluta (por si algún día metes URLs externas)
   if (/^https?:\/\//i.test(path)) return path;
 
-  const base =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api";
+  const base = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api";
 
   return new URL(path, base).href;
 }
@@ -336,13 +333,17 @@ function abrirContacto() {
 }
 </script>
 
-
 <style scoped>
 /* Fondo general */
 .pd-wrapper {
   min-height: 80vh;
   padding: 2.8rem 1rem 3rem;
-  background: radial-gradient(circle at top left, #f9fbff 0, #eef3ff 35%, #ffffff 100%);
+  background: radial-gradient(
+    circle at top left,
+    #f9fbff 0,
+    #eef3ff 35%,
+    #ffffff 100%
+  );
 }
 
 .pd-shell {
@@ -403,7 +404,7 @@ function abrirContacto() {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 430px;  /* más alta */
+  min-height: 430px; /* más alta */
   max-height: 600px;
   overflow: hidden;
 }
@@ -422,7 +423,23 @@ function abrirContacto() {
   color: #9ca3af;
   font-size: 0.95rem;
 }
-
+.pd-loading {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.98rem;
+}
+.loading-gif {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+}
 /* Badge “destacado” */
 .pd-badge {
   position: absolute;
@@ -600,13 +617,12 @@ function abrirContacto() {
 .pd-btn--ghost {
   background: linear-gradient(135deg, var(--color-blue), var(--color-gray));
   color: #ffffffff;
- box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
 }
 .pd-btn--ghost:hover {
   box-shadow: 0 14px 30px rgba(248, 52, 38, 0.35);
   filter: brightness(1.05);
   transform: translateY(-1px);
-  
 }
 
 /* Estado vacío */
@@ -705,7 +721,8 @@ function abrirContacto() {
   min-width: 220px;
   max-width: 260px;
   scroll-snap-align: start;
-  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    border-color 0.16s ease;
 }
 .pd-related-card:hover {
   transform: translateY(-3px);

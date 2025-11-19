@@ -7,10 +7,7 @@ let host =
   process.env.MYSQLHOST ||
   "localhost";
 
-let port =
-  process.env.DB_PORT ||
-  process.env.MYSQLPORT ||
-  3306;
+const PORT = process.env.PORT || 8080;
 
 // Si alguien ha puesto "crossover.proxy.rlwy.net:59545" en DB_HOST, lo partimos
 if (host && host.includes(":")) {

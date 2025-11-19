@@ -1,6 +1,7 @@
 // src/composables/useCatalogo.js
 import { ref } from "vue";
 import { resolveImageUrl } from "../utils/imagenes.js";
+import api from "../services/api";
 
 // Normaliza textos: minúsculas, sin acentos
 function normalizarTexto(str) {
@@ -379,6 +380,7 @@ function normalizarProducto(raw) {
 }
 
 // 🧩 4) Composable público
+// 🧩 4) Composable público
 export function useCatalogo() {
   const list = ref([]);
   const isLoading = ref(false);
@@ -389,17 +391,36 @@ export function useCatalogo() {
     isLoading.value = true;
     error.value = null;
 
-    try {
-      const res = await fetch("http://localhost:4000/api/productos");
-      if (!res.ok) throw new Error("Error al cargar catálogo");
+    const MIN_LOADING_TIME = 400;
+    const start = Date.now();
 
-      const data = await res.json();
-      const productosRaw = Array.isArray(data) ? data : data.data || [];
-      list.value = productosRaw.map(normalizarProducto);
+    try {
+      console.log("VITE_API_URL =>", import.meta.env.VITE_API_URL);
+
+      const res = await api.get("/productos");  // Axios ya lanza error si NO es 2xx
+      console.log("Respuesta /productos:", res.status, res.data);
+
+      const data = Array.isArray(res.data)
+        ? res.data
+        : res.data?.data ?? [];
+
+      list.value = data.map(normalizarProducto);
     } catch (err) {
-      console.error("Error al cargar catálogo", err);
+      if (err.response) {
+        console.error(
+          "Error API /productos:",
+          err.response.status,
+          err.response.data
+        );
+      } else {
+        console.error("Error de red /productos:", err.message || err);
+      }
       error.value = err;
     } finally {
+      const elapsed = Date.now() - start;
+      if (elapsed < MIN_LOADING_TIME) {
+        await new Promise((r) => setTimeout(r, MIN_LOADING_TIME - elapsed));
+      }
       isLoading.value = false;
     }
   }

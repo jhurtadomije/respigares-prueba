@@ -1,6 +1,6 @@
-import { Router} from "express";
+import { Router } from "express";
 import nodemailer from "nodemailer";
-import dotenv from "dotenv";   
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -9,26 +9,37 @@ const router = Router();
 // Correo al que se envían las consultas
 const CONTACT_TO = process.env.CONTACT_TO || "jhurtadomije@gmail.com";
 
-// Configuramos el transporte de nodemailer
-const transporter = nodemailer.createTransport({
+// ------------- CONFIGURACIÓN SMTP -------------
+let transporter = null;
+
+// Solo montamos el transporter si hay config mínima
+if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
+  transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT) || 587,
-    secure: process.env.SMTP_SECURE === "true",
+    secure: process.env.SMTP_SECURE === "true", // true normalmente solo con 465
     auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
     },
-});
+  });
 
-transporter.verify((err) => {
+  transporter.verify((err) => {
     if (err) {
-        console.error("Error configurando SMTP:", err.message);
+      console.error(
+        "Error configurando SMTP, desactivamos envío real:",
+        err.message
+      );
+      transporter = null; // 🔴 en caso de fallo, NO usaremos SMTP
     } else {
-        console.log("SMTP listo para enviar correos");
+      console.log("SMTP listo para enviar correos");
     }
-});
+  });
+} else {
+  console.warn("SMTP no configurado: modo demo (sin envío real de email)");
+}
 
-// Ruta para enviar consulta de contacto
+// ------------- RUTA POST /api/contacto -------------
 router.post("/", async (req, res) => {
   try {
     const {
@@ -44,13 +55,12 @@ router.post("/", async (req, res) => {
 
     if (!nombre || !email || !mensaje) {
       return res.status(400).json({
+        ok: false,
         error: "Faltan campos obligatorios (nombre, email, mensaje)",
       });
     }
 
     const tipoFinal = tipo || "producto";
-    // 1) Enviar email al responsable
-    const asunto = `[Web Respigares] Nueva solicitud (${tipoFinal})`;
 
     const lineasProducto = producto_nombre
       ? `
@@ -61,7 +71,7 @@ router.post("/", async (req, res) => {
 
     const html = `
       <h2>Nueva solicitud de información desde la web</h2>
-      
+
       ${lineasProducto}
 
       <h3>Datos de contacto</h3>
@@ -71,7 +81,7 @@ router.post("/", async (req, res) => {
       ${telefono ? `<p><strong>Teléfono:</strong> ${telefono}</p>` : ""}
 
       <h3>Mensaje</h3>
-      <p>${mensaje.replace(/\n/g, "<br>")}</p>
+      <p>${String(mensaje).replace(/\n/g, "<br>")}</p>
 
       <hr>
       <p style="font-size: 12px; color: #777;">
@@ -96,20 +106,45 @@ Mensaje
 ${mensaje}
     `.trim();
 
+    // 🔹 MODO DEMO: sin transporter (o con error previo en verify)
+    if (!transporter) {
+      console.log("[CONTACTO DEMO] Datos recibidos:", {
+        tipoFinal,
+        producto_sku,
+        producto_nombre,
+        nombre,
+        email,
+        telefono,
+        empresa,
+        mensaje,
+      });
+
+      return res.json({
+        ok: true,
+        message:
+          "Solicitud recibida correctamente (modo demo: el correo no se ha enviado porque el SMTP no está configurado en el servidor).",
+      });
+    }
+
+    // 🔹 Envío real de correo (cuando SMTP funcione)
     await transporter.sendMail({
       from: process.env.SMTP_FROM || process.env.SMTP_USER,
       to: CONTACT_TO,
-      replyTo: email, // para que puedan contestar directamente al cliente
-      subject: asunto,
+      replyTo: email,
+      subject: `[Web Respigares] Nueva solicitud (${tipoFinal})`,
       text,
       html,
     });
 
-    // 2) Respuesta OK al front
-    res.json({ ok: true });
+    return res.json({ ok: true, message: "Mensaje enviado correctamente" });
   } catch (err) {
-    console.error("Error al guardar/enviar contacto", err);
-    res.status(500).json({ error: "Error al procesar la consulta" });
+    console.error("Error al procesar contacto", err);
+
+    // Incluso aquí podemos evitar el 500 “duro” y devolver info controlada:
+    return res.status(500).json({
+      ok: false,
+      error: "Error al procesar la consulta de contacto en el servidor.",
+    });
   }
 });
 
