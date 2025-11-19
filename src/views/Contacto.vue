@@ -141,7 +141,7 @@ useHead({
 .section-title-tab {
   position: relative;
   z-index: 2;
-  background: #fff;
+  background: linear-gradient(180deg, #f7f9fb 100%, #f1f4f7 0%);
   border-radius: 1.3em 1.3em 0 0;
   padding: 1.5em 2em 0.8em 2em;
   min-width: 8em;
@@ -152,9 +152,9 @@ useHead({
   justify-content: center;
 }
 .section-title-tab h1 {
-  color: #ab0a3d;
-  font-size: 2.7rem;
-  font-weight: bold;
+  color: var(--color-main);
+  font-size: 2.5rem;
+  font-weight: 800;
   text-align: center;
   margin: 1rem;
   letter-spacing: 0.01em;
@@ -177,12 +177,12 @@ useHead({
 /* El resto de tu CSS del formulario y contacto */
 .contacto {
   max-width: 540px;
-  margin: 0 auto;
-  padding: 2rem 1rem 4rem;
+  padding: 2rem 1rem 2rem 1rem;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 32px #ab0a3d22, 0 1.5px 0 #e7c95388;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .contacto-lead {
   color: #707070;
@@ -230,15 +230,15 @@ useHead({
 }
 .contacto-btn {
   margin-top: 0.8rem;
-  background: linear-gradient(90deg, #e7c953, #ab0a3d);
-  color: #222;
+  background: linear-gradient(135deg, var(--color-main), var(--color-gray));
+  color: #ffffffff;
   font-weight: 900;
   border: none;
   border-radius: 35px;
   font-size: 1.1rem;
   padding: 1rem 2.1rem;
   letter-spacing: .04em;
-  box-shadow: 0 2px 18px #c99e3633;
+  box-shadow: 0 14px 30px rgba(248, 52, 38, 0.35);
   cursor: pointer;
   transition: background 0.22s, filter 0.18s;
   text-shadow: none;
@@ -249,11 +249,12 @@ useHead({
   cursor: not-allowed;
 }
 .contacto-btn:hover {
-  filter: brightness(1.08);
-  background: linear-gradient(90deg, #f5e396, #b38b25);
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--color-blue), var(--color-gray));
 }
 .mensaje-exito {
-  color: #2bb065;
+  color: var(--color-blue);
   background: #ecffe8;
   border-radius: 6px;
   margin-top: 1.3rem;

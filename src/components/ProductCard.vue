@@ -11,7 +11,7 @@
         v-show="!imgError"
       />
       <div v-if="imgError" class="img-fallback">
-        <img :src="base + 'img/productos/default.jpg'" alt="Imagen no disponible" class="product-img" />
+        <img :src="base + 'img/default.jpg'" alt="Imagen no disponible" class="product-img" />
         <span>Imagen no disponible por el momento</span>
       </div>
     </div>
@@ -19,7 +19,7 @@
     <h3 class="product-title">{{ titleText }}</h3>
 
     <router-link
-      :to="`/producto/${encodeURIComponent(linkSlug)}`"
+      :to="{ name: 'ProductoDetalle', params: { sku: producto.sku } }"
       class="btn-ver-mas"
     >
       Más detalles
@@ -40,7 +40,7 @@ const base = import.meta.env.BASE_URL || '/'
 function onImgError() { imgError.value = true }
 
 function fullSrc(path) {
-  if (!path) return base + 'img/productos/default.jpg'
+  if (!path) return base + 'img/default.jpg'
   if (/^https?:\/\//i.test(path) || path.startsWith('/')) return path
   return base + path.replace(/^\/+/, '')
 }
@@ -59,12 +59,12 @@ const imgSrc = computed(() => {
   if (Array.isArray(props.producto.galeria) && props.producto.galeria.length > 0) {
     return fullSrc(props.producto.galeria[0])
   }
-  return base + 'img/productos/default.jpg'
+  return base + 'img/default.jpg'
 })
 
 // --- Slug ---
 const linkSlug = computed(() =>
-  props.producto.slug || slugify(titleText.value)
+  props.producto.sku || slugify(titleText.value)
 )
 
 function slugify(s) {
@@ -161,10 +161,10 @@ function slugify(s) {
 .btn-ver-mas {
   margin-top: auto;
   padding: 0.68em 1.5em;
-  background: var(--color-main, #285281);
+  background: linear-gradient(135deg, var(--color-main), var(--color-gray));
   color: #fff;
   border: none;
-  border-radius: 11px;
+  border-radius: 20px;
   font-size: 1.01em;
   font-weight: 700;
   cursor: pointer;

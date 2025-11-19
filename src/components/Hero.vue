@@ -13,7 +13,6 @@
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      
       <h1 class="hero-title">
         Especialistas en <span>productos gourmet</span>
       </h1>
@@ -28,27 +27,31 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
 onMounted(() => {
-  const video = document.querySelector('.hero-video');
-  if (video) video.playbackRate = 0.7;
-});
+  const video = document.querySelector('.hero-video')
+  if (video) video.playbackRate = 0.7
+})
 </script>
 
 <style scoped>
 .hero {
   position: relative;
   width: 100%;
-  min-height: 400px;
+  
+  min-height: calc(60vh);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  box-sizing: border-box;
+  margin-top: -3.6rem; /* pegar al header */
 }
 
 .hero-video {
   position: absolute;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -60,7 +63,8 @@ onMounted(() => {
 
 .hero-overlay {
   position: absolute;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%; 
   height: 100%;
   background: linear-gradient(90deg, #16430044 30%, #0000 100%);
@@ -73,35 +77,40 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* centrado vertical real */
   color: #fff;
   text-align: center;
   width: 100%;
-  padding: 20rem 1rem 0.5rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem 2.5rem 1rem; /* mucho menos padding que antes */
   animation: fadeIn 1.8s cubic-bezier(.8,.1,.1,1);
+  margin-top: 40rem;
 }
-
 
 .hero-title {
-  font-size: 2.7rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
   text-shadow: 0 2px 12px #0006;
+  padding: 1rem 0.4rem;
 }
+
 .hero-title span {
   color: #e7c953;
   font-weight: 800;
   letter-spacing: 0.03em;
 }
+
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
   margin-bottom: 2.2rem;
   font-weight: 400;
   color: #f5efda;
   text-shadow: 0 1px 8px #0006;
 }
+
 .hero-btn {
   background: linear-gradient(90deg, #e7c953, #c99e36);
   color: #222;
@@ -116,43 +125,52 @@ onMounted(() => {
   text-shadow: none;
   letter-spacing: 0.03em;
 }
+
 .hero-btn:hover {
   filter: brightness(1.08);
   background: linear-gradient(90deg, #f5e396, #b38b25);
 }
 
-
-/* Mobile first: menos separación, textos pequeños, sin desbordes */
-@media (max-width: 700px) {
+/* Mobile first: ajuste fino en móviles */
+@media (max-width: 600px) {
   .hero {
-    height: calc(90vh - 56px);
-    min-height: 300px;
+    min-height: calc(100vh - 3.6rem);
   }
-  .hero-logo {
-    width: 110px;
-    margin-bottom: 1.1rem;
-  }
-  .hero-title {
-    font-size: 1.4rem;
-    margin-bottom: 0.6rem;
-  }
+
   .hero-content {
-    padding: 1.2rem 0.2rem;
+    padding: 3rem 1rem 2.5rem 1rem;
   }
+
+  .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.7rem;
+  }
+
   .hero-btn {
     font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.6rem;
   }
 }
 
+/* Escritorio: solo podemos tocar tipografía si quieres, NO altura */
 @media (min-width: 900px) {
   .hero {
-    min-height: 480px;
-    max-height: 650px;
+    min-height: calc(80vh);
+    margin: 0;
+  }
+  .hero-content {
+    margin-top: 28rem;  
   }
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(35px);}
-  to   { opacity: 1; transform: none;}
+  from { opacity: 0; transform: translateY(35px); }
+  to   { opacity: 1; transform: none; }
 }
 </style>
+

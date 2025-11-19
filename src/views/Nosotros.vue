@@ -2,7 +2,7 @@
   <section class="nosotros-hero animate-fadein">
     <img src="/img/hero-nosotros.jpg" alt="Equipo Respigares" class="nosotros-hero-img" />
     <div class="nosotros-hero-content">
-      <h1>Somos</h1>
+      <h1>Sobre Nosotros</h1>
     </div>
   </section>
 
@@ -196,7 +196,7 @@ useHead({
   position: relative;
   z-index: 2;
   text-align: center;
-  background: #fff;
+  background: linear-gradient(180deg, #f7f9fb 100%, #f1f4f7 0%);
   border-radius: 1.375em 1.375em 0 0;
   padding: 1.1em 1em 1em;
   box-shadow: 0 0.07em 0.75em #0001;
@@ -204,7 +204,7 @@ useHead({
 .nosotros-hero-content h1 {
   color: #ab0a3d;
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 0;
 }
 
@@ -216,7 +216,7 @@ useHead({
   margin-top: 2.2em;
   margin-bottom: 1.2em;
   letter-spacing: 0.03em;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .nosotros-wrap {

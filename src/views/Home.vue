@@ -1,13 +1,14 @@
+// src/views/Home.vue
 <template>
   <section v-scroll-random-reveal>
     <Hero />
   </section>
   <main class="home-content contenedor">
+    
+     <CatalogPreview :categories="categoriesPreview" />
+    
     <section v-scroll-random-reveal>
-      <SomosPreview />
-    </section>
-    <section v-scroll-random-reveal>
-      <CatalogPreview :categories="categoriesPreview" />
+       <SomosPreview />
     </section>
     <section v-scroll-random-reveal>
       <BrandsCarousel />
@@ -67,9 +68,27 @@ useHead({
 })
 </script>
 
-<style>
+<style scoped>
 .home-content {
-  margin-top: 70px;
-  padding: 2rem 0;
+  margin-top: 70px;          
+  padding: 1.5rem 1rem 3rem; 
+  box-sizing: border-box;
+}
+
+/* Espaciado entre secciones de la home */
+.home-content > section {
+  margin-bottom: 2.5rem;
+}
+
+/* Ajustes responsive */
+@media (min-width: 768px) {
+  .home-content {
+    margin-top: 6rem;        /* header más alto en escritorio + margen extra */
+    padding: 3rem 0 4rem;    /* el padding lateral lo suele gestionar .contenedor */
+  }
+
+  .home-content > section {
+    margin-bottom: 3.5rem;   /* más aire entre bloques en pantallas grandes */
+  }
 }
 </style>

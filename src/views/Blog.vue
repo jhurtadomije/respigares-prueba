@@ -59,7 +59,7 @@ useHead({
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
-  background: #fff;
+  background: #afacacff;
   margin-bottom: 0;
 }
 .section-hero-img {
@@ -76,8 +76,8 @@ useHead({
 .section-title-tab {
   position: relative;
   z-index: 2;
-  background: #fff;
-  border-radius: 1.3em 1.3em 0 0;
+  background: linear-gradient(180deg, #f7f9fb 100%, #f1f4f7 0%);
+  border-radius: 4em 4em 1.2em 0;
   padding: 1.5em 2em 0.8em 2em;
   min-width: 8em;
   margin-bottom: -1.3em;
@@ -87,9 +87,9 @@ useHead({
   justify-content: center;
 }
 .section-title-tab h1 {
-  color: #ab0a3d;
+  color: var(--color-main);
   font-size: 2.7rem;
-  font-weight: bold;
+  font-weight: 800;
   text-align: center;
   margin: 1rem;
   letter-spacing: 0.01em;
@@ -109,13 +109,14 @@ useHead({
 }
 /* Main content */
 .page-wrap {
-  margin-top: 80px;
+  margin-top: 1.5rem;
   padding: 2.5rem 0 2rem 0;
-  background: #fff;
+  background: linear-gradient(180deg, #f7f9fb 0%, #f1f4f7 100%);
   min-height: 70vh;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 3rem;
 }
 .loading-posts {
   text-align: center;

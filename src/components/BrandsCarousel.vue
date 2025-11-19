@@ -46,30 +46,32 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
 <style scoped>
 /* ==== MOBILE FIRST ==== */
 .brands {
-  background: var(--color-light);
-  padding: 2.2rem 0 1.6rem 0;
+  background: linear-gradient(180deg, #f7f9fb 0%, #edf1f5 100%);
+  padding: 2.4rem 0 1.8rem 0;
   position: relative;
   overflow-x: hidden; /* BLOQUEA SCROLL LATERAL */
 }
 
+/* usamos el contenedor local sólo dentro del componente */
 .contenedor {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
+  padding-inline: 0.8rem;
   width: 100%;
   box-sizing: border-box;
 }
 
 .brands__label {
-  margin-top: 2rem;
+  margin-top: 2.4rem;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
   font-weight: 900;
   color: var(--color-main);
-  margin-bottom: 2em;
+  margin-bottom: 1.7rem;
+  letter-spacing: 0.03em;
 }
 
+/* línea muy sutil inferior para separar la sección */
 .brands::after {
   content: '';
   position: absolute;
@@ -77,18 +79,18 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   left: 50%;
   width: 100vw;
   height: 1px;
-  background: #ccc;
-  opacity: 0.5;
+  background: #c7ccd3;
+  opacity: 0.4;
   transform: translateX(-50%);
   pointer-events: none;
 }
 
+/* Swiper */
 .brands-swiper {
   max-width: 100%;
   --swiper-navigation-color: var(--color-main);
   padding-bottom: 1.2rem;
   overflow: visible;
-  /* NO uses max-width: 98vw aquí */
 }
 
 .brands-swiper .swiper-wrapper {
@@ -101,53 +103,56 @@ const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
   justify-content: center;
 }
 
+/* Logos como “chips” de marca */
 .brand-logo {
-  max-width: 5.5rem;
-  max-height: 3.3rem;
+  max-width: 5.7rem;
+  max-height: 3.4rem;
   width: 100%;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.55);
-  transition: filter 0.3s, opacity 0.3s;
+  transition: filter 0.3s ease, opacity 0.3s ease, transform 0.25s ease;
   margin: 0 auto;
 }
 
-.brands-swiper-slide:hover .brand-logo {
-  filter: grayscale(0%) opacity(1);
-}
-
-/* ===== TABLET ===== */
-@media (min-width: 30em) {
-  .brands__label {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-  .brand-logo {
-    max-width: 6.25rem;
-    max-height: 4.1rem;
-  }
-}
+/* Hover sólo en dispositivos con ratón */
 @media (hover: hover) and (pointer: fine) {
   .brands-swiper-slide:hover .brand-logo {
     filter: grayscale(0%) opacity(1) drop-shadow(0 2px 6px #e7c95344);
     transform: scale(1.07);
   }
 }
-/* ===== DESKTOP ===== */
-@media (min-width: 60em) {
+
+/* ===== TABLET ===== */
+@media (min-width: 30rem) {  /* 480px */
   .brands__label {
-    font-size: 2.2rem;
-    margin-top: 2rem;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    margin-bottom: 1.6rem;
+  }
+
+  .brand-logo {
+    max-width: 6.3rem;
+    max-height: 4.1rem;
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 60rem) { /* 960px aprox */
+  .brands {
+    padding: 3rem 0 2.2rem 0;
+  }
+
+  .brands__label {
+    margin-top: 2.2rem;
     margin-bottom: 2rem;
   }
+
   .brand-logo {
-    max-width: 7.5rem;
-    max-height: 5rem;
+    max-width: 7.3rem;
+    max-height: 4.8rem;
   }
-  .brands {
-    padding: 3rem 0 2rem 0;
-  }
+
   .brands-swiper {
-    padding-bottom: 1.6rem; /* desktop */
+    padding-bottom: 1.6rem;
   }
 }
 </style>

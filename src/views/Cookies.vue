@@ -43,6 +43,8 @@ import { showCookies, configOpen } from '../cookiesState'
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
+const emit = defineEmits(['accepted'])
+
 const analytics = ref(false)
 const ads = ref(false)
 const router = useRouter()
@@ -55,12 +57,14 @@ onMounted(() => {
 function acceptAll() {
   localStorage.setItem('cookies_consent', JSON.stringify({ tech: true, analytics: true, ads: true }))
   showCookies.value = false
+  emit('accepted')
   router.push('/')
 }
 
 function rejectAll() {
   localStorage.setItem('cookies_consent', JSON.stringify({ tech: true, analytics: false, ads: false }))
   showCookies.value = false
+  emit('accepted')
   router.push('/')
 }
 
@@ -68,6 +72,7 @@ function saveConfig() {
   localStorage.setItem('cookies_consent', JSON.stringify({ tech: true, analytics: analytics.value, ads: ads.value }))
   showCookies.value = false
   configOpen.value = false
+  emit('accepted')
   router.push('/')
 }
 </script>

@@ -8,20 +8,26 @@
       {
         "id": "aceite-de-oliva",
         "name": "Aceite de Oliva",
-        "image": "img/subcategorias/aceite-de-oliva.jpg",
-        "match": ["aceite-de-oliva", "aceites_de_oliva", "aceites-oliva", "aceite_oliva"]
+        "image": "img/subcategorias/aceiteOliva.jpg",
+        "match": ["aceites/oliva", "aceite oliva"]
       },
       {
         "id": "aceite-de-girasol",
         "name": "Aceite de Girasol",
-        "image": "img/subcategorias/aceite-de-girasol.jpg",
-        "match": ["aceite-de-girasol"]
+        "image": "img/subcategorias/aceiteGirasol.webp",
+        "match": ["aceite girasol", "alto oleico" ]
       },
       {
         "id": "vinagres",
         "name": "Vinagres",
-        "image": "img/subcategorias/vinagres.jpg",
-        "match": ["vinagres"]
+        "image": "img/subcategorias/vinagre.jpg",
+        "match": ["vinagres","vinagre"]
+      },
+      {
+        "id": "otros-aceites",
+        "name": "Otros Aceites",
+        "image": "img/subcategorias/otros-aceites.jpg",
+        "match": ["aceites vegetal aguacate", "vegetal/aguacate"]
       }
     ]
   },
@@ -46,21 +52,21 @@
       "tarritos-hero"
     ],
     "subcategorias": [
-      { "id": "postres-meriendas", "name": "Postres y Meriendas", "image": "img/subcategorias/postres-meriendas.jpg", "match": ["postres-y-meriendas-hero-baby"] },
-      { "id": "leches-infantiles", "name": "Leches Infantiles", "image": "img/subcategorias/leches-infantiles.jpg", "match": ["leches-infantiles-hero-baby"] },
-      { "id": "papillas", "name": "Papillas Infantiles", "image": "img/subcategorias/papillas.jpg", "match": ["papillas-infantiles-hero-baby"] },
-      { "id": "tarritos", "name": "Tarritos", "image": "img/subcategorias/tarritos.jpg", "match": ["tarritos-hero"] }
+      { "id": "postres-meriendas", "name": "Postres y Meriendas", "image": "img/subcategorias/postresMeriendasInfantil.jpg", "match": ["postres-y-meriendas-hero-baby"] },
+      { "id": "leches-infantiles", "name": "Leches Infantiles", "image": "img/subcategorias/lecheInfantil.jpg", "match": ["leches-infantiles-hero-baby"] },
+      { "id": "papillas", "name": "Papillas Infantiles", "image": "img/subcategorias/papillasInfantil.jpeg", "match": ["papillas-infantiles-hero-baby"] },
+      { "id": "tarritos", "name": "Tarritos", "image": "img/subcategorias/tarritosInfantil.jpg", "match": ["TARRITOS HERO","VERDURAS", "CARNE"] }
     ]
   },
   {
     "id": "almibares_mermeladas_y_mieles",
     "name": "Almíbares, Mermeladas y Mieles",
     "image": "img/categorias/almibares_mermeladas_y_mieles.jpg",
-    "match": ["confituras-y-mermeladas", "miel", "fruta-en-almibar-y-natural"],
+    "match": ["confituras y mermeladas", "miel", "frutas almibar"],
     "subcategorias": [
       { "id": "mermeladas", "name": "Mermeladas", "image": "img/subcategorias/mermeladas.jpg", "match": ["confituras-y-mermeladas"] },
-      { "id": "miel", "name": "Miel", "image": "img/subcategorias/miel.jpg", "match": ["miel"] },
-      { "id": "almibares", "name": "Fruta en Almíbar", "image": "img/subcategorias/almibares.jpg", "match": ["fruta-en-almibar-y-natural"] }
+      { "id": "miel", "name": "Miel", "image": "img/subcategorias/mieles.webp", "match": ["miel"] },
+      { "id": "almibares", "name": "Fruta en Almíbar", "image": "img/subcategorias/frutaAlmibar.jpg", "match": ["almib"] }
     ]
   },
   {
@@ -74,23 +80,49 @@
   },
   {
     "id": "carnicos_ibericos",
-    "name": "Cárnicos Ibéricos",
+    "name": "Cárnicos y Productos Ibéricos",
     "image": "img/categorias/carnicos_ibericos.png",
-    "match": ["carnicos-ibericos", "jamones-y-embutidos-ibericos", "jamones", "embutidos"],
+    "match": ["carnicos-ibericos", "carnicos ibericos","jamones-y-embutidos-ibericos", "jamones", "embutidos"],
     "subcategorias": [
-      { "id": "carnicos", "name": "Cárnicos", "image": "img/subcategorias/carnicos.jpg", "match": ["carnicos-ibericos"] },
-      { "id": "embutidos", "name": "Jamones y Embutidos", "image": "img/subcategorias/embutidos.jpg", "match": ["jamones-y-embutidos-ibericos", "jamones", "embutidos"] }
+      { "id": "carnicos", "name": "Cárnicos", "image": "img/subcategorias/carnicos.jpg", "match": [ "carne fresca",
+        "fresco",
+        "presa",
+        "secreto",
+        "pluma",
+        "lagarto",
+        "solomillo",
+        "lomo fresco"] 
+      },
+      { "id": "deshuesados", "name": "Deshuesados", "image": "img/subcategorias/deshuesados.jpg", "match": ["deshues"] },
+      { "id": "jamones", "name": "Jamones", "image": "img/subcategorias/jamones.jpg", "match": ["jamon", "jamones"] },
+      { "id": "paletas", "name": "Paletas", "image": "img/subcategorias/paleta.jpg", "match": ["paleta iberica", "paleta","paletas"] },
+      { "id": "embutidos", "name": "Otros Embutidos", "image": "img/subcategorias/jamonesYembutidos.jpg", "match": ["embutid","chorizo","salchichon","lomo","cana de lomo"] }
     ]
   },
   {
-    "id": "conservas_de_pescado",
-    "name": "Conservas de Pescado",
-    "image": "img/categorias/conservas_de_pescado.jpg",
-    "match": ["conservas-de-pescado"],
-    "subcategorias": [
-      { "id": "pescado", "name": "Conservas de Pescado", "image": "img/subcategorias/conservas-de-pescado.jpg", "match": ["conservas-de-pescado"] }
-    ]
-  },
+  "id": "conservas_de_pescado",
+  "name": "Conservas de Pescado",
+  "image": "img/categorias/conservas_de_pescado.jpg",
+  "match": ["conservas-de-pescado"],
+  "subcategorias": [
+    { "id": "anchoa",      "name": "Conservas de Anchoa",     "image": "img/subcategorias/anchoa.jpg",     "match": ["anchoa"] },
+    { "id": "atun",        "name": "Conservas de Atún",       "image": "img/subcategorias/atun.jpg",       "match": ["atun"] },
+    { "id": "berberecho",  "name": "Conservas de Berberecho", "image": "img/subcategorias/berberecho.jpg", "match": ["berberecho"] },
+    { "id": "bonito",      "name": "Conservas de Bonito",     "image": "img/subcategorias/bonito.jpg",     "match": ["bonito"] },
+    { "id": "caballa",     "name": "Conservas de Caballa",    "image": "img/subcategorias/caballa.jpg",    "match": ["caballa"] },
+    { "id": "calamar",     "name": "Conservas de Calamar",    "image": "img/subcategorias/calamar.jpg",    "match": ["calamar"] },
+    { "id": "gildas",      "name": "Gildas",                  "image": "img/subcategorias/gilda.jpg",      "match": ["gilda"] },
+    { "id": "mejillones",  "name": "Conservas de Mejillones", "image": "img/subcategorias/mejillones.jpg", "match": ["mejillon"] },
+    { "id": "melva",       "name": "Conservas de Melva",      "image": "img/subcategorias/melva.jpg",      "match": ["melva"] },
+    { "id": "sardina",     "name": "Conservas de Sardina",    "image": "img/subcategorias/sardina.jpg",    "match": ["sardin"] },
+    {
+      "id": "otros",
+      "name": "Otros",
+      "image": "img/subcategorias/conservaspescado.jpg",
+      "match": ["almejas", "arlequinit", "boqueron", "cogula", "zamburi"]
+    }
+  ]
+},
   {
     "id": "conservas_vegetales",
     "name": "Conservas Vegetales",
@@ -106,11 +138,11 @@
       "tomate-frito"
     ],
     "subcategorias": [
-      { "id": "tomates", "name": "Tomates", "image": "img/subcategorias/tomates.jpg", "match": ["tomates", "tomate-entero-y-triturado", "tomate-frito"] },
-      { "id": "pimientos", "name": "Conservas de Pimiento", "image": "img/subcategorias/pimientos.jpg", "match": ["conservas-de-pimiento"] },
-      { "id": "esparragos", "name": "Conservas de Espárragos", "image": "img/subcategorias/esparragos.jpg", "match": ["conservas-de-esparragos"] },
-      { "id": "alcachofas", "name": "Conservas de Alcachofa", "image": "img/subcategorias/alcachofas.jpg", "match": ["conservas-de-alcachofa"] },
-      { "id": "otros", "name": "Otros Vegetales", "image": "img/subcategorias/otros-vegetales.jpg", "match": ["otros-vegetales", "conservas-vegetales"] }
+      { "id": "tomates", "name": "Tomates", "image": "img/subcategorias/cTomate.jpeg", "match": ["tomates", "tomate-entero-y-triturado", "tomate-frito"] },
+      { "id": "pimientos", "name": "Conservas de Pimiento", "image": "img/subcategorias/cPimiento.jpg", "match": ["conservas-de-pimiento"] },
+      { "id": "esparragos", "name": "Conservas de Espárragos", "image": "img/subcategorias/cEsparragos.png", "match": ["conservas-de-esparragos"] },
+      { "id": "alcachofas", "name": "Conservas de Alcachofa", "image": "img/subcategorias/cAlcachofa.png", "match": ["conservas-de-alcachofa"] },
+      { "id": "otros", "name": "Otros Vegetales", "image": "img/subcategorias/otrosvegetales.jpeg", "match": ["otros-vegetales", "conservas-vegetales"] }
     ]
   },
   {
@@ -120,7 +152,7 @@
     "match": ["legumbres", "conservas-de-legumbres", "arroces"],
     "subcategorias": [
       { "id": "legumbres", "name": "Legumbres", "image": "img/subcategorias/legumbres.jpg", "match": ["legumbres", "conservas-de-legumbres"] },
-      { "id": "arroces", "name": "Arroces", "image": "img/subcategorias/arroces.jpg", "match": ["arroces"] }
+      { "id": "arroces", "name": "Arroces", "image": "img/subcategorias/arroces.png", "match": ["arroces"] }
     ]
   },
   {
@@ -135,7 +167,7 @@
   {
     "id": "quesos",
     "name": "Quesos",
-    "image": "img/categorias/quesos.png",
+    "image": "img/categorias/quesos.jpg",
     "match": ["quesos"],
     "subcategorias": [
       { "id": "quesos", "name": "Quesos", "image": "img/subcategorias/quesos.jpg", "match": ["quesos"] }
@@ -145,42 +177,33 @@
     "id": "reposteria",
     "name": "Repostería",
     "image": "img/categorias/reposteria.png",
-    "match": ["reposteria", "cacao-en-polvo", "coberturas", "especial-postres", "taza"],
+    "match": ["dulces", "cacao-en-polvo", "siropes", "especial-postres", "taza", "corny"],
     "subcategorias": [
-      { "id": "cacao", "name": "Cacao en Polvo", "image": "img/subcategorias/cacao.jpg", "match": ["cacao-en-polvo"] },
-      { "id": "coberturas", "name": "Coberturas", "image": "img/subcategorias/coberturas.jpg", "match": ["coberturas"] },
-      { "id": "postres", "name": "Especial Postres", "image": "img/subcategorias/postres.jpg", "match": ["especial-postres", "reposteria"] },
-      { "id": "taza", "name": "Chocolate a la Taza", "image": "img/subcategorias/taza.jpg", "match": ["taza"] }
+      { "id": "dulces", "name": "Dulces", "image": "img/subcategorias/cacao.jpg", "match": ["dulces"] },
+      { "id": "coberturas", "name": "Coberturas", "image": "img/subcategorias/coberturas.jpg", "match": ["siropes"] },
+      { "id": "corny", "name": "Barritas Proteicas", "image": "img/subcategorias/corny.jpg", "match": ["CORNY"] }
     ]
   },
   {
     "id": "salsas_ketchup_y_mostaza",
-    "name": "Salsas, Ketchup y Mostaza",
+    "name": "Salsas",
     "image": "img/categorias/salsas_ketchup_y_mostaza.jpg",
     "match": ["salsas-ketchup-y-mostaza", "salsas-de-tomate", "tomate-frito"],
     "subcategorias": [
-      { "id": "ketchup-mostaza", "name": "Ketchup y Mostaza", "image": "img/subcategorias/ketchup.jpg", "match": ["salsas-ketchup-y-mostaza"] },
-      { "id": "salsas-tomate", "name": "Salsas de Tomate", "image": "img/subcategorias/salsas-tomate.jpg", "match": ["salsas-de-tomate", "tomate-frito"] }
-    ]
-  },
-  {
-    "id": "siropes",
-    "name": "Siropes",
-    "image": "img/categorias/siropes.jpeg",
-    "match": ["siropes"],
-    "subcategorias": [
-      { "id": "siropes", "name": "Siropes", "image": "img/subcategorias/siropes.jpg", "match": ["siropes"] }
+      { "id": "ketchup-mostaza", "name": "Ketchup, Mayonesa y Mostaza", "image": "img/subcategorias/ketchupMostaza.jpg", "match": ["salsas-ketchup-y-mostaza"] },
+      { "id": "salsas-tomate", "name": "Salsas de Tomate", "image": "img/subcategorias/tomate.jpg", "match": ["salsas-de-tomate", "tomate-frito"] },
+      { "id": "salsas-horeca", "name": "Horeca", "image": "img/subcategorias/horeca.jpg", "match": ["horeca"] },
+      { "id": "otras-salsas", "name": "Otras Salsas", "image": "img/subcategorias/horeca.jpg", "match": ["otras-salsas"] }
     ]
   },
   {
     "id": "vinos",
     "name": "Vinos",
-    "image": "img/categorias/vinos.png",
+    "image": "img/categorias/vinos.jpg",
     "match": ["vinos-d-o-rioja", "vinos-d-o-ribera-del-duero", "vinos-d-o-rueda", "vinos"],
     "subcategorias": [
-      { "id": "rioja", "name": "D.O. Rioja", "image": "img/subcategorias/rioja.jpg", "match": ["vinos-d-o-rioja"] },
-      { "id": "ribera", "name": "D.O. Ribera del Duero", "image": "img/subcategorias/ribera.jpg", "match": ["vinos-d-o-ribera-del-duero"] },
-      { "id": "rueda", "name": "D.O. Rueda", "image": "img/subcategorias/rueda.jpg", "match": ["vinos-d-o-rueda"] },
+      { "id": "rioja", "name": "D.O. Rioja", "image": "img/subcategorias/rioja.png", "match": ["vinos-d-o-rioja"] },
+      { "id": "ribera", "name": "D.O. Ribera del Duero", "image": "img/subcategorias/riberaDuero.jpeg", "match": ["vinos-d-o-ribera-del-duero"] },
       { "id": "otros-vinos", "name": "Otros Vinos", "image": "img/subcategorias/otros-vinos.jpg", "match": ["vinos"] }
     ]
   }
