@@ -21,4 +21,4 @@ pool.query("SELECT 1").then(() => {
   // NO hagas process.exit aquí, solo log para ver qué falla
 });
 
-export default pool
+export default pool;
