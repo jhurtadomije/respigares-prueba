@@ -1,30 +1,28 @@
 // backend/db.js
 import mysql from "mysql2/promise";
 
-// Normalizamos host y puerto por si DB_HOST viene como "host:puerto"
-let host =
+// Sacamos host y port a variables para poder loguearlas y reutilizarlas
+const host =
   process.env.DB_HOST ||
-  process.env.MYSQLHOST ||
-  "localhost";
+  process.env.MYSQLHOST;
 
-const PORT = process.env.PORT || 8080;
+const port =
+  Number(process.env.DB_PORT || process.env.MYSQLPORT || 3306);
 
-// Si alguien ha puesto "crossover.proxy.rlwy.net:59545" en DB_HOST, lo partimos
-if (host && host.includes(":")) {
-  const [h, p] = host.split(":");
-  host = h;
-  if (!process.env.DB_PORT && !process.env.MYSQLPORT && p) {
-    port = p;
-  }
-}
+// (Opcional, pero muy útil para ver en Railway qué está usando)
+console.log("Config MySQL:", {
+  host,
+  port,
+  database: process.env.DB_NAME || process.env.MYSQLDATABASE,
+  user: process.env.DB_USER || process.env.MYSQLUSER,
+});
 
-console.log("Config MySQL:", { host, port });
-
+// Creamos el pool usando vars locales o de Railway
 export const pool = mysql.createPool({
   host,
-  user:     process.env.DB_USER      || process.env.MYSQLUSER,
-  password: process.env.DB_PASS      || process.env.MYSQLPASSWORD,
-  database: process.env.DB_NAME      || process.env.MYSQLDATABASE,
+  user: process.env.DB_USER || process.env.MYSQLUSER,
+  password: process.env.DB_PASS || process.env.MYSQLPASSWORD,
+  database: process.env.DB_NAME || process.env.MYSQLDATABASE,
   port,
   waitForConnections: true,
   connectionLimit: 10,
