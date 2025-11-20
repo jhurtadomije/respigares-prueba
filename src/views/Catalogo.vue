@@ -26,11 +26,18 @@
     </p>
   </div>
 
-  <!-- Vista de productos de una categoría -->
-  <div v-if="categoriaSeleccionada" class="catalogo-productos-contenedor">
+  <!-- ✅ MODO PRODUCTOS: categoría seleccionada O marca seleccionada -->
+  <div v-if="showProductos" class="catalogo-productos-contenedor">
     <h2 class="catalogo-cat-title">
-      Productos en "{{ categoriaSeleccionada.name }}"
+      <!-- ✅ Título dinámico según modo -->
+      <template v-if="modoMarca">
+        Productos de la marca "{{ marcaSeleccionada }}"
+      </template>
+      <template v-else>
+        Productos en "{{ categoriaSeleccionada.name }}"
+      </template>
     </h2>
+
     <div v-if="isLoading" class="catalogo-loading">
       <img
         src="/img/iconos/loading.gif"
@@ -43,6 +50,7 @@
       <p>Ha ocurrido un error al cargar los productos.</p>
       <button class="btn-volver-categorias" @click="load">Reintentar</button>
     </div>
+
     <div v-else-if="productosFiltrados.length" class="grid-productos">
       <ProductCard
         v-for="(producto, idx) in productosFiltrados"
@@ -52,14 +60,22 @@
       />
     </div>
 
-    <div v-else class="no-productos">No hay productos para esta categoría.</div>
+    <div v-else class="no-productos">
+      <!-- ✅ Texto vacío según modo -->
+      <template v-if="modoMarca">
+        No hay productos para esta marca.
+      </template>
+      <template v-else>
+        No hay productos para esta categoría.
+      </template>
+    </div>
 
     <button class="btn-volver-categorias" @click="volverCategorias">
       Volver al catálogo
     </button>
   </div>
 
-  <!-- Si NO hay categoría seleccionada, muestra las categorías como hasta ahora -->
+  <!-- Si NO hay categoría ni marca seleccionada, muestra las categorías como hasta ahora -->
   <section v-else class="catalogo contenedor">
     <div class="catalogo-grid">
       <router-link
@@ -85,6 +101,7 @@ import { ref, onMounted, computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import ProductCard from "../components/ProductCard.vue";
 import { useCatalogo } from "../composables/useCatalogo";
+import { canonicalMarcaKey } from "../data/marcas";
 
 const categories = ref([]);
 const route = useRoute();
@@ -108,18 +125,68 @@ onMounted(async () => {
   // 2) Cargar catálogo (productos.json)
   try {
     await load();
-  } catch (e) {
-    // ya se muestra el console.error en el composable
-  }
+  } catch (e) {}
 });
+
+// ✅ NORMALIZADOR ÚNICO (IGUAL QUE EN BrandsCarousel)
+function marcaKey(str = "") {
+  return String(str)
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, "-");
+}
 
 // Categoría seleccionada a partir de la query ?cat=...
 const categoriaSeleccionada = computed(() =>
   categories.value.find((cat) => String(cat.id) === String(route.query.cat))
 );
 
-// Productos filtrados por categoría principal y, opcionalmente, subcategoría (?sub=...)
+// ✅ marca desde query (?marca=slug)
+const marcaQuery = computed(() => String(route.query.marca || "").trim());
+
+// ✅ estamos en modo marca cuando hay marca y NO hay cat
+const modoMarca = computed(() => !!marcaQuery.value && !route.query.cat);
+
+// ✅ key ya normalizada de la marca pedida
+const wantedMarcaKey = computed(() => marcaKey(marcaQuery.value));
+
+// ✅ label bonita para el título de marca
+const marcaSeleccionada = computed(() => {
+  if (!modoMarca.value) return "";
+
+  const found = list.value.find((p) => {
+    const marcaProd = p.marca ?? p.Marca ?? p.brand ?? p.Brand ?? "";
+    return marcaKey(marcaProd) === wantedMarcaKey.value;
+  });
+
+  return (
+    found?.marca ||
+    found?.Marca ||
+    found?.brand ||
+    found?.Brand ||
+    marcaQuery.value
+  );
+});
+
+// ✅ bandera general para mostrar grid de productos
+const showProductos = computed(
+  () => !!categoriaSeleccionada.value || modoMarca.value
+);
+
+// ✅ Productos filtrados por categoría o marca
 const productosFiltrados = computed(() => {
+  if (modoMarca.value) {
+    const wanted = canonicalMarcaKey(marcaQuery.value);
+
+    return list.value.filter((p) => {
+      const marcaProd = p.marca ?? p.Marca ?? p.brand ?? p.Brand ?? "";
+      return canonicalMarcaKey(marcaProd) === wanted;
+    });
+  }
+
+  // --- MODO CATEGORÍA (como estaba) ---
   if (!route.query.cat) return [];
 
   const catId = String(route.query.cat);

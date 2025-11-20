@@ -19,8 +19,12 @@
       >
         <SwiperSlide
           v-for="(logo, i) in logos"
-          :key="i"
+          :key="logo.key || i"
           class="brands-swiper-slide"
+          @click="irMarca(logo.key)"
+          role="button"
+          tabindex="0"
+          @keydown.enter="irMarca(logo.key)"
         >
           <img :src="logo.src" :alt="logo.alt" class="brand-logo" />
         </SwiperSlide>
@@ -30,17 +34,51 @@
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Autoplay } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/autoplay'
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import { useRouter } from "vue-router";
+
+// ✅ lista oficial + canonicalizador
+import { MARCAS, canonicalMarcaKey } from "../data/marcas.js";
+
+const router = useRouter();
 
 const modules = import.meta.glob(
-  '../assets/logosMarcas/*.{png,jpg,jpeg,svg}',
+  "../assets/logosMarcas/*.{png,jpg,jpeg,svg,webp}",
   { eager: true }
-)
-const logos = Object.values(modules).map(m => ({ src: m.default, alt: '' }))
+);
+
+// 1) Mapa canonical -> logo
+const logosByCanonical = {};
+for (const [p, m] of Object.entries(modules)) {
+  const file = p.split("/").pop() || "";
+  const rawName = file.replace(/\.(png|jpg|jpeg|svg|webp)$/i, "");
+  const alt = rawName.replace(/[-_]+/g, " ").trim();
+  const cKey = canonicalMarcaKey(rawName);
+
+  // si hay duplicados de canonical, nos quedamos con el primero
+  if (!logosByCanonical[cKey]) {
+    logosByCanonical[cKey] = { src: m.default, alt, key: cKey };
+  }
+}
+
+// 2) Carrusel = marcas oficiales que tienen logo
+const logos = MARCAS
+  .map((name) => {
+    const cKey = canonicalMarcaKey(name);
+    return logosByCanonical[cKey] || null;
+  })
+  .filter(Boolean)
+  // 3) quitar canonicals repetidas (submarcas)
+  .filter((logo, idx, arr) => arr.findIndex((l) => l.key === logo.key) === idx);
+
+function irMarca(key) {
+  if (!key) return;
+  router.push({ path: "/catalogo", query: { marca: key } });
+}
 </script>
 
 <style scoped>
