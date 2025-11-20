@@ -96,6 +96,7 @@
 </template>
 
 <style scoped>
+
 .cookies-policy {
   background: #fff;
   border-radius: 10px;
@@ -110,7 +111,7 @@
   text-align: center;
   color: var(--color-main, #ab0a3d);
   font-size: 2.15rem;
-  margin-bottom: 2.1rem;
+  margin-bottom: 2rem;
   font-weight: 900;
 }
 .cookies-policy__block {

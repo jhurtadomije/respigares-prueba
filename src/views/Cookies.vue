@@ -5,7 +5,13 @@
       <div class="cookies-info">
         <p>
           Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte publicidad personalizada según un perfil elaborado a partir de tus hábitos de navegación. 
-          <a href="/politica-cookies" target="_blank">Más información</a>.
+          <a 
+          href="/politica-cookies" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          aria-label="Leer la Política de cookies de Respigares">
+          Política de cookies
+          </a>.
         </p>
         <ul>
           <li><b>Cookies técnicas</b> (siempre activas): necesarias para el funcionamiento básico.</li>

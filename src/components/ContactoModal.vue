@@ -173,7 +173,7 @@ async function enviar() {
     await enviarConsultaContacto(payload);
     ok.value = true;
 
-    // Cerrar automáticamente tras unos segundos si quieres
+    // Cerrar automáticamente tras unos segundos 
     setTimeout(() => {
       cerrar();
     }, 2500);
