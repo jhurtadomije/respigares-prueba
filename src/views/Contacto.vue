@@ -118,7 +118,7 @@ useHead({
 .section-hero {
   position: relative;
   width: 100vw;
-  min-height: 14vw;
+  min-height: 25vw;
   max-height: 20em;
   display: flex;
   align-items: flex-end;
@@ -143,7 +143,7 @@ useHead({
   z-index: 2;
   background: linear-gradient(180deg, #f7f9fb 100%, #f1f4f7 0%);
   border-radius: 1.3em 1.3em 0 0;
-  padding: 1.5em 2em 0.8em 2em;
+  padding: 0.5em 2em 0.8em 2em;
   min-width: 8em;
   margin-bottom: -1.3em;
   margin-top: 2em;

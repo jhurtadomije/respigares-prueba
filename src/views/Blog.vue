@@ -53,7 +53,7 @@ useHead({
 .section-hero {
   position: relative;
   width: 100vw;
-  min-height: 14vw;
+  min-height: 25vw;
   max-height: 20em;
   display: flex;
   align-items: flex-end;
@@ -77,8 +77,8 @@ useHead({
   position: relative;
   z-index: 2;
   background: linear-gradient(180deg, #f7f9fb 100%, #f1f4f7 0%);
-  border-radius: 4em 4em 1.2em 0;
-  padding: 1.5em 2em 0.8em 2em;
+  border-radius: 2em 2em 1.5em 0;
+  padding: 0.1em 2em 0.5em 2em;
   min-width: 8em;
   margin-bottom: -1.3em;
   margin-top: 2em;
@@ -96,7 +96,7 @@ useHead({
 }
 @media (max-width: 700px) {
   .section-hero-img { min-height: 110px; }
-  .section-title-tab { padding: 0.9em 0.5em 0.7em 0.5em; }
+  .section-title-tab { padding: 0.5em 0.5em 0.5em 0.5em; }
   .section-title-tab h1 { font-size: 1.5rem; }
 }
 /* Animación aparición */
@@ -110,7 +110,7 @@ useHead({
 /* Main content */
 .page-wrap {
   margin-top: 1.5rem;
-  padding: 2.5rem 0 2rem 0;
+  padding: 2rem 0 2rem 0;
   background: linear-gradient(180deg, #f7f9fb 0%, #f1f4f7 100%);
   min-height: 70vh;
   max-width: 1100px;
@@ -126,7 +126,7 @@ useHead({
 }
 @media (max-width: 600px) {
   .page-wrap {
-    padding: 1.2rem 0 1.2rem 0;
+    padding: 0.5rem 0 1.2rem 0;
   }
 }
 </style>

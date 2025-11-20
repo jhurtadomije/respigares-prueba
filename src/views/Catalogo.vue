@@ -172,7 +172,7 @@ useHead({
   position: relative;
   width: 100%;
   max-width: 100vw;
-  min-height: 14vw;
+  min-height: 25vw;
   max-height: 20rem;
   display: flex;
   align-items: flex-end;
@@ -199,7 +199,7 @@ useHead({
   z-index: 2;
   background: linear-gradient(180deg, #f7f9fb 100%, #f1f4f7 0%);
   border-radius: 1.3em 1.3em 0 0;
-  padding: 1.4em 2.4em 0.85em 2.4em;
+  padding: 0.4em 2.4em 0.85em 2.4em;
   min-width: 8em;
   margin-bottom: -1.3em;
   margin-top: 2.2em;
@@ -403,7 +403,7 @@ useHead({
     min-height: 110px;
   }
   .catalogo-title-tab {
-    padding: 0.9em 0.9em 0.7em 0.9em;
+    padding: 0.4em 0.9em 0.7em 0.9em;
     margin-top: 1.6em;
   }
   .catalogo-title-tab h1 {

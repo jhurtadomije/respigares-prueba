@@ -1,6 +1,14 @@
 <template>
   <section class="nosotros-hero animate-fadein">
-    <img src="/img/hero-nosotros.jpg" alt="Equipo Respigares" class="nosotros-hero-img" />
+    <img
+      src="/img/hero-nosotros.jpg"
+      alt="Equipo Respigares"
+      class="nosotros-hero-img"
+      decoding="async"
+      fetchpriority="high"
+      width="1920"
+      height="600"
+    />
     <div class="nosotros-hero-content">
       <h1>Sobre Nosotros</h1>
     </div>
@@ -15,7 +23,12 @@
     <!-- SECCIÓN 1 -->
     <section class="nosotros-section contenedor animate-stagger" style="animation-delay:.37s;">
       <div class="ns-img">
-        <img src="/img/nosotros-supermercado1.jpg" alt="Supermercado" />
+        <img
+          src="/img/nosotros-supermercado1.jpg"
+          alt="Supermercado"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div class="ns-text">
         <h2>Representantes de Calidad desde 1971</h2>
@@ -34,7 +47,12 @@
     <!-- SECCIÓN 2 (invertida en escritorio) -->
     <section class="nosotros-section nosotros-section-invert contenedor animate-stagger" style="animation-delay:.57s;">
       <div class="ns-img">
-        <img src="/img/nosotros-supermercado2.png" alt="Equipo en supermercado" />
+        <img
+          src="/img/nosotros-supermercado2.png"
+          alt="Equipo en supermercado"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div class="ns-text">
         <p>
@@ -56,7 +74,12 @@
     <!-- SECCIÓN 3 -->
     <section class="nosotros-section contenedor animate-stagger" style="animation-delay:.77s;">
       <div class="ns-img">
-        <img src="/img/nosotros-carrito.jpg" alt="Historia Respigares" />
+        <img
+          src="/img/nosotros-carrito.jpg"
+          alt="Historia Respigares"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div class="ns-text">
         <h2>La Historia</h2>
@@ -70,11 +93,20 @@
     </section>
 
     <!-- VALORES -->
-    <section class="nosotros-valores contenedor animate-stagger" style="animation-delay:.97s;">
-      <h3 class="valores-title">• VALORES •</h3>
+    <section
+      class="nosotros-valores contenedor animate-stagger"
+      style="animation-delay:.97s;"
+      aria-labelledby="valores-title"
+    >
+      <h3 id="valores-title" class="valores-title">• VALORES •</h3>
       <div class="valores-grid">
         <div class="valor">
-          <img src="/img/iconos/excelencia.svg" alt="Excelencia" />
+          <img
+            src="/img/iconos/excelencia.svg"
+            alt="Excelencia"
+            loading="lazy"
+            decoding="async"
+          />
           <h4>Excelencia</h4>
           <p>
             No nos conformamos con dar un buen servicio a nuestros clientes. Trabajamos incansablemente por la excelencia.
@@ -82,7 +114,12 @@
           </p>
         </div>
         <div class="valor">
-          <img src="/img/iconos/ilusion.ico" alt="Ilusión" />
+          <img
+            src="/img/iconos/ilusion.ico"
+            alt="Ilusión"
+            loading="lazy"
+            decoding="async"
+          />
           <h4>Ilusión</h4>
           <p>
             Ser un referente en el sector de la representación y distribución de productos alimentarios no impide que trabajemos con la misma ilusión que el primer día.
@@ -90,7 +127,12 @@
           </p>
         </div>
         <div class="valor">
-          <img src="/img/iconos/compromiso.ico" alt="Compromiso" />
+          <img
+            src="/img/iconos/compromiso.ico"
+            alt="Compromiso"
+            loading="lazy"
+            decoding="async"
+          />
           <h4>Compromiso</h4>
           <p>
             Representar significa adquirir un compromiso con la marca a la que representas.
@@ -101,8 +143,12 @@
     </section>
 
     <!-- EQUIPO -->
-    <section class="nosotros-equipo contenedor animate-stagger" style="animation-delay:1.17s;">
-      <h2 class="equipo-title">Equipo</h2>
+    <section
+      class="nosotros-equipo contenedor animate-stagger"
+      style="animation-delay:1.17s;"
+      aria-labelledby="equipo-title"
+    >
+      <h2 id="equipo-title" class="equipo-title">Equipo</h2>
       <p class="equipo-subtitle">Los profesionales</p>
       <div class="equipo-grid">
         <div class="equipo-col equipo-principal">
@@ -157,31 +203,60 @@ useHead({
   title: 'Quiénes somos | Respigares',
   meta: [
     { name: 'description', content: 'Conoce la historia, misión, visión y valores de Representaciones Espigares. Más de 50 años creciendo junto a nuestros clientes y marcas representadas.' },
+
+    // invisible
+    { name: 'robots', content: 'index,follow' },
+
     { property: 'og:title', content: 'Quiénes somos | Respigares' },
     { property: 'og:description', content: 'Desde 1971, expertos en representación y distribución de productos de alimentación en Andalucía.' },
     { property: 'og:image', content: 'https://www.respigares.es/img/hero-nosotros.jpg' },
-    { property: 'og:type', content: 'website' }
+    { property: 'og:type', content: 'website' },
+
+    // extras OG/Twitter invisibles
+    { property: 'og:url', content: 'https://www.respigares.es/nosotros' },
+    { property: 'og:site_name', content: 'Respigares' },
+    { property: 'og:locale', content: 'es_ES' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Quiénes somos | Respigares' },
+    { name: 'twitter:description', content: 'Más de 50 años representando y distribuyendo productos gourmet en Andalucía.' },
+    { name: 'twitter:image', content: 'https://www.respigares.es/img/hero-nosotros.jpg' },
   ],
   link: [
-    { rel: 'canonical', href: 'https://www.respigares.es/somos' }
+    // canonical correcto (no afecta visual)
+    { rel: 'canonical', href: 'https://www.respigares.es/nosotros' }
+  ],
+  // schema invisible (si tienes schema global, puedes quitarlo)
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        name: "Quiénes somos | Respigares",
+        url: "https://www.respigares.es/nosotros",
+        description:
+          "Historia, misión, visión y valores de Representaciones Espigares, empresa familiar de distribución gourmet desde 1971.",
+        inLanguage: "es-ES"
+      })
+    }
   ]
 })
-
-
 </script>
 
 <style scoped>
+/* CSS Sobre nosotros */
 .nosotros-hero {
   position: relative;
   width: 100vw;
-  height: 14vw;
-  min-height: 7em;
-  max-height: 15em;
+  height: 25vw;
+  min-height: 8em;
+  max-height: 25em;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   background: #fff;
   overflow: hidden;
+ 
 }
 .nosotros-hero-img {
   position: absolute;
@@ -240,9 +315,15 @@ useHead({
   flex-direction: row-reverse;
 }
 .ns-img {
-  flex: 1 1 35vw;
-  max-width: 40vw;
-  min-width: 16em;
+  flex: 1 1 40vw;
+  max-width: 50vw;
+  min-width: 18em;
+  position: relative;
+  padding: 0.6em;              /* aire extra entre imagen y texto */
+  background: #fff;            /* “cartulina” detrás */
+  border-radius: 1em;          /* acompaña el radio de la img */
+  box-shadow: 0 0.25em 1.2em #00000010;  /* sombra muy sutil */
+  box-sizing: border-box;
 }
 .ns-img img {
   width: 100%;
@@ -252,6 +333,7 @@ useHead({
   border-bottom: 0;
   margin-bottom: 0.4em;
   background: repeating-linear-gradient(-45deg, #e2e9ef, #e2e9ef 0.5em, #fff 0.5em, #fff 1.2em);
+  display: block;
 }
 .ns-text {
   flex: 2 1 52vw;
@@ -452,5 +534,4 @@ useHead({
   opacity: 0;
   animation: aparecer 1.08s cubic-bezier(.8,.1,.1,1) forwards;
 }
-
 </style>

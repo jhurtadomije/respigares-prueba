@@ -19,7 +19,7 @@
       <nav :class="['nav', { open }]" @click="closeMenuOnNav">
         <RouterLink to="/">Inicio</RouterLink>
         <RouterLink to="/catalogo">Catálogo</RouterLink>
-        <RouterLink to="/nosotros">Somos</RouterLink>
+        <RouterLink to="/nosotros">Conócenos</RouterLink>
         <RouterLink to="/blog">Blog</RouterLink>
         <RouterLink to="/contacto">Contacto</RouterLink>
       </nav>
