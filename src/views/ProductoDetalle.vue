@@ -217,7 +217,7 @@ import { openContactForProducto } from "../contactModalState";
 const route = useRoute();
 const { list, load, isLoading, error } = useCatalogo();
 
-const DEFAULT_IMG = "img/default.jpg"; // 👈 está en /public/img/default.jpg
+const DEFAULT_IMG = "/img/default.jpg"; 
 
 // Cargar catálogo si aún no está en memoria
 onMounted(async () => {
