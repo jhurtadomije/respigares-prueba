@@ -1,6 +1,6 @@
 // src/components/SomosPreview.vue
 <template>
-  <h2 class="brands__somos">Somos</h2>
+  <h2 class="brands__somos">Sobre Nosotros</h2>
   <section class="preview preview--somos contenedor">
   <img
     src="/img/carro.png"  
