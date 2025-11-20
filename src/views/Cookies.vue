@@ -216,17 +216,17 @@ function saveConfig() {
   from {
     opacity: 0;
     transform: scale(0.82) rotate(-8deg);
-    filter: blur(7px) brightness(1.3);
+    
   }
   80% {
     opacity: 1;
     transform: scale(1.03) rotate(1.3deg);
-    filter: blur(0px) brightness(1);
+    
   }
   to {
     opacity: 1;
     transform: scale(1) rotate(0deg);
-    filter: blur(0px) brightness(1);
+    
   }
 }
 </style>
