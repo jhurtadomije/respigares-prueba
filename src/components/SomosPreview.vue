@@ -54,7 +54,7 @@
         </p>
       </div>
     </div>
-    <router-link to="/nosotros" class="btn-preview">Más información</router-link>
+    <router-link to="/nosotros" class="btn-preview">Conócenos</router-link>
   </section>
 </template>
 
