@@ -38,20 +38,20 @@ onMounted(() => {
 .hero {
   position: relative;
   width: 100%;
-  
-  min-height: calc(60vh);
+  max-width: 100vw;          /* 👈 evita que algo se pase del viewport */
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  overflow-x: clip;          /* 👈 cinturón anti-scroll horizontal */
   box-sizing: border-box;
-  margin-top: -3.6rem; /* pegar al header */
+  margin-top: -3.6rem;       /* pegar al header */
 }
 
 .hero-video {
   position: absolute;
-  top: 0; 
-  left: 0;
+  inset: 0;                  /* 👈 mejor que top/left/width/height sueltos */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -63,9 +63,8 @@ onMounted(() => {
 
 .hero-overlay {
   position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
+  inset: 0;
+  width: 100%;
   height: 100%;
   background: linear-gradient(90deg, #16430044 30%, #0000 100%);
   z-index: 2;
@@ -77,15 +76,17 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* centrado vertical real */
+  justify-content: center; 
   color: #fff;
   text-align: center;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1rem 2.5rem 1rem; /* mucho menos padding que antes */
+
+  /* ✅ en vez de margin-top fijo monstruoso */
+  padding: clamp(6rem, 14vh, 12rem) 1rem 2.5rem 1rem;
+
   animation: fadeIn 1.8s cubic-bezier(.8,.1,.1,1);
-  margin-top: 40rem;
 }
 
 .hero-title {
@@ -131,14 +132,14 @@ onMounted(() => {
   background: linear-gradient(90deg, #f5e396, #b38b25);
 }
 
-/* Mobile first: ajuste fino en móviles */
+/* Mobile */
 @media (max-width: 600px) {
   .hero {
     min-height: calc(100vh - 3.6rem);
   }
 
   .hero-content {
-    padding: 3rem 1rem 2.5rem 1rem;
+    padding: clamp(5rem, 18vh, 9rem) 1rem 2.5rem 1rem;
   }
 
   .hero-title {
@@ -157,14 +158,16 @@ onMounted(() => {
   }
 }
 
-/* Escritorio: solo podemos tocar tipografía si quieres, NO altura */
+/* Desktop */
 @media (min-width: 900px) {
   .hero {
-    min-height: calc(80vh);
+    min-height: 80vh;
     margin: 0;
   }
+
+  /* ya no hace falta margin-top aquí */
   .hero-content {
-    margin-top: 28rem;  
+    padding: clamp(7rem, 16vh, 13rem) 1rem 2.5rem 1rem;
   }
 }
 
@@ -173,4 +176,3 @@ onMounted(() => {
   to   { opacity: 1; transform: none; }
 }
 </style>
-

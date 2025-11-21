@@ -72,7 +72,7 @@ defineProps({
   opacity: 0.9;
   pointer-events: none;
   user-select: none;
-  transform: scaleX(-1);     /* 👈 la gira horizontalmente */
+  transform: scaleX(-1);     
 }
 
 /* Título bloque */

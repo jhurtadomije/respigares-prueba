@@ -114,12 +114,12 @@ function irMarca(key) {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   height: 1px;
   background: #c7ccd3;
   opacity: 0.4;
-  transform: translateX(-50%);
+  transform: none;
   pointer-events: none;
 }
 
@@ -128,7 +128,9 @@ function irMarca(key) {
   max-width: 100%;
   --swiper-navigation-color: var(--color-main);
   padding-bottom: 1.2rem;
-  overflow: visible;
+  
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .brands-swiper .swiper-wrapper {
@@ -137,6 +139,7 @@ function irMarca(key) {
 
 .brands-swiper-slide {
   display: flex;
+  min-width: 0;
   align-items: center;
   justify-content: center;
 }
@@ -161,7 +164,7 @@ function irMarca(key) {
 }
 
 /* ===== TABLET ===== */
-@media (min-width: 30rem) {  /* 480px */
+@media (min-width: 480px) { 
   .brands__label {
     font-size: clamp(1.7rem, 3vw, 2.2rem);
     margin-bottom: 1.6rem;
@@ -174,7 +177,7 @@ function irMarca(key) {
 }
 
 /* ===== DESKTOP ===== */
-@media (min-width: 60rem) { /* 960px aprox */
+@media (min-width: 960px) { 
   .brands {
     padding: 3rem 0 2.2rem 0;
   }
