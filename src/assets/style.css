@@ -24,7 +24,7 @@ html {
 body {
   font-family: var(--font-main);
   color: var(--color-gray);
-  background: var(--color-white);
+  
   margin: 0;
   background: linear-gradient(180deg, #f7f9fb 0%, #f1f4f7 100%);
 }
@@ -197,4 +197,14 @@ button:hover,
   }
 
   
+}
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;     /* o clip si prefieres */
+}
+
+/* iOS/Safari: evita que algo se pase 1px y cree scroll */
+body {
+  overflow-x: clip;
 }
