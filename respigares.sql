@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-11-2025 a las 12:48:33
+-- Tiempo de generación: 24-11-2025 a las 15:05:45
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -791,6 +791,36 @@ INSERT INTO `productos` (`id`, `sku`, `nombre`, `u_caja`, `nombre_familia`, `cod
 (735, 'ACE0672', 'Angulis Acequia tarro 220g', NULL, NULL, NULL, 'ACEQUIA', NULL, NULL, '*CONSERVA PESCADO', '*CONSERVA PESCADO/ANGULAS', '*CONSERVA PESCADO/ANGULAS', '*CONSERVA PESCADO/ANGULAS', '*CONSERVA PESCADO/ANGULAS', 'angulis-acequia-tarro-220g', '/uploads/ACE0672.png', 1, '2025-11-17 23:50:45', '2025-11-17 23:50:45'),
 (736, 'ARL10160007', 'Mejillones en escabeche Gigante 10/14 p Arlequin', NULL, NULL, NULL, 'ARLEQUIN', NULL, NULL, '*CONSERVA PESCADO', '*CONSERVA PESCADO/MEJILLONES', '*CONSERVA PESCADO/MEJILLONES', '*CONSERVA PESCADO/MEJILLONES', '*CONSERVA PESCADO/MEJILLONES', 'mejillones-en-escabeche-gigante-10-14-p-arlequin', '/uploads/ARL10160007.png', 1, '2025-11-17 23:55:16', '2025-11-17 23:55:16');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `promociones`
+--
+
+CREATE TABLE `promociones` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(150) NOT NULL,
+  `imagen_banner` varchar(255) DEFAULT NULL,
+  `cta_texto` varchar(80) DEFAULT NULL,
+  `cta_url` varchar(255) DEFAULT NULL,
+  `fecha_inicio` date DEFAULT NULL,
+  `fecha_fin` date DEFAULT NULL,
+  `activa` tinyint(1) NOT NULL DEFAULT 1,
+  `destacada` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `promociones`
+--
+
+INSERT INTO `promociones` (`id`, `titulo`, `imagen_banner`, `cta_texto`, `cta_url`, `fecha_inicio`, `fecha_fin`, `activa`, `destacada`, `created_at`, `updated_at`) VALUES
+(2, 'Navidad', '/uploads/promos/promo-1763991675872.webp', 'Solicita información', NULL, NULL, NULL, 1, 1, '2025-11-24 11:04:18', '2025-11-24 13:43:22'),
+(3, 'Semana Santa', '/uploads/promos/promo-1763982345471.webp', NULL, NULL, '2025-11-23', NULL, 0, 0, '2025-11-24 11:05:48', '2025-11-24 13:41:47'),
+(4, 'Feria', '/uploads/promos/promo-1763982361641.webp', NULL, NULL, '2025-11-22', '2025-11-15', 1, 0, '2025-11-24 11:06:04', '2025-11-24 13:58:47'),
+(5, 'La misma de ayer', '/uploads/promos/promo-1763982407362.webp', NULL, NULL, '2025-11-22', NULL, 1, 0, '2025-11-24 11:06:49', '2025-11-24 13:36:52');
+
 --
 -- Índices para tablas volcadas
 --
@@ -806,6 +836,12 @@ ALTER TABLE `productos`
   ADD KEY `idx_productos_activo` (`activo`);
 
 --
+-- Indices de la tabla `promociones`
+--
+ALTER TABLE `promociones`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -814,6 +850,12 @@ ALTER TABLE `productos`
 --
 ALTER TABLE `productos`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=737;
+
+--
+-- AUTO_INCREMENT de la tabla `promociones`
+--
+ALTER TABLE `promociones`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
