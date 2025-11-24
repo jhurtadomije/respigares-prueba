@@ -84,7 +84,8 @@ onMounted(() => {
   margin: 0 auto;
 
   /* ✅ en vez de margin-top fijo monstruoso */
-  padding: clamp(6rem, 14vh, 12rem) 1rem 2.5rem 1rem;
+  padding: clamp(10rem, 22vh, 18rem) 1rem 2.5rem 1rem;
+  
 
   animation: fadeIn 1.8s cubic-bezier(.8,.1,.1,1);
 }
@@ -139,7 +140,9 @@ onMounted(() => {
   }
 
   .hero-content {
-    padding: clamp(5rem, 18vh, 9rem) 1rem 2.5rem 1rem;
+    padding-top: clamp(14rem, 34vh, 22rem);
+    transform: translateY(70px);
+    
   }
 
   .hero-title {
@@ -157,6 +160,12 @@ onMounted(() => {
     padding: 0.75rem 1.6rem;
   }
 }
+@media (min-width: 600px) and (max-width: 900px) {
+  .hero-content {
+    padding-top: clamp(7.5rem, 14vh, 10.5rem);
+    transform: translateY(50px);
+  }
+}
 
 /* Desktop */
 @media (min-width: 900px) {
@@ -167,7 +176,8 @@ onMounted(() => {
 
   /* ya no hace falta margin-top aquí */
   .hero-content {
-    padding: clamp(7rem, 16vh, 13rem) 1rem 2.5rem 1rem;
+    padding: clamp(17rem, 38vh, 25rem) 1rem 2.5rem 1rem;
+    transform: translateY(25px);
   }
 }
 
