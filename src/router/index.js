@@ -5,9 +5,11 @@ import Catalogo from '../views/Catalogo.vue'
 import CatalogoCategoria from '../views/CatalogoCategoria.vue'
 import AdminLogin from "../views/AdminLogin.vue";
 import AdminProductos from "../views/AdminProductos.vue";
+import AdminPromociones from "../views/AdminPromociones.vue";
+import AdminDashboard from "../views/AdminDashboard.vue";
 import { isAuthenticated } from "../services/authService";
 import Contacto from '../views/Contacto.vue'
-import ProductoDetalle from '../views/ProductoDetalle.vue'
+import ProductoDetalle from '../views/ProductoDetalle.vue';
 import AvisoLegal from '../views/AvisoLegal.vue'
 import Privacidad from '../views/Privacidad.vue'
 import Cookies from '../views/Cookies.vue'
@@ -23,18 +25,42 @@ const routes = [
   { path: '/nosotros', name: 'Nosotros', component: Nosotros },
   { path: '/catalogo', name: 'Catalogo', component: Catalogo },
   { path: '/catalogo/:catId', name: 'catalogoCategoria', component: CatalogoCategoria },
+
   {
     path: "/debug-catalogo",
     name: "DebugCatalogo",
     component: DebugCatalogo,
   },
-   { path: "/admin/login", name: "admin-login", component: AdminLogin },
+
+  // =========================
+  // ADMIN
+  // =========================
+  { path: "/admin/login", name: "admin-login", component: AdminLogin },
+
+  {
+    path: "/admin",
+    name: "AdminDashboard",
+    component: AdminDashboard,
+    meta: { requiresAuth: true }, //  mismo criterio que el guard
+  },
+
   {
     path: "/admin/productos",
     name: "admin-productos",
     component: AdminProductos,
     meta: { requiresAuth: true },
   },
+
+  {
+    path: "/admin/promociones",
+    name: "AdminPromociones",
+    component: AdminPromociones,
+    meta: { requiresAuth: true },
+  },
+
+  // =========================
+  // PUBLIC
+  // =========================
   { path: '/contacto', name: 'Contacto', component: Contacto },
   { path: '/producto/:sku', name: 'ProductoDetalle', component: () => import('../views/ProductoDetalle.vue') },
   { path: '/avisolegal', name: 'AvisoLegal', component: AvisoLegal },
@@ -44,21 +70,19 @@ const routes = [
   { path: '/blog', name: 'Blog', component: Blog },
   { path: '/blog/:slug', name: 'Noticia', component: Noticia, props: true },
   { path: '/TerminosYCondiciones', name: 'Terminos', component: TerminosYcondiciones },
-  { path: '/politica-cookies', name: 'CookiesPolicy', component: CookiesPolicy, },
+  { path: '/politica-cookies', name: 'CookiesPolicy', component: CookiesPolicy },
+
   // { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound } // opcional
 ]
 
 const router = createRouter({
-  // mejor usar la base de Vite, así no habrá sustos al desplegar
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    // 1) si vienes de botón atrás/adelante
     if (savedPosition) {
       return savedPosition;
     }
 
-    // 2) si la ruta lleva hash (#seccion), intentamos hacer scroll al elemento
     if (to.hash) {
       const el = document.querySelector(to.hash);
       if (el) {
@@ -67,20 +91,18 @@ const router = createRouter({
           behavior: "smooth",
         };
       }
-      // si no existe el elemento, seguimos al punto 3
     }
 
-    // 3) por defecto, arriba del todo
     return { left: 0, top: 0 };
   },
 });
+
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth && !isAuthenticated()) {
-    next ({ name: "admin-login", query: { redirect: to.fullPath } });
+    next({ name: "admin-login", query: { redirect: to.fullPath } });
   } else {
     next();
   }
 });
-
 
 export default router

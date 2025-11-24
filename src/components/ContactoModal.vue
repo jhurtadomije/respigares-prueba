@@ -10,15 +10,15 @@
         Déjanos tus datos de contacto y te responderemos lo antes posible.
       </p>
 
-      <!-- Contexto del producto / promoción -->
+      <!-- ===== CONTEXTO ===== -->
+      <!-- Producto -->
       <div v-if="producto" class="cm-context">
         <h3>Producto seleccionado</h3>
 
         <div class="cm-product-row">
-          <!-- Miniatura -->
           <div class="cm-thumb">
             <img
-              :src="buildImagenUrl(thumbPath)"
+              :src="buildImagenUrl(productoThumbPath)"
               :alt="`Imagen de ${producto?.nombre || 'Producto'}`"
               width="80"
               height="80"
@@ -28,15 +28,14 @@
             />
           </div>
 
-          <!-- Info -->
           <div class="cm-product-info">
             <p class="cm-product-name">
               {{ producto.nombre }}
             </p>
             <p class="cm-product-meta">
-              <span v-if="producto.sku"
-                >SKU: <strong>{{ producto.sku }}</strong></span
-              >
+              <span v-if="producto.sku">
+                SKU: <strong>{{ producto.sku }}</strong>
+              </span>
               <span v-if="producto.categoria">
                 · {{ formatLabel(producto.categoria) }}
                 <span v-if="producto.subcategoria">
@@ -48,6 +47,47 @@
         </div>
       </div>
 
+      <!-- Promoción -->
+      <div v-else-if="promocion" class="cm-context">
+        <h3>Promoción seleccionada</h3>
+
+        <div class="cm-product-row">
+          <div class="cm-thumb">
+            <img
+              :src="buildImagenUrl(promoThumbPath)"
+              :alt="`Banner de ${promocion?.titulo || 'Promoción'}`"
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              @error="onThumbError"
+            />
+          </div>
+
+          <div class="cm-product-info">
+            <p class="cm-product-name">
+              {{ promocion.titulo }}
+            </p>
+
+            <p class="cm-product-meta">
+              <span v-if="promocion.fecha_inicio || promocion.fecha_fin">
+                Vigencia:
+                <strong>
+                  {{ promocion.fecha_inicio || "—" }}
+                  →
+                  {{ promocion.fecha_fin || "—" }}
+                </strong>
+              </span>
+
+              <span v-if="promocion.destacada" class="pill-mini">
+                Destacada
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== FORM ===== -->
       <form class="cm-form" @submit.prevent="enviar">
         <div class="cm-grid">
           <label>
@@ -132,13 +172,17 @@ const form = reactive({
   mensaje: "",
 });
 
-// Producto desde el contexto global
+const tipo = computed(() => contactContext.value.tipo || null);
+
+// Contexto global
 const producto = computed(() => contactContext.value.producto || null);
+const promocion = computed(() => contactContext.value.promocion || null);
 
 const DEFAULT_IMG = "/img/default.jpg";
 
-// ruta de la miniatura (igual criterio que catálogo)
-const thumbPath = computed(() => {
+/** ===== THUMBS ===== */
+// thumb de producto
+const productoThumbPath = computed(() => {
   const p = producto.value;
   if (!p) return null;
   return (
@@ -155,10 +199,15 @@ const thumbPath = computed(() => {
   );
 });
 
+// thumb de promo
+const promoThumbPath = computed(() => {
+  const pr = promocion.value;
+  if (!pr) return null;
+  return pr.imagen_banner || pr.banner_img || pr.image || null;
+});
 
 function buildImagenUrl(path) {
   if (!path) return DEFAULT_IMG;
-
   if (/^https?:\/\//i.test(path)) return path;
 
   const base = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api";
@@ -183,9 +232,7 @@ function resetForm() {
 
 function cerrar() {
   closeContactModal();
-  setTimeout(() => {
-    resetForm();
-  }, 200);
+  setTimeout(resetForm, 200);
 }
 
 function formatLabel(str) {
@@ -209,9 +256,18 @@ async function enviar() {
 
   try {
     const payload = {
-      tipo: contactContext.value.tipo || "producto",
+      tipo: tipo.value || "producto",
+
+      // producto (si aplica)
       producto_sku: producto.value?.sku || null,
       producto_nombre: producto.value?.nombre || null,
+
+      // ✅ promo (si aplica)
+      promocion_id: promocion.value?.id || null,
+      promocion_titulo: promocion.value?.titulo || null,
+      promocion_banner: promocion.value?.imagen_banner || null,
+
+      // datos usuario
       nombre: form.nombre,
       empresa: form.empresa || null,
       email: form.email,
@@ -222,10 +278,7 @@ async function enviar() {
     await enviarConsultaContacto(payload);
     ok.value = true;
 
-    // Cerrar automáticamente tras unos segundos
-    setTimeout(() => {
-      cerrar();
-    }, 2500);
+    setTimeout(cerrar, 2500);
   } catch (e) {
     console.error(e);
     error.value =
@@ -235,20 +288,28 @@ async function enviar() {
   }
 }
 
-// Cuando se abre el modal, si hay producto, pre-rellenamos el mensaje
+// Prefill al abrir
 watch(
   () => showContactModal.value,
   (visible) => {
-    if (visible && producto.value) {
+    if (!visible) return;
+
+    if (producto.value) {
       form.mensaje = `Estoy interesado en el producto "${
         producto.value.nombre
       }" (SKU: ${producto.value.sku || "N/D"}).`;
+      return;
+    }
+
+    if (promocion.value) {
+      form.mensaje = `Estoy interesado en la promoción "${promocion.value.titulo}".`;
     }
   }
 );
 </script>
 
 <style scoped>
+/* TODO tu CSS igual */
 .cm-backdrop {
   position: fixed;
   inset: 0;
@@ -272,19 +333,13 @@ watch(
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
-
-  /* Sombras más premium */
   box-shadow:
     0 30px 70px rgba(15, 23, 42, 0.35),
     0 2px 10px rgba(15, 23, 42, 0.08);
-
-  /* Borde superior con acento de marca */
   border-top: 5px solid var(--color-main, #ab0a3d);
-
   animation: cmPop .32s cubic-bezier(.2,.9,.2,1);
 }
 
-/* HEADER */
 .cm-header {
   display: flex;
   justify-content: space-between;
@@ -320,7 +375,6 @@ watch(
   transform: rotate(90deg);
 }
 
-/* Intro */
 .cm-intro {
   font-size: 0.95rem;
   color: #4b5563;
@@ -328,7 +382,6 @@ watch(
   line-height: 1.6;
 }
 
-/* CONTEXTO PRODUCTO */
 .cm-context {
   background: linear-gradient(180deg, #fafafa, #f4f6f8);
   border-radius: 14px;
@@ -398,7 +451,18 @@ watch(
   gap: 0.35rem;
 }
 
-/* FORM */
+/* mini pill solo para promos */
+.pill-mini{
+  display:inline-block;
+  padding:.12rem .5rem;
+  border-radius:999px;
+  font-size:.72rem;
+  font-weight:800;
+  background:#e9f8ef;
+  color:#1d7b3a;
+  border:1px solid #bfe9cc;
+}
+
 .cm-form {
   margin-top: .5rem;
   display: flex;
@@ -432,10 +496,8 @@ textarea {
   background: #f9fafb;
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background .15s ease;
 }
-
 input::placeholder,
 textarea::placeholder { color: #9ca3af; }
-
 input:focus,
 textarea:focus {
   background: #fff;
@@ -453,7 +515,6 @@ textarea { resize: vertical; }
   line-height: 1.5;
 }
 
-/* ACCIONES */
 .cm-actions {
   display: flex;
   flex-wrap: wrap;
@@ -484,10 +545,7 @@ textarea { resize: vertical; }
   filter: brightness(1.06);
   transform: translateY(-1px);
 }
-.cm-btn--primary:disabled {
-  opacity: .65;
-  cursor: default;
-}
+.cm-btn--primary:disabled { opacity: .65; cursor: default; }
 
 .cm-btn--ghost {
   background: #fff;
@@ -500,7 +558,6 @@ textarea { resize: vertical; }
   box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
 }
 
-/* Mensajes */
 .cm-error,
 .cm-ok {
   margin: 0.45rem 0 0;
@@ -520,29 +577,21 @@ textarea { resize: vertical; }
   border: 1px solid #bbf7d0;
 }
 
-/* Responsive */
 @media (max-width: 640px) {
   .cm-modal { padding: 1.35rem 1.1rem 1.1rem; }
   .cm-grid { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 420px) {
   .cm-product-row { align-items: flex-start; }
   .cm-thumb { width: 72px; height: 72px; }
 }
 
-/* Animaciones suaves */
-@keyframes cmFade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+@keyframes cmFade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes cmPop {
   from { opacity: 0; transform: translateY(12px) scale(.98); }
   to   { opacity: 1; transform: none; }
 }
-
 @media (prefers-reduced-motion: reduce) {
   .cm-backdrop, .cm-modal { animation: none !important; }
 }
-
 </style>

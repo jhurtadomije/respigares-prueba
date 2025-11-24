@@ -84,31 +84,10 @@
   max-width: 100%;
   box-sizing: border-box;
 }
-
-
-/* Carrito izquierdo (arriba-izquierda, un pelín fuera) */
-.somos-cart--left {
-  position: absolute;
-  top: -20rem;
-  left: -28rem;
-  z-index: 200;
-  width: clamp(20rem, 40vw, 15rem);
-  opacity: 0.9;
-  pointer-events: none;
-  user-select: none;
-  transform: scaleX(-1); 
+.somos-cart{
+  display: none;
 }
-.somos-cart--right {
-  position: absolute;
-  top: -20rem;
-  right: -28rem;
-  z-index: 200;
-  width: clamp(20rem, 40vw, 15rem);
-  opacity: 0.9;
-  pointer-events: none;
-  user-select: none;
-  transform: scaleX(+1); 
-}
+
 
 
 
@@ -284,5 +263,31 @@
     padding: 0 0.3rem;
   }
 }
+@media (min-width: 1200px) {
+  .somos-cart {
+  display: block;
+  position: absolute;
+  z-index: 200;
+  width: clamp(14rem, 28vw, 20rem);  /* ✅ min < vw < max */
+  height: auto;
+  opacity: 0.9;
+  pointer-events: none;
+  user-select: none;
+}
+/* Carrito izquierdo (arriba-izquierda, un pelín fuera) */
+.somos-cart--left {
+  top: clamp(-22rem, -10vw, -16rem);      /* sube/baja según pantalla */
+  left: clamp(-28rem, -18vw, -12rem);     /* en pantallas medianas entra */
+  transform: scaleX(-1);
+}
+.somos-cart--right {
+  top: clamp(-22rem, -10vw, -16rem);
+  right: clamp(-28rem, -18vw, -12rem);
+  transform: scaleX(1);
+}
+}
+
+
+
 </style>
 

@@ -10,6 +10,8 @@ import adminProductosRoutes from "./routes/adminProductos.js";
 import publicProductosRoutes from "./routes/publicProductos.js";
 import adminFamiliasRoutes from "./routes/adminFamilias.js";
 import contactRoutes from "./routes/contacto.js";
+import adminPromociones from "./routes/adminPromociones.js";
+import publicPromociones from "./routes/publicPromociones.js";
 
 dotenv.config();
 
@@ -39,6 +41,10 @@ app.use("/api/admin/productos", adminProductosRoutes);
 app.use("/api/admin/familias", adminFamiliasRoutes);
 app.use("/api/productos", publicProductosRoutes);
 app.use("/api/contacto", contactRoutes);
+app.use("/api/admin/promociones", adminPromociones);
+app.use("/api/promociones", publicPromociones);
+
+
 
 // Más adelante aquí añadiremos el build de Vue para producción
 

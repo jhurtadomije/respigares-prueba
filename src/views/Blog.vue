@@ -1,55 +1,60 @@
+<!-- src/views/Blog.vue  (Historial Promociones) -->
 <template>
   <!-- Cabecera visual con imagen de fondo -->
   <div class="section-hero">
-    <img src="/img/hero-blog.jpg" alt="Blog Respigares" class="section-hero-img" />
+    <img src="/img/hero-blog.jpg" alt="Promociones Respigares" class="section-hero-img" />
     <div class="section-title-tab animate-fadein">
-      <h1>Blog</h1>
+      <h1>Promociones</h1>
     </div>
   </div>
-  
+
   <div class="page-wrap">
-    <div v-if="posts.length">
-      <BlogPreview :posts="posts" :showTitle="false" />
+    <div v-if="promos.length">
+      <BlogPreview
+        :posts="promos"
+        :showTitle="false"
+        :showHero="true"
+        :showMoreButton="false"
+      />
     </div>
-    <p v-else class="loading-posts">Cargando noticias…</p>
+    <p v-else class="loading-posts">Cargando promociones…</p>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import BlogPreview  from '../components/BlogPreview.vue'
-import { useHead } from '@vueuse/head'
+import { ref, onMounted } from "vue";
+import BlogPreview from "../components/BlogPreview.vue";
+import { useHead } from "@vueuse/head";
+import { publicPromocionesService } from "../services/publicPromocionesService.js";
 
-const posts = ref([])
+// aquí metes el historial completo (activas + inactivas)
+const promos = ref([]);
 
 onMounted(async () => {
-  const base = import.meta.env.BASE_URL
-  const res  = await fetch(`${base}posts.json`)
-  if (res.ok) {
-    posts.value = await res.json()
-  } else {
-    console.error('No se pudo cargar posts.json en', `${base}posts.json`)
+  try {
+    const { data } = await publicPromocionesService.listAll();
+    promos.value = data || [];
+  } catch (e) {
+    console.error("No se pudo cargar historial de promos", e);
+    promos.value = [];
   }
-})
+});
 
 useHead({
-  title: 'Blog y Novedades | Respigares',
+  title: "Promociones | Respigares",
   meta: [
-    { name: 'description', content: 'Actualidad, novedades, consejos y noticias sobre productos gourmet, distribución y alimentación en Andalucía. Síguenos en el blog de Respigares.' },
-    { property: 'og:title', content: 'Blog y Novedades | Respigares' },
-    { property: 'og:description', content: 'Descubre noticias, eventos y tendencias en el sector alimentación de la mano de Respigares.' },
-    { property: 'og:image', content: 'https://www.respigares.es/img/hero-catalogo.jpg' },
-    { property: 'og:type', content: 'website' }
+    { name: "description", content: "Historial de ofertas y promociones de Respigares." },
+    { property: "og:title", content: "Promociones | Respigares" },
+    { property: "og:description", content: "Consulta todas nuestras promociones activas y anteriores." },
+    { property: "og:image", content: "https://www.respigares.es/img/hero-catalogo.jpg" },
+    { property: "og:type", content: "website" }
   ],
-  link: [
-    { rel: 'canonical', href: 'https://www.respigares.es/blog' }
-  ]
-})
-
+  link: [{ rel: "canonical", href: "https://www.respigares.es/blog" }]
+});
 </script>
 
 <style scoped>
-/* Hero cabecera */
+
 .section-hero {
   position: relative;
   width: 100vw;
@@ -99,18 +104,24 @@ useHead({
   .section-title-tab { padding: 0.5em 0.5em 0.5em 0.5em; }
   .section-title-tab h1 { font-size: 1.5rem; }
 }
-/* Animación aparición */
+
 .animate-fadein {
-  animation: aparecer 1.25s cubic-bezier(.8,.1,.1,1);
+  animation: aparecer 1.25s cubic-bezier(0.8, 0.1, 0.1, 1);
 }
 @keyframes aparecer {
-  from { opacity: 0; transform: translateY(35px);}
-  to   { opacity: 1; transform: none;}
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
-/* Main content */
+
 .page-wrap {
   margin-top: 1.5rem;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
   background: linear-gradient(180deg, #f7f9fb 0%, #f1f4f7 100%);
   min-height: 70vh;
   max-width: 1100px;
@@ -126,7 +137,7 @@ useHead({
 }
 @media (max-width: 600px) {
   .page-wrap {
-    padding: 0.5rem 0 1.2rem 0;
+    padding: 0.5rem 0 1.2rem;
   }
 }
 </style>

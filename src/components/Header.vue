@@ -20,7 +20,7 @@
         <RouterLink to="/">Inicio</RouterLink>
         <RouterLink to="/catalogo">Catálogo</RouterLink>
         <RouterLink to="/nosotros">Conócenos</RouterLink>
-        <RouterLink to="/blog">Blog</RouterLink>
+        <RouterLink to="/blog">Promociones</RouterLink>
         <RouterLink to="/contacto">Contacto</RouterLink>
       </nav>
     </div>

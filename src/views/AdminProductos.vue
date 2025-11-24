@@ -1,3 +1,4 @@
+//views/AdminProductos.vue
 <template>
   <div class="admin-page">
     <!-- HEADER -->
@@ -7,12 +8,11 @@
         <p class="admin-subtitle">Panel interno · Respigares</p>
       </div>
       <div class="admin-header__actions">
-        <button class="btn btn-primary" @click="nuevo">
-          + Nuevo producto
+        <button class="btn btn-secondary" @click="goDashboard">
+           Vuelve al Menú
         </button>
-        <button class="btn btn-secondary" @click="salir">
-          Cerrar sesión
-        </button>
+        <button class="btn btn-primary" @click="nuevo">+ Nuevo producto</button>
+        <button class="btn btn-secondary" @click="salir">Cerrar sesión</button>
       </div>
     </header>
 
@@ -47,9 +47,8 @@
 
         <div class="filtro-resumen">
           <small>
-            Total: {{ productos.length }} |
-            Mostrando: {{ productosFiltrados.length }} |
-            Con imagen: {{ totalConImagen }} |
+            Total: {{ productos.length }} | Mostrando:
+            {{ productosFiltrados.length }} | Con imagen: {{ totalConImagen }} |
             Sin imagen: {{ totalSinImagen }}
           </small>
         </div>
@@ -137,9 +136,7 @@
           <h2>
             {{ form.id ? "Editar producto" : "Nuevo producto" }}
           </h2>
-          <button type="button" class="modal-close" @click="cancelar">
-            ✕
-          </button>
+          <button type="button" class="modal-close" @click="cancelar">✕</button>
         </header>
 
         <form @submit.prevent="guardar" class="editor-form">
@@ -263,11 +260,7 @@
             <button type="submit" class="btn btn-primary">
               {{ form.id ? "Guardar cambios" : "Crear producto" }}
             </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              @click="cancelar"
-            >
+            <button type="button" class="btn btn-secondary" @click="cancelar">
               Cancelar
             </button>
           </div>
@@ -395,9 +388,8 @@ function esImagenDefault(path) {
   if (!path) return false;
   const p = String(path).toLowerCase();
   // Ajusta aquí si tu placeholder se llama distinto
-  return p.includes("default"); 
+  return p.includes("default");
 }
-
 
 function tieneImagenReal(producto) {
   // "Imagen real" = tiene ruta y no es la default/placeholder
@@ -451,8 +443,7 @@ function buildImagenUrl(path) {
   // Si ya es absoluta, la devolvemos tal cual
   if (/^https?:\/\//i.test(path)) return path;
 
-  const base =
-    import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+  const base = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
 
   return new URL(path, base).href;
 }
@@ -487,6 +478,11 @@ async function eliminar(p) {
   }
 }
 
+function goDashboard() {
+  router.push({ name: "AdminDashboard" }); 
+}
+
+
 function salir() {
   logout();
   router.push({ name: "admin-login" });
@@ -498,91 +494,101 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+/* ====== LAYOUT GENERAL ====== */
 .admin-page {
-  
-  padding: 3rem;
+  padding: 2rem 1rem 3rem;
   max-width: 1200px;
-  margin: 1rem auto ;
+  margin: 0 auto;
 }
 
-/* HEADER */
+/* ====== HEADER COMO BLOQUE LIMPIO (igual que promos) ====== */
 .admin-header {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
+  align-items: center;
   gap: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .admin-header h1 {
   margin: 0;
-  font-size: 1.5rem;
-  color: #004d73;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--color-main);
+  font-weight: 900;
+  letter-spacing: 0.02em;
 }
 
 .admin-subtitle {
   margin: 0.2rem 0 0;
-  font-size: 0.85rem;
-  color: #667;
+  font-size: 0.95rem;
+  color: #666;
 }
 
 .admin-header__actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
+/* ====== CARDS (igual a .admin-block de promos) ====== */
+.admin-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: none; /* más limpio */
+}
+
+/* ====== MAIN ====== */
 .admin-main {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
-/* CARD GENÉRICA */
-.admin-card {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 0.9rem 1rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e1e5ea;
-}
-
-/* 🔍 Filtros */
+/* ====== FILTROS ====== */
 .admin-filtros {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
   align-items: flex-end;
 }
 
 .admin-filtros label {
   display: flex;
   flex-direction: column;
-  font-size: 0.85rem;
-  color: #444;
+  font-size: 0.9rem;
+  color: #333;
+  gap: 0.35rem;
 }
 
 .admin-filtros input,
 .admin-filtros select {
-  padding: 0.35rem 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccd2da;
-  font-size: 0.85rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  background: #fff;
 }
 
 .admin-filtros input:focus,
 .admin-filtros select:focus {
   outline: none;
-  border-color: #006bb7;
-  box-shadow: 0 0 0 1px rgba(0, 107, 183, 0.15);
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 3px #ab0a3d1a;
 }
 
 .filtro-resumen {
   margin-left: auto;
-  font-size: 0.78rem;
-  color: #555;
+  font-size: 0.85rem;
+  color: #666;
 }
 
-/* Tabla */
+/* ====== TABLA (más ligera tipo promos) ====== */
 .admin-table-wrapper {
   overflow: auto;
 }
@@ -590,66 +596,64 @@ onMounted(async () => {
 .tabla-productos {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .tabla-productos th,
 .tabla-productos td {
-  border-bottom: 1px solid #e4e8ee;
-  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid #eee;
+  padding: 0.65rem 0.6rem;
   text-align: left;
+  vertical-align: middle;
 }
 
 .tabla-productos thead {
-  background: #f5f7fa;
+  background: #fafafa;
 }
 
 .tabla-productos thead th {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  color: #667;
-}
-
-.tabla-productos tbody tr:nth-child(even) {
-  background: #fafbfc;
+  color: #555;
+  font-weight: 800;
 }
 
 .tabla-productos tbody tr:hover {
-  background: #f0f7ff;
+  background: #f7f7f7;
 }
 
 /* Columnas específicas */
 .col-id {
-  width: 52px;
-  font-size: 0.78rem;
-  color: #888;
+  width: 58px;
+  font-size: 0.8rem;
+  color: #777;
 }
 
 .col-img {
-  width: 70px;
+  width: 80px;
   text-align: center;
 }
 
 .col-sku {
-  font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.82rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
 }
 
 .col-nombre .nombre-principal {
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: #222;
 }
 
 .col-nombre .nombre-secundario {
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: #777;
 }
 
 .col-familia,
 .col-marca {
-  font-size: 0.83rem;
+  font-size: 0.9rem;
 }
 
 .col-activo {
@@ -661,15 +665,15 @@ onMounted(async () => {
   text-align: right;
 }
 
-/* Miniatura */
+/* ====== MINIATURA ====== */
 .thumb-wrapper {
-  width: 52px;
-  height: 52px;
-  border-radius: 7px;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #dde3ec;
+  border: 1px solid #eee;
   margin: 0 auto;
-  background: #f8fafc;
+  background: #f8f8f8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -681,114 +685,111 @@ onMounted(async () => {
   object-fit: cover;
 }
 
-.thumb-img.img-error {
-  opacity: 0.3;
-  filter: grayscale(1);
-}
-
 .sin-imagen {
-  font-size: 0.75rem;
-  color: #c0392b;
-  font-weight: 600;
+  font-size: 0.8rem;
+  color: #b00020;
+  font-weight: 700;
 }
 
-/* BADGES */
+/* ====== BADGES (como pills de promos) ====== */
 .badge {
   display: inline-block;
-  padding: 0.15rem 0.5rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .badge--ok {
-  background: #e1f7e7;
-  color: #1e7b35;
+  background: #e9f8ef;
+  color: #1d7b3a;
+  border: 1px solid #bfe9cc;
 }
 
 .badge--off {
-  background: #fde2e2;
-  color: #bb2525;
+  background: #f7f7f7;
+  color: #777;
+  border: 1px solid #e5e5e5;
 }
 
-/* BOTONES */
+/* ====== BOTONES (mismo look que promos) ====== */
 .btn {
   border: none;
   border-radius: 999px;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.95rem;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-  font-weight: 600;
-  transition: background 0.15s, color 0.15s, box-shadow 0.15s,
-    transform 0.05s;
+  font-weight: 900;
+  background: var(--color-main);
+  color: #fff;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px #ab0a3d33;
+  transition: filter 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
 }
 
 .btn:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
-.btn-primary {
-  background: #006bb7;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 107, 183, 0.35);
-}
-
-.btn-primary:hover {
-  background: #005792;
-}
-
+/* secundarios suaves */
 .btn-secondary {
-  background: #eef1f5;
-  color: #334;
+  background: #e9edf2;
+  color: #222;
+  box-shadow: none;
+  font-weight: 800;
 }
 
 .btn-secondary:hover {
-  background: #dde3ec;
+  filter: brightness(0.98);
 }
 
+/* editar suave */
 .btn-outline {
-  background: transparent;
-  color: #006bb7;
-  border-radius: 999px;
-  border: 1px solid #b6d5f1;
-  padding-inline: 0.7rem;
+  background: #f2f3f5;
+  color: #222;
+  border: 1px solid #e2e2e2;
+  box-shadow: none;
+  font-weight: 800;
 }
 
 .btn-outline:hover {
-  background: #e7f1fb;
+  background: #e9eaed;
 }
 
+/* eliminar rojo */
 .btn-danger {
-  background: #d9534f;
+  background: #a01414;
   color: #fff;
-  padding-inline: 0.7rem;
+  box-shadow: none;
 }
 
 .btn-danger:hover {
-  background: #c9302c;
+  filter: brightness(1.05);
 }
 
 .btn-small {
-  font-size: 0.78rem;
-  padding: 0.25rem 0.6rem;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.85rem;
 }
 
-/* ERRORES / LOAD */
+/* ====== ERRORES / LOAD ====== */
 .error {
-  color: #c0392b;
-  margin-bottom: 0.5rem;
+  color: #b00020;
+  margin: 0.5rem 0;
+  font-weight: 700;
 }
 
 .loading {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: #666;
 }
 
-/* MODAL */
+/* ====== MODAL: puedes dejarlo igual, solo retoque de color ====== */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -822,7 +823,8 @@ onMounted(async () => {
 .modal-header h2 {
   margin: 0;
   font-size: 1.2rem;
-  color: #004d73;
+  color: var(--color-main);
+  font-weight: 900;
 }
 
 .modal-close {
@@ -853,56 +855,43 @@ onMounted(async () => {
 .editor-form label {
   display: flex;
   flex-direction: column;
-  font-size: 0.85rem;
-  color: #444;
+  font-size: 0.9rem;
+  color: #333;
+  gap: 0.35rem;
 }
 
 .editor-form input,
 .editor-form select {
-  padding: 0.32rem 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccd2da;
-  font-size: 0.86rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  background: #fff;
 }
 
 .editor-form input:focus,
 .editor-form select:focus {
   outline: none;
-  border-color: #006bb7;
-  box-shadow: 0 0 0 1px rgba(0, 107, 183, 0.15);
+  border-color: var(--color-main);
+  box-shadow: 0 0 0 3px #ab0a3d1a;
 }
 
 .editor-form__file {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: #555;
-}
-
-.file-path {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
 }
 
 .editor-form__actions {
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .admin-page {
-    padding: 1rem;
-  }
-
   .admin-header {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .admin-header__actions {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: wrap;
   }
 
   .grid-2 {
@@ -913,7 +902,7 @@ onMounted(async () => {
 @media (max-width: 600px) {
   .tabla-productos th:nth-child(1),
   .tabla-productos td:nth-child(1) {
-    display: none; /* ocultar ID en móviles para ganar espacio */
+    display: none;
   }
 }
 
@@ -928,4 +917,6 @@ onMounted(async () => {
     transform: translateY(0) scale(1);
   }
 }
+
 </style>
+

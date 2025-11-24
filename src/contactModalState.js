@@ -6,20 +6,50 @@ export const showContactModal = ref(false);
 export const contactContext = ref({
   tipo: null,     // 'producto' | 'promocion' | ...
   producto: null, // producto COMPLETO
+  promocion: null // promo COMPLETA
 });
 
 // Abrir modal para un producto concreto
 export function openContactForProducto(producto) {
   contactContext.value = {
     tipo: "producto",
-    // ✅ guardamos el objeto completo para no perder imagen/galeria/etc.
     producto: {
       ...producto,
       categoria: producto.categoria ?? null,
       subcategoria: producto.subcategoria ?? null,
-      // normalización defensiva por si cambia el nombre del campo
-      imagen: producto.imagen || producto.Imagen || producto.image || producto.foto || null,
-      galeria: producto.galeria || producto.Galeria || producto.images || [],
+      imagen:
+        producto.imagen ||
+        producto.Imagen ||
+        producto.image ||
+        producto.foto ||
+        null,
+      galeria:
+        producto.galeria ||
+        producto.Galeria ||
+        producto.images ||
+        [],
+    },
+    promocion: null,
+  };
+
+  showContactModal.value = true;
+}
+
+// ✅ Abrir modal para una promoción concreta
+export function openContactForPromocion(promocion) {
+  contactContext.value = {
+    tipo: "promocion",
+    producto: null,
+    promocion: {
+      ...promocion,
+      // normalización defensiva por si cambia el campo
+      imagen_banner:
+        promocion.imagen_banner ||
+        promocion.banner_img ||
+        promocion.image ||
+        null,
+      cta_texto: promocion.cta_texto || null,
+      cta_url: promocion.cta_url || null,
     },
   };
 

@@ -16,7 +16,12 @@
     </section>
 
     <section v-scroll-random-reveal>
-      <BlogPreview :posts="postsPreview" />
+      <BlogPreview
+        :posts="promos"
+        title="Ofertas y promociones"
+        :showTitle="true"
+        
+      />
     </section>
   </main>
 </template>
@@ -31,8 +36,10 @@ import CatalogPreview from "../components/CatalogPreview.vue";
 import BrandsCarousel from "../components/BrandsCarousel.vue";
 import BlogPreview from "../components/BlogPreview.vue";
 
+import { publicPromocionesService } from "../services/publicPromocionesService.js";
+
 const categoriesPreview = ref([]);
-const postsPreview = ref([]);
+const promos = ref([]);
 const isLoading = ref(false);
 const loadError = ref(null);
 
@@ -43,11 +50,10 @@ async function loadHomeData() {
   const base = import.meta.env.BASE_URL;
 
   try {
-    // Cargar en paralelo (mejor TTFB/LCP)
-    const [catRes, postRes] = await Promise.all([
-      fetch(`${base}categorias.json`, { cache: "force-cache" }),
-      fetch(`${base}posts.json`, { cache: "force-cache" }),
-    ]);
+    // ✅ solo categorías (posts.json ya no hace falta aquí)
+    const catRes = await fetch(`${base}categorias.json`, {
+      cache: "force-cache",
+    });
 
     if (catRes.ok) {
       categoriesPreview.value = await catRes.json();
@@ -56,18 +62,14 @@ async function loadHomeData() {
       categoriesPreview.value = [];
     }
 
-    if (postRes.ok) {
-      const allPosts = await postRes.json();
-      postsPreview.value = allPosts.slice(0, 4);
-    } else {
-      console.warn("No se encontró posts.json en", `${base}posts.json`);
-      postsPreview.value = [];
-    }
+    // ✅ promos públicas
+    const { data } = await publicPromocionesService.list();
+    promos.value = data || [];
   } catch (err) {
     console.error("Error cargando datos de Home:", err);
     loadError.value = err;
     categoriesPreview.value = [];
-    postsPreview.value = [];
+    promos.value = [];
   } finally {
     isLoading.value = false;
   }
@@ -84,11 +86,7 @@ useHead(() => ({
       content:
         "Distribuimos más de 4.000 referencias de alimentos gourmet y productos premium para hostelería y particulares. Calidad, confianza y cercanía desde 1971.",
     },
-
-    // Robots explícito (por claridad)
     { name: "robots", content: "index,follow" },
-
-    // Open Graph
     {
       property: "og:title",
       content: "Respigares | Distribución de productos gourmet en Andalucía",
@@ -106,8 +104,6 @@ useHead(() => ({
     { property: "og:url", content: "https://www.respigares.es/" },
     { property: "og:site_name", content: "Respigares" },
     { property: "og:locale", content: "es_ES" },
-
-    // Twitter Cards
     { name: "twitter:card", content: "summary_large_image" },
     {
       name: "twitter:title",
@@ -124,9 +120,6 @@ useHead(() => ({
     },
   ],
   link: [{ rel: "canonical", href: "https://www.respigares.es/" }],
-
-  // JSON-LD básico para Home
-  // Si ya lo tienes en App.vue/Layout, puedes quitar este bloque para no duplicar.
   script: [
     {
       type: "application/ld+json",
@@ -137,7 +130,8 @@ useHead(() => ({
         url: "https://www.respigares.es/",
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://www.respigares.es/catalogo?search={search_term_string}",
+          target:
+            "https://www.respigares.es/catalogo?search={search_term_string}",
           "query-input": "required name=search_term_string",
         },
       }),
@@ -153,12 +147,10 @@ useHead(() => ({
   box-sizing: border-box;
 }
 
-/* Espaciado entre secciones de la home */
 .home-content > section {
   margin-bottom: 2.5rem;
 }
 
-/* Ajustes responsive */
 @media (min-width: 768px) {
   .home-content {
     margin-top: 6rem;

@@ -55,25 +55,9 @@ defineProps({
   border-radius: 20px;
 }
 .catalogo-preview__olive {
-  position: absolute;
-  top: -11rem;
-  left: -20rem;                /* sácala un poco hacia fuera como en el catálogo */
-  width: clamp(25rem, 50vw, 10rem);
-  opacity: 0.9;
-  pointer-events: none;
-  user-select: none;
-}
+  display: none;
+  }
 
-.catalogo-preview__olive--right {
-  position: absolute;
-  top: -11rem;
-  left: 70rem;                /* sácala un poco hacia fuera como en el catálogo */
-  width: clamp(25rem, 50vw, 10rem);
-  opacity: 0.9;
-  pointer-events: none;
-  user-select: none;
-  transform: scaleX(-1);     
-}
 
 /* Título bloque */
 .catalogo-preview__title {
@@ -238,9 +222,23 @@ defineProps({
   }
 }
 
-@media (max-width: 700px) {
+@media (min-width: 1200px) {
   .catalogo-preview__olive {
-    display: none;
+    display: block;                 /* ✅ vuelve a mostrarlos */
+    position: absolute;
+    top: clamp(-15.3rem, -9.3vw, -11.3rem);     /* más arriba/pegados al hero */
+    left: clamp(-22rem, -18vw, -12rem);   /* entra/sale según pantalla */
+    width: clamp(18rem, 38vw, 26rem);     /* responsive real */
+    opacity: 0.9;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+  }
+
+  .catalogo-preview__olive--right {
+    left: auto;                           /* ✅ importante */
+    right: clamp(-22rem, -18vw, -12rem);  /* espejo del izquierdo */
+    transform: scaleX(-1);
   }
 }
 </style>
