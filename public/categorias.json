@@ -193,7 +193,7 @@
       { "id": "ketchup-mostaza", "name": "Ketchup, Mayonesa y Mostaza", "image": "img/subcategorias/ketchupMostaza.jpg", "match": ["salsas-ketchup-y-mostaza"] },
       { "id": "salsas-tomate", "name": "Salsas de Tomate", "image": "img/subcategorias/tomate.jpg", "match": ["salsas-de-tomate", "tomate-frito"] },
       { "id": "salsas-horeca", "name": "Horeca", "image": "img/subcategorias/horeca.jpg", "match": ["horeca"] },
-      { "id": "otras-salsas", "name": "Otras Salsas", "image": "img/subcategorias/horeca.jpg", "match": ["otras-salsas"] }
+      { "id": "otras-salsas", "name": "Otras Salsas", "image": "img/subcategorias/otrasSalsas.webp", "match": ["otras-salsas"] }
     ]
   },
   {
