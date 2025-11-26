@@ -2,7 +2,7 @@
 <template>
   <!-- Cabecera visual con imagen de fondo -->
   <div class="section-hero">
-    <img src="/img/hero-blog.png" alt="Promociones Respigares" class="section-hero-img" />
+    <img src="/img/hero-blog_2.png" alt="Promociones Respigares" class="section-hero-img" />
     <div class="section-title-tab animate-fadein">
       <h1>Promociones</h1>
     </div>
@@ -57,9 +57,11 @@ useHead({
 
 .section-hero {
   position: relative;
-  width: 100vw;
-  min-height: 25vw;
-  max-height: 20em;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 220px;
+  max-height: 370px;
+  aspect-ratio: 16 / 5;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -70,11 +72,12 @@ useHead({
 .section-hero-img {
   position: absolute;
   top: 0; left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   object-fit: cover;
+ 
   z-index: 1;
-  filter: brightness(1.05) saturate(1.05);
+  --filter: brightness(1.05) saturate(1.05);
   pointer-events: none;
   user-select: none;
 }
