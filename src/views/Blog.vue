@@ -2,7 +2,7 @@
 <template>
   <!-- Cabecera visual con imagen de fondo -->
   <div class="section-hero">
-    <img src="/img/hero-blog_2.png" alt="Promociones Respigares" class="section-hero-img" />
+    <img src="/img/hero-blog.png" alt="Promociones Respigares" class="section-hero-img" />
     <div class="section-title-tab animate-fadein">
       <h1>Promociones</h1>
     </div>
