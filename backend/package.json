@@ -6,8 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "node server.js",
-    "start":"node server.js"
-  },
+    "start": "node server.js",
+    "pm2-start": "pm2 start server.js --name respigares-api --time",
+    "pm2-stop": "pm2 stop respigares-api",
+    "pm2-restart": "pm2 restart respigares-api"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,5 +22,8 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.15.3",
     "nodemailer": "^7.0.10"
+  },
+  "devDependencies": {
+    "pm2": "^6.0.14"
   }
 }

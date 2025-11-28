@@ -41,14 +41,14 @@ if (
 
   transporter.verify((err) => {
     if (err) {
-      console.error("Error configurando SMTP, lo desactivamos:", err.message);
+      console.error("Error configurando SMTP, desactivando:", err.message);
       transporter = null;
     } else {
       console.log("SMTP listo para enviar correos");
     }
   });
 } else {
-  console.log("SMTP desactivado (Railway o SMTP_DISABLED=true). Modo demo sin envío real.");
+  console.log("SMTP desactivado (SMTP_DISABLED=true). Modo demo sin envío real.");
 }
 
 // ------------ POST /api/contacto -------------

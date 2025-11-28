@@ -1,6 +1,15 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # No reescribimos peticiones a archivos .json
+  RewriteCond %{REQUEST_URI} \.json$ [NC]
+  RewriteRule ^ - [L]
+
+  # No reescribimos estos ficheros
+  RewriteRule ^(robots\.txt|sitemap\.xml) - [L]
+
+  # reglas normales para 
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
